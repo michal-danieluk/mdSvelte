@@ -105,9 +105,6 @@
             />
           </a>
         </div>
-        <p class="order-3 text-base text-zinc-600 dark:text-zinc-400">
-          {bio}
-        </p>
       </div>
     </div>
   </div>
