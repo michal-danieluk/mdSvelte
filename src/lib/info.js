@@ -3,14 +3,14 @@
 // feel free to remove this file.
 
 // URL of your website
-export const website = 'https://sveltekit-blog-template.vercel.app'
+export const website = 'michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
 
-export const firstName = 'Jordan'
-export const lastName = 'Doe'
+export const firstName = 'Michał'
+export const lastName = 'Danieluk'
 export const name = `${firstName} ${lastName}`
 
 // Used for the landing page & footer of posts
-export const avatar = 'https://api.lorem.space/image/face?w=250&h=250'
+export const avatar = 'img/michal.jpg' //'https://michaldanieluk.com/img/michal.jpg'
 export const bio = `\
 I’m ${firstName}, a software engineer based in Canada. Lorem ipsum dolor sit amet, consectetur
 adipiscing elit. Phasellus accumsan quam at eros malesuada, id luctus lectus efficitur. Nulla
@@ -21,7 +21,7 @@ vehicula sapien vitae sagittis.
 // Your social usernames, empty strings won't be used.
 // For sake of the live demo, I'm using `username/repo` for github,
 // but you can replace with just your username.
-export const github = 'mattjennings/sveltekit-blog-template'
-export const twitter = ''
-export const linkedin = ''
-export const instagram = ''
+export const github = '' //'mattjennings/sveltekit-blog-template'
+export const twitter = 'michaldanieluk'
+export const linkedin = 'in/michal-danieluk'
+export const instagram = 'michal_danieluk'
