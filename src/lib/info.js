@@ -3,14 +3,14 @@
 // feel free to remove this file.
 
 // URL of your website
-export const website = 'michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
+export const website = 'michaldanieluk.com/'//'https://sveltekit-blog-template.vercel.app'
 export const localweb = 'http://localhost:5173/'
 export const firstName = 'Michał'
 export const lastName = 'Danieluk'
 export const name = `${firstName} ${lastName}`
 
 // Used for the landing page & footer of posts
-export const avatar = `${localweb}img/michal.jpg` //'https://michaldanieluk.com/img/michal.jpg'
+export const avatar = `${website}img/michal.jpg` //'https://michaldanieluk.com/img/michal.jpg'
 export const bio = `\
 Cześć :)
 Nazywam się Michał. Od lat zajmuję się sprzedażą. W mowie i piśmie :). Prywatnie
