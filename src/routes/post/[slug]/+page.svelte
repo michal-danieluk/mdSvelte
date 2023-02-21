@@ -97,12 +97,10 @@
           <SocialLinks />
         </div>
         <div class="flex justify-center order-2 md:order-1 md:col-span-2">
-          <a href="/" class="inline-block rounded-full">
-            <img
-              src={avatar}
-              alt={name}
-              class="w-24 h-24 mx-auto rounded-full md:w-28 md:h-28 ring-2 ring-zinc-200 dark:ring-zinc-700"
-            />
+          <a href="/"
+        class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 dark:to-teal-400"
+          >
+              {name}
           </a>
         </div>
       </div>
