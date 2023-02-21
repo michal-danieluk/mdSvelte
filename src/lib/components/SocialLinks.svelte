@@ -1,9 +1,11 @@
 <script>
   import { linkedin, instagram, twitter, github } from '$lib/info'
+
+  const target= '_blank\" rel=\"noopener noreferrer'
 </script>
 
 {#if twitter}
-  <a href={`https://twitter.com/${twitter}`} class="group" aria-label="Follow on Twitter">
+  <a href={`https://twitter.com/${twitter}`} class="group" {target} aria-label="Follow on Twitter">
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -17,7 +19,7 @@
 {/if}
 
 {#if instagram}
-  <a href={`https://instagram.com/${instagram}`} class="group" aria-label="Follow on Instagram">
+  <a href={`https://instagram.com/${instagram}`} class="group" {target} aria-label="Follow on Instagram">
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -34,7 +36,7 @@
 {/if}
 
 {#if github}
-  <a href={`https://github.com/${github}`} class="group" aria-label="Follow on GitHub">
+  <a href={`https://github.com/${github}`} class="group" {target} aria-label="Follow on GitHub">
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -50,7 +52,7 @@
 {/if}
 
 {#if linkedin}
-  <a href={`https://linkedin.com/${linkedin}`} class="group" aria-label="Follow on LinkedIn">
+  <a href={`https://linkedin.com/in/${linkedin}`} class="group" {target} aria-label="Follow on LinkedIn">
     <svg
       viewBox="0 0 24 24"
       class="w-6 h-6 transition fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"

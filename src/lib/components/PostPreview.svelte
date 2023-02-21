@@ -13,7 +13,7 @@
   </div>
   <div slot="actions">
     <div class="flex items-center text-teal-500">
-      <span class="text-sm font-medium">Read</span>
+      <span class="text-sm font-medium">Czytaj ... </span>
       <ArrowRightIcon class="w-4 h-4 ml-1" />
     </div>
   </div>

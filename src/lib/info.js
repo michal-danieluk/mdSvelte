@@ -4,24 +4,22 @@
 
 // URL of your website
 export const website = 'michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
-
+export const localweb = 'http://localhost:5173/'
 export const firstName = 'Michał'
 export const lastName = 'Danieluk'
 export const name = `${firstName} ${lastName}`
 
 // Used for the landing page & footer of posts
-export const avatar = 'img/michal.jpg' //'https://michaldanieluk.com/img/michal.jpg'
+export const avatar = `${localweb}img/michal.jpg` //'https://michaldanieluk.com/img/michal.jpg'
 export const bio = `\
-I’m ${firstName}, a software engineer based in Canada. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Phasellus accumsan quam at eros malesuada, id luctus lectus efficitur. Nulla
-sit amet arcu mi. Duis quis mauris malesuada, posuere orci et, pulvinar nisl. Nam malesuada
-vehicula sapien vitae sagittis.
+Cześć :)
+Nazywam się Michał. Od lat zajmuję się sprzedażą. W mowie i piśmie :). Prywatnie
+grzebię się troszkę w kodzie. Obecnie jest to Svelte.
 `
-
 // Your social usernames, empty strings won't be used.
 // For sake of the live demo, I'm using `username/repo` for github,
 // but you can replace with just your username.
 export const github = '' //'mattjennings/sveltekit-blog-template'
 export const twitter = 'michaldanieluk'
-export const linkedin = 'in/michal-danieluk'
+export const linkedin = 'michal-danieluk'
 export const instagram = 'michal_danieluk'
