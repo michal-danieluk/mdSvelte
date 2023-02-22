@@ -3,7 +3,9 @@ title: Polskie wyświetlanie miesięcy w date-fns
 date: 2023-2-22
 ---
 
-## Chciałem mieć ładnie brzmiącą datę.
+## Data po polsku
+
+Chciałem mieć ładnie brzmiącą datę.
 
 Kiedy wyświetlałem zestawienie wpisów i pokazywały się ich daty to chciałem żeby były one po polsku. Czyli pokazywało 15 grudnia czy 14 marca. W wersji orginalnej było oczywiści po angielsku.
 
