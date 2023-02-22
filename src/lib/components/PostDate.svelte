@@ -1,6 +1,6 @@
 <script>
   import { format, parseISO } from 'date-fns'
-//  import  pl from 'date-fns/locale/pl'
+     import  pl from 'date-fns/locale/pl'
   export let decorate
   export let post
   export let collapsed = false
@@ -20,7 +20,7 @@
   {/if}
   <div class="flex" class:flex-col={!collapsed}>
     <time datetime={post.date}>
-      {format(new Date(parseISO(post.date)), 'd/MM/yyyy')}
+      {format(new Date(parseISO(post.date)), 'd MMMM yyyy', {locale: pl})}
     </time>
     {#if collapsed}
       <span class="mx-1">•</span>
