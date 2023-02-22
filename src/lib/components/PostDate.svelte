@@ -1,6 +1,6 @@
 <script>
   import { format, parseISO } from 'date-fns'
-     import  pl from 'date-fns/locale/pl'
+     import  pl from 'date-fns/locale/pl/index'
   export let decorate
   export let post
   export let collapsed = false
