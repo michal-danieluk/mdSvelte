@@ -18,9 +18,10 @@
 <div class="flex flex-col flex-grow">
   <header class="pt-4">
     <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
-      Writing on tech, music, and whatever else I feel like
+    Piszę o technologi, marketingu, książkach i co tylko przyjdzie mi innego do głowy.
     </h1>
-    <p class="mt-6">All of my written content collected in one place</p>
+    <p class="mt-6">Mój mały digital garden, który co jakiś czas będę podlewał.
+    </p>
   </header>
 
   <div class="mt-16 sm:mt-20">
