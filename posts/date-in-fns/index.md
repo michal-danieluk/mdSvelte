@@ -2,7 +2,6 @@
 title: Polskie wyświetlanie miesięcy w date-fns
 date: 2023-2-22
 ---
-
 ## Data po polsku
 
 Chciałem mieć ładnie brzmiącą datę.
@@ -19,7 +18,8 @@ Kod do tego wyglądał mniej więcej tak.
 
 ```
 
-## Mówimy po polski tak?
+## Po polsku tak?
+
 
 Ja za to chciałem, żeby Dec zmienił się w grudzień. W domentacji **date-fns** w funkcji **format** znalazłem odniesienie do opcji locale.
 
