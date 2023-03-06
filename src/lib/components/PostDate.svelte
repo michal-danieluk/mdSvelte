@@ -25,5 +25,6 @@
     {#if collapsed}
       <span class="mx-1">•</span>
     {/if}
+    <span>{post.readingTime}</span>
   </div>
 </div>

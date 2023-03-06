@@ -88,7 +88,6 @@
         <svelte:component this={data.component} />
       </div>
     </article>
-
     <!-- bio -->
     <hr />
     <div class="py-8">
