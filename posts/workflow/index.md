@@ -36,7 +36,8 @@ klawisze.
 To jak wydląda ten mój workflow?
 Odpalam system. Pracuję na laptopie i jednym monitorze zewnętrzym.
 
-### Na dużym monitorze mam pokolei:
+### Na monitorze:
+
 
     - workspace 1 - terminal
     - workspace 2 - przeglądarka
@@ -65,7 +66,7 @@ Na pierwszym workspasie mam uruchomiony terminal.
 W tym terminalu działa **tmux**. Tmux czyli "terminal multiplexer", pozowala mi on na uruchomienie
 w jednym oknie kilku programów. Takie też workspacy :)
 
-### Workspace 2 - przeglądarka
+### Workspace 2 - firefox
 
 Tutaj działa najczęściej firefox lub qutebrowser, zależy.
 Najczęściej na firefoxie działam. Nic szczególnego.
