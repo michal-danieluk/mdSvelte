@@ -2,95 +2,78 @@
 title: Mój workflow
 date: 2023-03-04
 ---
+## Workflow
 
-## Workflow z jakiego korzystam
+Mój workflow opiera się na systemie Linux Arch oraz i3wm. i3 to menedżer okien, którym głównie obsługuje się skrótami klawiszowymi, chociaż można też używać myszy.
 
-Mnój workflow opiera się o **Linux Arch** oraz **i3wm**.
-Nie wiem czy wiesz czym jest i3. Jest to manager okien,
-którego głównie obsługuje się skrótami klawiszowymi.
+## Key binding
 
-## Ale jak to?
+Czyli skróty klawiszowe.
 
-```
-Alt+Enter otwiera terminal.
-```
+Niektóre skróty klawiszowe, które stosuję, to:
 
-```
-Alt+b otwiera przeglądarkę.
-```
+ - Alt+Enter - otwiera terminal
+ - Alt+b - otwiera przeglądarkę
+ - Alt+1 - pierwszy workspace
+ - itd.
 
-```
-Alt+1 jest to pierwszy workspace.
-```
-
-Tych workspacow można mieć 10.
-Jeśli zaczynsz używać Window Managera takiego jak i3 po tym jak korzystałeś z np. Windowsa
-to trwa to chwilę, żeby się przestawić. Jednym z największysz wyzwań jest nauczenie się skrótów
+Można mieć do 10 workspace'ów. Przestawienie się z Window Managera takiego jak
+i3 na inny system operacyjny wymaga czasu, aby nauczyć się nowych skrótów
 klawiszowych.
 
-Potem powrót na Windows jest straszną męczarnia. Wiem coś o tym :) i ręcę same uderzają
-klawisze.
+## Rozmieszczenie aplikacji
 
-## Ale Workflow
+Kiedy uruchamiam system, pracuję na laptopie i jednym zewnętrznym monitorze. Na dużym monitorze mam uruchomione kolejno:
 
-To jak wydląda ten mój workflow?
-Odpalam system. Pracuję na laptopie i jednym monitorze zewnętrzym.
+ - workspace 1 - terminal
+ - workspace 2 - przeglądarka
+ - workspace 3 - poczta (neomutt)
+ - workspace 4 - Spotify/Obsidian
+ - workspace 5 - Slack
 
-### Na monitorze:
+Na laptopie natomiast:
 
+ - workspace 10 - Signal/Endel playlist
 
-    - workspace 1 - terminal
-    - workspace 2 - przeglądarka
-    - workspace 3 - Mail(neomutt)
-    - workspace 4 - spotify/obsidian
-    - workspace 5 - chat (slack)
+## Opis moich workspace
 
-### Na laptopie:
-
-    - workspace 10 - signal / Endel playlist
-
-Tak to mniej więcej wygląda jeśli chodzi o rozmieszczenie aplikacji.
-Neomutt nie jest odpalony na pierwszym workspace bo czasami skróty klawiszowe z tmuxa i neomuuta
-gryzły mi się. Wiem, żę można to przemapować ale tak się już przywyczaiłęm.
-
-Na samym początku to odpowiednio poznazywałem każdy workspace tak żeby się do tego przywyczaić.
-Terz już pamięć mieśniowa sama wie co i jak.
-
-## Workspaces
-
-Kążdy z tych workspesów słyży do czego innego. I naczej wygląda :)
+Każdy workspace jest dedykowany do innej aplikacji.
 
 ### Workspace 1 - terminal
 
-Na pierwszym workspasie mam uruchomiony terminal.
-W tym terminalu działa **tmux**. Tmux czyli "terminal multiplexer", pozowala mi on na uruchomienie
-w jednym oknie kilku programów. Takie też workspacy :)
+Na pierwszym workspace'ie mam uruchomiony terminal z programem tmux, który pozwala na uruchomienie kilku programów w jednym oknie. Najcześciej w tmuxie działa **neovim**.
+Jest program, którego najcześciej używam to poprawiania lub pisania słów które
+czytasz.
 
-### Workspace 2 - firefox
+### Workspace 2 - browser
 
-Tutaj działa najczęściej firefox lub qutebrowser, zależy.
-Najczęściej na firefoxie działam. Nic szczególnego.
+Na drugim workspace'ie zazwyczaj pracuję na przeglądarce internetowej, najczęściej na Firefox lub qutebrowser.
 
-### Workspace 3 - Mail
+### Workspace 3 - poczta
 
-Tutaj działa też terminal, w którym chodzi program neomutt. Jest kosolwy program poczotwy. Przyznaje
-że czasami jest wyzwaniem przy używaniu poczty, bo większość maili teraz jest w formacie html.
+Na trzecim workspace'ie działa terminal z uruchomionym neomuttem - konsolowym programem pocztowym. Czasami jest to wyzwanie, szczególnie przy mailach w formacie html. Neomutt można jednak obsługiwać całkowicie za pomocą klawiatury, co umożliwia szybkie przeglądanie poczty.
 
-Bardzo widoczne jest to przy **newsletterach**. Najgorzej jest jednak kiedy te nawet nie mają
-odnośnika, żeby zobaczyć maila w przeglądarce. No cóż zdarza się.
+### Workspace 4 - Spotify/Obsidian
 
-Wracjąca do neomutt. Program całkowicie można obsługiwać za pomocą klawiatury. Na początk jest
-dziwnie, potem jednak kiedy człowiek się przyzwyczai do tego okazuje się, że jest to jeden z
-najszybszych sposobów przeglądania poczty.
+Na czwartym workspace'ie uruchamiam aplikację Spotify lub Obsidian. Spotify to
+jeden z moich ulubionych programów muzycznych, a Obsidian służy mi do notowania
+pomysłów i organizowania myśli.
 
+Również wpisy w formie draftów powstawją właśnie
+w Obsidianie. Jest to szczególnie wygodne bo cały wpis jest już formie
+**markdown** dzięki temu nie muszę go potem ponownie formatować :)
 
+### Workspace 5 - Slack/Discord
 
+Na piątym workspace'ie korzystam z programu Slack lub Discord. Każdy z nich służy
+do komunikacji z inną grupą.
 
+### Workspace 10 - Signal
 
+Na laptopie przypisałem workspace 10 dla aplikacji Signal, ta służy do rozmów z
+rodziną i przyjaciółmi. Chociaż często jest uruchomina w tle żeby mnie nie
+rozpraszać.
 
+## Podsumowanie
 
-
-
-
-
-
+Dzięki temu rozłożeniu aplikacji na workspace'y mam szybki i łatwy dostęp do wszystkich potrzebnych mi programów, co przyspiesza moją pracę. Na początku wymagało to nauki nowych skrótów klawiszowych, ale teraz jest to dla mnie naturalne.
