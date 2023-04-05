@@ -15,6 +15,7 @@ export const bio = `\
 Cześć :)
 Nazywam się Michał. Od lat zajmuję się sprzedażą. W mowie i piśmie :). Prywatnie
 grzebię się troszkę w kodzie. Obecnie jest to Svelte.
+BTW I use Arch :).
 `
 // Your social usernames, empty strings won't be used.
 // For sake of the live demo, I'm using `username/repo` for github,
