@@ -1,11 +1,11 @@
 <script>
-  import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
-  import PostsList from '$lib/components/PostsList.svelte'
+// import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
+//  import PostsList from '$lib/components/PostsList.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
   import { avatar, bio, name } from '$lib/info.js'
 
   /** @type {import('./$types').PageData} */
-//  export let data
+  //  export let data
 </script>
 
 <svelte:head>
@@ -27,22 +27,17 @@
     </div>
   </section>
   <section class="flex flex-col items-center w-full prose">
-<h2 class="text-2xl">Cześć :) Nazywam się Michał.</h2>
-      <p class="text-base text-zinc-600 dark:text-zinc-400">
-Od lat zajmuję się sprzedażą. W mowie i piśmie :).
-Prowadzę newsletter produtkowy dla klientów mojej obecnej firmy.
-
-Jestem odpowiedzialny za jego wygląd oraz terści. Z roku na rok zauważam jak bardzo
-zminiał się sposób prowadzenia jego prze ze mnie.
-</p>
-   <p class="text-base text-zinc-600 dark:text-zinc-400">
-Prywatnie grzebię się troszkę w kodzie. Myślę, że raczej nie mogę się nazwać programistą
-bo za mało piszę kodu. Jednak jestem w stanie sam postawić sobie bloga w Nextjs czy tak
-jak teraz w Svelte. Przyznaje, że bardzo mnie to pasjonuję i staram się poświęcać
-jak najwięcej temu czasu.
-      </p>
-
-
-
+    <h2 class="text-2xl">Cześć :) Nazywam się Michał.</h2>
+    <p class="text-base text-zinc-600 dark:text-zinc-400">
+      Od lat zajmuję się sprzedażą. W mowie i piśmie :). Prowadzę newsletter produtkowy dla klientów
+      mojej obecnej firmy. Jestem odpowiedzialny za jego wygląd oraz terści. Z roku na rok zauważam
+      jak bardzo zminiał się sposób prowadzenia jego prze ze mnie.
+    </p>
+    <p class="text-base text-zinc-600 dark:text-zinc-400">
+      Prywatnie grzebię się troszkę w kodzie. Myślę, że raczej nie mogę się nazwać programistą bo za
+      mało piszę kodu. Jednak jestem w stanie sam postawić sobie bloga w Nextjs czy tak jak teraz w
+      Svelte. Przyznaje, że bardzo mnie to pasjonuję i staram się poświęcać jak najwięcej temu
+      czasu.
+    </p>
   </section>
 </div>
