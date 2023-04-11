@@ -3,7 +3,7 @@
 // feel free to remove this file.
 
 // URL of your website
-export const website = 'michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
+export const website = 'https://michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
 export const localweb = 'http://localhost:5173/'
 export const firstName = 'Michał'
 export const lastName = 'Danieluk'
