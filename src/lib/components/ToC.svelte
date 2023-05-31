@@ -16,6 +16,8 @@
   let activeHeading = headings[0]
   let scrollY
 
+console.log(post.headings)
+
   function updateHeadings() {
     headings = post.headings
 
