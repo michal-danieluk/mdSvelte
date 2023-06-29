@@ -85,7 +85,7 @@
       </header>
 
       <!-- render the post -->
-      <div class="prose dark:prose-invert ">
+      <div class="prose prose-p:text-xl  dark:prose-invert ">
         <svelte:component this={data.component} />
       </div>
     </article>
