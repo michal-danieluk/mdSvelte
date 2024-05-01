@@ -12,8 +12,7 @@ export const name = `${firstName} ${lastName}`
 // Used for the landing page & footer of posts
 export const avatar = `img/michal.jpg` //'https://michaldanieluk.com/img/michal.jpg'
 export const bio = `\
-Cześć :)
-Nazywam się Michał. Od lat zajmuję się sprzedażą. W mowie i piśmie :). Prywatnie
+Cześć. Tutaj Michał. Od lat zajmuję się sprzedażą. W mowie i piśmie :). Prywatnie
 grzebię się troszkę w kodzie. Obecnie jest to Svelte.
 BTW I use Arch :).
 `

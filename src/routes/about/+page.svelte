@@ -1,6 +1,6 @@
 <script>
-// import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
-//  import PostsList from '$lib/components/PostsList.svelte'
+  // import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
+  //  import PostsList from '$lib/components/PostsList.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
   import { avatar, bio, name } from '$lib/info.js'
 
@@ -27,7 +27,7 @@
     </div>
   </section>
   <section class="flex flex-col items-center w-full prose">
-    <h2 class="text-2xl">Cześć :) Nazywam się Michał.</h2>
+    <h2 class="text-2xl">Cześć &#128512; Nazywam się Michał.</h2>
     <p class="text-base text-zinc-600 dark:text-zinc-400">
       Od lat zajmuję się sprzedażą. W mowie i piśmie :). Prowadzę newsletter produtkowy dla klientów
       mojej obecnej firmy. Jestem odpowiedzialny za jego wygląd oraz terści. Z roku na rok zauważam
