@@ -23,7 +23,7 @@ Gdzieś na YT zobaczyłem, że jest plugin do neovim-a, który pozwala na pracę
 
 Nie daje on pełnej gamy funkcji jakie mamy przy użwaniu aplikcaji **Obsidian** ale daje dość duże możliwosći jeśli chodzi o współpracę tych dwóch narzędzi. 
 
-## To co to może?
+## To co to potrafi?
 
 Plugin do Obsidiana pozawala na np. stworzenie nowej notatki. 
 
