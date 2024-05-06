@@ -1,7 +1,8 @@
 ---
-title: Neovim i Obsidian czy to udana para?
-date: 2024-04-24
+title: Czy Neovim i Obisidan to udana para?
+date: 2024-04-28  
 ---
+
 
 ## Neovim i obsydian.
 
