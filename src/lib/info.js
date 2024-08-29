@@ -3,10 +3,11 @@
 // feel free to remove this file.
 
 // URL of your website
-export const website = 'https://michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
+export const website = 'https://wd3kster.com'
+   // 'https://michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
 export const localweb = 'http://localhost:5173/'
-export const firstName = 'Michał'
-export const lastName = 'Danieluk'
+export const firstName = 'wd3kster'// 'Michał'
+export const lastName = '😎' //Danieluk'
 export const name = `${firstName} ${lastName}`
 
 // Used for the landing page & footer of posts
