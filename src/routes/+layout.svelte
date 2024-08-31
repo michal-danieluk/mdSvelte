@@ -6,6 +6,8 @@
   import { browser } from '$app/environment'
   import { name } from '$lib/info'
   import { page } from '$app/stores'
+  import {firstName} from '$lib/info'
+  import {lastName} from '$lib/info'
 
   let isDarkMode = browser ? Boolean(document.documentElement.classList.contains('dark')) : true
 
@@ -25,8 +27,8 @@
           class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 dark:to-teal-400"
           href="/"
         >
-          {name}
-        </a>
+          {firstName}
+        </a>{lastName}
 
         <a
           class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 hover:to-teal-800 dark:hover:to-teal-600 dark:to-teal-400"
