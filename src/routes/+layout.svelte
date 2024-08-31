@@ -28,8 +28,9 @@
           href="/"
         >
           {firstName}
+
+        <i class="text-2xl bg-transparent">{lastName}</i>
         </a>
-        <i class="text-xl justify-start">{lastName}</i>
 
         <a
           class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 hover:to-teal-800 dark:hover:to-teal-600 dark:to-teal-400"
