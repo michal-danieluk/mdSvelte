@@ -1,6 +1,7 @@
 ---
 title: Mój workflow
 date: 2023-03-04
+tags: ['Linux', 'i3wm', 'Workflow', 'Arch Linux']
 ---
 
 ## Workflow

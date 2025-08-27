@@ -1,6 +1,7 @@
 ---
 title: Markdown I ♥ you...
 date: 2022-12-12
+tags: ['Markdown', 'Writing', 'Blog']
 ---
 
 ## Uwielbiam markdown

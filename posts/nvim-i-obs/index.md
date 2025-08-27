@@ -1,6 +1,7 @@
 ---
 title: Nvim i Obsidian czy to udana para?
 date: 2024-04-24
+tags: ['Neovim', 'Obsidian', 'Tools', 'Note-taking']
 ---
 
 # Nvim i obsydian.

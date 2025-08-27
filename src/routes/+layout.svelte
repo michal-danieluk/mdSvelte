@@ -32,12 +32,20 @@
         <i class="text-2xl bg-transparent">{lastName}</i>
         </a>
 
-        <a
-          class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 hover:to-teal-800 dark:hover:to-teal-600 dark:to-teal-400"
-          href="/about"
-        >
-          O mnie
-        </a>
+        <nav class="flex items-center space-x-4">
+          <a
+            class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 hover:to-teal-800 dark:hover:to-teal-600 dark:to-teal-400"
+            href="/tags"
+          >
+            Tags
+          </a>
+          <a
+            class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 hover:to-teal-800 dark:hover:to-teal-600 dark:to-teal-400"
+            href="/about"
+          >
+            O mnie
+          </a>
+        </nav>
       </div>
       <button
         type="button"

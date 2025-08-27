@@ -36,6 +36,13 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
           )
         : undefined,
 
+      // process tags - ensure it's always an array
+      tags: post.metadata.tags 
+        ? Array.isArray(post.metadata.tags) 
+          ? post.metadata.tags.map(tag => tag.trim()) 
+          : post.metadata.tags.split(',').map(tag => tag.trim())
+        : [],
+
       preview: {
         html: preview.toString(),
         // text-only preview (i.e no html elements), used for SEO
@@ -60,4 +67,33 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
 function addTimezoneOffset(date) {
   const offsetInMilliseconds = new Date().getTimezoneOffset() * 60 * 1000
   return new Date(new Date(date).getTime() + offsetInMilliseconds)
+}
+
+// Get all unique tags from all posts
+export function getAllTags() {
+  const allTags = posts.flatMap(post => post.tags)
+  const uniqueTags = [...new Set(allTags)]
+  
+  return uniqueTags
+    .map(tag => ({
+      name: tag,
+      slug: tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+      count: allTags.filter(t => t === tag).length
+    }))
+    .sort((a, b) => b.count - a.count)
+}
+
+// Get posts by tag
+export function getPostsByTag(tagSlug) {
+  return posts.filter(post => 
+    post.tags.some(tag => 
+      tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') === tagSlug
+    )
+  )
+}
+
+// Get tag info by slug
+export function getTagBySlug(tagSlug) {
+  const tags = getAllTags()
+  return tags.find(tag => tag.slug === tagSlug)
 }

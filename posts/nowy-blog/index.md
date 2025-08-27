@@ -1,6 +1,7 @@
 ---
 title: Postawiłem nowy blog cz. 1
 date: 2023-2-21
+tags: ['SvelteKit', 'Blog', 'Web Development']
 ---
 
 No i powstał nowy blog. W znaczeniu nowa szata graficzna i nowy silnik podspodem.

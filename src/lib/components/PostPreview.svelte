@@ -1,6 +1,7 @@
 <script>
   import Card from './Card.svelte'
   import ArrowRightIcon from './ArrowRightIcon.svelte'
+  import Tags from './Tags.svelte'
 
   export let post
 </script>
@@ -10,6 +11,12 @@
   <slot slot="title">{post.title}</slot>
   <div slot="description" class="prose dark:prose-invert">
     {@html post.preview.html}
+    
+    {#if post.tags && post.tags.length > 0}
+      <div class="mt-3 not-prose">
+        <Tags tags={post.tags} showLabel={false} size="sm" />
+      </div>
+    {/if}
   </div>
   <div slot="actions">
     <div class="flex items-center text-teal-500">

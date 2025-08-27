@@ -3,6 +3,7 @@
   import ToC from '$lib/components/ToC.svelte'
   import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
+  import Tags from '$lib/components/Tags.svelte'
   import { afterNavigate } from '$app/navigation'
   import PostDate from '$lib/components/PostDate.svelte'
 
@@ -83,6 +84,12 @@
           {data.post.title}
         </h1>
         <PostDate class="text-sm sm:text-base" post={data.post} decorate collapsed />
+        
+        {#if data.post.tags && data.post.tags.length > 0}
+          <div class="mt-4">
+            <Tags tags={data.post.tags} />
+          </div>
+        {/if}
       </header>
 
       <!-- render the post -->
