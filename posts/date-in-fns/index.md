@@ -1,5 +1,6 @@
 ---
 title: Polskie wyświetlanie miesięcy w date-fns
+tags: Blog, Data, Config 
 date: 2023-2-22
 ---
 
