@@ -14,25 +14,26 @@
   <meta name="description" content={bio} />
 </svelte:head>
 
-<div class="flex flex-col flex-grow pb-16">
-  <!-- bio card - 20% wider than main container -->
-  <section class="flex flex-col items-center pt-8 pb-16 -mx-4">
-    <div class="bg-amber-50 dark:bg-gray-800 border border-amber-200 dark:border-gray-700 rounded-xl shadow-lg p-12 transition-all duration-300 hover:shadow-xl hover:bg-amber-100 dark:hover:bg-gray-700 hover:-translate-y-1 w-full max-w-3xl">
-      <div class="flex flex-col items-center w-full gap-8">
-        <img
-          src={avatar}
-          alt={name}
-          class="mx-auto rounded-full w-44 h-44 ring-4 ring-amber-200 dark:ring-gray-600 shadow-lg"
-        />
-        <div class="flex gap-6">
-          <SocialLinks />
-        </div>
-        <p class="text-lg text-gray-700 dark:text-gray-300 text-center max-w-3xl leading-relaxed">
-          {bio}
-        </p>
+<!-- bio card - breaking out of all parent containers -->
+<section class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen flex justify-center pt-8 pb-16 bg-gradient-to-b from-amber-50/50 to-transparent dark:from-gray-800/50 dark:to-transparent">
+  <div class="bg-amber-50 dark:bg-gray-800 border border-amber-200 dark:border-gray-700 rounded-xl shadow-lg p-12 transition-all duration-300 hover:shadow-xl hover:bg-amber-100 dark:hover:bg-gray-700 hover:-translate-y-1 w-full max-w-4xl mx-4">
+    <div class="flex flex-col items-center w-full gap-8">
+      <img
+        src={avatar}
+        alt={name}
+        class="mx-auto rounded-full w-44 h-44 ring-4 ring-amber-200 dark:ring-gray-600 shadow-lg"
+      />
+      <div class="flex gap-6">
+        <SocialLinks />
       </div>
+      <p class="text-lg text-gray-700 dark:text-gray-300 text-center max-w-3xl leading-relaxed">
+        {bio}
+      </p>
     </div>
-  </section>
+  </div>
+</section>
+
+<div class="flex flex-col flex-grow pb-16">
   
   <div class="flex flex-col gap-8">
     <section class="w-full">
