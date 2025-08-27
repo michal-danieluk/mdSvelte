@@ -16,8 +16,9 @@ Ansible jest dość łatwy w użciu. Opiera się o pliki YAML i działa na zasad
 ## Stow
 
 Stow służy do:
-> GNU Stow is a symlink farm manager which takes distinct  packages of software and/or data located in separate  directories on the filesystem, and makes them appear to be installed in the same place.
->  GNU Stow documentation
+
+> GNU Stow is a symlink farm manager which takes distinct packages of software and/or data located in separate directories on the filesystem, and makes them appear to be installed in the same place.
+> GNU Stow documentation
 
 Wegług ich definicji jest to menadżer symlinków. I dlaczego jest On, aż tak przydatny w naszym przypadku?
 Ja prawie wszystkie swoje pliki konfiguracyjne mam w katalogu `dotfiles` który trzymam w repozytorim git na GitHubie. Kiedy przeisntaluję komputer lub przesiadam się na nowy komputer, oczywisćie musi to byś system UNIX, to wystarczy tylko mi sciaganć to repozytorium i odpalić Stow by wyszstyko było skonfigurowane tak jak ja to chce.
@@ -25,6 +26,7 @@ Ja prawie wszystkie swoje pliki konfiguracyjne mam w katalogu `dotfiles` który 
 ## Dotfiles
 
 Jak już można było zauważyć wcześniej dotfiles to moje pliki konfiguracyjne. Mam tam "confy" do takich aplikajci jak:
+
 - i3
 - neovim
 - tmux
@@ -35,12 +37,8 @@ Jak już można było zauważyć wcześniej dotfiles to moje pliki konfiguracyjn
 
 Wszystkie one są w moim repozytorium na githubie.
 
-##  Na koniec
+## Na koniec
 
-Te narzędzia oraz możliwość ich łatwego użycia bardzo oszczędza czas i poprawia wydajność. Szczególnie, że pracuje na aplikacjach wykorzystujących w dużej mierze  skróty klawiszowe.
+Te narzędzia oraz możliwość ich łatwego użycia bardzo oszczędza czas i poprawia wydajność. Szczególnie, że pracuje na aplikacjach wykorzystujących w dużej mierze skróty klawiszowe.
 
 #blog
-
-
-
-

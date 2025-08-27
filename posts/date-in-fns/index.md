@@ -2,6 +2,7 @@
 title: Polskie wyświetlanie miesięcy w date-fns
 date: 2023-2-22
 ---
+
 ## Data po polsku
 
 Chciałem mieć ładnie brzmiącą datę.
@@ -9,7 +10,6 @@ Chciałem mieć ładnie brzmiącą datę.
 Kiedy wyświetlałem zestawienie wpisów i pokazywały się ich daty to chciałem żeby były one po polsku. Czyli pokazywało 15 grudnia czy 14 marca. W wersji orginalnej było oczywiści po angielsku.
 
 ![Eng Date](./date_fns.png)
-
 
 Kod do tego wyglądał mniej więcej tak.
 
@@ -20,7 +20,6 @@ Kod do tego wyglądał mniej więcej tak.
 
 ## Po polsku tak?
 
-
 Ja za to chciałem, żeby Dec zmienił się w grudzień. W domentacji **date-fns** w funkcji **format** znalazłem odniesienie do opcji locale.
 
 Myśle sobie super hurra. I jedziemy z tym.
@@ -28,7 +27,9 @@ Myśle sobie super hurra. I jedziemy z tym.
 Poprzedni kod zmieniłem na
 
 ```js
-{format(new Date(parseISO(post.date)), 'd MMMM yyyy', {locale: pl})}
+{
+  format(new Date(parseISO(post.date)), 'd MMMM yyyy', { locale: pl })
+}
 ```
 
 I jakieś było moje zdumenie kiedy SvelteKit wywalił mi błąd.
@@ -78,4 +79,3 @@ import pl from 'date-fns/locale/pl/index'
 ```
 
 Ta końcówka **/pl/index** zmieniła wszyskto. Od teraz wszsytko chula jak możecie zobaczyć sami.
-

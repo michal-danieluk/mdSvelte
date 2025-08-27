@@ -2,6 +2,7 @@
 title: Mój workflow
 date: 2023-03-04
 ---
+
 ## Workflow
 
 Mój workflow opiera się na systemie Linux Arch oraz i3wm. i3 to menedżer okien, którym głównie obsługuje się skrótami klawiszowymi, chociaż można też używać myszy.
@@ -12,10 +13,10 @@ Czyli skróty klawiszowe.
 
 Niektóre skróty klawiszowe, które stosuję, to:
 
- - Alt+Enter - otwiera terminal
- - Alt+b - otwiera przeglądarkę
- - Alt+1 - pierwszy workspace
- - itd.
+- Alt+Enter - otwiera terminal
+- Alt+b - otwiera przeglądarkę
+- Alt+1 - pierwszy workspace
+- itd.
 
 Można mieć do 10 workspace'ów. Przestawienie się z Window Managera takiego jak
 i3 na inny system operacyjny wymaga czasu, aby nauczyć się nowych skrótów
@@ -25,15 +26,15 @@ klawiszowych.
 
 Kiedy uruchamiam system, pracuję na laptopie i jednym zewnętrznym monitorze. Na dużym monitorze mam uruchomione kolejno:
 
- - workspace 1 - terminal
- - workspace 2 - przeglądarka
- - workspace 3 - poczta (neomutt)
- - workspace 4 - Spotify/Obsidian
- - workspace 5 - Slack
+- workspace 1 - terminal
+- workspace 2 - przeglądarka
+- workspace 3 - poczta (neomutt)
+- workspace 4 - Spotify/Obsidian
+- workspace 5 - Slack
 
 Na laptopie natomiast:
 
- - workspace 10 - Signal/Endel playlist
+- workspace 10 - Signal/Endel playlist
 
 ## Opis moich workspace
 

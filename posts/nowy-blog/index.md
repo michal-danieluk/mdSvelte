@@ -17,7 +17,7 @@ mnie kusiło już od jakiegoś czasu. I myślałem też o innych technologiach t
 **Astro**. Nawet gdzieś na dysku mam jakiś początek mojej przygody z tym. Ostatenie padło
 jednak na coś innego. Dlatego?
 
-## Znowu ***[The Primegen](https://www.youtube.com/@ThePrimeTimeagen)***
+## Znowu **_[The Primegen](https://www.youtube.com/@ThePrimeTimeagen)_**
 
 Ten pan zainspirował mnie już do kilku zmian innych zmian. Jedną z nich było używanie NeoVim do pisania
 kodu :) .
@@ -40,9 +40,9 @@ Niestety pokazuje on np.
 ```
 4 min read
 ```
+
 Nie miałem czasu narazie to **read** zmienić na odpowiednik polski.
 Ale napewno to zrobię, kwestia czasu.
 
 Wyświetlanie daty w konwencji polskiej udało mi się zmienić, a zajeło mi to chwilę. Więcej
 o tym **[tutaj](/post/date-in-fns)**.
-

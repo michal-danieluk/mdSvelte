@@ -4,14 +4,14 @@
 
 // URL of your website
 export const website = 'https://wd3kster.com'
-   // 'https://michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
+// 'https://michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
 export const localweb = 'http://localhost:5173/'
-export const firstName = 'wd3kster'// 'Michał'
+export const firstName = 'wd3kster' // 'Michał'
 export const lastName = '😎' //Danieluk'
 export const name = `${firstName} ${lastName}`
 
 // Used for the landing page & footer of posts
-export const avatar = `img/michal.jpg` //'https://michaldanieluk.com/img/michal.jpg'
+export const avatar = `img/md.jpg` //'https://michaldanieluk.com/img/michal.jpg'
 export const bio = `\
 Cześć. Tutaj Michał. Od lat zajmuję się sprzedażą. W mowie i piśmie :). Prywatnie
 grzebię się troszkę w kodzie. Obecnie jest to Svelte.
