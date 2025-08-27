@@ -1,22 +1,25 @@
 <script>
   import { browser } from '$app/environment'
-  import { onMount } from 'svelte'
+  import { onMount, onDestroy } from 'svelte'
   import Card from './Card.svelte'
 
   export let post
 
   let elements = []
   let headings = post.headings
+  let activeHeading = headings[0]
+  let scrollTimeout
 
   onMount(() => {
     updateHeadings()
     setActiveHeading()
   })
 
-  let activeHeading = headings[0]
-  let scrollY
-
-console.log(post.headings)
+  onDestroy(() => {
+    if (scrollTimeout) {
+      clearTimeout(scrollTimeout)
+    }
+  })
 
   function updateHeadings() {
     headings = post.headings
@@ -24,27 +27,46 @@ console.log(post.headings)
     if (browser) {
       elements = headings.map((heading) => {
         return document.getElementById(heading.id)
-      })
+      }).filter(Boolean) // Remove null elements
     }
   }
+
   function setActiveHeading() {
-    scrollY = window.scrollY
+    if (!browser || elements.length === 0) return
 
-    const visibleIndex =
-      elements.findIndex((element) => element.offsetTop + element.clientHeight > scrollY) - 1
-
-    activeHeading = headings[visibleIndex]
-
-    const pageHeight = document.body.scrollHeight
-    const scrollProgress = (scrollY + window.innerHeight) / pageHeight
-
-    if (!activeHeading) {
-      if (scrollProgress > 0.5) {
-        activeHeading = headings[headings.length - 1]
-      } else {
-        activeHeading = headings[0]
-      }
+    // Clear any existing timeout to throttle scroll events
+    if (scrollTimeout) {
+      clearTimeout(scrollTimeout)
     }
+
+    scrollTimeout = setTimeout(() => {
+      const scrollY = window.scrollY
+      const windowHeight = window.innerHeight
+      
+      // Add some offset so heading is considered "active" before it reaches the very top
+      const offset = 100
+      
+      let currentActiveHeading = headings[0]
+
+      // Find the heading that's currently most visible
+      for (let i = elements.length - 1; i >= 0; i--) {
+        const element = elements[i]
+        if (element && element.offsetTop <= scrollY + offset) {
+          currentActiveHeading = headings[i]
+          break
+        }
+      }
+
+      // Handle case when we're near the bottom of the page
+      const pageHeight = document.documentElement.scrollHeight
+      const scrollProgress = (scrollY + windowHeight) / pageHeight
+      
+      if (scrollProgress > 0.95) {
+        currentActiveHeading = headings[headings.length - 1]
+      }
+
+      activeHeading = currentActiveHeading
+    }, 10) // Small delay to throttle scroll events
   }
 </script>
 
