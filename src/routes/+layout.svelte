@@ -21,40 +21,34 @@
 
 <div class="flex flex-col min-h-screen">
   <div class="flex flex-col flex-grow w-full px-4 py-2">
-    <header class="sticky top-0 z-50 w-full backdrop-blur-sm bg-white/90 dark:bg-zinc-900/90 border-b border-zinc-200/50 dark:border-zinc-700/50">
-      <div class="flex items-center justify-between w-full max-w-5xl px-6 py-3 mx-auto">
-        <!-- Avatar + Name -->
-        <div class="flex items-center space-x-3">
-          <a href="/" class="flex items-center space-x-3 group">
-            <img
-              src="/img/md.jpg"
-              alt="{firstName} {lastName}"
-              class="w-10 h-10 rounded-full ring-2 ring-teal-200 dark:ring-teal-600 group-hover:ring-teal-300 dark:group-hover:ring-teal-500 transition-all duration-300"
-            />
-            <div class="flex flex-col">
-              <span class="text-lg font-semibold !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 dark:to-teal-400 group-hover:from-teal-600 group-hover:to-teal-700 dark:group-hover:to-teal-300 transition-all duration-300">
-                {firstName} {lastName}
-              </span>
-              <span class="text-xs text-zinc-500 dark:text-zinc-400">
-                Blog osobisty
-              </span>
-            </div>
+    <!-- Option 1: Minimal Floating Header -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-700 shadow-sm">
+      <div class="flex items-center justify-between w-full max-w-2xl px-4 py-3 mx-auto">
+        <!-- Logo/Name -->
+        <div class="flex items-center">
+          <a
+            href="/"
+            class="text-lg font-bold text-zinc-900 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200"
+          >
+            {firstName} {lastName}
           </a>
         </div>
 
         <!-- Navigation -->
-        <nav class="hidden md:flex items-center space-x-6">
+        <nav class="hidden sm:flex items-center space-x-6">
           <a
-            class="text-sm font-medium text-zinc-600 hover:text-teal-600 dark:text-zinc-300 dark:hover:text-teal-400 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-teal-50 dark:hover:bg-teal-900/30"
+            class="relative text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors duration-200 group"
             href="/tags"
           >
             Tags
+            <span class="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-teal-500 to-teal-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
           </a>
           <a
-            class="text-sm font-medium text-zinc-600 hover:text-teal-600 dark:text-zinc-300 dark:hover:text-teal-400 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-teal-50 dark:hover:bg-teal-900/30"
+            class="relative text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors duration-200 group"
             href="/about"
           >
             O mnie
+            <span class="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-teal-500 to-teal-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
           </a>
         </nav>
 
@@ -65,7 +59,7 @@
             role="switch"
             aria-label="Toggle Dark Mode"
             aria-checked={isDarkMode}
-            class="flex items-center justify-center w-9 h-9 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors duration-200"
+            class="flex items-center justify-center w-8 h-8 rounded-md text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors duration-200"
             on:click={() => {
               isDarkMode = !isDarkMode
               localStorage.setItem('isDarkMode', isDarkMode.toString())
@@ -79,8 +73,8 @@
               }
             }}
           >
-            <MoonIcon class="hidden w-4 h-4 text-zinc-600 dark:block dark:text-zinc-400" />
-            <SunIcon class="block w-4 h-4 text-zinc-600 dark:hidden" />
+            <MoonIcon class="hidden w-4 h-4 dark:block" />
+            <SunIcon class="block w-4 h-4 dark:hidden" />
           </button>
         </div>
       </div>
