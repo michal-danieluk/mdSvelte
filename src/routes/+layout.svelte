@@ -83,7 +83,7 @@
       <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
         <div class="flex items-center gap-2">
           <span class="text-sm text-zinc-600 dark:text-zinc-400">
-            © 2024 {firstName} {lastName}
+            © 2023-{new Date().getFullYear()} {firstName} {lastName}
           </span>
         </div>
         <div class="flex items-center gap-4">
