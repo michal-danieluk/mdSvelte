@@ -17,7 +17,7 @@
 <div class="flex flex-col flex-grow pb-16">
   <!-- bio card - 20% wider than main container -->
   <section class="flex flex-col items-center pt-8 pb-16 -mx-4">
-    <div class="bio-card bg-amber-50 dark:bg-gray-800 border border-amber-200 dark:border-gray-700 rounded-xl shadow-lg p-12 transition-all duration-300 hover:shadow-xl hover:bg-amber-100 w-full max-w-3xl">
+    <div class="bg-amber-50 dark:bg-gray-800 border border-amber-200 dark:border-gray-700 rounded-xl shadow-lg p-12 transition-all duration-300 hover:shadow-xl hover:bg-amber-100 dark:hover:bg-gray-700 hover:-translate-y-1 w-full max-w-3xl">
       <div class="flex flex-col items-center w-full gap-8">
         <img
           src={avatar}
@@ -48,14 +48,3 @@
     </section>
   </div>
 </div>
-
-<style lang="postcss">
-  .bio-card {
-    @apply transform hover:-translate-y-1;
-  }
-  
-  /* Custom gray-750 color since it's not in default Tailwind */
-  :global(.dark) .bio-card:hover {
-    background-color: rgb(55 65 81); /* gray-750 equivalent */
-  }
-</style>
