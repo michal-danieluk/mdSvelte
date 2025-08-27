@@ -4,11 +4,11 @@
 
 // URL of your website
 export const website = 'https://wd3kster.com'
-// 'https://michaldanieluk.com'//'https://sveltekit-blog-template.vercel.app'
+// 'https://michaldanieluk.com'//'https://mdSvelte-blog.vercel.app'
 export const localweb = 'http://localhost:5173/'
 export const firstName = 'Michał' // 'Michał'
 export const lastName = 'Danieluk'
-export const name = `${firstName} ${lastName}`+'😎'
+export const name = `${firstName} ${lastName}` // +'😎'
 
 // Used for the landing page & footer of posts
 export const avatar = `img/md.jpg` //'https://michaldanieluk.com/img/michal.jpg'
@@ -20,7 +20,7 @@ BTW I use Arch :).
 // Your social usernames, empty strings won't be used.
 // For sake of the live demo, I'm using `username/repo` for github,
 // but you can replace with just your username.
-export const github = '' //'mattjennings/sveltekit-blog-template'
+export const github = '' //'mattjennings/mdSvelte-blog'
 export const twitter = 'michaldanieluk'
 export const linkedin = 'michal-danieluk'
 export const instagram = 'michal_danieluk'
