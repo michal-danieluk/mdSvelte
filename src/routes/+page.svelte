@@ -17,17 +17,17 @@
 <div class="flex flex-col flex-grow gap-8 pb-16">
   <!-- bio card -->
   <section class="flex flex-col items-center gap-16 pt-8 pb-16">
-    <div class="bio-card bg-yellow-50 dark:bg-gray-800 border border-yellow-200 dark:border-gray-700 rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:bg-yellow-100">
-      <div class="flex flex-col items-center w-full gap-6">
+    <div class="bio-card bg-amber-50 dark:bg-gray-800 border border-amber-200 dark:border-gray-700 rounded-xl shadow-lg p-12 transition-all duration-300 hover:shadow-xl hover:bg-amber-100 max-w-4xl w-full">
+      <div class="flex flex-col items-center w-full gap-8">
         <img
           src={avatar}
           alt={name}
-          class="mx-auto rounded-full w-36 h-36 ring-4 ring-yellow-200 dark:ring-gray-600 shadow-lg"
+          class="mx-auto rounded-full w-44 h-44 ring-4 ring-amber-200 dark:ring-gray-600 shadow-lg"
         />
         <div class="flex gap-6">
           <SocialLinks />
         </div>
-        <p class="text-base text-gray-700 dark:text-gray-300 text-center max-w-2xl leading-relaxed">
+        <p class="text-lg text-gray-700 dark:text-gray-300 text-center max-w-3xl leading-relaxed">
           {bio}
         </p>
       </div>
