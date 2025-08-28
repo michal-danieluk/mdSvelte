@@ -4,15 +4,15 @@
   import { Moon, Sun } from '@steeze-ui/heroicons'
   import { Icon } from '@steeze-ui/svelte-icon'
   import { browser } from '$app/environment'
-  //import { name } from '$lib/info'
+  import { onMount } from 'svelte'
   import { page } from '$app/stores'
   import { firstName } from '$lib/info'
   import { lastName } from '$lib/info'
 
-  let isDarkMode = true
+  let { children } = $props()
+  let isDarkMode = $state(true)
 
-  // Initialize theme properly
-  if (browser) {
+  onMount(() => {
     // Check localStorage first, then system preference
     const stored = localStorage.getItem('isDarkMode')
     if (stored !== null) {
@@ -22,18 +22,37 @@
     }
     
     // Apply the theme immediately
+    updateTheme()
+  })
+
+  function updateTheme() {
+    if (!browser) return
+    
+    // Add temporary transition disable
+    const style = document.createElement('style')
+    style.textContent = '*, *::before, *::after { transition-duration: 0s !important; }'
+    document.head.appendChild(style)
+    
     if (isDarkMode) {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
+    
+    // Remove transition disable after DOM update
+    setTimeout(() => {
+      try {
+        document.head.removeChild(style)
+      } catch (e) {
+        // Style element already removed, ignore
+      }
+    }, 50)
   }
 
-  function disableTransitionsTemporarily() {
-    document.documentElement.classList.add('[&_*]:!transition-none')
-    window.setTimeout(() => {
-      document.documentElement.classList.remove('[&_*]:!transition-none')
-    }, 0)
+  function toggleTheme() {
+    isDarkMode = !isDarkMode
+    localStorage.setItem('isDarkMode', isDarkMode.toString())
+    updateTheme()
   }
 </script>
 
@@ -78,21 +97,13 @@
             aria-label="Toggle Dark Mode"
             aria-checked={isDarkMode}
             class="flex items-center justify-center w-8 h-8 rounded-md text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors duration-200"
-            on:click={() => {
-              isDarkMode = !isDarkMode
-              localStorage.setItem('isDarkMode', isDarkMode.toString())
-
-              disableTransitionsTemporarily()
-
-              if (isDarkMode) {
-                document.documentElement.classList.add('dark')
-              } else {
-                document.documentElement.classList.remove('dark')
-              }
-            }}
+            onclick={toggleTheme}
           >
-            <Icon src={Moon} class="hidden w-4 h-4 dark:block" />
-            <Icon src={Sun} class="block w-4 h-4 dark:hidden" />
+            {#if isDarkMode}
+              <Icon src={Sun} class="w-4 h-4" />
+            {:else}
+              <Icon src={Moon} class="w-4 h-4" />
+            {/if}
           </button>
         </div>
       </div>
@@ -101,7 +112,7 @@
       class="flex flex-col flex-grow w-full mx-auto"
       class:max-w-2xl={!$page.data.layout?.fullWidth}
     >
-      <slot />
+      {@render children?.()}
     </main>
   </div>
   
