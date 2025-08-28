@@ -20,8 +20,10 @@
     } else {
       isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
     }
-    
-    // Apply the theme immediately
+  })
+
+  // Reactively update theme when isDarkMode changes
+  $effect(() => {
     updateTheme()
   })
 
@@ -52,7 +54,6 @@
   function toggleTheme() {
     isDarkMode = !isDarkMode
     localStorage.setItem('isDarkMode', isDarkMode.toString())
-    updateTheme()
   }
 </script>
 
