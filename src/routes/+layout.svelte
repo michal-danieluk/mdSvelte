@@ -2,7 +2,7 @@
   import '../app.css'
   import '../prism.css'
   import { Moon, Sun } from '@steeze-ui/heroicons'
-  import Icon from '@steeze-ui/svelte-icon'
+  import { Icon } from '@steeze-ui/svelte-icon'
   import { browser } from '$app/environment'
   //import { name } from '$lib/info'
   import { page } from '$app/stores'
