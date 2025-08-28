@@ -10,50 +10,50 @@
   import { lastName } from '$lib/info'
 
   let { children } = $props()
+  
+  // Default to dark mode (true = dark, false = light)
   let isDarkMode = $state(true)
+  let mounted = $state(false)
 
   onMount(() => {
-    // Check localStorage first, then system preference
-    const stored = localStorage.getItem('isDarkMode')
-    if (stored !== null) {
-      isDarkMode = stored === 'true'
+    mounted = true
+    
+    // Initialize theme from localStorage or default to dark
+    const stored = localStorage.getItem('theme')
+    if (stored) {
+      isDarkMode = stored === 'dark'
     } else {
-      isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+      // Default to dark mode
+      isDarkMode = true
+      localStorage.setItem('theme', 'dark')
+    }
+    
+    // Apply theme immediately
+    applyTheme()
+  })
+
+  // React to isDarkMode changes
+  $effect(() => {
+    if (mounted) {
+      applyTheme()
     }
   })
 
-  // Reactively update theme when isDarkMode changes
-  $effect(() => {
-    updateTheme()
-  })
-
-  function updateTheme() {
+  function applyTheme() {
     if (!browser) return
     
-    // Add temporary transition disable
-    const style = document.createElement('style')
-    style.textContent = '*, *::before, *::after { transition-duration: 0s !important; }'
-    document.head.appendChild(style)
+    const html = document.documentElement
     
     if (isDarkMode) {
-      document.documentElement.classList.add('dark')
+      html.classList.add('dark')
     } else {
-      document.documentElement.classList.remove('dark')
+      html.classList.remove('dark')
     }
-    
-    // Remove transition disable after DOM update
-    setTimeout(() => {
-      try {
-        document.head.removeChild(style)
-      } catch (e) {
-        // Style element already removed, ignore
-      }
-    }, 50)
   }
 
   function toggleTheme() {
     isDarkMode = !isDarkMode
-    localStorage.setItem('isDarkMode', isDarkMode.toString())
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light')
   }
 </script>
 
