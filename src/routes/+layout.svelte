@@ -1,8 +1,8 @@
 <script>
   import '../app.css'
   import '../prism.css'
-  import MoonIcon from 'heroicons-svelte/dist/24/solid/MoonIcon.svelte'
-  import SunIcon from 'heroicons-svelte/dist/24/solid/SunIcon.svelte'
+  import { Moon, Sun } from '@steeze-ui/heroicons'
+  import Icon from '@steeze-ui/svelte-icon'
   import { browser } from '$app/environment'
   //import { name } from '$lib/info'
   import { page } from '$app/stores'
@@ -73,8 +73,8 @@
               }
             }}
           >
-            <MoonIcon class="hidden w-4 h-4 dark:block" />
-            <SunIcon class="block w-4 h-4 dark:hidden" />
+            <Icon src={Moon} class="hidden w-4 h-4 dark:block" />
+            <Icon src={Sun} class="block w-4 h-4 dark:hidden" />
           </button>
         </div>
       </div>
