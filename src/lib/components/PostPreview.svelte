@@ -7,7 +7,7 @@
 </script>
 
 <Card href={`/post/${post.slug}`} data-sveltekit-prefetch>
-  <slot slot="eyebrow" name="eyebrow" />
+  <slot slot="eyebrow" name="eyebrow"></slot>
   <slot slot="title">{post.title}</slot>
   <div slot="description" class="prose dark:prose-invert">
     {@html post.preview.html}

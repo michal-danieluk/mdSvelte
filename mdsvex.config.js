@@ -38,7 +38,7 @@ function videos() {
               playsinline
               loop
               title="${node.alt}"
-            />
+            ></video>
           `
       }
     })

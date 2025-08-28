@@ -70,7 +70,7 @@
   }
 </script>
 
-<svelte:window on:scroll={setActiveHeading} />
+<svelte:window on:scroll={setActiveHeading}></svelte:window>
 
 <Card>
   <slot slot="description">
