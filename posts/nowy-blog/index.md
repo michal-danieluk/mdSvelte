@@ -18,9 +18,9 @@ mnie kusiło już od jakiegoś czasu. I myślałem też o innych technologiach t
 **Astro**. Nawet gdzieś na dysku mam jakiś początek mojej przygody z tym. Ostatenie padło
 jednak na coś innego. Dlatego?
 
-## Znowu **_[The Primegen](https://www.youtube.com/@ThePrimeTimeagen)_**
+## Znowu The Primegean
 
-Ten pan zainspirował mnie już do kilku zmian innych zmian. Jedną z nich było używanie NeoVim do pisania
+Ten pan zainspirował mnie już do kilku zmian innych zmian. Jedną z nich było używanie NeoVim do pisania. Mowa o [The Primeagen](https://www.youtube.com/@ThePrimeTimeagen) który
 kodu :) .
 W grudniu miał liva z twórcą Svelte (Rich Harris).
 
