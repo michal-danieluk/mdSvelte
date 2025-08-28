@@ -57,6 +57,7 @@
 </svelte:head>
 
 <div class="root max-w-2xl mx-auto lg:max-w-none">
+  <!-- Back button column (left) -->
   <div class="hidden lg:block pt-8">
     <div class="sticky top-0 w-full flex justify-end pt-11 pr-8">
       <svelte:element
@@ -75,6 +76,7 @@
     </div>
   </div>
 
+  <!-- Main content column (center) -->
   <div class="w-full mx-auto overflow-x-hidden">
     <article>
       <header class="flex flex-col">
@@ -115,10 +117,12 @@
     </div>
   </div>
 
-  <!-- table of contents -->
-  <div class="hidden xl:block pt-10">
-    <aside class="sticky hidden w-48 ml-8 xl:block top-8" aria-label="Table of Contents">
-      <ToC post={data.post} />
+  <!-- Table of contents column (right) -->
+  <div class="hidden lg:block pt-10">
+    <aside class="sticky w-48 ml-8 top-8" aria-label="Table of Contents">
+      {#if data.post.headings && data.post.headings.length > 0}
+        <ToC post={data.post} />
+      {/if}
     </aside>
   </div>
 </div>

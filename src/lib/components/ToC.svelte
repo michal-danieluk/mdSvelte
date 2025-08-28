@@ -97,11 +97,14 @@
   }
 
   .active {
-    @apply font-medium text-slate-900 border-l-2 -ml-[2px];
+    font-weight: 500;
+    color: #18181b;
+    border-left-width: 2px;
+    margin-left: -2px;
   }
 
   /* can't use dark: modifier in @apply */
   :global(.dark) .active {
-    @apply text-slate-100;
+    color: #f4f4f5;
   }
 </style>

@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 @import './prism.css';
+@plugin "@tailwindcss/typography";
+
+@reference;
 
 @layer base {
   body {

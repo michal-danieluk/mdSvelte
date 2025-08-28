@@ -9,7 +9,25 @@
   import { firstName } from '$lib/info'
   import { lastName } from '$lib/info'
 
-  let isDarkMode = browser ? Boolean(document.documentElement.classList.contains('dark')) : true
+  let isDarkMode = true
+
+  // Initialize theme properly
+  if (browser) {
+    // Check localStorage first, then system preference
+    const stored = localStorage.getItem('isDarkMode')
+    if (stored !== null) {
+      isDarkMode = stored === 'true'
+    } else {
+      isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+    
+    // Apply the theme immediately
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
 
   function disableTransitionsTemporarily() {
     document.documentElement.classList.add('[&_*]:!transition-none')
@@ -67,9 +85,9 @@
               disableTransitionsTemporarily()
 
               if (isDarkMode) {
-                document.querySelector('html').classList.add('dark')
+                document.documentElement.classList.add('dark')
               } else {
-                document.querySelector('html').classList.remove('dark')
+                document.documentElement.classList.remove('dark')
               }
             }}
           >

@@ -54,6 +54,9 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
           : metadata.tags.split(',').map((tag) => tag.trim())
         : [],
 
+      // include headings for table of contents
+      headings: metadata.headings || [],
+
       preview: {
         html: preview.toString(),
         // text-only preview (i.e no html elements), used for SEO
