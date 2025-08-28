@@ -26,7 +26,7 @@
       </div>
     </div>
   </section>
-  <section class="flex flex-col items-center w-full prose">
+  <section class="flex flex-col items-center w-full prose dark:prose-invert">
     <h2 class="text-2xl">Cześć &#128512; Nazywam się Michał.</h2>
     <p class="text-base text-zinc-600 dark:text-zinc-400">
       Od lat zajmuję się sprzedażą. W mowie i piśmie :). Prowadzę newsletter produtkowy dla klientów
