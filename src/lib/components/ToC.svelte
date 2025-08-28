@@ -74,7 +74,7 @@
 
 <Card>
   <slot slot="description">
-    <ul class="flex flex-col gap-2">
+    <ul class="flex flex-col" style="gap: 0.5rem;">
       {#each headings as heading}
         <li
           class="pl-2 transition-colors border-teal-500 heading text-zinc-500 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100"

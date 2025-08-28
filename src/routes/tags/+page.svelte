@@ -33,7 +33,8 @@
               {#each data.tags as tag}
                 <a
                   href="/tag/{tag.slug}"
-                  class="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-zinc-700 bg-zinc-100 rounded-full hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition-colors"
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-zinc-700 bg-zinc-100 rounded-full hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition-colors"
+                  style="gap: 0.5rem;"
                 >
                   {tag.name}
                   <span class="text-xs text-zinc-500 dark:text-zinc-400">

@@ -108,7 +108,7 @@
   <footer class="w-full border-t border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900">
     <div class="max-w-2xl mx-auto px-4 py-8">
       <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center" style="gap: 0.5rem;">
           <span class="text-sm text-zinc-600 dark:text-zinc-400">
             © 2023-{new Date().getFullYear()} {firstName} {lastName}
           </span>

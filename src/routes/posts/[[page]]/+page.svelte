@@ -50,10 +50,14 @@
 
 <style>
   a {
-    @apply flex items-center gap-2 font-medium text-zinc-700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: rgb(63 63 70);
   }
 
   :global(.dark) a {
-    @apply text-zinc-300;
+    color: rgb(212 212 216);
   }
 </style>

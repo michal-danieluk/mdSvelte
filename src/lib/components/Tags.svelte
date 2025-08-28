@@ -14,7 +14,7 @@
 </script>
 
 {#if tags && tags.length > 0}
-  <div class="flex flex-wrap items-center gap-2">
+  <div class="flex flex-wrap items-center" style="gap: 0.5rem;">
     {#if showLabel}
       <span class="text-sm text-zinc-500 dark:text-zinc-400">Tags:</span>
     {/if}

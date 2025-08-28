@@ -22,6 +22,7 @@ const config = {
     // remove this if you don't want prerendering
     prerender: {
       handleHttpError: 'ignore',
+      handleMissingId: 'warn',
       entries: ['*', '/sitemap.xml', '/rss.xml']
     }
   }
