@@ -66,3 +66,5 @@ This is a SvelteKit blog template built on mdsvex (markdown for Svelte) and Tail
 - RSS feed generation
 - SEO-friendly with proper meta tags and structured data
 - Mobile-responsive design
+- add to memory. Use git very often to be able to reverse changes
+- add to memroy. Check if you fix is really working.

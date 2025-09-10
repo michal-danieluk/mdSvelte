@@ -110,7 +110,7 @@
       </div>
     </header>
     <main
-      class="flex flex-col flex-grow w-full mx-auto"
+      class="flex flex-col flex-grow w-full mx-auto mt-7"
       class:max-w-2xl={!$page.data.layout?.fullWidth}
     >
       {@render children?.()}
