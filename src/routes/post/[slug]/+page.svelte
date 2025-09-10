@@ -77,7 +77,7 @@
   </div>
 
   <!-- Main content column (center) -->
-  <div class="w-full mx-auto overflow-x-hidden">
+  <div class="overflow-x-hidden">
     <article>
       <header class="flex flex-col">
         <h1
