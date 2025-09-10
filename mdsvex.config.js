@@ -28,7 +28,7 @@ export default {
   },
   remarkPlugins: [videos, relativeImages, headings],
   rehypePlugins: [
-    [slugPlugin, { slugify: slugifyPolish }],
+    [slugPlugin, { prefix: '', slugify: (value) => slugifyPolish(value) }],
     [
       autolinkHeadings,
       {
