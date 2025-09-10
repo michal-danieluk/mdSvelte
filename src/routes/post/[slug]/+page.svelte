@@ -118,8 +118,8 @@
   </div>
 
   <!-- Table of contents column (right) -->
-  <div class="hidden lg:block pt-10">
-    <aside class="sticky w-48 ml-8 top-8" aria-label="Table of Contents">
+  <div class="hidden lg:block">
+    <aside class="sticky top-8 pt-10" aria-label="Table of Contents">
       {#if data.post.headings && data.post.headings.length > 0}
         <ToC post={data.post} />
       {/if}
@@ -133,7 +133,7 @@
     grid-template-columns: 1fr;
   }
 
-  @media screen(lg) {
+  @screen lg {
     .root {
       /* 42rem matches max-w-2xl */
       grid-template-columns: 1fr 42rem 1fr;
