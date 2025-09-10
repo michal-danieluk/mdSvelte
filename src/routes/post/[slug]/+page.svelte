@@ -56,7 +56,7 @@
   <meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
-<div class="root max-w-2xl mx-auto lg:max-w-none">
+<div class="root">
   <!-- Back button column (left) -->
   <div class="hidden lg:block pt-8">
     <div class="sticky top-0 w-full flex justify-end pt-11 pr-8">
@@ -131,12 +131,19 @@
   .root {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
-  @screen lg {
+  @media (min-width: 1024px) {
     .root {
       /* 42rem matches max-w-2xl */
       grid-template-columns: 1fr 42rem 1fr;
+      max-width: 100%;
+      margin: 0;
+      padding: 0 2rem;
     }
   }
 </style>
