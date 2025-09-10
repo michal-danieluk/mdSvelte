@@ -4,6 +4,23 @@ import slugPlugin from 'rehype-slug'
 import relativeImages from 'mdsvex-relative-images'
 import remarkHeadings from '@vcarl/remark-headings'
 
+// Polish character slugification function
+function slugifyPolish(text) {
+  return text
+    .toLowerCase()
+    .replace(/ą/g, 'a')
+    .replace(/ć/g, 'c')
+    .replace(/ę/g, 'e')
+    .replace(/ł/g, 'l')
+    .replace(/ń/g, 'n')
+    .replace(/ó/g, 'o')
+    .replace(/ś/g, 's')
+    .replace(/ź/g, 'z')
+    .replace(/ż/g, 'z')
+    .replace(/\s/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+}
+
 export default {
   extensions: ['.svx', '.md'],
   smartypants: {
@@ -11,7 +28,7 @@ export default {
   },
   remarkPlugins: [videos, relativeImages, headings],
   rehypePlugins: [
-    slugPlugin,
+    [slugPlugin, { slugify: slugifyPolish }],
     [
       autolinkHeadings,
       {
@@ -57,20 +74,8 @@ function headings() {
     vfile.data.fm ??= {}
     vfile.data.fm.headings = vfile.data.headings.map((heading) => ({
       ...heading,
-      // slugify heading.value
-      id: heading.value
-        .toLowerCase()
-        .replace(/ą/g, 'a')
-        .replace(/ć/g, 'c')
-        .replace(/ę/g, 'e')
-        .replace(/ł/g, 'l')
-        .replace(/ń/g, 'n')
-        .replace(/ó/g, 'o')
-        .replace(/ś/g, 's')
-        .replace(/ź/g, 'z')
-        .replace(/ż/g, 'z')
-        .replace(/\s/g, '-')
-        .replace(/[^a-z0-9-]/g, '')
+      // slugify heading.value using the same function as rehype-slug
+      id: slugifyPolish(heading.value)
     }))
   }
 }
