@@ -2,27 +2,32 @@ import { browser } from '$app/environment'
 import { format } from 'date-fns'
 import { parse } from 'node-html-parser'
 import readingTime from 'reading-time'
+import fs from 'fs'
+import path from 'path'
 
 // we require some server-side APIs to parse all metadata
 if (browser) {
   throw new Error(`posts can only be imported server-side`)
 }
 
-// Get all posts and add metadata
+// Get all posts and add metadata  
 export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: true }))
   .map(([filepath, module]) => {
-    // In Svelte 5, mdsvex provides the HTML content directly
     const metadata = module.metadata || {}
-    const htmlContent = module.html || ''
-    const html = parse(htmlContent)
 
+    // Get the raw markdown content for reading time calculation by reading the file directly
+    const fullPath = path.join(process.cwd(), filepath)
+    const rawContent = fs.readFileSync(fullPath, 'utf-8')
+    
     // Safely get preview
     let preview
     if (metadata.preview) {
       preview = parse(metadata.preview)
     } else {
-      const firstParagraph = html.querySelector('p')
-      preview = firstParagraph || { toString: () => '', text: '' }
+      // For preview, we'll extract from the raw content
+      const contentWithoutFrontmatter = rawContent.replace(/^---[\s\S]*?---/, '').trim()
+      const firstParagraph = contentWithoutFrontmatter.split('\n\n')[0] || ''
+      preview = { toString: () => firstParagraph, text: firstParagraph }
     }
 
     return {
@@ -64,7 +69,14 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
       },
 
       // get estimated reading time for the post
-      readingTime: Math.ceil(readingTime(html.text || html.toString()).minutes) + ' min czyt.'
+      readingTime: (() => {
+        // Use raw markdown content for reading time calculation
+        const contentWithoutFrontmatter = rawContent.replace(/^---[\s\S]*?---/, '').trim()
+        const minutes = readingTime(contentWithoutFrontmatter).minutes
+        
+        
+        return Math.ceil(minutes) + ' min czyt.'
+      })()
     }
   })
   // sort by date
