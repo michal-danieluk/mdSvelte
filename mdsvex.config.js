@@ -4,9 +4,11 @@ import slugPlugin from 'rehype-slug'
 import relativeImages from 'mdsvex-relative-images'
 import remarkHeadings from '@vcarl/remark-headings'
 
-// Polish character slugification function
+// Polish character slugification function  
 function slugifyPolish(text) {
+  if (typeof text !== 'string') return ''
   return text
+    .toString()
     .toLowerCase()
     .replace(/ą/g, 'a')
     .replace(/ć/g, 'c')
@@ -17,8 +19,40 @@ function slugifyPolish(text) {
     .replace(/ś/g, 's')
     .replace(/ź/g, 'z')
     .replace(/ż/g, 'z')
-    .replace(/\s/g, '-')
-    .replace(/[^a-z0-9-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9\-]/g, '')
+    .replace(/^-+|-+$/g, '')
+}
+
+/**
+ * Custom rehype plugin to fix Polish character slugs
+ */
+function fixPolishSlugs() {
+  return function transformer(tree) {
+    visit(tree, 'element', (node) => {
+      if (
+        (node.tagName === 'h1' || 
+         node.tagName === 'h2' || 
+         node.tagName === 'h3' || 
+         node.tagName === 'h4' || 
+         node.tagName === 'h5' || 
+         node.tagName === 'h6') &&
+        node.properties &&
+        node.properties.id
+      ) {
+        // Apply Polish character conversion to the ID
+        node.properties.id = slugifyPolish(node.properties.id)
+      }
+      
+      // Also fix anchor links that point to headings
+      if (node.tagName === 'a' && node.properties && node.properties.href) {
+        const href = node.properties.href
+        if (href.startsWith('#')) {
+          node.properties.href = '#' + slugifyPolish(href.slice(1))
+        }
+      }
+    })
+  }
 }
 
 export default {
@@ -28,7 +62,8 @@ export default {
   },
   remarkPlugins: [videos, relativeImages, headings],
   rehypePlugins: [
-    [slugPlugin, { prefix: '', slugify: (value) => slugifyPolish(value) }],
+    slugPlugin,
+    fixPolishSlugs,
     [
       autolinkHeadings,
       {
