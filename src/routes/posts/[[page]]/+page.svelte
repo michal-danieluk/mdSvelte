@@ -17,10 +17,10 @@
 
 <div class="flex flex-col flex-grow">
   <header class="pt-4">
-    <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
+    <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
     Piszę o technologi, marketingu, książkach i co tylko przyjdzie mi innego do głowy.
     </h1>
-    <p class="mt-6">Mój mały digital garden, który co jakiś czas będę podlewał.
+    <p class="mt-6 text-zinc-600 dark:text-zinc-400">Mój mały digital garden, który co jakiś czas będę podlewał.
     </p>
   </header>
 
@@ -31,7 +31,7 @@
   <!-- pagination -->
   <div class="flex items-center justify-between pt-16 pb-8">
     {#if !isFirstPage}
-      <a href={`/posts/${data.page - 1}`} data-sveltekit-prefetch>
+      <a href={`/posts/${data.page - 1}`} data-sveltekit-prefetch class="flex items-center gap-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
         <ArrowLeftIcon class="w-4 h-4" />
         Previous
       </a>
@@ -40,7 +40,7 @@
     {/if}
 
     {#if hasNextPage}
-      <a href={`/posts/${data.page + 1}`} data-sveltekit-prefetch
+      <a href={`/posts/${data.page + 1}`} data-sveltekit-prefetch class="flex items-center gap-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
         >Next
         <ArrowRightIcon class="w-4 h-4" />
       </a>
@@ -48,16 +48,3 @@
   </div>
 </div>
 
-<style>
-  a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 500;
-    color: rgb(63 63 70);
-  }
-
-  :global(.dark) a {
-    color: rgb(212 212 216);
-  }
-</style>

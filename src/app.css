@@ -1,6 +1,100 @@
 @import 'tailwindcss';
 @import './prism.css';
 @plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 2️⃣  Light tokens */
+@theme {
+  --color-bg: #ffffff;
+  --color-fg: #111827;
+  --color-prose-body: #374151;
+  --color-prose-headings: #111827;
+  --color-prose-links: #2563eb;
+  --color-prose-borders: #d1d5db;
+  --color-prose-code: #111827;
+  --color-prose-pre-bg: #1f2937;
+  --color-prose-pre-code: #e5e7eb;
+  --color-prose-blockquote-border: #d1d5db;
+}
+
+/* 3️⃣  Dark overrides */
+.dark {
+  --color-bg: #111827;
+  --color-fg: #f9fafb;
+  --color-prose-body: #d1d5db;
+  --color-prose-headings: #f9fafb;
+  --color-prose-links: #60a5fa;
+  --color-prose-borders: #374151;
+  --color-prose-code: #f9fafb;
+  --color-prose-pre-bg: #111827;
+  --color-prose-pre-code: #e5e7eb;
+  --color-prose-blockquote-border: #4b5563;
+}
+
+@layer base {
+  * {
+    @apply border-slate-200 dark:border-slate-700;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/30 dark:border-slate-700/30 shadow-lg shadow-slate-200/20 dark:shadow-slate-900/20;
+  }
+
+  /* 1️⃣  Light-mode typography overrides */
+  .prose {
+    --tw-prose-body: var(--color-prose-body);
+    --tw-prose-p: var(--color-prose-body); /* <p> text colour */
+    --tw-prose-li: var(--color-prose-body);
+    --tw-prose-headings: var(--color-prose-headings);
+    --tw-prose-bold: var(--color-prose-headings);
+    --tw-prose-links: var(--color-prose-links);
+    --tw-prose-code: var(--color-prose-code);
+    --tw-prose-pre-code: var(--color-prose-pre-code);
+    --tw-prose-pre-bg: var(--color-prose-pre-bg);
+    --tw-prose-blockquote-border: var(--color-prose-blockquote-border);
+    --tw-prose-hr: var(--color-prose-borders);
+    --tw-prose-th-borders: var(--color-prose-borders);
+    --tw-prose-td-borders: var(--color-prose-borders);
+  }
+
+  /* 2️⃣  Dark-mode overrides (inside .dark) */
+  .dark .prose {
+    --tw-prose-body: var(--color-prose-body);
+    --tw-prose-p: var(--color-prose-body);
+    --tw-prose-li: var(--color-prose-body);
+    --tw-prose-headings: var(--color-prose-headings);
+    --tw-prose-bold: var(--color-prose-headings);
+    --tw-prose-links: var(--color-prose-links);
+    --tw-prose-code: var(--color-prose-code);
+    --tw-prose-pre-code: var(--color-prose-pre-code);
+    --tw-prose-pre-bg: var(--color-prose-pre-bg);
+    --tw-prose-blockquote-border: var(--color-prose-blockquote-border);
+    --tw-prose-hr: var(--color-prose-borders);
+    --tw-prose-th-borders: var(--color-prose-borders);
+    --tw-prose-td-borders: var(--color-prose-borders);
+  }
+
+  /* make sure links inside prose get hover states */
+  .prose a:hover {
+    color: var(--color-prose-links);
+    opacity: 0.8;
+  }
+}
 
 @reference .text-zinc-300, .text-zinc-700, .text-zinc-600, .text-zinc-400, .text-zinc-500, .text-zinc-900, .text-zinc-100, .text-zinc-200, .bg-zinc-100, .bg-zinc-800, .bg-zinc-900, .bg-zinc-50, .bg-white, .hover\:bg-zinc-200, .hover\:bg-zinc-700, .hover\:bg-zinc-800, .hover\:text-zinc-700, .hover\:text-zinc-900, .hover\:text-zinc-200, .hover\:text-zinc-100, .dark\:text-zinc-300, .dark\:text-zinc-400, .dark\:text-zinc-100, .dark\:text-zinc-200, .dark\:bg-zinc-800, .dark\:bg-zinc-900, .dark\:hover\:bg-zinc-700, .dark\:hover\:bg-zinc-800, .dark\:hover\:text-zinc-100, .dark\:hover\:text-zinc-200, .dark\:border-zinc-700, .border-zinc-200, .border-zinc-100, .hover\:text-teal-600, .dark\:hover\:text-teal-400, .dark\:to-teal-400;
 

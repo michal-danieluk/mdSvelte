@@ -3,7 +3,7 @@
 // feel free to remove this file.
 
 // URL of your website
-export const website = 'https://wd3kster.com'
+export const website = 'https://michaldanieluk.pl'
 // 'https://michaldanieluk.com'//'https://mdSvelte-blog.vercel.app'
 export const localweb = 'http://localhost:5173/'
 export const firstName = 'Michał' // 'Michał'

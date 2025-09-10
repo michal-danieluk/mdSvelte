@@ -11,30 +11,29 @@
 
   let { children } = $props()
   
-  // Default to dark mode (true = dark, false = light)
-  let isDarkMode = $state(true)
+  let isDarkMode = $state(false)
   let mounted = $state(false)
 
   onMount(() => {
     mounted = true
     
-    // Initialize theme from localStorage or default to dark
+    // Initialize theme from localStorage or default to light
     const stored = localStorage.getItem('theme')
     if (stored) {
       isDarkMode = stored === 'dark'
     } else {
-      // Default to dark mode
-      isDarkMode = true
-      localStorage.setItem('theme', 'dark')
+      // Default to light mode
+      isDarkMode = false
+      localStorage.setItem('theme', 'light')
     }
     
     // Apply theme immediately
     applyTheme()
   })
 
-  // React to isDarkMode changes
+  // React to isDarkMode changes - use svelte:document instead of manual DOM manipulation
   $effect(() => {
-    if (mounted) {
+    if (mounted && browser) {
       applyTheme()
     }
   })
