@@ -24,3 +24,6 @@ export const github = '' //'mattjennings/mdSvelte-blog'
 export const twitter = 'michaldanieluk'
 export const linkedin = 'michal-danieluk'
 export const instagram = 'michal_danieluk'
+
+// Featured posts configuration
+export const featured_posts = 3

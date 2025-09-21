@@ -1,6 +1,7 @@
 <script>
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
   import PostsList from '$lib/components/PostsList.svelte'
+  import FeaturedPosts from '$lib/components/FeaturedPosts.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
   import Card from '$lib/components/Card.svelte'
   import { avatar, bio, name } from '$lib/info.js'
@@ -34,8 +35,23 @@
 </section>
 
 <div class="flex flex-col flex-grow pb-16">
-  
-  <div class="flex flex-col gap-8">
+
+  <div class="flex flex-col gap-12">
+    <!-- Featured Posts Section -->
+    {#if data.featuredPosts && data.featuredPosts.length > 0}
+      <section class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-b from-amber-50/30 via-orange-50/20 to-transparent dark:from-gray-800/30 dark:via-gray-700/20 dark:to-transparent py-12">
+        <div class="container mx-auto px-4 max-w-6xl">
+          <div class="flex items-center justify-between gap-4 mb-8">
+            <h2 class="text-lg font-semibold sm:text-xl text-amber-900 dark:text-gray-100">
+              ⭐ Posty wyróżnione
+            </h2>
+          </div>
+          <FeaturedPosts posts={data.featuredPosts} />
+        </div>
+      </section>
+    {/if}
+
+    <!-- Latest Posts Section -->
     <section class="w-full">
       <div class="flex items-center justify-between gap-4 mb-8">
         <h2 class="text-sm font-medium sm:text-base text-zinc-500 dark:text-zinc-400">

@@ -128,3 +128,10 @@ export function getTagBySlug(tagSlug) {
   const tags = getAllTags()
   return tags.find((tag) => tag.slug === tagSlug)
 }
+
+// Get featured posts
+export function getFeaturedPosts(limit = 3) {
+  return posts
+    .filter((post) => post.featured === true)
+    .slice(0, limit)
+}
