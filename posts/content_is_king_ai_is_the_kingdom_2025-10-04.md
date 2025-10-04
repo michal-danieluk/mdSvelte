@@ -3,6 +3,7 @@ title: "Content is King, AI is the Kingdom: Jak Pisać Teksty, Które AI Pokocha
 date: 2025-10-04
 tags: ['SEO', 'AI', 'Content Marketing', 'LLM']
 image_prompt: 'A medieval king looking thoughtfully at a futuristic, glowing crown shaped like a brain, with a kingdom in the background. Stylized, digital art.'
+featured: true
 ---
 
 "Content is king" – ile razy to słyszałeś? Setki? Tysiące? To hasło, wytarte jak ulubione dżinsy, przez lata było mantrą każdego, kto parał się marketingiem w internecie. I wiesz co? To nadal prawda. Ale król ma nowego władcę. A właściwie całe królestwo.

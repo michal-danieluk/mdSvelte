@@ -1,7 +1,6 @@
 ---
 title: Mało kto pisze maile tylko tekstowe
 date: 2023-03-17
-featured: true
 ---
 
 Mało kto dzisiaj wysyła maile tekstowe. Większość z nich jest w formacie HTML.

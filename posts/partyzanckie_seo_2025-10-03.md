@@ -1,8 +1,9 @@
 ---
-title: Partyzanckie SEO: Jak mała firma może wygrać z gigantami?
+title: Partyzanckie SEO. Jak mała firma może wygrać z gigantami?
 date: 2025-10-03
 tags: ['SEO', 'Marketing', 'Mała Firma', 'Strategia']
 image_prompt: 'A small, clever chameleon is outsmarting a huge, clumsy dinosaur in a lush jungle. The chameleon is using its environment to its advantage. The style should be a vibrant, slightly humorous digital illustration.'
+featured: true
 ---
 
 ## Wstęp: Dawid kontra Goliat w świecie online

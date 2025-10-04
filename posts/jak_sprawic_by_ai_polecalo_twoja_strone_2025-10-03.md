@@ -3,6 +3,7 @@ title: Jak sprawić, by AI polecało Twoją stronę? Czyli nowe SEO dla cwaniak�
 date: 2025-10-03
 tags: ['SEO', 'AI', 'LLM', 'Marketing']
 image_prompt: 'A friendly, glowing robot librarian is enthusiastically recommending a specific book to a person in a vast, futuristic library. The book is glowing brightly. The style should be slightly stylized, optimistic, and digital art.'
+featured: true
 ---
 
 ## Wstęp, czyli "Skąd ta AI to wie?"
