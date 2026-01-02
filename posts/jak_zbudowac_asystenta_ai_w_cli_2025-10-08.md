@@ -23,7 +23,7 @@ To nie jest "współpraca z AI". To jest manualna manufaktura. W tej serii artyk
 W trzech częściach przejdziemy drogę od chaosu w przeglądarce do własnego, spersonalizowanego Jarvis'a w terminalu.
 
 *   **Część 1 (To czytasz):** Dlaczego terminal i pliki tekstowe to przyszłość pracy z AI?
-*   **Część 2 (Już dostępna):** Warsztat Geeka – instalacja, konfiguracja i struktura plików.
+*   **[Część 2 (Już dostępna): Warsztat Geeka](/post/jak_zbudowac_asystenta_ai_w_cli_cz2_warsztat_2025-10-09)** – instalacja, konfiguracja i struktura plików.
 *   **Część 3 (Wkrótce):** Workflow w praktyce – automatyzacja, research i pisanie.
 
 ---
