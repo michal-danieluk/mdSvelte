@@ -72,7 +72,7 @@ Nie obiecuję Ci gruszek na wierzbie. To wymaga zmiany nawyków. Ale jeśli prze
 
 ## Co dalej?
 
-W tej części chciałam zasiać w Twojej głowie ziarno niepewności. Czy na pewno obecny sposób pracy z AI jest optymalny? Jeśli czujesz, że marnujesz potencjał modeli przez kiepski interfejs – zapraszam do **Części 2**.
+W tej części chciałam zasiać w Twojej głowie ziarno niepewności. Czy na pewno obecny sposób pracy z AI jest optymalny? Jeśli czujesz, że marnujesz potencjał modeli przez kiepski interfejs – zapraszam do **[Części 2 (Już dostępna): Warsztat Geeka](/post/jak_zbudowac_asystenta_ai_w_cli_cz2_warsztat_2025-10-09)**.
 
 W kolejnym wpisie ubrudzimy sobie ręce. Pokażę Ci krok po kroku:
 1.  Jak zainstalować niezbędne narzędzia.
