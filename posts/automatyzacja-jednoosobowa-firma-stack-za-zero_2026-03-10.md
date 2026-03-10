@@ -100,8 +100,3 @@ Nie musisz ustawiać wszystkiego naraz. Zacznij od jednego narzędzia, jednego w
 
 **Sugestia na start:** Załóż Airtable, wrzuć tam swoje pomysły na content i dodaj kolumnę "status". To zajmie 10 minut i zmieni Ci perspektywę.
 
-Chcesz zobaczyć, jak dokładnie wygląda mój setup krok po kroku? Daj znać — jeśli będzie zainteresowanie, nagram o tym video.
-
-Odpowiedz na tego maila i powiedz mi — jakiego narzędzia używasz, którego ja nie mam na liście?
-
-A jeśli znasz kogoś, kto prowadzi jednoosobową firmę i narzeka na brak czasu — prześlij mu tego newslettera.
