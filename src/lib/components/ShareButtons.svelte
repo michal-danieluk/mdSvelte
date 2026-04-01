@@ -1,8 +1,7 @@
 <script>
   import { twitter } from '$lib/info'
   import { Icon } from '@steeze-ui/svelte-icon'
-  import { Link, ClipboardCheck } from '@steeze-ui/heroicons'
-  import { onMount } from 'svelte'
+  import { Link, ClipboardDocumentCheck } from '@steeze-ui/heroicons'
 
   let { title, url } = $props()
   let copied = $state(false)
@@ -48,10 +47,10 @@
       aria-label="Kopiuj link"
     >
       {#if copied}
-        <Icon src={ClipboardCheck} class="w-4 h-4 text-green-500" />
-        <span class="text-green-500">Skopiowano!</span>
+        <Icon src={ClipboardDocumentCheck} class="w-4 h-4 text-green-500" />
+        <span class="text-green-500 transition-all">Skopiowano!</span>
       {:else}
-        <Icon src={Link} class="w-4 h-4" />
+        <Icon src={Link} class="w-4 h-4 transition-all" />
         <span>Link</span>
       {/if}
     </button>
