@@ -68,6 +68,9 @@
           class="group flex items-center justify-center w-10 h-10 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-indigo-500 dark:hover:border-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all shadow-sm active:scale-95"
           href={canGoBack ? undefined : '/posts'}
           onclick={goBack}
+          onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && goBack()}
+          role="button"
+          tabindex="0"
           aria-label="Wróć do listy wpisów"
         >
           <ArrowLeftIcon class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" />
