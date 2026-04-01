@@ -4,16 +4,20 @@
 
   export let posts
 </script>
-<div class="flex flex-col gap-16 md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
+
+<div class="flex flex-col gap-20 md:border-l md:border-zinc-100 md:pl-10 md:dark:border-zinc-800/60">
   {#each posts as post}
-    <article class="grid items-start grid-cols-4 gap-8">
-      <PostDate class="flex-col hidden md:flex text-sm" {post} />
+    <article class="relative grid items-start grid-cols-4 gap-8 group">
+      <!-- Side indicator on hover -->
+      <div class="absolute -left-[41px] top-6 w-1 h-8 bg-indigo-500 rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"></div>
+
+      <PostDate class="flex-col hidden md:flex text-sm font-bold tracking-tighter text-zinc-400 dark:text-zinc-600 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors uppercase" {post} />
 
       <div class="col-span-4 md:col-span-3">
         <PostPreview {post}>
-          <slot slot="eyebrow">
-            <PostDate class="md:hidden" {post} collapsed decorate />
-          </slot>
+          <div slot="eyebrow">
+            <PostDate class="md:hidden text-xs font-bold tracking-widest text-zinc-400 dark:text-zinc-500 uppercase mb-4" {post} />
+          </div>
         </PostPreview>
       </div>
     </article>
