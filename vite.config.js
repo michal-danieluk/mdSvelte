@@ -1,4 +1,3 @@
-//import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 import { sveltekit } from '@sveltejs/kit/vite'
 
@@ -9,5 +8,8 @@ export default defineConfig({
     fs: {
       allow: ['./']
     }
+  },
+  optimizeDeps: {
+    exclude: ['@steeze-ui/heroicons', '@steeze-ui/svelte-icon']
   }
 })
