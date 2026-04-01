@@ -76,18 +76,16 @@
         <header class="mb-12">
           <div class="flex items-center gap-3 mb-6">
             <div class="h-px w-8 bg-indigo-500"></div>
-            <PostDate class="text-xs font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400" post={data.post} />
+            <PostDate 
+              class="text-xs font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400" 
+              post={data.post} 
+              collapsed 
+            />
           </div>
 
           <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-zinc-900 dark:text-zinc-50 leading-[1.1]">
             {data.post.title}
           </h1>
-
-          {#if data.post.readingTime}
-            <p class="mt-6 text-sm font-medium text-zinc-500 dark:text-zinc-500">
-              {data.post.readingTime} • {data.post.preview.text.split(' ').length} słów
-            </p>
-          {/if}
         </header>
 
         <!-- Post Content: Explicit max-w to prevent layout breaks -->
