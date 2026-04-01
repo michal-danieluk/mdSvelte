@@ -1,10 +1,6 @@
 <script>
   import SocialLinks from '$lib/components/SocialLinks.svelte'
-  import { avatar, bio, name } from '$lib/info.js'
-  import { enhance } from '$app/forms'
-
-  /** @type {import('./$types').ActionData} */
-  export let form
+  import { avatar, bio, name, email } from '$lib/info.js'
 </script>
 
 <svelte:head>
@@ -57,7 +53,7 @@
         </p>
       </section>
 
-      <!-- Contact Section -->
+      <!-- Contact Section: Simple & Direct -->
       <section class="mt-20 pt-12 border-t border-zinc-100 dark:border-zinc-800">
         <div class="flex items-center gap-2 mb-10">
           <div class="h-px w-8 bg-indigo-500"></div>
@@ -66,72 +62,27 @@
           </h2>
         </div>
 
-        <form method="POST" class="space-y-8" use:enhance>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div class="space-y-2">
-              <label for="name" class="text-xs font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-500 ml-1">
-                Twoje Imię
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={form?.name ?? ''}
-                required
-                class="block w-full px-4 py-3 bg-zinc-100 dark:bg-zinc-900 border-transparent focus:border-indigo-500 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-zinc-800 focus:ring-0 rounded-xl text-zinc-900 dark:text-zinc-100 transition-all"
-                placeholder="Jan Kowalski"
-              />
-            </div>
-            <div class="space-y-2">
-              <label for="email" class="text-xs font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-500 ml-1">
-                Adres Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={form?.email ?? ''}
-                required
-                class="block w-full px-4 py-3 bg-zinc-100 dark:bg-zinc-900 border-transparent focus:border-indigo-500 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-zinc-800 focus:ring-0 rounded-xl text-zinc-900 dark:text-zinc-100 transition-all"
-                placeholder="jan@przyklad.pl"
-              />
-            </div>
-          </div>
+        <div class="bg-zinc-100 dark:bg-zinc-900/50 rounded-2xl p-8 sm:p-12 text-center">
+          <h3 class="text-2xl font-black text-zinc-900 dark:text-zinc-50 mb-4">Masz pomysł na projekt?</h3>
+          <p class="text-zinc-600 dark:text-zinc-400 mb-8 max-w-md mx-auto leading-relaxed">
+            Nie cierpię spamu, ale kocham konkretne rozmowy o automatyzacji i marketingu. Napisz do mnie bezpośrednio na maila.
+          </p>
           
-          <div class="space-y-2">
-            <label for="message" class="text-xs font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-500 ml-1">
-              Twoja Wiadomość
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows="5"
-              class="block w-full px-4 py-3 bg-zinc-100 dark:bg-zinc-900 border-transparent focus:border-indigo-500 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-zinc-800 focus:ring-0 rounded-xl text-zinc-900 dark:text-zinc-100 transition-all resize-none"
-              placeholder="O czym chcesz porozmawiać?"
-            >{form?.message ?? ''}</textarea>
-          </div>
-          
-          <button
-            type="submit"
-            class="group relative inline-flex items-center justify-center px-8 py-4 font-black uppercase tracking-widest text-white transition-all duration-200 bg-indigo-600 rounded-xl hover:bg-indigo-500 hover:shadow-xl hover:shadow-indigo-500/20 active:scale-95"
+          <a
+            href="mailto:{email}"
+            class="group relative inline-flex items-center justify-center px-10 py-5 font-black uppercase tracking-widest text-white transition-all duration-200 bg-indigo-600 rounded-2xl hover:bg-indigo-500 hover:shadow-xl hover:shadow-indigo-500/20 active:scale-95"
           >
-            Wyślij wiadomość
+            Napisz wiadomość
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
             </svg>
-          </button>
-          
-          {#if form?.success}
-            <div class="animate-in fade-in slide-in-from-top-4 duration-300 text-indigo-600 dark:text-indigo-400 font-bold text-sm p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl border border-indigo-100 dark:border-indigo-800/50 flex items-center gap-3">
-              <span class="text-xl">✅</span> {form.message}
-            </div>
-          {:else if form?.error}
-            <div class="animate-in fade-in slide-in-from-top-4 duration-300 text-red-600 dark:text-red-400 font-bold text-sm p-4 bg-red-50 dark:bg-red-900/20 rounded-xl border border-red-100 dark:border-red-800/50 flex items-center gap-3">
-              <span class="text-xl">❌</span> {form.error}
-            </div>
-          {/if}
-        </form>
+          </a>
+
+          <div class="mt-8 text-xs font-bold text-zinc-400 dark:text-zinc-600 uppercase tracking-widest">
+            Odpowiadam zazwyczaj w ciągu 24h
+          </div>
+        </div>
       </section>
     </main>
 
