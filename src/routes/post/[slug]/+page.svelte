@@ -11,22 +11,18 @@
   export let data
 
   // generated open-graph image for sharing on social media.
-  // see https://og-image.vercel.app/ for more options.
   const ogImage = `https://og-image.vercel.app/**${encodeURIComponent(
     data.post.title
   )}**?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg`
 
   const url = `${website}/${data.post.slug}`
 
-  // if we came from /posts, we will use history to go back to preserve
-  // posts pagination
   let canGoBack = false
   afterNavigate(({ from }) => {
     if (from && from.url.pathname.startsWith('/posts')) {
       canGoBack = true
     }
   })
-
 
   function goBack() {
     if (canGoBack) {
@@ -56,94 +52,89 @@
   <meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
-<div class="root">
-  <!-- Back button column (left) -->
-  <div class="hidden lg:block pt-8">
-    <div class="sticky top-0 w-full flex justify-end pt-11 pr-8">
-      <svelte:element
-        this={canGoBack ? 'button' : 'a'}
-        class="items-center justify-center hidden w-10 h-10 mb-8 transition bg-white rounded-full shadow-md -top-1 -left-16 lg:flex group shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:focus-visible:ring-2 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20"
-        href={canGoBack ? undefined : '/posts'}
-        role={canGoBack ? 'button' : undefined}
-        aria-label="Go back to posts"
-        on:click={goBack}
-        on:keydown={goBack}
-      >
-        <ArrowLeftIcon
-          class="w-4 h-4 transition stroke-zinc-500 group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400"
-        />
-      </svelte:element>
-    </div>
-  </div>
-
-  <!-- Main content column (center) -->
-  <div class="overflow-x-hidden">
-    <article>
-      <header class="flex flex-col">
-        <h1
-          class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
+<div class="max-w-4xl mx-auto px-6 pt-12 lg:pt-20">
+  <div class="relative lg:flex lg:gap-16">
+    
+    <!-- Left Column: Navigation (Sticky) -->
+    <div class="hidden lg:block w-12 shrink-0">
+      <div class="sticky top-24">
+        <svelte:element
+          this={canGoBack ? 'button' : 'a'}
+          class="group flex items-center justify-center w-10 h-10 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-indigo-500 dark:hover:border-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all shadow-sm active:scale-95"
+          href={canGoBack ? undefined : '/posts'}
+          onclick={goBack}
+          aria-label="Wróć do listy wpisów"
         >
-          {data.post.title}
-        </h1>
-        <PostDate class="text-sm sm:text-base" post={data.post} decorate collapsed />
-        
+          <ArrowLeftIcon class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" />
+        </svelte:element>
+      </div>
+    </div>
+
+    <!-- Center Column: Main Content -->
+    <main class="flex-grow max-w-2xl mx-auto lg:mx-0">
+      <article>
+        <header class="mb-12">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="h-px w-8 bg-indigo-500"></div>
+            <PostDate class="text-xs font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400" post={data.post} />
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-zinc-900 dark:text-zinc-50 leading-[1.1]">
+            {data.post.title}
+          </h1>
+
+          {#if data.post.readingTime}
+            <p class="mt-6 text-sm font-medium text-zinc-500 dark:text-zinc-500">
+              {data.post.readingTime.text} • {data.post.readingTime.words} słów
+            </p>
+          {/if}
+        </header>
+
+        <!-- Post Content -->
+        <div class="prose prose-zinc dark:prose-invert max-w-none 
+          prose-headings:font-black prose-headings:tracking-tight
+          prose-a:text-indigo-600 dark:prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:underline
+          prose-pre:rounded-2xl prose-pre:border prose-pre:border-zinc-200 dark:prose-pre:border-zinc-800
+          prose-img:rounded-2xl prose-img:shadow-xl">
+          <svelte:component this={data.component} />
+        </div>
+
+        <!-- Tags at the end -->
         {#if data.post.tags && data.post.tags.length > 0}
-          <div class="mt-4">
+          <div class="mt-16 pt-8 border-t border-zinc-100 dark:border-zinc-800">
+            <h3 class="text-xs font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-4">Tematyka</h3>
             <Tags tags={data.post.tags} />
           </div>
         {/if}
-      </header>
+      </article>
 
-      <!-- render the post -->
-      <div class="prose prose-p:text-xl  dark:prose-invert ">
-        <svelte:component this={data.component} />
-      </div>
-    </article>
-    <!-- bio -->
-    <hr />
-    <div class="py-8">
-      <div class="grid gap-8">
-        <div class="flex justify-center order-1 col-span-2 gap-6 md:order-2">
-          <SocialLinks />
+      <!-- Bottom Bio / Socials -->
+      <footer class="mt-24 py-12 border-t border-zinc-100 dark:border-zinc-800">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div class="flex flex-col items-center sm:items-start">
+            <a href="/" class="text-lg font-black tracking-tighter text-zinc-900 dark:text-zinc-50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              {name}<span class="text-indigo-600 dark:text-indigo-400">.</span>
+            </a>
+            <p class="text-sm text-zinc-500 dark:text-zinc-500 mt-1">Dzięki za lekturę! Podziel się tekstem dalej.</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <SocialLinks />
+          </div>
         </div>
-        <div class="flex justify-center order-2 md:order-1 md:col-span-2">
-          <a href="/"
-        class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 dark:to-teal-400"
-          >
-              {name}
-          </a>
-        </div>
-      </div>
+      </footer>
+    </main>
+
+    <!-- Right Column: ToC (Sticky) -->
+    <div class="hidden xl:block w-64 shrink-0">
+      <aside class="sticky top-24">
+        {#if data.post.headings && data.post.headings.length > 0}
+          <div class="pl-8 border-l border-zinc-100 dark:border-zinc-800">
+            <h3 class="text-xs font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-6">Spis treści</h3>
+            <ToC post={data.post} />
+          </div>
+        {/if}
+      </aside>
     </div>
-  </div>
 
-  <!-- Table of contents column (right) -->
-  <div class="hidden lg:block">
-    <aside class="sticky top-8 pt-10" aria-label="Table of Contents">
-      {#if data.post.headings && data.post.headings.length > 0}
-        <ToC post={data.post} />
-      {/if}
-    </aside>
   </div>
 </div>
-
-<style lang="postcss">
-  .root {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 42rem;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  @media (min-width: 1024px) {
-    .root {
-      /* 42rem matches max-w-2xl */
-      grid-template-columns: 1fr 42rem 1fr;
-      max-width: 100%;
-      margin: 0;
-      padding: 0 2rem;
-    }
-  }
-</style>
