@@ -6,6 +6,7 @@
   import Tags from '$lib/components/Tags.svelte'
   import { afterNavigate } from '$app/navigation'
   import PostDate from '$lib/components/PostDate.svelte'
+  import ShareButtons from '$lib/components/ShareButtons.svelte'
 
   /** @type {import('./$types').PageData} */
   export let data
@@ -13,9 +14,9 @@
   // generated open-graph image for sharing on social media.
   const ogImage = `https://og-image.vercel.app/**${encodeURIComponent(
     data.post.title
-  )}**?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg`
+  )}**.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg`
 
-  const url = `${website}/${data.post.slug}`
+  const url = `${website}/post/${data.post.slug}`
 
   let canGoBack = false
   afterNavigate(({ from }) => {
@@ -33,22 +34,26 @@
 
 <svelte:head>
   <title>{data.post.title} - {name}</title>
-  <meta name="description" content={data.post.preview.text} />
+  <meta name="description" content={data.post.description || data.post.preview.text} />
   <meta name="author" content={name} />
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content={url} />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:title" content={data.post.title} />
-  <meta property="og:description" content={data.post.preview.text} />
+  <meta property="og:description" content={data.post.description || data.post.preview.text} />
   <meta property="og:image" content={ogImage} />
+  <meta property="og:site_name" content={name} />
+  <meta property="og:locale" content="pl_PL" />
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="twitter:domain" content={website} />
+  <meta name="twitter:site" content="@michaldanieluk" />
+  <meta name="twitter:creator" content="@michaldanieluk" />
+  <meta property="twitter:domain" content={website.replace('https://', '')} />
   <meta property="twitter:url" content={url} />
   <meta name="twitter:title" content={data.post.title} />
-  <meta name="twitter:description" content={data.post.preview.text} />
+  <meta name="twitter:description" content={data.post.description || data.post.preview.text} />
   <meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
@@ -99,13 +104,19 @@
           <svelte:component this={data.component} />
         </div>
 
-        <!-- Tags at the end -->
-        {#if data.post.tags && data.post.tags.length > 0}
-          <div class="mt-16 pt-8 border-t border-zinc-100 dark:border-zinc-800">
-            <h3 class="text-xs font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-4">Tematyka</h3>
-            <Tags tags={data.post.tags} />
+        <!-- Social Share & Tags -->
+        <div class="mt-16 pt-8 border-t border-zinc-100 dark:border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-8">
+          {#if data.post.tags && data.post.tags.length > 0}
+            <div>
+              <h3 class="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-3">Tematyka</h3>
+              <Tags tags={data.post.tags} />
+            </div>
+          {/if}
+          
+          <div class="sm:text-right">
+            <ShareButtons title={data.post.title} {url} />
           </div>
-        {/if}
+        </div>
 
         <!-- Related Posts Section -->
         {#if data.relatedPosts && data.relatedPosts.length > 0}

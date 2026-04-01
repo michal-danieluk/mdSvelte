@@ -8,13 +8,13 @@
   import { page } from '$app/stores'
   import { firstName, lastName } from '$lib/info'
   import Search from '$lib/components/Search.svelte'
+  import { fly } from 'svelte/transition'
 
   let { children } = $props()
   
   let isDarkMode = $state(false)
 
   onMount(() => {
-    // Initial check without FOUC (handled in app.html)
     isDarkMode = document.documentElement.classList.contains('dark')
   })
 
@@ -33,10 +33,8 @@
 </script>
 
 <div class="flex flex-col min-h-screen bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300">
-  <!-- Minimal Floating Header -->
   <header class="sticky top-0 z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border-b border-zinc-200/50 dark:border-zinc-800/50">
-    <div class="flex items-center justify-between w-full max-w-4xl px-6 py-4 mx-auto">
-      <!-- Logo/Name -->
+    <div class="flex items-center justify-between w-full max-w-6xl px-6 py-4 mx-auto">
       <a
         href="/"
         class="text-xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
@@ -44,8 +42,7 @@
         {firstName}<span class="text-indigo-600 dark:text-indigo-400">.</span>{lastName.charAt(0)}
       </a>
 
-      <!-- Navigation & Actions -->
-      <div class="flex items-center gap-8">
+      <div class="flex items-center gap-4 sm:gap-8">
         <nav class="hidden sm:flex items-center gap-6">
           <a
             class="text-sm font-semibold text-zinc-600 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 transition-colors"
@@ -65,7 +62,6 @@
 
         <Search />
 
-        <!-- Dark mode toggle -->
         <button
           type="button"
           aria-label="Toggle Dark Mode"
@@ -82,12 +78,16 @@
     </div>
   </header>
 
-  <main class="flex-grow w-full mx-auto px-4" class:max-w-4xl={!$page.data.layout?.fullWidth}>
-    {@render children?.()}
+  <main class="flex-grow w-full mx-auto px-4">
+    {#key $page.url.pathname}
+      <div in:fly={{ y: 10, duration: 400, delay: 200 }} out:fly={{ y: -10, duration: 200 }}>
+        {@render children?.()}
+      </div>
+    {/key}
   </main>
 
   <footer class="w-full border-t border-zinc-200 dark:border-zinc-800 mt-24 pb-12">
-    <div class="max-w-4xl mx-auto px-6 py-12">
+    <div class="max-w-6xl mx-auto px-6 py-12">
       <div class="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
         <div class="text-center sm:text-left">
           <p class="text-sm font-bold text-zinc-900 dark:text-zinc-50 uppercase tracking-widest">

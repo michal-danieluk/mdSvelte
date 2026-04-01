@@ -1,14 +1,14 @@
 ---
-title: "Content is King, AI is the Kingdom: Jak Pisać Teksty, Które AI Pokocha?"
+title: "Content Marketingt is King, AI is the Kingdom: Jak Pisać Teksty, Które AI Pokocha?"
 date: '2025-10-04'
-tags: ['SEO', 'AI', 'Content Marketing', 'LLM']
+tags: ['SEO', 'AI', 'Content Marketingt Marketing', 'LLM']
 description: 'Era pisania "pod Google" się kończy. Dowiedz się, jak tworzyć treści, które Wielkie Modele Językowe (LLM) uznają za wiarygodne i zaczną cytować w AI Overviews.'
 keywords: 'content marketing ai, pisanie pod ai, seo dla ai, llm optimization, eeat content, ai overviews seo'
 image_prompt: 'A medieval king looking thoughtfully at a futuristic, glowing crown shaped like a brain, with a kingdom in the background. Stylized, digital art.'
 featured: true
 ---
 
-"Content is king" – ile razy to słyszałeś? Setki? Tysiące? To hasło, wytarte jak ulubione dżinsy, przez lata było mantrą każdego, kto parał się marketingiem w internecie. I wiesz co? To nadal prawda. Ale król ma nowego władcę. A właściwie całe królestwo.
+"Content Marketingt is king" – ile razy to słyszałeś? Setki? Tysiące? To hasło, wytarte jak ulubione dżinsy, przez lata było mantrą każdego, kto parał się marketingiem w internecie. I wiesz co? To nadal prawda. Ale król ma nowego władcę. A właściwie całe królestwo.
 
 Tym królestwem jest AI.
 
@@ -55,7 +55,7 @@ Nigdy nie zapominaj o człowieku po drugiej stronie. Pisz naturalnie, w swoim st
 Ostatnio sam użyłem do tego Gemini CLI:
 
 ```bash
-# gemini-cli prompt "Wygeneruj dane strukturalne Schema.org w formacie JSON-LD dla artykułu na blogu o tytule 'Content is King, AI is the Kingdom' autorstwa Michała Danieluka."
+# gemini-cli prompt "Wygeneruj dane strukturalne Schema.org w formacie JSON-LD dla artykułu na blogu o tytule 'Content Marketingt is King, AI is the Kingdom' autorstwa Michała Danieluka."
 ```
 
 #### Krok 5: Audytuj i aktualizuj bez litości

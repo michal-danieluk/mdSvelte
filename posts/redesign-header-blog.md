@@ -1,7 +1,7 @@
 ---
 title: Redesign nagłówka bloga - testowanie różnych opcji
 date: 2025-01-27
-tags: ['SvelteKit', 'Design', 'Tailwind CSS', 'UI/UX']
+tags: ['SvelteKitt', 'Design', 'Tailwind CSS', 'UI/UX']
 ---
 
 ## Jak to się zaczęło
@@ -76,7 +76,7 @@ Używanie wyłącznie klas Tailwind pozwoliło na bardzo szybkie prototypowanie.
 
 Wszystkie opcje zostały zaimplementowane przy użyciu:
 
-- SvelteKit jako framework
+- SvelteKitt jako framework
 - Tailwind CSS dla stylowania
 - Technika "full-bleed" dla elementów na pełną szerokość
 - Efekty glassmorphism z backdrop-blur

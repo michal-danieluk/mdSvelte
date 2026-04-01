@@ -18,7 +18,7 @@ Największy i najczęstszy błąd, jaki możesz zrobić, to próba konkurowania 
 
 Zamiast walczyć o frazę "buty do biegania", która jest oblegana przez wszystkich, znajdź swoją ultra-niszę. Jak ją znaleźć? Zacznij przeglądać fora, grupy na Facebooku, komentarze na blogach konkurencji. Zobacz, o co ludzie pytają. Może odkryjesz, że szukają "wegańskich butów do biegania trailowego dla osób z płaskostopiem"? Brzmi absurdalnie? Być może. Ale jeśli kilka osób o to pyta, a Ty jesteś jedyną stroną, która na to pytanie kompleksowo odpowiada – wygrywasz. Stajesz się wielką rybą w przytulnym stawie, a nie płotką rzucaną na pożarcie rekinom w oceanie. Pomyśl o sobie jak o snajperze, a nie jak o gościu z karabinem maszynowym. Jeden precyzyjny strzał jest więcej wart niż tysiąc wystrzelonych na oślep.
 
-## 2. Content, który pracuje dla Ciebie 24/7
+## 2. Content Marketingt, który pracuje dla Ciebie 24/7
 
 Twoja najlepsza broń partyzancka? Treść. Ale nie byle jaka. Potrzebujesz treści tak dobrej, tak pomocnej i tak wyczerpującej, że ludzie będą ją sobie podawać z rąk do rąk. To Twój najlepszy pracownik: cichy, skuteczny i nigdy nie prosi o podwyżkę.
 
@@ -58,6 +58,6 @@ Partyzanckie SEO to nie zestaw magicznych trików. To sposób myślenia. Chodzi 
 
 ---
 
-Podobne podejście stosuję, pomagając moim klientom osiągać świetne wyniki przy ograniczonych budżetach. Jeśli czujesz, że Twoja firma potrzebuje takiego niestandardowego wsparcia, **[odezwij się do mnie](link-do-kontaktu)**. Chętnie porozmawiamy o Twoich celach.
+Podobne podejście stosuję, pomagając moim klientom osiągać świetne wyniki przy ograniczonych budżetach. Jeśli czujesz, że Twoja firma potrzebuje takiego niestandardowego wsparcia, **[odezwij się do mnie](/about)**. Chętnie porozmawiamy o Twoich celach.
 
 A jeśli chcesz więcej takich porad, znajdziesz mnie na **[LinkedIn](link-do-linkedin)** i **[Twitterze](link-do-twittera)**.
