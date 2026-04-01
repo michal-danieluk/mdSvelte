@@ -1,7 +1,7 @@
 ---
 title: Redesign nagłówka bloga - testowanie różnych opcji
 date: 2025-01-27
-tags: ['SvelteKitt', 'Design', 'Tailwind CSS', 'UI/UX']
+tags: ['SvelteKit', 'Design', 'Tailwind CSS', 'UI/UX']
 ---
 
 ## Jak to się zaczęło

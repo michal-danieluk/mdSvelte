@@ -1,7 +1,7 @@
 ---
 title: 'Jak automatyzuję content plan za pomocą AI i Airtable'
 date: '2026-01-28'
-tags: ['AI', 'Automatyzacja', 'Content', 'Airtable', 'Produktywność']
+tags: ['AI', 'Automatyzacja', 'Content Marketing', 'Airtable', 'Produktywność']
 description: 'Praktyczny przewodnik po moim systemie planowania contentu. Airtable jako baza, AI do generowania pomysłów i briefów. Bez teorii — same konkrety.'
 keywords: 'content plan AI, Airtable content calendar, automatyzacja contentu, planowanie treści AI, Claude content workflow'
 image_prompt: 'A clean Airtable-style spreadsheet on a laptop screen with colorful status labels, surrounded by floating AI circuit patterns and content icons like video and article symbols, modern flat illustration style.'
