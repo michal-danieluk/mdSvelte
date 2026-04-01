@@ -7,6 +7,7 @@
   import { onMount } from 'svelte'
   import { page } from '$app/stores'
   import { firstName, lastName } from '$lib/info'
+  import Search from '$lib/components/Search.svelte'
 
   let { children } = $props()
   
@@ -61,6 +62,8 @@
         </nav>
 
         <div class="h-4 w-px bg-zinc-200 dark:bg-zinc-800 hidden sm:block"></div>
+
+        <Search />
 
         <!-- Dark mode toggle -->
         <button

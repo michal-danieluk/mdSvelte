@@ -106,6 +106,29 @@
             <Tags tags={data.post.tags} />
           </div>
         {/if}
+
+        <!-- Related Posts Section -->
+        {#if data.relatedPosts && data.relatedPosts.length > 0}
+          <section class="mt-24 pt-16 border-t border-zinc-100 dark:border-zinc-800">
+            <h3 class="text-xl font-black text-zinc-900 dark:text-zinc-50 mb-10 flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+              Może Cię zainteresować
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {#each data.relatedPosts as related}
+                <a 
+                  href="/post/{related.slug}" 
+                  class="group p-6 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-zinc-100 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all"
+                >
+                  <PostDate class="text-[10px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-3" post={related} collapsed />
+                  <h4 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
+                    {related.title}
+                  </h4>
+                </a>
+              {/each}
+            </div>
+          </section>
+        {/if}
       </article>
 
       <!-- Bottom Bio / Socials -->
