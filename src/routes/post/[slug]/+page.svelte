@@ -71,7 +71,7 @@
     </div>
 
     <!-- Center Column: Main Content -->
-    <main class="flex-grow max-w-2xl mx-auto lg:mx-0">
+    <main class="flex-grow max-w-[65ch] mx-auto lg:mx-0 overflow-hidden">
       <article>
         <header class="mb-12">
           <div class="flex items-center gap-3 mb-6">
@@ -85,13 +85,15 @@
 
           {#if data.post.readingTime}
             <p class="mt-6 text-sm font-medium text-zinc-500 dark:text-zinc-500">
-              {data.post.readingTime.text} • {data.post.readingTime.words} słów
+              {data.post.readingTime} • {data.post.preview.text.split(' ').length} słów
             </p>
           {/if}
         </header>
 
-        <!-- Post Content -->
-        <div class="prose prose-zinc dark:prose-invert max-w-none 
+        <!-- Post Content: Explicit max-w to prevent layout breaks -->
+        <div class="prose prose-zinc dark:prose-invert 
+          max-w-none break-words
+          prose-p:text-base sm:prose-p:text-lg prose-p:leading-relaxed
           prose-headings:font-black prose-headings:tracking-tight
           prose-a:text-indigo-600 dark:prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:underline
           prose-pre:rounded-2xl prose-pre:border prose-pre:border-zinc-200 dark:prose-pre:border-zinc-800

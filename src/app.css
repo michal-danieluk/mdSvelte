@@ -74,12 +74,17 @@
     --tw-prose-td-borders: var(--color-prose-borders);
   }
 
-  .prose a:hover {
-    color: var(--color-primary);
-    text-decoration: none;
-    border-bottom: 2px solid var(--color-primary);
+  /* Code blocks */
+  pre {
+    @apply max-w-full overflow-x-auto;
+    color: var(--color-prose-pre-code);
+    font-size: theme('fontSize.sm');
+    font-weight: theme('fontWeight.medium');
+    background-color: var(--color-prose-pre-bg);
+    border-radius: theme('borderRadius.2xl');
+    padding: theme('spacing.6');
+    border: 1px solid var(--color-prose-borders);
   }
-}
 
 /* Global utility for consistent typography */
 @layer base {
