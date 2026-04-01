@@ -10,6 +10,9 @@
 		"lint": "prettier --check . && eslint --ignore-path .gitignore .",
 		"format": "prettier --write ."
 	},
+	"engines": {
+		"node": ">=20.0.0"
+	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^6.3.3",
 		"@sveltejs/kit": "^2.36.3",
