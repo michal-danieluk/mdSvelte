@@ -5,7 +5,7 @@ tags: ['SEO', 'AI', 'Content Marketing', 'LLM']
 description: 'Era pisania "pod Google" się kończy. Dowiedz się, jak tworzyć treści, które Wielkie Modele Językowe (LLM) uznają za wiarygodne i zaczną cytować w AI Overviews.'
 keywords: 'content marketing ai, pisanie pod ai, seo dla ai, llm optimization, eeat content, ai overviews seo'
 image_prompt: 'A medieval king looking thoughtfully at a futuristic, glowing crown shaped like a brain, with a kingdom in the background. Stylized, digital art.'
-featured: true
+featured: false
 ---
 
 "Content is king" – ile razy to słyszałeś? Setki? Tysiące? To hasło, wytarte jak ulubione dżinsy, przez lata było mantrą każdego, kto parał się marketingiem w internecie. I wiesz co? To nadal prawda. Ale król ma nowego władcę. A właściwie całe królestwo.

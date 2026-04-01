@@ -5,7 +5,7 @@ tags: ['Google Ads', 'Marketing', 'Agencja', 'Reklamy', 'SEM']
 description: 'Płacisz agencji za Google Ads? 4 konkretne rzeczy, które sprawdzisz sam w panelu — bez wiedzy technicznej. Dowiedz się, czy Twój budżet jest dobrze wydawany.'
 keywords: 'jak sprawdzić kampanię google ads, kontrola agencji google ads, impression share, quality score google ads, raport wyszukiwanych haseł, audyt google ads'
 image_prompt: 'A cyberpunk figure sitting at a desk late at night, bathed in neon light from multiple monitors. The character wears a dark hoodie, face partially lit by the cold blue-purple glow of the screens. On the monitors: Google Ads dashboard with campaign metrics, impression share graphs, quality score columns — data glowing in electric cyan and neon purple. Deep black shadows, vivid neon accents — purple, cyan, amber. Flat illustration style with strong contrast and glowing edges. Stylized digital art, cinematic side-angle composition.'
-featured: false
+featured: true
 ---
 
 Płacisz agencji za prowadzenie Google Ads. Co miesiąc przychodzi faktura, czasem raport w PDF-ie z wykresami, które wyglądają profesjonalnie. Ale tak naprawdę nie masz pojęcia, czy te pieniądze pracują dobrze, czy lecą w błoto.
