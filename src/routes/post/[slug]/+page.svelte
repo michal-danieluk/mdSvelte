@@ -52,7 +52,7 @@
   <meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
-<div class="max-w-4xl mx-auto px-6 pt-12 lg:pt-20">
+<div class="max-w-6xl mx-auto px-6 pt-12 lg:pt-20">
   <div class="relative lg:flex lg:gap-16">
     
     <!-- Left Column: Navigation (Sticky) -->
@@ -71,7 +71,7 @@
     </div>
 
     <!-- Center Column: Main Content -->
-    <main class="flex-grow max-w-[65ch] mx-auto lg:mx-0 overflow-hidden">
+    <main class="flex-grow max-w-3xl mx-auto lg:mx-0 overflow-hidden">
       <article>
         <header class="mb-12">
           <div class="flex items-center gap-3 mb-6">
