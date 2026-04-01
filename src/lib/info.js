@@ -24,7 +24,7 @@ export const github = '' //'mattjennings/mdSvelte-blog'
 export const twitter = 'michaldanieluk'
 export const linkedin = 'michal-danieluk'
 export const instagram = 'michal_danieluk'
-export const email = 'hello@michaldanieluk.pl' // Zmień na swój prawdziwy mail!
+export const email = 'michal@danieluk.pl'
 
 // Featured posts configuration
 export const featured_posts = 3
