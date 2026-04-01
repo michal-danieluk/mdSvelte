@@ -1,46 +1,38 @@
 <script>
-  import Tags from '$lib/components/Tags.svelte'
-
+  /** @type {import('$lib/data/posts').Post[]} */
   export let posts
 </script>
 
 {#if posts && posts.length > 0}
   <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
     {#each posts as post}
-      <a href="/post/{post.slug}" class="group block h-48">
-        <article class="relative group-hover:scale-105 transition-transform duration-200 h-full">
-          <div class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 border border-amber-200 dark:border-gray-600 rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:border-amber-300 dark:hover:border-gray-500 h-full">
-            <div class="absolute top-4 right-4">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-gray-700 dark:text-gray-200">
-                Wyróżniony
-              </span>
+      <a 
+        href="/post/{post.slug}" 
+        class="group relative flex flex-col h-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 hover:border-indigo-500/50 dark:hover:border-indigo-400/50 hover:-translate-y-1"
+      >
+        <!-- Decorative accent -->
+        <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 dark:bg-indigo-400/5 rounded-bl-full -z-10 transition-colors group-hover:bg-indigo-500/10"></div>
+        
+        <div class="flex flex-col h-full justify-between gap-4">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+              <span class="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Post wyróżniony</span>
             </div>
-
-            <div class="flex flex-col h-full">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 pr-16 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors line-clamp-2">
-                {post.title}
-              </h3>
-
-              <div class="mt-auto">
-                {#if post.tags && post.tags.length > 0}
-                  <div class="overflow-hidden">
-                    <Tags tags={post.tags} showLabel={false} size="sm" />
-                  </div>
-                {/if}
-              </div>
-            </div>
+            
+            <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug">
+              {post.title}
+            </h3>
           </div>
-        </article>
+
+          <div class="flex items-center gap-2 text-sm font-semibold text-indigo-600 dark:text-indigo-400 opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">
+            Czytaj więcej
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
       </a>
     {/each}
   </div>
 {/if}
-
-<style>
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-</style>
