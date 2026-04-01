@@ -1,7 +1,9 @@
 ---
 title: "Content is King, AI is the Kingdom: Jak Pisać Teksty, Które AI Pokocha?"
-date: 2025-10-04
+date: '2025-10-04'
 tags: ['SEO', 'AI', 'Content Marketing', 'LLM']
+description: 'Era pisania "pod Google" się kończy. Dowiedz się, jak tworzyć treści, które Wielkie Modele Językowe (LLM) uznają za wiarygodne i zaczną cytować w AI Overviews.'
+keywords: 'content marketing ai, pisanie pod ai, seo dla ai, llm optimization, eeat content, ai overviews seo'
 image_prompt: 'A medieval king looking thoughtfully at a futuristic, glowing crown shaped like a brain, with a kingdom in the background. Stylized, digital art.'
 featured: true
 ---
