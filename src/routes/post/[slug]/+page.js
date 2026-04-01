@@ -13,7 +13,7 @@ export async function load({ data }) {
     : await import(`../../../../posts/${data.post.slug}.md`)
 
   return {
-    post: data.post,
+    ...data,
     component: component.default,
     layout: {
       fullWidth: true

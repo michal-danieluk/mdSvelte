@@ -10,7 +10,7 @@ if (browser) {
   throw new Error(`posts can only be imported server-side`)
 }
 
-// Get all posts and add metadata  
+// Get all posts and add metadata (v2)
 export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: true }))
   .map(([filepath, module]) => {
     const metadata = module.metadata || {}
