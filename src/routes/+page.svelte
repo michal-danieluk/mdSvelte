@@ -15,53 +15,64 @@
   <meta name="description" content={bio} />
 </svelte:head>
 
-<!-- bio card - breaking out of all parent containers -->
-<section class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen flex justify-center pt-8 pb-16 bg-gradient-to-b from-amber-50/50 to-transparent dark:from-gray-800/50 dark:to-transparent">
-  <div class="bg-amber-50 dark:bg-gray-800 border border-amber-200 dark:border-gray-700 rounded-xl shadow-lg p-12 transition-all duration-300 hover:shadow-xl hover:bg-amber-100 dark:hover:bg-gray-700 hover:-translate-y-1 w-full max-w-4xl mx-4">
-    <div class="flex flex-col items-center w-full gap-8">
+<!-- Redesigned Hero Section: Professional & Compact -->
+<section class="relative overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-24">
+  <div class="flex flex-col items-center text-center gap-8 px-4 max-w-4xl mx-auto">
+    <div class="relative">
+      <div class="absolute inset-0 rounded-full bg-indigo-500/20 blur-2xl dark:bg-indigo-400/10"></div>
       <img
         src={avatar}
         alt={name}
-        class="mx-auto rounded-full w-44 h-44 ring-4 ring-amber-200 dark:ring-gray-600 shadow-lg"
+        class="relative mx-auto rounded-2xl w-32 h-32 sm:w-40 sm:h-40 object-cover shadow-2xl ring-1 ring-zinc-200 dark:ring-zinc-800 rotate-2 transition-transform hover:rotate-0 duration-500"
       />
-      <div class="flex gap-6">
-        <SocialLinks />
-      </div>
-      <p class="text-lg text-gray-700 dark:text-gray-300 text-center max-w-3xl leading-relaxed">
+    </div>
+    
+    <div class="space-y-4">
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+        Cześć, jestem <span class="text-indigo-600 dark:text-indigo-400">{name.split(' ')[0]}</span>.
+      </h1>
+      <p class="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
         {bio}
       </p>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <SocialLinks />
     </div>
   </div>
 </section>
 
-<div class="flex flex-col flex-grow pb-16">
+<div class="flex flex-col flex-grow pb-24 space-y-24">
 
-  <div class="flex flex-col gap-12">
-    <!-- Featured Posts Section -->
-    {#if data.featuredPosts && data.featuredPosts.length > 0}
-      <section class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-b from-amber-50/30 via-orange-50/20 to-transparent dark:from-gray-800/30 dark:via-gray-700/20 dark:to-transparent py-12">
-        <div class="container mx-auto px-4 max-w-6xl">
-          <div class="flex items-center justify-between gap-4 mb-8">
-            <h2 class="text-lg font-semibold sm:text-xl text-amber-900 dark:text-gray-100">
-              ⭐ Posty wyróżnione
-            </h2>
-          </div>
-          <FeaturedPosts posts={data.featuredPosts} />
+  <!-- Featured Posts Section: Modern Grid Background -->
+  {#if data.featuredPosts && data.featuredPosts.length > 0}
+    <section class="relative">
+      <div class="absolute inset-0 -top-12 -bottom-12 bg-zinc-100/50 dark:bg-zinc-900/50 -skew-y-1"></div>
+      <div class="relative container mx-auto px-4 max-w-4xl">
+        <div class="flex items-center gap-2 mb-10">
+          <div class="h-px w-8 bg-indigo-500"></div>
+          <h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-50">
+            Wyróżnione projekty i myśli
+          </h2>
         </div>
-      </section>
-    {/if}
-
-    <!-- Latest Posts Section -->
-    <section class="w-full">
-      <div class="flex items-center justify-between gap-4 mb-8">
-        <h2 class="text-sm font-medium sm:text-base text-zinc-500 dark:text-zinc-400">
-        Najnowsze
-        </h2>
-        <a href="/posts" class="flex items-center gap-1 text-sm font-medium text-teal-500"
-          >Blog <ArrowRightIcon class="w-4 h-4" /></a
-        >
+        <FeaturedPosts posts={data.featuredPosts} />
       </div>
-      <PostsList posts={data.posts} />
     </section>
-  </div>
+  {/if}
+
+  <!-- Latest Posts Section -->
+  <section class="container mx-auto px-4 max-w-4xl">
+    <div class="flex items-center justify-between gap-4 mb-10">
+      <div class="flex items-center gap-2">
+        <div class="h-px w-8 bg-zinc-300 dark:bg-zinc-700"></div>
+        <h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-50">
+          Najnowsze wpisy
+        </h2>
+      </div>
+      <a href="/posts" class="group flex items-center gap-1 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors"
+        >Zobacz wszystkie <ArrowRightIcon class="w-4 h-4 transition-transform group-hover:translate-x-1" /></a
+      >
+    </div>
+    <PostsList posts={data.posts} />
+  </section>
 </div>

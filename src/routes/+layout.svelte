@@ -6,130 +6,101 @@
   import { browser } from '$app/environment'
   import { onMount } from 'svelte'
   import { page } from '$app/stores'
-  import { firstName } from '$lib/info'
-  import { lastName } from '$lib/info'
+  import { firstName, lastName } from '$lib/info'
 
   let { children } = $props()
   
   let isDarkMode = $state(false)
-  let mounted = $state(false)
 
   onMount(() => {
-    mounted = true
-    
-    // Initialize theme from localStorage or default to light
-    const stored = localStorage.getItem('theme')
-    if (stored) {
-      isDarkMode = stored === 'dark'
-    } else {
-      // Default to light mode
-      isDarkMode = false
-      localStorage.setItem('theme', 'light')
-    }
-    
-    // Apply theme immediately
-    applyTheme()
+    // Initial check without FOUC (handled in app.html)
+    isDarkMode = document.documentElement.classList.contains('dark')
   })
-
-  // React to isDarkMode changes - use svelte:document instead of manual DOM manipulation
-  $effect(() => {
-    if (mounted && browser) {
-      applyTheme()
-    }
-  })
-
-  function applyTheme() {
-    if (!browser) return
-    
-    const html = document.documentElement
-    
-    if (isDarkMode) {
-      html.classList.add('dark')
-    } else {
-      html.classList.remove('dark')
-    }
-  }
 
   function toggleTheme() {
     isDarkMode = !isDarkMode
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light')
+    if (browser) {
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+        localStorage.setItem('theme', 'light')
+      }
+    }
   }
 </script>
 
-<div class="flex flex-col min-h-screen">
-  <div class="flex flex-col flex-grow w-full px-4 py-2">
-    <!-- Option 1: Minimal Floating Header -->
-    <header class="sticky top-0 z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-700 shadow-sm">
-      <div class="flex items-center justify-between w-full max-w-2xl px-4 py-3 mx-auto">
-        <!-- Logo/Name -->
-        <div class="flex items-center">
-          <a
-            href="/"
-            class="text-lg font-bold text-zinc-900 dark:text-zinc-100 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200"
-          >
-            {firstName} {lastName}
-          </a>
-        </div>
+<div class="flex flex-col min-h-screen bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300">
+  <!-- Minimal Floating Header -->
+  <header class="sticky top-0 z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border-b border-zinc-200/50 dark:border-zinc-800/50">
+    <div class="flex items-center justify-between w-full max-w-4xl px-6 py-4 mx-auto">
+      <!-- Logo/Name -->
+      <a
+        href="/"
+        class="text-xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+      >
+        {firstName}<span class="text-indigo-600 dark:text-indigo-400">.</span>{lastName.charAt(0)}
+      </a>
 
-        <!-- Navigation -->
-        <nav class="hidden sm:flex items-center space-x-6">
+      <!-- Navigation & Actions -->
+      <div class="flex items-center gap-8">
+        <nav class="hidden sm:flex items-center gap-6">
           <a
-            class="relative text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors duration-200 group"
+            class="text-sm font-semibold text-zinc-600 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 transition-colors"
             href="/tags"
           >
-            Tags
-            <span class="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-teal-500 to-teal-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+            Tagi
           </a>
           <a
-            class="relative text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors duration-200 group"
+            class="text-sm font-semibold text-zinc-600 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 transition-colors"
             href="/about"
           >
             O mnie
-            <span class="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-teal-500 to-teal-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
           </a>
         </nav>
 
+        <div class="h-4 w-px bg-zinc-200 dark:bg-zinc-800 hidden sm:block"></div>
+
         <!-- Dark mode toggle -->
-        <div class="flex items-center">
-          <button
-            type="button"
-            role="switch"
-            aria-label="Toggle Dark Mode"
-            aria-checked={isDarkMode}
-            class="flex items-center justify-center w-8 h-8 rounded-md text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors duration-200"
-            onclick={toggleTheme}
-          >
-            {#if isDarkMode}
-              <Icon src={Sun} class="w-4 h-4" />
-            {:else}
-              <Icon src={Moon} class="w-4 h-4" />
-            {/if}
-          </button>
-        </div>
+        <button
+          type="button"
+          aria-label="Toggle Dark Mode"
+          class="group flex items-center justify-center w-9 h-9 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all active:scale-95"
+          onclick={toggleTheme}
+        >
+          {#if isDarkMode}
+            <Icon src={Sun} class="w-5 h-5 group-hover:rotate-45 transition-transform" />
+          {:else}
+            <Icon src={Moon} class="w-5 h-5 group-hover:-rotate-12 transition-transform" />
+          {/if}
+        </button>
       </div>
-    </header>
-    <main
-      class="flex flex-col flex-grow w-full mx-auto mt-7"
-      class:max-w-2xl={!$page.data.layout?.fullWidth}
-    >
-      {@render children?.()}
-    </main>
-  </div>
-  
-  <footer class="w-full border-t border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900">
-    <div class="max-w-2xl mx-auto px-4 py-8">
-      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-        <div class="flex items-center" style="gap: 0.5rem;">
-          <span class="text-sm text-zinc-600 dark:text-zinc-400">
-            © 2023-{new Date().getFullYear()} {firstName} {lastName}
-          </span>
+    </div>
+  </header>
+
+  <main class="flex-grow w-full mx-auto px-4" class:max-w-4xl={!$page.data.layout?.fullWidth}>
+    {@render children?.()}
+  </main>
+
+  <footer class="w-full border-t border-zinc-200 dark:border-zinc-800 mt-24 pb-12">
+    <div class="max-w-4xl mx-auto px-6 py-12">
+      <div class="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
+        <div class="text-center sm:text-left">
+          <p class="text-sm font-bold text-zinc-900 dark:text-zinc-50 uppercase tracking-widest">
+            {firstName} {lastName}
+          </p>
+          <p class="text-xs text-zinc-500 dark:text-zinc-500 mt-1">
+            © {new Date().getFullYear()} • Productivity, Marketing & AI
+          </p>
         </div>
-        <div class="flex items-center gap-4">
-          <a href="/rss.xml" class="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
-            RSS
+        
+        <div class="flex items-center gap-8">
+          <a href="/rss.xml" class="text-xs font-bold text-zinc-500 hover:text-indigo-600 dark:text-zinc-500 dark:hover:text-indigo-400 transition-colors">
+            RSS FEED
           </a>
-          <a href="/sitemap.xml" class="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
-            Sitemap
+          <a href="/sitemap.xml" class="text-xs font-bold text-zinc-500 hover:text-indigo-600 dark:text-zinc-500 dark:hover:text-indigo-400 transition-colors">
+            SITEMAP
           </a>
         </div>
       </div>
