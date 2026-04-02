@@ -79,6 +79,17 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
       })()
     }
   })
+  // Filter out posts with future dates (unless in development mode)
+  .filter((post) => {
+    // If you want to see future posts during local development, uncomment the line below or use an env var
+    // if (process.env.NODE_ENV === 'development') return true
+    
+    if (!post.date) return true
+    const postDate = new Date(post.date)
+    const now = new Date()
+    // Compare dates ignoring time (optional, but usually safer for "daily" posts)
+    return postDate <= now
+  })
   // sort by date
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   // add references to the next/previous post
