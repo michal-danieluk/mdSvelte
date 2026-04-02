@@ -9,11 +9,11 @@
   <meta name="description" content={bio} />
 </svelte:head>
 
-<div class="max-w-4xl mx-auto px-6 py-12 lg:py-20">
+<div class="max-w-6xl mx-auto px-6 py-12 lg:py-20">
   <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
     
     <!-- Left Column: Identity & Socials -->
-    <aside class="lg:w-1/3 shrink-0">
+    <aside class="lg:w-1/4 shrink-0">
       <div class="lg:sticky lg:top-24 flex flex-col items-center lg:items-start text-center lg:text-left">
         <div class="relative mb-8">
           <div class="absolute inset-0 rounded-3xl bg-indigo-500/20 blur-2xl dark:bg-indigo-400/10"></div>

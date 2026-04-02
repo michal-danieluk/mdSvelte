@@ -23,15 +23,15 @@
       </p>
     </div>
 
-    <div class="w-full lg:w-auto shrink-0">
+    <div class="w-full lg:w-auto shrink-0 flex justify-center lg:justify-end">
       <a
         href={substack}
         target="_blank"
         rel="noopener noreferrer"
-        class="group relative inline-flex items-center justify-center w-full lg:w-auto px-8 py-5 font-black uppercase tracking-widest text-zinc-900 transition-all duration-200 bg-white rounded-2xl hover:bg-indigo-500 hover:text-white hover:shadow-xl hover:shadow-indigo-500/30 active:scale-95"
+        class="group relative inline-flex items-center justify-center w-full sm:w-auto px-10 py-5 font-black uppercase tracking-widest text-zinc-900 transition-all duration-200 bg-white rounded-2xl hover:bg-indigo-500 hover:text-white hover:shadow-xl hover:shadow-indigo-500/30 active:scale-95 whitespace-nowrap"
       >
         Zapisz się teraz
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 shrink-0 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
       </a>
