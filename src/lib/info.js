@@ -24,6 +24,7 @@ export const twitter = 'michaldanieluk'
 export const linkedin = 'michal-danieluk'
 export const instagram = 'michal_danieluk'
 export const email = 'michal@danieluk.pl'
+export const substack = 'https://buildletter.substack.com/subscribe'
 
 // Featured posts configuration
 export const featured_posts = 3
