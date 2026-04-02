@@ -7,14 +7,13 @@
   import { afterNavigate } from '$app/navigation'
   import PostDate from '$lib/components/PostDate.svelte'
   import ShareButtons from '$lib/components/ShareButtons.svelte'
+  import Newsletter from '$lib/components/Newsletter.svelte'
 
   /** @type {import('./$types').PageData} */
   export let data
 
   // generated open-graph image for sharing on social media.
-  const ogImage = `https://og-image.vercel.app/**${encodeURIComponent(
-    data.post.title
-  )}**.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg`
+  const ogImage = `${website}/api/og?title=${encodeURIComponent(data.post.title)}`
 
   const url = `${website}/post/${data.post.slug}`
 
@@ -143,6 +142,8 @@
             </div>
           </section>
         {/if}
+
+        <Newsletter />
       </article>
 
       <!-- Bottom Bio / Socials -->

@@ -1,5 +1,6 @@
 <script>
   import SocialLinks from '$lib/components/SocialLinks.svelte'
+  import Newsletter from '$lib/components/Newsletter.svelte'
   import { avatar, bio, name, email } from '$lib/info.js'
 </script>
 
@@ -52,6 +53,8 @@
           Prywatnie jestem entuzjastą kodu. Choć nie nazywam się pełnoetatowym programistą, uwielbiam budować własne systemy – od blogów w Svelte po automatyzacje w CLI. Wierzę, że zrozumienie "jak to działa pod spodem" daje ogromną przewagę w dzisiejszym świecie marketingu.
         </p>
       </section>
+
+      <Newsletter />
 
       <!-- Contact Section: Simple & Direct -->
       <section class="mt-20 pt-12 border-t border-zinc-100 dark:border-zinc-800">
