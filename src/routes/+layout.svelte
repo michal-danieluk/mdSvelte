@@ -1,18 +1,19 @@
 <script>
   import '../app.css'
   import '../prism.css'
-  import { Moon, Sun } from '@steeze-ui/heroicons'
+  import { Moon, Sun, Bars3 as Menu, XMark as X } from '@steeze-ui/heroicons'
   import { Icon } from '@steeze-ui/svelte-icon'
   import { browser } from '$app/environment'
   import { onMount } from 'svelte'
   import { page } from '$app/stores'
   import { firstName, lastName } from '$lib/info'
   import Search from '$lib/components/Search.svelte'
-  import { fly } from 'svelte/transition'
+  import { fly, slide, fade } from 'svelte/transition'
 
   let { children } = $props()
   
   let isDarkMode = $state(false)
+  let isMenuOpen = $state(false)
 
   onMount(() => {
     isDarkMode = document.documentElement.classList.contains('dark')
@@ -30,6 +31,16 @@
       }
     }
   }
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen
+  }
+
+  // Zamknij menu przy zmianie strony
+  $effect(() => {
+    $page.url.pathname;
+    isMenuOpen = false;
+  })
 </script>
 
 <div class="flex flex-col min-h-screen bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300">
@@ -42,7 +53,8 @@
         {firstName}<span class="text-indigo-600 dark:text-indigo-400">.</span>{lastName.charAt(0)}
       </a>
 
-      <div class="flex items-center gap-4 sm:gap-8">
+      <div class="flex items-center gap-2 sm:gap-8">
+        <!-- Desktop Nav -->
         <nav class="hidden sm:flex items-center gap-6">
           <a
             class="text-sm font-semibold text-zinc-600 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 transition-colors"
@@ -74,8 +86,45 @@
             <Icon src={Moon} class="w-5 h-5 group-hover:-rotate-12 transition-transform" />
           {/if}
         </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          type="button"
+          class="sm:hidden flex items-center justify-center w-9 h-9 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all active:scale-95"
+          onclick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
+          {#if isMenuOpen}
+            <Icon src={X} class="w-5 h-5" />
+          {:else}
+            <Icon src={Menu} class="w-5 h-5" />
+          {/if}
+        </button>
       </div>
     </div>
+
+    <!-- Mobile Menu Overlay -->
+    {#if isMenuOpen}
+      <div 
+        class="sm:hidden border-t border-zinc-200/50 dark:border-zinc-800/50 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md"
+        transition:slide={{ duration: 300 }}
+      >
+        <nav class="flex flex-col p-6 gap-4">
+          <a
+            class="text-base font-bold text-zinc-600 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 transition-colors py-2"
+            href="/tags"
+          >
+            Tagi
+          </a>
+          <a
+            class="text-base font-bold text-zinc-600 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 transition-colors py-2"
+            href="/about"
+          >
+            O mnie
+          </a>
+        </nav>
+      </div>
+    {/if}
   </header>
 
   <main class="flex-grow w-full mx-auto px-4">
