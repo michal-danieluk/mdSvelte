@@ -1,7 +1,7 @@
 <script>
   import SocialLinks from '$lib/components/SocialLinks.svelte'
   import Newsletter from '$lib/components/Newsletter.svelte'
-  import { avatar, bio, name, email } from '$lib/info.js'
+  import { avatar, bio, name, email, substack } from '$lib/info.js'
 </script>
 
 <svelte:head>
@@ -47,7 +47,7 @@
           Od lat zajmuję się sprzedażą – w mowie i piśmie. Moja praca to ciągłe balansowanie między potrzebami klientów a technologią, która pozwala te potrzeby zaspokoić szybciej i lepiej.
         </p>
         <p>
-          Obecnie prowadzę newsletter produktowy, gdzie odpowiadam za całą ścieżkę: od strategii treści, przez design, aż po techniczną egzekucję. Fascynuje mnie to, jak ewoluuje komunikacja z klientem i jak narzędzia, których używamy, zmieniają nasz sposób myślenia o marketingu.
+          Obecnie prowadzę <a href={substack} target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-bold no-underline hover:underline">newsletter produktowy</a>, gdzie odpowiadam za całą ścieżkę: od strategii treści, przez design, aż po techniczną egzekucję. Fascynuje mnie to, jak ewoluuje komunikacja z klientem i jak narzędzia, których używamy, zmieniają nasz sposób myślenia o marketingu.
         </p>
         <p>
           Prywatnie jestem entuzjastą kodu. Choć nie nazywam się pełnoetatowym programistą, uwielbiam budować własne systemy – od blogów w Svelte po automatyzacje w CLI. Wierzę, że zrozumienie "jak to działa pod spodem" daje ogromną przewagę w dzisiejszym świecie marketingu.
