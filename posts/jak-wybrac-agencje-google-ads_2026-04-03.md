@@ -1,6 +1,6 @@
 ---
 title: 'Jak wybrać agencję Google Ads — 7 pytań, które musisz zadać przed podpisaniem umowy'
-date: '2026-04-07'
+date: '2026-04-03'
 tags: ['Google Ads', 'Agencja', 'Marketing', 'SEM', 'Reklamy']
 description: 'Jak wybrać agencję Google Ads? 7 konkretnych pytań, które zadasz przed podpisaniem umowy — żeby nie stracić budżetu i kontroli nad kontem.'
 keywords: 'jak wybrać agencję Google Ads, agencja SEM, pytania do agencji Google Ads, umowa z agencją reklamową, kontrola agencji Google Ads'
