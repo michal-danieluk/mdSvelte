@@ -14,6 +14,8 @@ Google nie traktuje wszystkich reklamodawców jednakowo. Ci, którzy dostarczaj�
 
 ## Jak działa Quality Score — trzy składniki
 
+![Quality Score Google Ads](/google_ads_linkedin.png)
+
 Quality Score (wynik jakości) to ocena od 1 do 10, którą Google przypisuje każdemu słowu kluczowemu w Twojej kampanii. Nie całej kampanii, nie grupie reklam — każdemu pojedynczemu słowu kluczowemu osobno.
 
 Ta ocena składa się z trzech elementów:
