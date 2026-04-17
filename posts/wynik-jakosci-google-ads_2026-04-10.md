@@ -80,7 +80,7 @@ Co konkretnie bierze pod uwagę:
 
 **Najczęstszy błąd:** kierowanie wszystkich reklam na stronę główną. Strona główna to nie landing page. Jeśli reklamujesz konkretną usługę, użytkownik powinien trafiać na stronę tej usługi — z opisem, ceną, formularzem kontaktowym.
 
-Sprawdź swoją stronę w Google PageSpeed Insights. Jeśli wynik na mobile jest poniżej 50, to jest Twój priorytet numer jeden. [LINK: jak sprawdzić czy agencja dobrze prowadzi kampanię]
+Sprawdź swoją stronę w Google PageSpeed Insights. Jeśli wynik na mobile jest poniżej 50, to jest Twój priorytet numer jeden. [Sprawdź też: jak weryfikować, czy agencja dobrze prowadzi kampanię Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01)
 
 ## Przewidywany CTR — jak go zwiększyć
 
@@ -99,7 +99,7 @@ To nie jest Twój aktualny CTR — to prognoza Google na podstawie historycznych
 
 ## Jak sprawdzić Quality Score w panelu
 
-Quality Score nie jest domyślnie widoczny w interfejsie Google Ads. Trzeba go sobie włączyć. [LINK: jak ustawić kampanię Google Ads]
+Quality Score nie jest domyślnie widoczny w interfejsie Google Ads. Trzeba go sobie włączyć. [Jak ustawić kampanię Google Ads krok po kroku](/post/jak-ustawic-kampanie-google-ads_2026-04-14)
 
 Krok po kroku:
 

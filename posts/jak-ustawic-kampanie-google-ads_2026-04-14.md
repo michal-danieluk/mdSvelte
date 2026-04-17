@@ -119,7 +119,7 @@ Pamiętaj: reklama to obietnica. Strona docelowa musi ją spełnić.
 
 Ktoś wpisuje „montaż klimatyzacji Wrocław", klika Twoją reklamę i trafia na stronę główną firmy budowlanej. Widzi menu: O nas, Oferta, Realizacje, Kontakt. Musi sam znaleźć klimatyzację. Większość nie będzie szukać — zamknie zakładkę.
 
-[LINK: jak sprawdzić czy agencja dobrze prowadzi kampanię]
+[Sprawdź też: jak weryfikować, czy agencja dobrze prowadzi kampanię Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01)
 
 Dobra strona docelowa dla kampanii Google Ads:
 
