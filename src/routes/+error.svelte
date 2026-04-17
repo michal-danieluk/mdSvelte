@@ -14,13 +14,13 @@
   <title>{status} - {is404 ? 'Strona nie znaleziona' : 'Błąd'} | Michał Danieluk</title>
 </svelte:head>
 
-<div class="flex flex-col items-center justify-center min-h-[60vh] text-center px-6">
-  <div in:fly={{ y: 20, duration: 600 }}>
-    <span class="text-xs font-black uppercase tracking-[0.3em] text-indigo-600 dark:text-indigo-400 mb-4 block">
-      Error {status}
+<div class="flex flex-col items-center pt-24 pb-12 text-center px-6 min-h-[70vh]">
+  <div in:fly={{ y: 30, duration: 800 }}>
+    <span class="text-sm font-black uppercase tracking-[0.4em] text-indigo-600 dark:text-indigo-400 mb-6 block">
+      Status Błędu: {status}
     </span>
     
-    <h1 class="text-6xl sm:text-8xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 mb-6">
+    <h1 class="text-6xl sm:text-8xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 mb-8">
       {#if is404}
         Zgubiony w <span class="text-indigo-600 dark:text-indigo-400">kodzie?</span>
       {:else}
@@ -28,7 +28,7 @@
       {/if}
     </h1>
 
-    <p class="max-w-md mx-auto text-lg text-zinc-600 dark:text-zinc-400 mb-12 leading-relaxed">
+    <p class="max-w-lg mx-auto text-xl text-zinc-600 dark:text-zinc-400 mb-14 leading-relaxed font-medium">
       {#if is404}
         Wygląda na to, że ta strona nie istnieje. Może została zautomatyzowana przez AI, albo po prostu wpisałeś zły adres.
       {:else}
@@ -36,26 +36,26 @@
       {/if}
     </p>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
       <a
         href="/"
-        class="group flex items-center gap-2 px-8 py-4 bg-zinc-900 dark:bg-zinc-50 text-zinc-50 dark:text-zinc-900 font-bold rounded-2xl hover:bg-indigo-600 dark:hover:bg-indigo-400 hover:text-white dark:hover:text-zinc-950 transition-all active:scale-95 shadow-lg shadow-zinc-200 dark:shadow-none"
+        class="group flex items-center gap-3 px-12 py-5 bg-zinc-900 dark:bg-zinc-50 text-zinc-50 dark:text-zinc-900 font-bold rounded-2xl hover:bg-indigo-600 dark:hover:bg-indigo-400 hover:text-white dark:hover:text-zinc-950 transition-all active:scale-95 shadow-xl shadow-zinc-200/50 dark:shadow-none"
       >
-        <Icon src={ArrowLeft} class="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+        <Icon src={ArrowLeft} class="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
         Wróć do bazy
       </a>
       
       <a
         href="mailto:michal@danieluk.pl"
-        class="px-8 py-4 text-zinc-600 dark:text-zinc-400 font-bold hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+        class="px-8 py-5 text-zinc-600 dark:text-zinc-400 font-bold hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
       >
-        Zgłoś błąd
+        Zgłoś problem
       </a>
     </div>
   </div>
 
   <!-- Dekoracyjny element w tle -->
-  <div class="absolute -z-10 blur-[120px] opacity-20 dark:opacity-10 pointer-events-none">
-    <div class="w-64 h-64 bg-indigo-600 rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 blur-[160px] opacity-25 dark:opacity-10 pointer-events-none">
+    <div class="w-96 h-96 bg-indigo-600 rounded-full"></div>
   </div>
 </div>
