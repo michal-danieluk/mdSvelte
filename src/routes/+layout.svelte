@@ -1,9 +1,6 @@
 <script>
   import '../app.css'
   import '../prism.css'
-  import { dev } from '$app/environment';
-  import { injectAnalytics } from '@vercel/analytics/sveltekit';
-  injectAnalytics({ mode: dev ? 'development' : 'production' });
   import { Moon, Sun, Bars3 as Menu, XMark as X } from '@steeze-ui/heroicons'
   import { Icon } from '@steeze-ui/svelte-icon'
   import { browser } from '$app/environment'
