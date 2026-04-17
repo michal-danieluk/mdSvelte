@@ -9,8 +9,12 @@
   import { firstName, lastName } from '$lib/info'
   import Search from '$lib/components/Search.svelte'
   import { fly, slide, fade } from 'svelte/transition'
+  import { dev } from '$app/environment'
+  import { inject } from '@vercel/analytics'
 
   let { children } = $props()
+  
+  inject({ mode: dev ? 'development' : 'production' })
   
   let isDarkMode = $state(false)
   let isMenuOpen = $state(false)
