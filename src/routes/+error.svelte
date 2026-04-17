@@ -16,8 +16,8 @@
 
 <div class="flex flex-col items-center pt-24 pb-12 text-center px-6 min-h-[70vh]">
   <div in:fly={{ y: 30, duration: 800 }}>
-    <span class="text-sm font-black uppercase tracking-[0.4em] text-indigo-600 dark:text-indigo-400 mb-6 block">
-      Status Błędu: {status}
+    <span class="text-xl font-black uppercase tracking-[0.4em] text-indigo-600 dark:text-indigo-400 mb-6 block">
+      Error {status}
     </span>
     
     <h1 class="text-6xl sm:text-8xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 mb-8">
