@@ -8,6 +8,7 @@
   import PostDate from '$lib/components/PostDate.svelte'
   import ShareButtons from '$lib/components/ShareButtons.svelte'
   import Newsletter from '$lib/components/Newsletter.svelte'
+  import BuildletterCTA from '$lib/components/BuildletterCTA.svelte'
 
   /** @type {import('./$types').PageData} */
   export let data
@@ -119,6 +120,8 @@
             <ShareButtons title={data.post.title} {url} />
           </div>
         </div>
+
+        <BuildletterCTA />
 
         <!-- Related Posts Section -->
         {#if data.relatedPosts && data.relatedPosts.length > 0}

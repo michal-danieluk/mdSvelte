@@ -45,7 +45,27 @@
     $page.url.pathname;
     isMenuOpen = false;
   })
+
+  // JSON-LD: jedna tożsamość autora spinająca michaldanieluk.pl i buildletter.com
+  const personJsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Michał Danieluk',
+    url: 'https://michaldanieluk.pl',
+    jobTitle: 'Digital Marketing Specialist',
+    knowsAbout: ['SEO', 'Google Ads', 'Email Marketing', 'Marketing Automation', 'AI'],
+    sameAs: [
+      'https://buildletter.com',
+      'https://www.linkedin.com/in/michal-danieluk',
+      'https://x.com/michaldanieluk',
+      'https://www.instagram.com/michal_danieluk'
+    ]
+  })
 </script>
+
+<svelte:head>
+  {@html `<script type="application/ld+json">${personJsonLd}</script>`}
+</svelte:head>
 
 <div class="flex flex-col min-h-screen bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300">
   <header class="sticky top-0 z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border-b border-zinc-200/50 dark:border-zinc-800/50">
