@@ -1,20 +1,31 @@
-<!-- Most między blogiem (poligon) a buildletter.com (usługi) -->
+<!-- Most między blogiem (poligon) a buildletter.com (usługi) — wizualnie w brandzie buildletter -->
 <aside
-  class="mt-16 p-6 sm:p-8 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-zinc-100 dark:border-zinc-800"
+  class="mt-16 p-6 sm:p-8 rounded-2xl bg-black border border-zinc-800 relative overflow-hidden"
 >
-  <h3 class="text-[10px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-3">
-    Prowadzisz małą firmę?
-  </h3>
-  <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
-    Ten blog to mój poligon — SEO i marketing testuję tu na sobie, na własne pieniądze.
-    To samo robię dla małych firm: widoczność w Google, audyty, reklamy.
-  </p>
-  <a
-    href="https://buildletter.com"
-    target="_blank"
-    rel="noopener"
-    class="inline-flex items-center gap-2 mt-4 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline underline-offset-4"
-  >
-    Zobacz, jak pracuję → buildletter.com
-  </a>
+  <span
+    aria-hidden="true"
+    class="absolute -right-6 -bottom-10 text-[140px] font-black leading-none select-none pointer-events-none"
+    style="color:#ff5b1f; opacity:0.9; transform:rotate(-8deg);">→</span>
+
+  <div class="relative">
+    <p class="text-lg font-black tracking-tight text-white">
+      build<span style="color:#ff5b1f;">letter</span>
+    </p>
+    <h3 class="mt-3 text-xl sm:text-2xl font-black tracking-tight text-white">
+      Prowadzisz małą firmę?
+    </h3>
+    <p class="mt-2 max-w-lg text-sm sm:text-base leading-relaxed text-zinc-400">
+      Ten blog to mój poligon — SEO i marketing testuję tu na sobie, na własne pieniądze.
+      To samo robię dla małych firm: widoczność w Google, audyty, reklamy.
+    </p>
+    <a
+      href="https://buildletter.com"
+      target="_blank"
+      rel="noopener"
+      class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-lg text-sm font-bold text-black transition-transform hover:scale-[1.03]"
+      style="background:#ff5b1f;"
+    >
+      Zobacz, jak pracuję →
+    </a>
+  </div>
 </aside>

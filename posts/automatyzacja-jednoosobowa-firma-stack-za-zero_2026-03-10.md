@@ -5,7 +5,7 @@ tags: ['AI', 'Automatyzacja', 'Narzędzia', 'Solopreneur', 'n8n', 'Make']
 description: 'Nie potrzebujesz budżetu ani zespołu, żeby zautomatyzować jednoosobową firmę. Oto 5 darmowych narzędzi, których używam codziennie.'
 keywords: 'automatyzacja jednoosobowa firma, darmowe narzędzia automatyzacja, stack za darmo, narzędzia dla solopreneurów, no-code automatyzacja, n8n, Make, Claude Code, Airtable'
 image_prompt: 'Minimalist dark workspace with five glowing tool icons connected by thin light lines forming a workflow chain, flat vector style, dark charcoal background with electric blue accents'
-featured: true
+featured: false
 ---
 
 Jesteś solopreneurem albo freelancerem w 2026. Pracujesz sam — marketing, sprzedaż, operacje, content, księgowość. Wszystko na Twojej głowie. Czas to jedyny zasób, którego nie dodrukujesz.
