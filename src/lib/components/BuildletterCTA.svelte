@@ -1,4 +1,14 @@
 <!-- Most między blogiem (poligon) a buildletter.com (usługi) — wizualnie w brandzie buildletter -->
+<script>
+  import { track } from '@vercel/analytics'
+
+  let { postSlug = null } = $props()
+
+  function handleClick() {
+    track('buildletter_cta_click', postSlug ? { post: postSlug } : {})
+  }
+</script>
+
 <aside
   class="mt-16 p-6 sm:p-8 rounded-2xl bg-black border border-zinc-800 relative overflow-hidden"
 >
@@ -22,6 +32,7 @@
       href="https://buildletter.com"
       target="_blank"
       rel="noopener"
+      onclick={handleClick}
       class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-lg text-sm font-bold text-black transition-transform hover:scale-[1.03]"
       style="background:#ff5b1f;"
     >

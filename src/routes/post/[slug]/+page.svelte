@@ -133,7 +133,7 @@
           </div>
         </div>
 
-        <BuildletterCTA />
+        <BuildletterCTA postSlug={data.post.slug} />
 
         <!-- Related Posts Section -->
         {#if data.relatedPosts && data.relatedPosts.length > 0}
