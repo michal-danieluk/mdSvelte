@@ -5,7 +5,7 @@ tags: ['Marketing', 'Mała Firma', 'Agencja', 'Strategia']
 description: 'Wybierasz agencję marketingową? 7 czerwonych flag, które rozpoznasz jeszcze przed podpisaniem umowy — zanim zamrozisz budżet na rok w złej współpracy.'
 keywords: 'jak wybrać agencję marketingową, czerwone flagi agencja, zła agencja marketingowa, umowa z agencją reklamową, gwarancja pozycji w google, własność konta google ads, wybór agencji dla małej firmy'
 image_prompt: 'A cyberpunk city street at night, a lone figure standing before a glowing neon doorway of a flashy marketing agency, seven red warning holograms flashing above the entrance like alarm signals, rain reflecting crimson and magenta light on wet pavement, the figure hesitating at the threshold, dark blue shadows, cinematic wide shot'
-featured: true
+featured: false
 ---
 
 Wybór agencji marketingowej to dla większości małych firm strzał w ciemno. Oferty wyglądają podobnie, każda agencja "ma doświadczenie i indywidualne podejście", a Ty nie masz jak zweryfikować, kto faktycznie umie robić marketing, a kto umie tylko sprzedawać marketing.
