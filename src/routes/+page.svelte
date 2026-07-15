@@ -4,16 +4,14 @@
   import FeaturedPosts from '$lib/components/FeaturedPosts.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
   import Card from '$lib/components/Card.svelte'
+  import Seo from '$lib/components/Seo.svelte'
   import { avatar, bio, name } from '$lib/info.js'
 
   /** @type {import('./$types').PageData} */
   export let data
 </script>
 
-<svelte:head>
-  <title>{name}</title>
-  <meta name="description" content={bio} />
-</svelte:head>
+<Seo title={name} description={bio} />
 
 <!-- Redesigned Hero Section: Professional & Compact -->
 <section class="relative overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-24">

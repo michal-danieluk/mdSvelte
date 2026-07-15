@@ -1,6 +1,7 @@
 ---
 title: Zarządzanie dotfiles
 date: 2023-03-31
+description: 'Jak zarządzam konfiguracją systemu: Ansible do automatyzacji, Stow do symlinków i wszystko w jednym repozytorium dotfiles na GitHubie.'
 ---
 
 ## Anisble i reszta

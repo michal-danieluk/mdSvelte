@@ -2,6 +2,7 @@
 title: Redesign nagłówka bloga - testowanie różnych opcji
 date: 2025-01-27
 tags: ['SvelteKit', 'Design', 'Tailwind CSS', 'UI/UX']
+description: 'Jak testowałem różne warianty nagłówka bloga w SvelteKit i Tailwind CSS — od minimalistycznego glassmorphism po finalną wybraną wersję.'
 ---
 
 ## Jak to się zaczęło

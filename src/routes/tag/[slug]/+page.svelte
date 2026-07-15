@@ -3,15 +3,13 @@
   import PostsList from '$lib/components/PostsList.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
   import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte'
+  import Seo from '$lib/components/Seo.svelte'
 
   /** @type {import('./$types').PageData} */
   export let data
 </script>
 
-<svelte:head>
-  <title>Temat: {data.tag.name} - {name}</title>
-  <meta name="description" content="Wpisy oznaczone tagiem {data.tag.name}" />
-</svelte:head>
+<Seo title={`Temat: ${data.tag.name} - ${name}`} description={`Wpisy oznaczone tagiem ${data.tag.name}`} />
 
 <div class="max-w-4xl mx-auto px-6 pt-12 lg:pt-20 pb-24">
   <header class="mb-16">

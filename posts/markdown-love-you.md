@@ -2,6 +2,7 @@
 title: Markdown I ♥ you...
 date: 2022-12-12
 tags: ['Markdown', 'Writing', 'Blog']
+description: 'Dlaczego Markdown to mój ulubiony sposób pisania: prosty, szybki i przenośny między Obsidianem a blogiem, bez zbędnego formatowania.'
 ---
 
 ## Uwielbiam markdown

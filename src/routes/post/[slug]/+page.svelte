@@ -9,6 +9,7 @@
   import ShareButtons from '$lib/components/ShareButtons.svelte'
   import Newsletter from '$lib/components/Newsletter.svelte'
   import BuildletterCTA from '$lib/components/BuildletterCTA.svelte'
+  import Seo from '$lib/components/Seo.svelte'
 
   /** @type {import('./$types').PageData} */
   export let data
@@ -17,6 +18,35 @@
   const ogImage = `${website}/api/og?title=${encodeURIComponent(data.post.title)}`
 
   const url = `${website}/post/${data.post.slug}`
+  const postDescription = data.post.description || data.post.preview.text
+
+  // ISO 8601 datetime for structured data (post.date is yyyy-MM-dd)
+  const publishedIso = new Date(`${data.post.date}T00:00:00`).toISOString()
+
+  const blogPostingJsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: data.post.title,
+    description: postDescription,
+    image: ogImage,
+    url,
+    datePublished: publishedIso,
+    dateModified: publishedIso,
+    author: {
+      '@type': 'Person',
+      name,
+      url: website
+    },
+    publisher: {
+      '@type': 'Person',
+      name,
+      url: website
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url
+    }
+  })
 
   let canGoBack = false
   afterNavigate(({ from }) => {
@@ -32,29 +62,11 @@
   }
 </script>
 
+<Seo title={`${data.post.title} - ${name}`} description={postDescription} type="article" image={ogImage} />
+
 <svelte:head>
-  <title>{data.post.title} - {name}</title>
-  <meta name="description" content={data.post.description || data.post.preview.text} />
   <meta name="author" content={name} />
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content={url} />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content={data.post.title} />
-  <meta property="og:description" content={data.post.description || data.post.preview.text} />
-  <meta property="og:image" content={ogImage} />
-  <meta property="og:site_name" content={name} />
-  <meta property="og:locale" content="pl_PL" />
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@michaldanieluk" />
-  <meta name="twitter:creator" content="@michaldanieluk" />
-  <meta property="twitter:domain" content={website.replace('https://', '')} />
-  <meta property="twitter:url" content={url} />
-  <meta name="twitter:title" content={data.post.title} />
-  <meta name="twitter:description" content={data.post.description || data.post.preview.text} />
-  <meta name="twitter:image" content={ogImage} />
+  {@html `<script type="application/ld+json">${blogPostingJsonLd}</script>`}
 </svelte:head>
 
 <div class="max-w-6xl mx-auto px-6 pt-12 lg:pt-20">

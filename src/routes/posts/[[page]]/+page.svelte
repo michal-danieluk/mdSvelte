@@ -4,6 +4,7 @@
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
   import PostsList from '$lib/components/PostsList.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
+  import Seo from '$lib/components/Seo.svelte'
 
   /** @type {import('./$types').PageData} */
   let { data } = $props()
@@ -13,9 +14,10 @@
   let hasNextPage = $derived(data.page < totalPages)
 </script>
 
-<svelte:head>
-  <title>Blog - {name}</title>
-</svelte:head>
+<Seo
+  title={`Blog - ${name}`}
+  description="Piszę o technologii, marketingu i automatyzacji. Bez lania wody, same konkrety."
+/>
 
 <div class="max-w-4xl mx-auto px-6 pt-12 lg:pt-20 pb-24">
   <header class="mb-16">

@@ -1,15 +1,13 @@
 <script>
   import { name } from '$lib/info.js'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
+  import Seo from '$lib/components/Seo.svelte'
 
   /** @type {import('./$types').PageData} */
   export let data
 </script>
 
-<svelte:head>
-  <title>Tagi - {name}</title>
-  <meta name="description" content="Przeglądaj wpisy według tematów" />
-</svelte:head>
+<Seo title={`Tagi - ${name}`} description="Przeglądaj wpisy według tematów" />
 
 <div class="max-w-4xl mx-auto px-6 pt-12 lg:pt-20 pb-24">
   <header class="mb-16">

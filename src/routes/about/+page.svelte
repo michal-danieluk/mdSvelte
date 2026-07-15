@@ -1,13 +1,11 @@
 <script>
   import SocialLinks from '$lib/components/SocialLinks.svelte'
   import Newsletter from '$lib/components/Newsletter.svelte'
+  import Seo from '$lib/components/Seo.svelte'
   import { avatar, bio, name, email, substack } from '$lib/info.js'
 </script>
 
-<svelte:head>
-  <title>O mnie - {name}</title>
-  <meta name="description" content={bio} />
-</svelte:head>
+<Seo title={`O mnie - ${name}`} description={bio} />
 
 <div class="max-w-6xl mx-auto px-6 py-12 lg:py-20">
   <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
