@@ -1,11 +1,11 @@
 ---
 title: 'Ile powinieneś płacić za marketing małej firmy? Realne widełki cenowe w Polsce w 2026'
-date: '2026-07-15'
+date: '2026-07-13'
 tags: ['Marketing', 'Mała Firma', 'Ceny', 'Agencja', 'Strategia']
 description: 'Ile kosztuje Google Ads, SEO, strona internetowa i audyt w Polsce w 2026? Konkretne widełki cenowe dla małych firm — bez owijania, z wyjaśnieniem skąd biorą się różnice.'
 keywords: 'ile kosztuje marketing małej firmy, cennik agencji marketingowej, ile kosztuje prowadzenie google ads, ile kosztuje seo miesięcznie, ile kosztuje strona internetowa 2026, ceny usług marketingowych polska'
 image_prompt: 'A cyberpunk marketplace at night, a small business owner standing before a giant holographic price board glowing in neon pink and cyan, floating digital price tags and złoty symbols drifting in the air, rain-slicked street reflecting the neon numbers, dark atmospheric city backdrop'
-featured: false
+featured: true
 ---
 
 Wpisz w Google "ile kosztuje prowadzenie Google Ads" i policz, ile stron agencji podaje konkretną kwotę. Wynik: prawie żadna. Zamiast tego dostaniesz "wycena indywidualna", "umów się na bezpłatną konsultację" i formularz kontaktowy. Branża marketingowa zrobiła z cen tajemnicę — i to nie jest przypadek.

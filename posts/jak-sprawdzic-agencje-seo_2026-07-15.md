@@ -5,7 +5,7 @@ tags: ['SEO', 'Marketing', 'Agencja', 'Mała Firma', 'Google Search Console']
 description: 'Płacisz agencji za SEO i nie wiesz, czy coś się dzieje? 4 konkretne rzeczy, które sprawdzisz sam — bez wiedzy technicznej. Zobacz, czy Twoje pieniądze pracują.'
 keywords: 'jak sprawdzić agencję seo, kontrola agencji seo, czy seo działa, google search console jak sprawdzić, raport pozycji seo, audyt seo małej firmy, pozycjonowanie strony weryfikacja'
 image_prompt: 'A cyberpunk detective examining a giant holographic search results page floating in a dark neon-lit office, magnifying glass in hand, glowing graphs and keyword rankings drifting in the air around him, purple and cyan neon light, rain against the window, cinematic composition'
-featured: false
+featured: true
 ---
 
 SEO to wymarzona usługa do sprzedawania. Efekty "przyjdą za kilka miesięcy", praca dzieje się "w tle", a jak nic nie rośnie — winny jest algorytm Google, konkurencja albo sezonowość. Płacisz co miesiąc 1500, 2500, czasem 5000 złotych i tak naprawdę nie wiesz, czy ktoś po drugiej stronie w ogóle otworzył Twoją stronę.

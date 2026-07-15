@@ -5,7 +5,7 @@ tags: ['Marketing', 'SEO', 'Google Ads', 'Strategia', 'Mała firma']
 description: 'Ile czasu mija od pierwszej złotówki wydanej na marketing do pierwszego klienta? Realne terminy dla SEO, Google Ads, wizytówki Google i e-mail marketingu — bez obiecanek.'
 keywords: 'jak długo czekać na efekty marketingu, kiedy SEO daje efekty, ile trwa pozycjonowanie, efekty Google Ads po jakim czasie, efekty marketingu mała firma'
 image_prompt: 'Cyberpunk flat illustration, hooded figure standing in front of a large wall-mounted timeline chart in a dark room. The timeline shows four glowing progress bars of different lengths: shortest bar glowing neon cyan (#00e5ff), medium bars glowing amber (#ff9500), longest bar glowing purple (#b347ff), each ending with a small flag icon. An hourglass icon floats above the timeline. Background: deep dark purple-black atmosphere with subtle neon light reflections. No text on the image. Flat vector style, clean lines, minimal detail, moody cyberpunk aesthetic.'
-featured: true
+featured: false
 ---
 
 "Kiedy będą efekty?" — to pierwsze pytanie, które zadaje każdy właściciel firmy przed wydaniem złotówki na marketing. I słusznie.

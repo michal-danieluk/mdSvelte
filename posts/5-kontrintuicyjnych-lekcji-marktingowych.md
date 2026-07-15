@@ -3,7 +3,7 @@ title: "5 kontrintuicyjnych lekcji marketingowych od Rory'ego Sutherlanda"
 date: 2025-09-10
 tags: ['Marketing', 'Psychologia', 'Strategia', 'Biznes', 'Innowacje']
 description: "5 kontrintuicyjnych lekcji marketingowych od Rory'ego Sutherlanda: dlaczego optymalizacja przegrywa z odwagą, i czego uczą Netflix, EasyJet i Guinness."
-featured: true
+featured: false
 ---
 
 # 5 kontrintuicyjnych lekcji marketingowych od Rory'ego Sutherlanda
