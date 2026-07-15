@@ -1,12 +1,10 @@
 <!-- Most między blogiem (poligon) a buildletter.com (usługi) — wizualnie w brandzie buildletter -->
 <script>
-  import { track } from '@vercel/analytics'
-
   let { postSlug = null } = $props()
 
-  function handleClick() {
-    track('buildletter_cta_click', postSlug ? { post: postSlug } : {})
-  }
+  // UTM zamiast Vercel Analytics track() (custom events sa platne) — dane trafiaja
+  // w query stringu, wiec zlapie je kazde narzedzie analityczne po stronie buildletter.com
+  const ctaUrl = `https://buildletter.com?utm_source=michaldanieluk.pl&utm_medium=blog_cta&utm_campaign=blog_bridge${postSlug ? `&utm_content=${postSlug}` : ''}`
 </script>
 
 <aside
@@ -29,10 +27,9 @@
       To samo robię dla małych firm: widoczność w Google, audyty, reklamy.
     </p>
     <a
-      href="https://buildletter.com"
+      href={ctaUrl}
       target="_blank"
       rel="noopener"
-      onclick={handleClick}
       class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-lg text-sm font-bold text-black transition-transform hover:scale-[1.03]"
       style="background:#ff5b1f;"
     >
