@@ -105,6 +105,8 @@ n8n to narzędzie do automatyzacji workflow. Open source, self-hosted, potężne
 
 **Moja zasada:** Automatyzuję tylko powtarzalne zadania. Jeśli robię coś raz, nie buduję do tego workflow.
 
+Cały mój automatyzacyjny stack (n8n razem z resztą) i to, jak te narzędzia się ze sobą łączą, opisałem szerzej w [Automatyzacja dla jednoosobowej firmy — mój stack za $0](/post/automatyzacja-jednoosobowa-firma-stack-za-zero_2026-03-10).
+
 ---
 
 ## Podsumowanie: AI to narzędzie, nie magia
@@ -116,6 +118,8 @@ I wiesz, co jest najważniejsze? **Żadne z nich nie działa samo.** Claude nie 
 AI to wzmacniacz sygnału. Jeśli Twój sygnał (wiedza, strategia, doświadczenie) jest silny — AI go wzmocni. Jeśli jest słaby — AI wzmocni bałagan.
 
 **Marketer, który rozumie AI, wygra z AI, które nie rozumie marketingu.** Zawsze.
+
+Ta lista jest krótka nie przez przypadek — to efekt świadomej selekcji, nie lenistwa. Rozwijam ten temat w [Minimalizmie w narzędziach](/post/minimalizm-w-narzedziach-mniej-znaczy-wiecej_2026-02-18).
 
 ---
 

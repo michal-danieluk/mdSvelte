@@ -14,13 +14,13 @@ Tym królestwem jest AI.
 
 Przez lata pisaliśmy "pod Google". Upychaliśmy słowa kluczowe, budowaliśmy piramidy linków i modliliśmy się do algorytmów o wyższą pozycję. Dziś to już nie wystarczy. Wchodzimy w erę, gdzie o Twojej widoczności decydują nie tylko algorytmy wyszukiwarki, ale też Wielkie Modele Językowe (LLM), takie jak Gemini, ChatGPT czy Claude.
 
-To one coraz częściej stają się pośrednikiem między użytkownikiem a informacją, serwując gotowe odpowiedzi w **AI Overviews** (dawniej SGE). Jeśli Twojej treści tam nie ma, to tak, jakbyś nie istniał.
+To one coraz częściej stają się pośrednikiem między użytkownikiem a informacją, serwując gotowe odpowiedzi w **AI Overviews** (dawniej SGE). Jeśli Twojej treści tam nie ma, to tak, jakbyś nie istniał. Pisałem szerzej o mechanice tego zjawiska w [SEO umiera, nadchodzi GEO](/post/seo_umiera_nadchodzi_geo_2025-10-05).
 
 Pytanie brzmi: jak sprawić, by AI nie tylko Cię zauważyło, ale wręcz pokochało i z dumą cytowało?
 
 ### Nowa strategia: Myśl konceptami, a nie słowami kluczowymi
 
-Zapomnij na chwilę o idealnym zagęszczeniu fraz. AI myśli inaczej. Myśli w kategoriach **encji** (kim lub czym jest dany byt) i **konceptów** (relacji między nimi). Twoim celem nie jest już tylko "trafienie w słowo kluczowe", ale zbudowanie wokół swojego tematu całego uniwersum znaczeń.
+Zapomnij na chwilę o idealnym zagęszczeniu fraz. AI myśli inaczej. Myśli w kategoriach **encji** (kim lub czym jest dany byt) i **konceptów** (relacji między nimi). Twoim celem nie jest już tylko "trafienie w słowo kluczowe", ale zbudowanie wokół swojego tematu całego uniwersum znaczeń. Rozwijam ten wątek — jak dosłownie "zostać encją" w oczach Google — w [Jak sprawić, by AI polecało Twoją stronę](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03).
 
 Musisz udowodnić, że jesteś ekspertem (słynne E-E-A-T od Google), a Twoja treść to najbardziej kompletne, wiarygodne i użyteczne źródło informacji na dany temat. AI ma być pewne, że cytując Ciebie, daje użytkownikowi najlepszą możliwą odpowiedź.
 

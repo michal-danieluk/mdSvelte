@@ -14,6 +14,8 @@ Nie jesteś w tym sam. Większość właścicieli małych firm jest w identyczne
 
 Dobra wiadomość: nie musisz być specjalistą od reklam, żeby ocenić, czy Twoja kampania jest prowadzona porządnie. Wystarczą cztery konkretne rzeczy, które możesz sprawdzić sam — każda zajmie kilka minut. Pokażę Ci krok po kroku, co otworzyć, na co kliknąć i jak interpretować to, co zobaczysz.
 
+Dopiero szukasz agencji i jeszcze nie masz kogo weryfikować? Zacznij od [7 pytań, które musisz zadać przed podpisaniem umowy](/post/jak-wybrac-agencje-google-ads_2026-04-03).
+
 Jeśli ta sama agencja prowadzi Ci równolegle kampanie Meta Ads (Facebook i Instagram), sprawdź też [analogiczny checklist dla Meta Ads](/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17) — tam liczą się zupełnie inne metryki niż w Google Ads.
 
 ---

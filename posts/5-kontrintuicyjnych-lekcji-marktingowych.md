@@ -101,3 +101,5 @@ Główna myśl Sutherlanda jest prosta, ale rewolucyjna: **prawdziwa wartość w
 Czasami najlepszym posunięciem jest zrobienie czegoś, co na pierwszy rzut oka wydaje się nielogiczne.
 
 **Pytanie na koniec:** Którą z tych strategii mógłbyś zastosować w swojej firmie, aby przestać konkurować na tych samych zasadach co wszyscy inni i zacząć tworzyć prawdziwie przełomową wartość?
+
+Ciekawostka: presja na krótkoterminowe wyniki, przed którą Sutherland przestrzega firmy, to dokładnie ten sam mechanizm, który pcha właścicieli małych firm w ramiona agencji obiecujących gwarantowane rezultaty. Rozpoznasz te sygnały w [Czerwonych flagach przy wyborze agencji marketingowej](/post/czerwone-flagi-agencja-marketingowa_2026-07-15).

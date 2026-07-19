@@ -51,6 +51,8 @@ Nie chodzi o to, które narzędzie jest „najlepsze" według rankingów na YouT
 
 Dla mnie to pięć narzędzi. Dla ciebie może to być siedem albo trzy. Liczba nie ma znaczenia. Znaczenie ma to, że każde z nich naprawdę pracuje.
 
+Konkretnie która to piątka i dlaczego akurat ta — rozpisałem w [Narzędziach AI, których naprawdę używam w pracy](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15).
+
 ## Moje zasady cyfrowego minimalizmu
 
 Po roku eksperymentów wypracowałem kilka reguł, które pomagają mi nie wpaść z powrotem w pułapkę kolekcjonowania narzędzi.

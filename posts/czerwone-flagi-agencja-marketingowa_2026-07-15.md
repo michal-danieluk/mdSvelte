@@ -32,6 +32,8 @@ To fizycznie niemożliwe, żeby dobrze wycenić marketing firmy, o której nic s
 
 **Dobry usługodawca najpierw pyta, potem wycenia.** Kto pyta o Twojego klienta, marże i sezonowość — ten faktycznie zamierza pracować nad Twoim biznesem, a nie odpalić kopiuj-wklej.
 
+Skoro już mowa o cenie — jeśli nie masz punktu odniesienia, ile w ogóle powinieneś płacić, zebrałem realne widełki rynkowe w [Ile powinieneś płacić za marketing małej firmy](/post/ile-kosztuje-marketing-malej-firmy_2026-07-15).
+
 ## 3. Brak przykładów z podobnej branży — albo brak jakichkolwiek weryfikowalnych przykładów
 
 "Mamy setki zadowolonych klientów" — świetnie, pokażcie trzech. Z nazwą firmy, opisem, co zostało zrobione, i wynikiem, który da się sprawdzić.
@@ -98,7 +100,7 @@ Same czerwone flagi to połowa roboty. Druga połowa to proces, który zwiększa
 
 I jedna rzecz na koniec: mała firma nie potrzebuje wielkiej agencji, żeby rosnąć. Potrzebuje przemyślanych działań w dobrze dobranych kanałach — a to często oznacza jednego solidnego specjalistę albo małą, wyspecjalizowaną agencję, nie "kompleksową obsługę 360°". Duży budżet źle wydany przegrywa z małym wydanym mądrze. Widziałem to wystarczająco wiele razy, żeby traktować to jako regułę, nie wyjątek.
 
-A jeśli umowę już podpisałeś i chcesz sprawdzić, jak agencja radzi sobie w praktyce — mam osobne poradniki krok po kroku: [jak sprawdzić kampanie Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01) i [jak sprawdzić kampanie Meta Ads](/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17). Wszystko zweryfikujesz sam, bez wiedzy technicznej.
+A jeśli umowę już podpisałeś i chcesz sprawdzić, jak agencja radzi sobie w praktyce — mam osobne poradniki krok po kroku: [jak sprawdzić kampanie Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01), [jak sprawdzić kampanie Meta Ads](/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17) i [jak sprawdzić agencję SEO](/post/jak-sprawdzic-agencje-seo_2026-07-15). Wszystko zweryfikujesz sam, bez wiedzy technicznej.
 
 ## Podsumowanie
 

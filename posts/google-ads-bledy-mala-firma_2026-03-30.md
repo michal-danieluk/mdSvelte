@@ -105,6 +105,8 @@ Jeśli masz kampanię i zastanawiasz się, czy działa — zacznij od tych pięc
 
 Jeśli na choćby jedno z tych pytań nie znasz odpowiedzi — wiesz, od czego zacząć.
 
+Zaczynasz kampanię od zera i chcesz od razu uniknąć tych błędów, zamiast je potem naprawiać? Zobacz [Jak poprawnie ustawić kampanię Google Ads od zera](/post/jak-ustawic-kampanie-google-ads_2026-04-14). A jeśli kampanię prowadzi Ci agencja i chcesz sprawdzić, czy akurat te błędy popełnia — mam osobny checklist: [Jak sprawdzić, czy agencja dobrze prowadzi Twoje kampanie Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01).
+
 ---
 
 Piszę regularnie o Google Ads i SEO z perspektywy praktyka, nie teorii. Jeśli chcesz dostawać takie materiały prosto na skrzynkę — zapisz się do newslettera. Albo napisz mi w komentarzu, który z tych błędów rozpoznajesz u siebie.

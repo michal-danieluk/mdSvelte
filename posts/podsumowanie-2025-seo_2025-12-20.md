@@ -21,7 +21,7 @@ Oto moje szczere podsumowanie. Bez lania wody, bez "top 10 trendów" przepisanyc
 
 Pamiętasz, jak jeszcze rok temu AI Overviews (kiedyś SGE) były ciekawostką w Google Labs? W 2025 stały się codziennością. Google wrzuciło je na pełen gaz i nagle okazało się, że Twoja piękna pozycja #1 ma CTR niższy niż kiedyś pozycja #5.
 
-Efekt? Ruch organiczny w wielu branżach spadł o 20-40%, mimo że widoczność stron **wzrosła**. To zjawisko, o którym pisałem wcześniej — "The Great Decoupling". Widoczność i ruch przestały iść w parze. Jeśli dalej mierzysz sukces SEO wyłącznie kliknięciami, mam złe wieści.
+Efekt? Ruch organiczny w wielu branżach spadł o 20-40%, mimo że widoczność stron **wzrosła**. To zjawisko, o którym [pisałem wcześniej](/post/seo_umiera_nadchodzi_geo_2025-10-05) — "The Great Decoupling". Widoczność i ruch przestały iść w parze. Jeśli dalej mierzysz sukces SEO wyłącznie kliknięciami, mam złe wieści.
 
 ### E-E-A-T — nie buzzword, a warunek konieczny
 
@@ -37,7 +37,7 @@ Google stało się znacznie lepsze w wykrywaniu thin contentu i artykułów pisa
 
 ### GEO weszło do gry
 
-Pisałem o tym wcześniej, ale warto powtórzyć: Generative Engine Optimization przestało być niszowym terminem i stało się realną dyscypliną. Optymalizacja pod odpowiedzi AI to już nie "fajny bonus" — to konieczność. Dane strukturalne, jasna architektura treści, format Q&A — to wszystko wpływa na to, czy AI "pożyczy" Twój content, czy kompletnie Cię zignoruje.
+[Pisałem o tym wcześniej](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03), ale warto powtórzyć: Generative Engine Optimization przestało być niszowym terminem i stało się realną dyscypliną. Optymalizacja pod odpowiedzi AI to już nie "fajny bonus" — to konieczność. Dane strukturalne, jasna architektura treści, format Q&A — to wszystko wpływa na to, czy AI "pożyczy" Twój content, czy kompletnie Cię zignoruje.
 
 ### Link building zmienił twarz
 

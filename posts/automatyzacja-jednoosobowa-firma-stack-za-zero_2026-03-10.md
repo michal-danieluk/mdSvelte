@@ -84,6 +84,8 @@ Free tier: 1000 rekordów, 1 GB attachments — wystarczy.
 
 Jeśli chodzi o Airtable — jestem jego baaardzo starym użytkownikiem, więc mogę mieć lepsze warunki darmowego planu. Sorry.
 
+Dokładnie to połączenie Airtable + Claude rozpisałem krok po kroku, z gotowymi promptami, w [Jak automatyzuję content plan za pomocą AI i Airtable](/post/jak-automatyzuje-content-plan-ai-airtable_2026-01-28).
+
 ---
 
 ## Jak to wszystko działa razem
@@ -99,4 +101,6 @@ Nie jest perfekcyjne — i o to chodzi. Działa, jest darmowe, można iterować.
 Nie musisz ustawiać wszystkiego naraz. Zacznij od jednego narzędzia, jednego workflow.
 
 **Sugestia na start:** Załóż Airtable, wrzuć tam swoje pomysły na content i dodaj kolumnę "status". To zajmie 10 minut i zmieni Ci perspektywę.
+
+Ten stack to nie przypadkowa piątka — to efekt świadomej selekcji, nie kolekcjonowania narzędzi. Więcej o samym mechanizmie wyboru w [Narzędziach AI, których naprawdę używam w pracy](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15).
 

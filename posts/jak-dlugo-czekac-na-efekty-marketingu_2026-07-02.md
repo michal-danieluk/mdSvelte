@@ -36,7 +36,7 @@ Dlaczego tak szybko? Bo konkurencja zwykle śpi. Większość lokalnych wizytów
 
 Tu jest najwięcej nieporozumień. Bo technicznie Google Ads działa od razu — ustawiasz kampanię, płacisz, ludzie klikają. Ruch masz od jutra.
 
-Ale ruch to nie klienci. Między pierwszym kliknięciem a kampanią, która się spina finansowo, są tygodnie optymalizacji: system uczy się, kto naprawdę kupuje, Ty uczysz się, które frazy przepalają budżet, strona uczy się zamieniać wejścia na telefony. Realny cykl: 4–8 tygodni do sensownych wyników, 2–3 miesiące do kampanii, o której można powiedzieć "działa".
+Ale ruch to nie klienci. Między pierwszym kliknięciem a kampanią, która się spina finansowo, są tygodnie optymalizacji: system uczy się, kto naprawdę kupuje, Ty uczysz się, które frazy przepalają budżet, strona uczy się zamieniać wejścia na telefony. Realny cykl: 4–8 tygodni do sensownych wyników, 2–3 miesiące do kampanii, o której można powiedzieć "działa". Jeśli w tym czasie chcesz sam sprawdzić, czy Twoja kampania (albo agencja, która ją prowadzi) w ogóle zmierza w dobrym kierunku, mam osobny checklist: [Jak sprawdzić, czy agencja dobrze prowadzi Twoje kampanie Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01).
 
 **🚩 Czerwona flaga:** raporty pokazujące tylko kliknięcia i wyświetlenia. Kliknięcia to koszt. Efektem są zapytania, telefony, sprzedaż.
 
@@ -46,7 +46,7 @@ Tak, to długo. I nie, nie da się tego uczciwie przyspieszyć obietnicami.
 
 Google musi Cię najpierw zauważyć, potem zacząć Ci ufać, potem sprawdzić, czy użytkownicy zostają na Twojej stronie. Każdy z tych etapów trwa. Pierwsze drgnięcia — frazy wchodzące do TOP 20-50 — zobaczysz zwykle po 3–4 miesiącach. Frazy, które realnie przyprowadzają klientów, to częściej horyzont 6–12 miesięcy.
 
-Piszę to na blogu, który sam pozycjonuję od zera, na własne pieniądze — więc wiem, jak wygląda ta krzywa od środka. Płaska, płaska, płaska... i nagle przestaje być płaska.
+Piszę to na blogu, który sam pozycjonuję od zera, na własne pieniądze — więc wiem, jak wygląda ta krzywa od środka. Płaska, płaska, płaska... i nagle przestaje być płaska. Jeśli SEO prowadzi Ci ktoś inny i chcesz się upewnić, że ta płaska krzywa to normalny etap, a nie brak pracy po drugiej stronie, sprawdź [Jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15).
 
 Dlaczego mimo to warto? Bo SEO jest jedynym kanałem, który **kumuluje**. Reklamy przestają działać w dniu, w którym przestajesz płacić. Pozycje zostają i pracują, kiedy śpisz.
 

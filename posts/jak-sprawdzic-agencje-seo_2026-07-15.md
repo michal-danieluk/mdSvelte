@@ -10,11 +10,11 @@ featured: true
 
 SEO to wymarzona usługa do sprzedawania. Efekty "przyjdą za kilka miesięcy", praca dzieje się "w tle", a jak nic nie rośnie — winny jest algorytm Google, konkurencja albo sezonowość. Płacisz co miesiąc 1500, 2500, czasem 5000 złotych i tak naprawdę nie wiesz, czy ktoś po drugiej stronie w ogóle otworzył Twoją stronę.
 
-Nie jesteś w tym sam i nie jesteś naiwny. SEO faktycznie potrzebuje czasu — pierwsze wyraźne efekty często widać po 3–6 miesiącach i uczciwa agencja powie Ci to wprost. Problem w tym, że dokładnie za tym samym zdaniem chowają się też firmy, które biorą pieniądze i nie robią nic. Z zewnątrz brzmią identycznie.
+Nie jesteś w tym sam i nie jesteś naiwny. SEO faktycznie potrzebuje czasu — pierwsze wyraźne efekty często widać po 3–6 miesiącach ([realne terminy kanał po kanale rozpisałem tutaj](/post/jak-dlugo-czekac-na-efekty-marketingu_2026-07-02)) i uczciwa agencja powie Ci to wprost. Problem w tym, że dokładnie za tym samym zdaniem chowają się też firmy, które biorą pieniądze i nie robią nic. Z zewnątrz brzmią identycznie.
 
 Ale jest różnica, i da się ją zobaczyć. Bo nawet jeśli efekty przychodzą powoli, to **praca powinna być widoczna od pierwszego miesiąca**. Zmiany na stronie zostawiają ślady. Dane w Google Search Console nie kłamią. Pokażę Ci cztery rzeczy, które sprawdzisz sam — bez wiedzy technicznej, każda w kilkanaście minut.
 
-Jeśli oprócz SEO agencja prowadzi Ci też płatne reklamy, zacznij od tekstu [Jak sprawdzić kampanie Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01) — tam pieniądze przepalają się szybciej, więc kontrola jest jeszcze pilniejsza.
+Jeśli oprócz SEO agencja prowadzi Ci też płatne reklamy, zacznij od tekstu [Jak sprawdzić kampanie Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01) albo [Jak sprawdzić kampanie Meta Ads](/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17) — tam pieniądze przepalają się szybciej, więc kontrola jest jeszcze pilniejsza.
 
 ---
 

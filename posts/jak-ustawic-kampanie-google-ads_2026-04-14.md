@@ -10,7 +10,7 @@ featured: false
 
 Większość kampanii Google Ads małych firm jest źle ustawiona od samego początku. Nie dlatego, że właściciele są głupi — dlatego, że Google robi wszystko, żebyś wydał jak najwięcej pieniędzy, a interfejs sugeruje opcje, które są dobre dla Google, niekoniecznie dla Ciebie.
 
-Widziałem dziesiątki kont, gdzie kampania „działała" — czyli kliknięcia były, pieniądze się kończyły, a telefon milczał. Problem prawie zawsze zaczynał się na etapie konfiguracji. Jeśli dopiero zaczynasz albo chcesz zacząć od nowa i tym razem zrobić to dobrze — ten przewodnik jest dla Ciebie.
+Widziałem dziesiątki kont, gdzie kampania „działała" — czyli kliknięcia były, pieniądze się kończyły, a telefon milczał. Problem prawie zawsze zaczynał się na etapie konfiguracji. Jeśli dopiero zaczynasz albo chcesz zacząć od nowa i tym razem zrobić to dobrze — ten przewodnik jest dla Ciebie. Zestaw najczęstszych błędów, które do tego prowadzą, opisałem osobno w [Jak małe firmy tracą pieniądze w Google Ads](/post/google-ads-bledy-mala-firma_2026-03-30).
 
 ---
 

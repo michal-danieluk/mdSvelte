@@ -12,6 +12,8 @@ Zdarzyło Ci się kiedyś zapytać AI o polecenie, na przykład, "najlepszej weg
 
 Jeśli tak, to witaj w klubie. To nie magia, a nowa, fascynująca dziedzina wiedzy tajemnej zwana **LLMO (Large Language Model Optimization)**. Brzmi strasznie? Spokojnie, to w gruncie rzeczy stare, dobre SEO, tylko na sterydach i z dodatkiem szczypty przyszłości. Zrozumienie tych mechanizmów to dziś absolutna podstawa, jeśli chcesz, by Twoja strona nie tylko kurzyła się w internecie, ale realnie na siebie zarabiała.
 
+Jeśli chcesz zobaczyć szerszy obraz tego, dlaczego klasyczne SEO traci grunt pod nogami, zerknij też na [SEO umiera, nadchodzi GEO](/post/seo_umiera_nadchodzi_geo_2025-10-05) — tam rozkładam samo zjawisko "The Great Decoupling" na czynniki pierwsze.
+
 ## Jak działają te całe LLM-y?
 
 Wyobraź sobie super inteligentnego bibliotekarza, który przeczytał cały internet (tak, łącznie z Twoimi starymi postami na forach). To jest właśnie **baza treningowa** LLM-a. Kiedy go o coś pytasz, on sięga do swojej ogromnej pamięci i na tej podstawie generuje odpowiedź. Ale to nie wszystko! Ten bibliotekarz ma też dostęp do aktualnych wiadomości i potrafi w czasie rzeczywistym przeszukiwać internet. To jest mechanizm zwany **RAG (Retrieval-Augmented Generation)**. Co to dla nas oznacza? Że nasza strategia musi być dwutorowa: po pierwsze, musimy zapisać się w annałach historii (czyli w pamięci treningowej bibliotekarza), a po drugie, musimy być gwiazdą jednego sezonu (czyli łatwym do znalezienia podczas jego szybkiego researchu).
@@ -38,6 +40,8 @@ Jak zostać taką encją?
 *   **Połącz kropki:** Używaj danych strukturalnych (tak, znowu one!), aby powiedzieć Google, że Twoja strona, Twój profil na LinkedIn i Twój kanał na YouTube to wszystko elementy tej samej układanki – Twojej osoby.
 
 Gdy Google zrozumie, że jesteś ważną "encją" w świecie marketingu, zacznie Ci ufać. A komu ufa Google, temu ufają też jego algorytmy AI.
+
+Chcesz zobaczyć, jak to samo myślenie — konceptami i encjami zamiast słów kluczowych — przekłada się na konkretny warsztat pisania? Rozpisałem to krok po kroku w [Content is King, AI is the Kingdom](/post/content_is_king_ai_is_the_kingdom_2025-10-04).
 
 ## AI Overviews i Dane Strukturalne
 

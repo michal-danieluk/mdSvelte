@@ -45,11 +45,15 @@ Ludzie szukają odpowiedzi, nie linków. Twoja treść ma być tą odpowiedzią.
 *   **Odpowiadaj bezpośrednio:** Twórz sekcje, które wprost odpowiadają na popularne pytania w Twojej niszy.
 *   **Format Q&A:** Wprowadź do swoich artykułów dedykowane sekcje z pytaniami i odpowiedziami. To kopalnia złota dla AI szukającego gotowych fragmentów.
 
+Rozpisałem tę strategię krok po kroku, z konkretnym poradnikiem pisania, w [Content is King, AI is the Kingdom](/post/content_is_king_ai_is_the_kingdom_2025-10-04).
+
 ### Strategia #3: Pokaż, że za tekstem stoi człowiek (i ekspert)
 
 W zalewie treści generowanych przez AI, autorytet i doświadczenie (E-E-A-T) stają się Twoją supermocą.
 *   **Buduj markę osobistą:** Pokaż, kim jesteś. Dziel się unikalnymi spostrzeżeniami, case studies, a nawet porażkami. AI tego nie potrafi.
 *   **Zbieraj dowody:** Opinie klientów, wzmianki w mediach, współprace – wszystko to buduje Twój autorytet w oczach Google.
+
+Pisałem szerzej o tym, jak zamienić się z anonimowego "blogera od SEO" w rozpoznawalną "encję" w oczach algorytmów, w tekście [Jak sprawić, by AI polecało Twoją stronę](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03).
 
 ### Strategia #4: Zmień mapę, nie teren
 

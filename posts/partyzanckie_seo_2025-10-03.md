@@ -46,7 +46,7 @@ Ludzie kupują od tych, których znają, lubią i którym ufają. Ta metoda budu
 ## 4. Wykorzystaj darmowe narzędzia jak profesjonalista
 
 Partyzant musi być sprytny i korzystać z dostępnych zasobów. Na szczęście w internecie jest mnóstwo darmowych narzędzi, które w rękach sprytnego marketera stają się potężną bronią.
-*   **Google Search Console:** To Twoje centrum dowodzenia. Zobaczysz, na jakie frazy Twoja strona już się wyświetla, które z nich generują kliknięcia i czy Google nie zgłasza jakichś błędów. To kopalnia wiedzy o tym, jak widzi Cię największa wyszukiwarka świata.
+*   **Google Search Console:** To Twoje centrum dowodzenia. Zobaczysz, na jakie frazy Twoja strona już się wyświetla, które z nich generują kliknięcia i czy Google nie zgłasza jakichś błędów. To kopalnia wiedzy o tym, jak widzi Cię największa wyszukiwarka świata. Rozpisałem dokładnie, jak czytać te dane, w [Jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15) — przyda się nawet jeśli robisz SEO sam, nie tylko przy kontroli agencji.
 *   **Google Analytics:** Kto wchodzi na Twoją stronę? Skąd? Jakie treści czyta najchętniej? Analytics odpowie na te pytania. Analizując te dane, dowiesz się, co działa, a co nie, i gdzie inwestować swój cenny czas.
 *   **AnswerThePublic / AlsoAsked:** Chcesz wiedzieć, o co pytają ludzie w Twojej niszy? Te narzędzia ([AnswerThePublic](https://answerthepublic.com/) i [AlsoAsked](https://alsoasked.com/)) zwizualizują zapytania wpisywane w Google. To gotowe pomysły na kolejne artykuły, które idealnie trafią w potrzeby Twoich czytelników.
 *   **Ubersuggest (wersja darmowa):** Neil Patel udostępnia część swojego potężnego narzędzia za darmo. Możesz podejrzeć, na jakie frazy rankuje Twoja konkurencja, sprawdzić popularność słów kluczowych i znaleźć nowe pomysły na content.
@@ -60,5 +60,7 @@ Partyzanckie SEO to nie zestaw magicznych trików. To sposób myślenia. Chodzi 
 ---
 
 Podobne podejście stosuję, pomagając moim klientom osiągać świetne wyniki przy ograniczonych budżetach. Jeśli czujesz, że Twoja firma potrzebuje takiego niestandardowego wsparcia, **[odezwij się do mnie](/about)**. Chętnie porozmawiamy o Twoich celach.
+
+Jedno zastrzeżenie: partyzanckie SEO wymaga cierpliwości tak samo jak to "budżetowe". Jeśli zastanawiasz się, ile realnie trzeba czekać, zanim ten epicki artykuł zacznie przyciągać ruch, sprawdź [Jak długo trzeba czekać na efekty marketingu](/post/jak-dlugo-czekac-na-efekty-marketingu_2026-07-02).
 
 A jeśli chcesz więcej takich porad, znajdziesz mnie na **[LinkedIn](link-do-linkedin)** i **[Twitterze](link-do-twittera)**.

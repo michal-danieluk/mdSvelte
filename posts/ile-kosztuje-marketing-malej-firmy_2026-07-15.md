@@ -63,7 +63,7 @@ I tu ważna rzecz: **jeśli w umowie lub ofercie nie jesteś w stanie zrozumieć
 - **Od pół roku "budujemy zasięgi".** Przy małej firmie efekty kampanii płatnych widać w tygodnie, nie w kwartały. SEO potrzebuje 4–6 miesięcy — ale nawet tam po trzech miesiącach powinieneś widzieć konkretne wykonane rzeczy, nie obietnice.
 - **Na pytanie "za co dokładnie płacę" dostajesz prezentację zamiast odpowiedzi.**
 
-Jeśli już płacisz za Google Ads i zastanawiasz się, czy to uczciwa cena za uczciwą pracę, sprawdź też [jak samodzielnie zweryfikować, czy agencja dobrze prowadzi Twoje kampanie](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01) — cztery rzeczy, które zobaczysz sam w panelu, bez wiedzy technicznej.
+Jeśli już płacisz za Google Ads i zastanawiasz się, czy to uczciwa cena za uczciwą pracę, sprawdź też [jak samodzielnie zweryfikować, czy agencja dobrze prowadzi Twoje kampanie](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01) — cztery rzeczy, które zobaczysz sam w panelu, bez wiedzy technicznej. To samo dotyczy SEO — mam analogiczny checklist: [Jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15).
 
 ## Sygnały, że cena jest zbyt niska, żeby dostać cokolwiek dobrego
 
@@ -73,6 +73,8 @@ Druga strona medalu. Za niska cena to nie okazja — to informacja, że ktoś fi
 - **Strona internetowa za 1 000 zł "z tekstami i SEO".** Dostaniesz szablon z tekstami z generatora, których nikt nie przeczytał przed wysłaniem.
 - **Pozycjonowanie za 300–500 zł miesięcznie z gwarancją pozycji.** Gwarancja pozycji w Google to czerwona flaga sama w sobie (Google wprost mówi, że nikt nie może jej dać), a taka kwota wystarcza co najwyżej na automatyczne, masowe działania, które potrafią zaszkodzić.
 - **Brak jakichkolwiek pytań o Twój biznes przed wyceną.** Ktoś, kto wycenia kampanię bez pytania, kim są Twoi klienci i ile jest wart dla Ciebie jeden kontakt z reklamy, nie wycenia pracy — wycenia, ile uda się od Ciebie wziąć.
+
+Te sygnały to tylko część obrazu — pełną listę siedmiu czerwonych flag, niezależnie od ceny, zebrałem w [Czerwonych flagach przy wyborze agencji marketingowej](/post/czerwone-flagi-agencja-marketingowa_2026-07-15).
 
 I jedno zdanie, które chcę tu zostawić, bo widzę odwrotne przekonanie u wielu właścicieli: **mała firma nie potrzebuje dużego budżetu, żeby wygrywać.** Potrzebuje mądrze wydanych pieniędzy w wąskim, dobrze wybranym miejscu — jednej dopracowanej kampanii lokalnej zamiast pięciu kanałów "bo konkurencja tam jest". Firma z budżetem 3 000 zł miesięcznie i dobrym planem regularnie ogrywa firmę z budżetem 10 000 zł i chaosem.
 

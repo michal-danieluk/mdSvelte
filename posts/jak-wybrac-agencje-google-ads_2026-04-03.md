@@ -117,3 +117,5 @@ Jeśli Twój budżet reklamowy to mniej niż 1500 zł miesięcznie, obsługa age
 ## Podsumowanie
 
 Wybór agencji Google Ads to nie jest decyzja, którą podejmujesz na podstawie ładnej strony internetowej. Siedem pytań, które opisałem, nie wymaga wiedzy technicznej. Wystarczy je zadać i uważnie posłuchać odpowiedzi. Dobra agencja odpowie na nie bez mrugania okiem. Zła — zacznie kręcić.
+
+Te same wzorce — ogólniki zamiast konkretów, presja na szybką decyzję, brak pytań o Twój biznes — powtarzają się przy wyborze każdej agencji marketingowej, nie tylko od Google Ads. Szerszy zestaw sygnałów ostrzegawczych znajdziesz w [Czerwonych flagach przy wyborze agencji marketingowej](/post/czerwone-flagi-agencja-marketingowa_2026-07-15). A jeśli umowę już podpisałeś, sprawdź po miesiącu-dwóch, czy faktycznie dostajesz to, co obiecano: [Jak sprawdzić, czy agencja dobrze prowadzi Twoje kampanie Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01).

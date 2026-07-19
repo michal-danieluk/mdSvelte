@@ -32,7 +32,7 @@ Potrzebowałem jednego miejsca, prostego przepływu i kogoś, kto pomoże mi my�
 
 ## Mój setup: Airtable + Claude
 
-Nie wymyślałem tutaj koła na nowo. Setup jest prosty do bólu i właśnie dlatego działa.
+Nie wymyślałem tutaj koła na nowo. Setup jest prosty do bólu i właśnie dlatego działa. To zresztą tylko jeden kawałek szerszego stacku — cały mój automatyzacyjny setup za $0 opisałem w [Automatyzacja dla jednoosobowej firmy](/post/automatyzacja-jednoosobowa-firma-stack-za-zero_2026-03-10).
 
 ### Airtable jako kręgosłup
 
