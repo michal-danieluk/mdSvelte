@@ -70,4 +70,14 @@ Status po pierwszym przebiegu (Filary D, B, C napisane jako wpisy blogowe — pa
 ## 5. Backlog — kolejne wpisy z serii "przebudowa bloga"
 
 - **Część 1 (2026-07-16):** `jak-przebudowuje-bloga-pillar-pages_2026-07-16` — plan przebudowy, dlaczego pillar pages, research keywordowy Semrushem, jak powstały 4 filary A/B/C/D.
-- **Część 2 (do napisania, na wyraźne polecenie Michała — NIE pisać automatycznie):** research uzupełniający przez **Answer the Public** (mapa pytań/long-tail, inne niż Semrush, dobre pod FAQ/People Also Ask). Michał wraca do tego świadomie później — nie zakładać, że "kolejny wpis" ma się pojawić bez jego sygnału.
+- **Część 2 — Answer the Public (rozpoczęta 2026-07-20):** 4 spoke-artykuły napisane w tej sesji (`czy-seo-sie-oplaca-malej-firmie`, `seo-samemu-czy-zatrudnic-kogos`, `content-marketing-a-seo-roznice`, `co-to-jest-seo-copywriting`), wszystkie dopięte do `pillars.ts` (`/seo`). Zasada: spoke targetuje długi ogon/konkretne pytanie, linkuje do huba, nie konkuruje o frazę główną.
+
+### Backlog otwarty — NIE pisać automatycznie, tylko na wyraźne polecenie Michała
+
+Sesja z 2026-07-20 zamknięta świadomie na 9 wpisach (kontrola tempa — ADHD, wiele wątków naraz). Poniższe czekają na osobny sygnał, każdy osobno, nie hurtem:
+
+1. **"Jak zbudować pillar page"** (pillar pages co to, struktura bloga SEO) — how-to, generalizowany dla innych, różny od `jak-przebudowuje-bloga-pillar-pages` (to była historia WŁASNEGO wdrożenia, nie poradnik dla kogoś innego). Można pisać od razu, gdy Michał da sygnał — nie wymaga niczego dodatkowego.
+2. **"Jak mierzyć efekty SEO"** (KPI SEO dla małej firmy, jak sprawdzić efekty pozycjonowania) — **kolejność ma znaczenie: pisać PO podłączeniu GA4/GSC** (patrz punkt 4), żeby oprzeć tekst na realnych danych z własnej strony, nie na ogólnikach — inaczej nachodzi na sekcję pomiaru już istniejącą w hubie Filaru A.
+3. **"Google Ads czy SEO dla małej firmy"** (google ads vs seo) — dobry temat pomostowy między pillarem `/seo` a `/google-ads` (oba już istnieją w kodzie). Zero blokerów, można pisać na sygnał.
+4. **Podłączenie GA4 + Google Search Console** — osobny, większy wątek (dostępy, uprawnienia, zakres: jednorazowy podgląd vs stały monitoring vs automatyczny raport). Nie dopisek do pisania treści — wymaga własnej, skupionej rozmowy, zanim się zacznie.
+5. **Cross-pollinacja z newsletterem "Marketing w Budowlance" (beehiiv)** — Michał zauważył 2026-07-20, że research z tej sesji (Semrush + Answer the Public) może zasilić też tamten newsletter, nie tylko blog. **Trzeci kanał treściowy** dopisany do tej samej sesji, w której już ustaliliśmy zamknięcie na 9 wpisach — świadomie NIE rozwijane teraz, wraca jako osobny wątek na wyraźny sygnał, żeby nie mnożyć otwartych frontów w jednej sesji.
