@@ -133,6 +133,8 @@ Nie musisz być specjalistą SEO, żeby ocenić, czy agencja pracuje. Wystarczą
 
 Małe firmy nie przegrywają w SEO dlatego, że mają za mały budżet. Przegrywają wtedy, gdy nikt nie kontroluje, na co ten budżet idzie. Godzina sprawdzania raz w miesiącu potrafi zaoszczędzić rok płacenia za nic.
 
+Ten tekst zakłada, że umowę już podpisałeś. Jeszcze przed podpisaniem? [Zebrałem 10 pytań, które warto zadać każdej firmie SEO, zanim cokolwiek podpiszesz](https://buildletter.com/blog/jak-sprawdzic-agencje-seo-10-pytan/) — na buildletter.com.
+
 **Chcesz dostawać więcej takich praktycznych materiałów o SEO i marketingu online?** Zapisz się do mojego newslettera — bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)

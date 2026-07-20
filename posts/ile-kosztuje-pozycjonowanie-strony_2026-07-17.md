@@ -75,6 +75,8 @@ Sensowne punkty odniesienia na 2026: **800–2500 zł miesięcznie** za pozycjon
 
 Od każdego, komu płacisz za pozycjonowanie, masz prawo wymagać jednego: żeby po polsku, bez żargonu, wytłumaczył Ci, na co konkretnie idą pieniądze każdego miesiąca. Kto nie potrafi — nie zasługuje na Twoją fakturę.
 
+Szukasz kogoś, kto to dla Ciebie poprowadzi? [Zobacz, jak wygląda współpraca ze mną i sprawdź wycenę potencjału za darmo](https://buildletter.com/#kontakt) na buildletter.com.
+
 **Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera — bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
