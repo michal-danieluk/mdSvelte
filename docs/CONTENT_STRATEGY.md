@@ -46,16 +46,16 @@ Strona cennikowa / landing ofertowy / posty o ROI. Temat: odczarowywanie kosztó
 
 ## 3. Gap-check vs. istniejące posty (`posts/`, stan 2026-07-20)
 
-Żaden istniejący wpis nie celuje wprost w primary keyword żadnego filara jako pillar page. Najbliższe pokrycie (do wykorzystania jako linkowanie wewnętrzne, nie duplikacja):
+Status po pierwszym przebiegu (Filary D, B, C napisane jako wpisy blogowe — patrz sekcja 5, pillar page routes to osobny projekt kodowy dla Codex/Forge, nie ten workflow):
 
 | Filar | Primary keyword | Status |
 |---|---|---|
-| A | content marketing / seo copywriting | Brak. `content_is_king_ai_is_the_kingdom` dotyka "content marketing ai" wąsko (kąt AI/GEO, nie klasyczny content marketing). |
-| B | audyt seo / narzędzia seo | Częściowe pokrycie boczne: `jak-sprawdzic-agencje-seo` ma "audyt seo małej firmy" jako secondary keyword, ale kąt to kontrola agencji, nie pillar "jak zrobić audyt SEO". Brak pillar page. |
-| C | pozycjonowanie stron / linkbuilding | Brak. `partyzanckie_seo`, `podsumowanie-2025-seo`, `seo_umiera_nadchodzi_geo` to ogólne SEO, nie targetują tej frazy. |
-| D | pozycjonowanie cena / lokalne | Blisko: `ile-kosztuje-marketing-malej-firmy` pokrywa koszt ogólnie (SEO to jeden z podpunktów) — dobry kandydat do linkowania, ale nie zastępuje dedykowanego "ile kosztuje pozycjonowanie" targetującego frazę transakcyjną wprost. |
+| A | content marketing / seo copywriting | Brak. `content_is_king_ai_is_the_kingdom` dotyka "content marketing ai" wąsko (kąt AI/GEO, nie klasyczny content marketing). **Następny w kolejce.** |
+| B | audyt seo / narzędzia seo | ✅ `jak-zrobic-audyt-seo_2026-07-19` — poradnik DIY audytu (techniczny/content/off-page + narzędzia). |
+| C | pozycjonowanie stron / linkbuilding | ✅ `jak-dziala-pozycjonowanie-stron_2026-07-20` — mechanika (crawling/indeksacja/ranking/linki), różnicowana od DIY-planu na buildletter.com. |
+| D | pozycjonowanie cena / lokalne | ✅ `ile-kosztuje-pozycjonowanie-strony_2026-07-17` — widełki + rozbicie kosztów + pozycjonowanie lokalne. |
 
-Wniosek: wszystkie 4 filary są realnym białym polem — najwyższy wolumen + intencja transakcyjna: **Filar D "pozycjonowanie cena" (5860, Commercial)** i **Filar C "pozycjonowanie stron" (9430)**.
+Pozostał **Filar A** (content marketing / seo copywriting) — jedyny wciąż bez dedykowanego pillar-page-worth artykułu.
 
 ## 4. Wytyczne wykonawcze (dla każdego artykułu)
 
@@ -64,3 +64,5 @@ Wniosek: wszystkie 4 filary są realnym białym polem — najwyższy wolumen + i
 3. Wpleć techniczną analogię/case study (n8n/Make, terminal, digital minimalism) — zgodnie z DNA.
 4. Sekcja "Co dalej?" na końcu: CTA do newslettera "Buildletter" + linkowanie wewnętrzne do 2-3 powiązanych postów z klastra (wzorzec już stosowany w repo, patrz commit `b2ef016`).
 5. Frontmatter jak w istniejących postach: `title, date, tags, description, keywords, image_prompt, featured`.
+6. **Data zawsze z przeszłości albo dzisiejsza, nigdy z przyszłości** — Vercel prerenderuje w build-time i nie odświeży się sam, gdy "nadejdzie" data. Sprawdź kolizję: `grep -rl "date: 'YYYY-MM-DD'" posts/*.md` przed zapisem.
+7. **Sprawdź nakładanie z buildletter.com/blog** (`~/Desktop/buildletter/src/pages/blog/`) przed pisaniem — ten sam autor prowadzi tam osobny blog o SEO/marketingu małych firm, z kątem sprzedażowym (CTA do usług). Jeśli temat się pokrywa: różnicuj kąt (michaldanieluk.pl = edukacyjny/personal brand, buildletter.com = sprzedażowy/actionable) i dodaj link w obie strony zamiast pisać duplikat. **Buildletter.com to osobne repo (Astro, nie SvelteKit) — commituj tam tylko pliki, które sam edytujesz, working tree bywa "brudny" od innej, równoległej pracy Michała.**
