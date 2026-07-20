@@ -1,24 +1,26 @@
 ---
-task: "Build three topic pillar pages for marketing blog"
+task: "Add sitewide SEO keyword metadata"
 slug: 20260720-103732_blog-pillar-pages
 project: md_blog
 effort: E3
-effort_source: context-override
+effort_source: auto
 phase: complete
-progress: 44/44
+progress: 58/58
 mode: interactive
 started: 2026-07-20T10:37:32Z
-updated: 2026-07-20T11:20:20Z
-principal_stated_goal: "stwórz mi pillar pageś w blogu dla /seo /adsy (albo inna nazwa) i /marketing. Dasz radę to zrobić??"
-principal_stated_goal_source: prompt
-principal_stated_goal_signal: 4
-principal_stated_goal_locked: 2026-07-20T10:37:32Z
-density_score: 0.71
+updated: 2026-07-20T19:55:01Z
+iteration: 2
+principal_stated_goal: "trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.pl bo wogóle ich nie ma jakrobiłem audyt poprzez semrush."
+principal_stated_goal_source: explicit-revision
+principal_stated_goal_signal: 2
+principal_stated_goal_locked: 2026-07-20T16:56:18Z
+density_score: 0.67
 interview_invoked: false
 divergence_risk: low
 density_gate_acknowledged: true
 context_checks_fired: [observe-density, observe-sufficiency]
 context_sufficient: true
+frame_drift: none
 ---
 
 ## Problem
@@ -36,6 +38,8 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - Tworzenie CMS-a do ręcznego zarządzania pillar pages.
 - Zewnętrzne badanie słów kluczowych i obietnice rankingów.
 - Nowy system wizualny niezależny od obecnego bloga.
+- Weryfikacja przez Interceptor lub inną przeglądarkę w iteracji 2, zgodnie z dyspozycją użytkownika.
+- Ręczne dopisywanie fraz do każdego artykułu, jeżeli frontmatter lub tagi już je definiują.
 
 ## Constraints
 
@@ -44,11 +48,14 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - Istniejące tokeny, typografia i komponenty mają pozostać źródłem stylu.
 - Trasy kanoniczne: `/seo`, `/google-ads`, `/marketing`.
 - Dobór wpisów ma korzystać z obecnego źródła danych, bez duplikowania metadanych postów.
-- Każda publiczna strona musi przejść realną nawigację w Chrome przez Interceptor.
+- Iteracja 1 wymagała Interceptora; iteracja 2 jest weryfikowana wyłącznie przez kod i prerenderowany HTML.
+- Metadane artykułów mają pozostać utrzymywane w ich frontmatterze.
 
 ## Goal
 
 „stwórz mi pillar pageś w blogu dla /seo /adsy (albo inna nazwa) i /marketing. Dasz radę to zrobić??” Zbudować responsywne, indeksowalne pillar pages pod `/seo`, `/google-ads`, `/meta-ads` i `/marketing`, które wprowadzają do tematu, porządkują istniejące artykuły oraz wzajemnie wspierają architekturę linkowania bloga. W iteracji dopilnować alfabetycznej kolejności filarów A–D i zbalansowanego układu czterech kart SEO.
+
+Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.pl bo wogóle ich nie ma jakrobiłem audyt poprzez semrush.” Każda indeksowalna strona ma emitować jeden niepusty, tematyczny `meta[name="keywords"]`; istniejące frazy postów mają płynąć z frontmatteru, a wynik ma zostać sprawdzony w wygenerowanym HTML, zapisany w commicie i wypchnięty na bieżącą gałąź.
 
 ## Criteria
 
@@ -96,6 +103,20 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - [x] ISC-42: Ścieżka SEO pokazuje filary w kolejności A → B → C → D.
 - [x] ISC-43: Cztery karty ścieżki SEO tworzą na desktopie czytelny, zbalansowany układ 2 × 2.
 - [x] ISC-44: Na mobile cztery karty SEO układają się pojedynczo, jedna pod drugą.
+- [x] ISC-45: `Seo.svelte` emituje dokładnie jeden niepusty `meta[name="keywords"]` dla przekazanych fraz.
+- [x] ISC-46: Normalizacja słów kluczowych obsługuje string i tablicę bez pustych wartości ani duplikatów.
+- [x] ISC-47: Strona główna ma tematyczne frazy dotyczące marketingu, SEO, Google Ads i automatyzacji.
+- [x] ISC-48: Lista wpisów ma odrębne frazy opisujące zakres bloga.
+- [x] ISC-49: Archiwum tagów ma odrębne frazy związane z kategoriami bloga.
+- [x] ISC-50: Każda strona pojedynczego tagu zawiera nazwę tego tagu w słowach kluczowych.
+- [x] ISC-51: Strona „O mnie” ma frazy zgodne z kompetencjami i widoczną treścią Michała.
+- [x] ISC-52: Każdy pillar ma własny zestaw fraz utrzymywany w `pillars.ts`.
+- [x] ISC-53: Artykuł z polem `keywords` renderuje frazy ze swojego frontmatteru.
+- [x] ISC-54: Artykuł bez pola `keywords` używa tagów, a bez tagów własnego tytułu jako fallbacku.
+- [x] ISC-55: `bun run check` i `bun run build` kończą się kodem 0.
+- [x] ISC-56: Anti: zmiana nie modyfikuje adresów, zależności, title, description, canonical ani social meta.
+- [x] ISC-57: Zmiany SEO są zapisane w osobnym commicie na bieżącej gałęzi.
+- [x] ISC-58: Commit z metadanymi SEO jest wypchnięty do `origin/main`.
 
 ## Test Strategy
 
@@ -112,6 +133,12 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 | ISC-31 | manual | porównanie obietnic hero | cztery odrębne intencje | odczyt konfiguracji | derived: doświadczenie |
 | ISC-32 | bash | diff zależności i tras postów | brak zmian | `git diff` | derived: regresja |
 | ISC-42..44 | screenshot | kolejność i układ kart SEO | A–D, 2 × 2 desktop, 1 × 4 mobile | Interceptor | literal: iteracja |
+| ISC-45..46 | bash | renderowanie i normalizacja keywords | jeden tag, brak pustych/duplikatów | `rg` w buildzie | literal: słowa kluczowe |
+| ISC-47..54 | bash | prerenderowany HTML stron i artykułów | tematyczne, niepuste frazy | `rg` i skrypt Bun | literal: michaldanieluk.pl |
+| ISC-55 | bash | kontrola typów i build produkcyjny | oba kody 0 | `bun run check`, `bun run build` | derived: jakość |
+| ISC-56 | bash | diff zależności, tras i pozostałych metadanych | brak regresji | `git diff`, `rg` | derived: bezpieczeństwo |
+| ISC-57 | bash | commit zawiera wyłącznie uzgodnione zmiany | nowy SHA | `git show --stat` | derived: commit |
+| ISC-58 | bash | zdalny ref wskazuje nowy commit | `origin/main == HEAD` | `git ls-remote` | derived: push |
 
 ## Features
 
@@ -121,6 +148,10 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 | PillarPageUI | ISC-1..3, ISC-10..27 | PillarContentModel | false | high |
 | PillarRoutes | ISC-1..12, ISC-30 | PillarContentModel, PillarPageUI | true | high |
 | QualityVerification | ISC-25..32 | PillarRoutes | false | high |
+| KeywordNormalizer | ISC-45..46, ISC-56 | none | false | high |
+| RouteKeywordMetadata | ISC-47..52 | KeywordNormalizer | true | medium |
+| ArticleKeywordMetadata | ISC-53..54 | KeywordNormalizer | true | high |
+| KeywordVerificationDelivery | ISC-55..58 | RouteKeywordMetadata, ArticleKeywordMetadata | false | high |
 
 ## Decisions
 
@@ -130,6 +161,18 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - 2026-07-20 10:44: `/seo` odwzorowuje cztery klastry A–D z `docs/CONTENT_STRATEGY.md` i ich dedykowane artykuły; strona nie może redukować tej strategii do filtra po tagu.
 - 2026-07-20 10:51: Kontrola brakujących artykułów działa w `+page.server.ts` na granicy konfiguracja→UI; build zatrzymuje się przed wyrenderowaniem niekompletnej strony.
 - 2026-07-20 13:18: Iteracja rozszerza architekturę o `/meta-ads`; ścieżka SEO musi być literowo A–D, a cztery karty mają zachować układ 1 × 4 na mobile i 2 × 2 od tabletu wzwyż.
+- 2026-07-20 16:56: refined: rozpoczęto iterację 2; principal_stated_goal zmieniono z „stwórz mi pillar pageś w blogu dla /seo /adsy (albo inna nazwa) i /marketing. Dasz radę to zrobić??” na „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.pl bo wogóle ich nie ma jakrobiłem audyt poprzez semrush.” jako nowy cel projektu.
+- 2026-07-20 16:57: Użytkownik wyłączył Interceptor; w iteracji 2 dowodem jest kod i prerenderowany HTML, bez twierdzeń o weryfikacji przeglądarkowej.
+- 2026-07-20 16:58: „Sitewide keywords” oznacza wspólne renderowanie z wartościami właściwymi dla strony, a nie jedną globalną listę na wszystkich trasach.
+- 2026-07-20 16:59: Commit i push do `origin/main` dołączono jako kryteria ISC-57 i ISC-58 po doprecyzowaniu użytkownika.
+- 2026-07-20 17:12: Refined: normalizator ogranicza wynik do 10 unikalnych fraz; bezpieczny fallback artykułu używa wyłącznie jego tytułu, nie ogólnej frazy autora.
+
+## Changelog
+
+- 2026-07-20 | conjectured: brak słów kluczowych w Semrush wymaga ręcznego uzupełniania każdej strony
+  refuted by: większość nowych postów miała już frazy we frontmatterze, lecz `Seo.svelte` ich nie renderował
+  learned: właściwym miejscem naprawy jest wspólny kontrakt metadanych z kontekstowymi fallbackami i limitem 10 fraz
+  criterion now: ISC-45..54 wymagają jednego renderera, unikalnych fraz tras oraz łańcucha frontmatter → tagi → tytuł
 
 ## Verification
 
@@ -143,3 +186,12 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - ISC-33..38: Interceptor wyrenderował `/meta-ads` bez błędów, z unikalnym title/opisem/canonical, jednym H1, sześcioma działającymi linkami do wpisów i trzyetapową ścieżką.
 - ISC-39..41: prerender sweep znalazł na każdym pillarze trzy pozostałe przewodniki; sitemap i stopka zawierają `/meta-ads`.
 - ISC-42..44: Chrome zwrócił kolejność A, B, C, D; na desktopie pozycje tworzą dwa rzędy po dwie karty, na 390 px cztery osobne rzędy bez poziomego scrolla.
+- ISC-45..46: source/build — `Seo.svelte` zawiera pojedynczy warunkowy emitter; lokalny SSR zwrócił po jednym tagu, a normalizator rozdziela string/tablicę, usuwa puste i duplikaty case-insensitive.
+- ISC-47..52: local SSR via curl — `/`, `/posts`, `/tags`, `/tag/seo`, `/about`, `/seo`, `/google-ads`, `/meta-ads` i `/marketing` zwróciły odrębne, niepuste wartości `keywords`.
+- ISC-53: local SSR via curl — `/post/jak-zrobic-audyt-seo_2026-07-19` zwrócił osiem fraz zapisanych we frontmatterze.
+- ISC-54: local SSR via curl — `/post/ans-dot-file` bez keywords i tagów zwrócił tematyczny fallback `Zarządzanie dotfiles`.
+- ISC-55: bash — `bun run check` zwrócił 0 błędów i 0 ostrzeżeń; `bun run build` zakończył się kodem 0.
+- ISC-56: bash — `git diff --check` zwrócił kod 0; diff nie obejmuje `package.json`, lockfile ani tras URL i zachowuje istniejące meta title/description/canonical/social.
+- ISC-57: git — commit `311e65f` (`Dodaj słowa kluczowe do metadanych SEO`) zawiera 9 plików funkcjonalnych, 125 insertions i 7 deletions.
+- ISC-58: git — `git push origin main` zakończył się `95e70b1..311e65f main -> main`; `git ls-remote` potwierdził SHA `311e65f15072c33bf4e9664116473cef3324b3dc` na `refs/heads/main`.
+- ISC-58: production HTTP — `curl -L https://michaldanieluk.pl/?verify=311e65f` zwrócił na kanonicznym `www` nowy tag `keywords` strony głównej.
