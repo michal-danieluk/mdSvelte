@@ -68,6 +68,8 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
       }
     ],
     moreArticleSlugs: [
+      'content-marketing-a-seo-roznice_2026-07-09',
+      'co-to-jest-seo-copywriting_2026-07-10',
       'czy-seo-sie-oplaca-malej-firmie_2026-07-12',
       'seo-samemu-czy-zatrudnic-kogos_2026-07-14',
       'jak-sprawdzic-agencje-seo_2026-07-15',
