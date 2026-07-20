@@ -50,12 +50,12 @@ Status po pierwszym przebiegu (Filary D, B, C napisane jako wpisy blogowe — pa
 
 | Filar | Primary keyword | Status |
 |---|---|---|
-| A | content marketing / seo copywriting | Brak. `content_is_king_ai_is_the_kingdom` dotyka "content marketing ai" wąsko (kąt AI/GEO, nie klasyczny content marketing). **Następny w kolejce.** |
+| A | content marketing / seo copywriting | ✅ `content-marketing-i-seo-copywriting_2026-07-18` — hub główny (1983 słowa, cel 2500 nie w pełni osiągnięty — patrz uwaga niżej). `content_is_king_ai_is_the_kingdom` zostaje jako wąski wpis o kącie AI/GEO, zlinkowany z hubem. |
 | B | audyt seo / narzędzia seo | ✅ `jak-zrobic-audyt-seo_2026-07-19` — poradnik DIY audytu (techniczny/content/off-page + narzędzia). |
 | C | pozycjonowanie stron / linkbuilding | ✅ `jak-dziala-pozycjonowanie-stron_2026-07-20` — mechanika (crawling/indeksacja/ranking/linki), różnicowana od DIY-planu na buildletter.com. |
 | D | pozycjonowanie cena / lokalne | ✅ `ile-kosztuje-pozycjonowanie-strony_2026-07-17` — widełki + rozbicie kosztów + pozycjonowanie lokalne. |
 
-Pozostał **Filar A** (content marketing / seo copywriting) — jedyny wciąż bez dedykowanego pillar-page-worth artykułu.
+**Wszystkie 4 filary mają teraz dedykowany artykuł** (A/B/C/D). Kolejny krok to pillar-page routes w kodzie (Codex/Forge, osobny projekt) oraz ewentualne dociągnięcie Filaru A do 2500+ słów, jeśli po czasie okaże się, że 1983 słowa nie wystarczają rankingowo — celowo nie dobijałem do okrągłej liczby kosztem lania wody (sprzeczne z DNA autora).
 
 ## 4. Wytyczne wykonawcze (dla każdego artykułu)
 
