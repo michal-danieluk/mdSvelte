@@ -45,7 +45,7 @@
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-4 focus-visible:ring-offset-zinc-50 dark:focus-visible:ring-indigo-400 dark:focus-visible:ring-offset-zinc-950'
 </script>
 
-<Seo title={pillar.seoTitle} description={pillar.metaDescription} />
+<Seo title={pillar.seoTitle} description={pillar.metaDescription} keywords={pillar.keywords} />
 
 <svelte:head>
   {@html `<script type="application/ld+json">${collectionJsonLd}</script>`}

@@ -7,7 +7,17 @@
   export let data
 </script>
 
-<Seo title={`Tagi - ${name}`} description="Przeglądaj wpisy według tematów" />
+<Seo
+  title={`Tagi - ${name}`}
+  description="Przeglądaj wpisy według tematów"
+  keywords={[
+    'tematy marketingowe',
+    'artykuły o marketingu',
+    'poradniki SEO',
+    'Google Ads poradniki',
+    'automatyzacja marketingu'
+  ]}
+/>
 
 <div class="max-w-4xl mx-auto px-6 pt-12 lg:pt-20 pb-24">
   <header class="mb-16">

@@ -11,7 +11,19 @@
   export let data
 </script>
 
-<Seo title={name} description={bio} />
+<Seo
+  title={name}
+  description={bio}
+  keywords={[
+    'Michał Danieluk',
+    'marketing internetowy',
+    'automatyzacja marketingu',
+    'SEO dla małej firmy',
+    'Google Ads',
+    'Meta Ads',
+    'AI w marketingu'
+  ]}
+/>
 
 <!-- Redesigned Hero Section: Professional & Compact -->
 <section class="relative overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-24">

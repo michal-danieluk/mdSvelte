@@ -17,6 +17,15 @@
 <Seo
   title={`Blog - ${name}`}
   description="Piszę o technologii, marketingu i automatyzacji. Bez lania wody, same konkrety."
+  keywords={[
+    'blog marketingowy',
+    'marketing dla małej firmy',
+    'SEO',
+    'Google Ads',
+    'Meta Ads',
+    'automatyzacja',
+    'AI w marketingu'
+  ]}
 />
 
 <div class="max-w-4xl mx-auto px-6 pt-12 lg:pt-20 pb-24">

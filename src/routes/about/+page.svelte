@@ -5,7 +5,17 @@
   import { avatar, bio, name, email, substack } from '$lib/info.js'
 </script>
 
-<Seo title={`O mnie - ${name}`} description={bio} />
+<Seo
+  title={`O mnie - ${name}`}
+  description={bio}
+  keywords={[
+    'Michał Danieluk',
+    'specjalista marketingu',
+    'automatyzacja marketingu',
+    'marketing i sprzedaż',
+    'AI w biznesie'
+  ]}
+/>
 
 <div class="max-w-6xl mx-auto px-6 py-12 lg:py-20">
   <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">

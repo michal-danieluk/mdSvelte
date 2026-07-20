@@ -15,6 +15,7 @@ export type PillarConfig = {
   eyebrow: string
   seoTitle: string
   metaDescription: string
+  keywords: string[]
   title: string
   accent: string
   promise: string
@@ -31,6 +32,13 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
     seoTitle: 'SEO od podstaw: praktyczny przewodnik dla małej firmy | Michał Danieluk',
     metaDescription:
       'Zrozum SEO bez branżowego żargonu. Przejdź od mechaniki Google przez audyt i treści po ocenę efektów pozycjonowania swojej strony.',
+    keywords: [
+      'SEO dla małej firmy',
+      'pozycjonowanie stron',
+      'audyt SEO',
+      'SEO copywriting',
+      'koszt pozycjonowania'
+    ],
     title: 'SEO, które da się',
     accent: 'zrozumieć i sprawdzić',
     promise:
@@ -84,6 +92,13 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
     seoTitle: 'Google Ads od zera: kampanie bez przepalania budżetu | Michał Danieluk',
     metaDescription:
       'Naucz się planować i kontrolować Google Ads: od ustawienia kampanii przez wynik jakości po samodzielną ocenę wydatków i pracy agencji.',
+    keywords: [
+      'Google Ads dla małej firmy',
+      'kampania Google Ads',
+      'audyt Google Ads',
+      'wynik jakości Google Ads',
+      'optymalizacja Google Ads'
+    ],
     title: 'Google Ads bez',
     accent: 'przepalania budżetu',
     promise:
@@ -126,6 +141,13 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
     seoTitle: 'Meta Ads dla małej firmy: kontrola kampanii i budżetu | Michał Danieluk',
     metaDescription:
       'Praktyczny przewodnik po Meta Ads dla małej firmy: zaplanuj budżet, kontroluj kampanie na Facebooku i Instagramie oraz rozliczaj agencję.',
+    keywords: [
+      'Meta Ads dla małej firmy',
+      'reklama na Facebooku',
+      'reklama na Instagramie',
+      'audyt Meta Ads',
+      'kontrola kampanii Meta Ads'
+    ],
     title: 'Meta Ads bez',
     accent: 'kupowania pustych zasięgów',
     promise:
@@ -168,6 +190,13 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
     seoTitle: 'Marketing małej firmy: strategia, koszty i realne efekty | Michał Danieluk',
     metaDescription:
       'Praktyczny marketing małej firmy: wybierz właściwe kanały, poznaj realne koszty i terminy oraz podejmuj decyzje bez agencyjnych obietnic.',
+    keywords: [
+      'marketing małej firmy',
+      'strategia marketingowa',
+      'koszt marketingu',
+      'content marketing',
+      'efekty marketingu'
+    ],
     title: 'Marketing, który wspiera',
     accent: 'decyzje biznesowe',
     promise:

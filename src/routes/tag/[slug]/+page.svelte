@@ -9,7 +9,11 @@
   export let data
 </script>
 
-<Seo title={`Temat: ${data.tag.name} - ${name}`} description={`Wpisy oznaczone tagiem ${data.tag.name}`} />
+<Seo
+  title={`Temat: ${data.tag.name} - ${name}`}
+  description={`Wpisy oznaczone tagiem ${data.tag.name}`}
+  keywords={[data.tag.name, `${data.tag.name} artykuły`, `${data.tag.name} poradnik`]}
+/>
 
 <div class="max-w-4xl mx-auto px-6 pt-12 lg:pt-20 pb-24">
   <header class="mb-16">

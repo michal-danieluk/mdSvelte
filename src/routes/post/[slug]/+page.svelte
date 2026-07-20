@@ -19,6 +19,12 @@
 
   const url = `${website}/post/${data.post.slug}`
   const postDescription = data.post.description || data.post.preview.text
+  const postKeywords = data.post.keywords?.length
+    ? data.post.keywords
+    : data.post.tags?.length
+      ? data.post.tags
+      : [data.post.title]
+  const structuredKeywords = Array.isArray(postKeywords) ? postKeywords.join(', ') : postKeywords
 
   // ISO 8601 datetime for structured data (post.date is yyyy-MM-dd)
   const publishedIso = new Date(`${data.post.date}T00:00:00`).toISOString()
@@ -28,6 +34,7 @@
     '@type': 'BlogPosting',
     headline: data.post.title,
     description: postDescription,
+    keywords: structuredKeywords,
     image: ogImage,
     url,
     datePublished: publishedIso,
@@ -62,7 +69,13 @@
   }
 </script>
 
-<Seo title={`${data.post.title} - ${name}`} description={postDescription} type="article" image={ogImage} />
+<Seo
+  title={`${data.post.title} - ${name}`}
+  description={postDescription}
+  type="article"
+  image={ogImage}
+  keywords={postKeywords}
+/>
 
 <svelte:head>
   <meta name="author" content={name} />
