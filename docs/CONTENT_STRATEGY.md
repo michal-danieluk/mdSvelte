@@ -66,3 +66,8 @@ Status po pierwszym przebiegu (Filary D, B, C napisane jako wpisy blogowe — pa
 5. Frontmatter jak w istniejących postach: `title, date, tags, description, keywords, image_prompt, featured`.
 6. **Data zawsze z przeszłości albo dzisiejsza, nigdy z przyszłości** — Vercel prerenderuje w build-time i nie odświeży się sam, gdy "nadejdzie" data. Sprawdź kolizję: `grep -rl "date: 'YYYY-MM-DD'" posts/*.md` przed zapisem.
 7. **Sprawdź nakładanie z buildletter.com/blog** (`~/Desktop/buildletter/src/pages/blog/`) przed pisaniem — ten sam autor prowadzi tam osobny blog o SEO/marketingu małych firm, z kątem sprzedażowym (CTA do usług). Jeśli temat się pokrywa: różnicuj kąt (michaldanieluk.pl = edukacyjny/personal brand, buildletter.com = sprzedażowy/actionable) i dodaj link w obie strony zamiast pisać duplikat. **Buildletter.com to osobne repo (Astro, nie SvelteKit) — commituj tam tylko pliki, które sam edytujesz, working tree bywa "brudny" od innej, równoległej pracy Michała.**
+
+## 5. Backlog — kolejne wpisy z serii "przebudowa bloga"
+
+- **Część 1 (2026-07-16):** `jak-przebudowuje-bloga-pillar-pages_2026-07-16` — plan przebudowy, dlaczego pillar pages, research keywordowy Semrushem, jak powstały 4 filary A/B/C/D.
+- **Część 2 (do napisania, na wyraźne polecenie Michała — NIE pisać automatycznie):** research uzupełniający przez **Answer the Public** (mapa pytań/long-tail, inne niż Semrush, dobre pod FAQ/People Also Ask). Michał wraca do tego świadomie później — nie zakładać, że "kolejny wpis" ma się pojawić bez jego sygnału.
