@@ -3,6 +3,7 @@
 // It is OK to delete this file if you'd rather not bother with it.
 
 import { posts, getAllTags } from '$lib/data/posts'
+import { pillarSlugs } from '$lib/data/pillars'
 import { website } from '$lib/info'
 
 export const prerender = true
@@ -26,7 +27,12 @@ export async function GET({ setHeaders }) {
     { loc: website, priority: '1.0', changefreq: 'weekly' },
     { loc: `${website}/posts`, priority: '0.8', changefreq: 'weekly' },
     { loc: `${website}/about`, priority: '0.5', changefreq: 'monthly' },
-    { loc: `${website}/tags`, priority: '0.4', changefreq: 'monthly' }
+    { loc: `${website}/tags`, priority: '0.4', changefreq: 'monthly' },
+    ...pillarSlugs.map((slug) => ({
+      loc: `${website}/${slug}`,
+      priority: '0.8',
+      changefreq: 'weekly'
+    }))
   ]
 
   const xml = `<?xml version="1.0" encoding="UTF-8" ?>

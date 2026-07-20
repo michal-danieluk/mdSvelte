@@ -13,9 +13,9 @@
   import { inject } from '@vercel/analytics'
 
   let { children } = $props()
-  
+
   inject({ mode: dev ? 'development' : 'production' })
-  
+
   let isDarkMode = $state(false)
   let isMenuOpen = $state(false)
 
@@ -42,8 +42,8 @@
 
   // Zamknij menu przy zmianie strony
   $effect(() => {
-    $page.url.pathname;
-    isMenuOpen = false;
+    $page.url.pathname
+    isMenuOpen = false
   })
 
   // JSON-LD: jedna tożsamość autora spinająca michaldanieluk.pl i buildletter.com
@@ -68,7 +68,9 @@
 </svelte:head>
 
 <div class="flex flex-col min-h-screen bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300">
-  <header class="sticky top-0 z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border-b border-zinc-200/50 dark:border-zinc-800/50">
+  <header
+    class="sticky top-0 z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border-b border-zinc-200/50 dark:border-zinc-800/50"
+  >
     <div class="flex items-center justify-between w-full max-w-6xl px-6 py-4 mx-auto">
       <a
         href="/"
@@ -129,7 +131,7 @@
 
     <!-- Mobile Menu Overlay -->
     {#if isMenuOpen}
-      <div 
+      <div
         class="sm:hidden border-t border-zinc-200/50 dark:border-zinc-800/50 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md"
         transition:slide={{ duration: 300 }}
       >
@@ -164,22 +166,58 @@
       <div class="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
         <div class="text-center sm:text-left">
           <p class="text-sm font-bold text-zinc-900 dark:text-zinc-50 uppercase tracking-widest">
-            {firstName} {lastName}
+            {firstName}
+            {lastName}
           </p>
           <p class="text-xs text-zinc-500 dark:text-zinc-500 mt-1">
             © {new Date().getFullYear()} • Productivity, Marketing & AI
           </p>
         </div>
-        
+
         <div class="flex items-center gap-8">
-          <a href="/rss.xml" class="text-xs font-bold text-zinc-500 hover:text-indigo-600 dark:text-zinc-500 dark:hover:text-indigo-400 transition-colors">
+          <a
+            href="/rss.xml"
+            class="text-xs font-bold text-zinc-500 hover:text-indigo-600 dark:text-zinc-500 dark:hover:text-indigo-400 transition-colors"
+          >
             RSS FEED
           </a>
-          <a href="/sitemap.xml" class="text-xs font-bold text-zinc-500 hover:text-indigo-600 dark:text-zinc-500 dark:hover:text-indigo-400 transition-colors">
+          <a
+            href="/sitemap.xml"
+            class="text-xs font-bold text-zinc-500 hover:text-indigo-600 dark:text-zinc-500 dark:hover:text-indigo-400 transition-colors"
+          >
             SITEMAP
           </a>
         </div>
       </div>
+      <nav
+        aria-label="Przewodniki tematyczne"
+        class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-zinc-200 pt-8 dark:border-zinc-800 sm:justify-start"
+      >
+        <span
+          class="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-600"
+          >Przewodniki</span
+        >
+        <a
+          href="/seo"
+          class="rounded-sm text-xs font-bold text-zinc-500 transition-colors hover:text-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400"
+          >SEO</a
+        >
+        <a
+          href="/google-ads"
+          class="rounded-sm text-xs font-bold text-zinc-500 transition-colors hover:text-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400"
+          >Google Ads</a
+        >
+        <a
+          href="/meta-ads"
+          class="rounded-sm text-xs font-bold text-zinc-500 transition-colors hover:text-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400"
+          >Meta Ads</a
+        >
+        <a
+          href="/marketing"
+          class="rounded-sm text-xs font-bold text-zinc-500 transition-colors hover:text-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400"
+          >Marketing</a
+        >
+      </nav>
     </div>
   </footer>
 </div>

@@ -13,7 +13,8 @@
   <span
     aria-hidden="true"
     class="absolute -right-6 -bottom-10 text-[140px] font-black leading-none select-none pointer-events-none"
-    style="color:#ff5b1f; opacity:0.9; transform:rotate(-8deg);">→</span>
+    style="color:#ff5b1f; opacity:0.9; transform:rotate(-8deg);">→</span
+  >
 
   <div class="relative">
     <p class="text-lg font-black tracking-tight text-white">
@@ -23,14 +24,14 @@
       Prowadzisz małą firmę?
     </h3>
     <p class="mt-2 max-w-lg text-sm sm:text-base leading-relaxed text-zinc-400">
-      Ten blog to mój poligon — SEO i marketing testuję tu na sobie, na własne pieniądze.
-      To samo robię dla małych firm: widoczność w Google, audyty, reklamy.
+      Ten blog to mój poligon — SEO i marketing testuję tu na sobie, na własne pieniądze. To samo
+      robię dla małych firm: widoczność w Google, audyty, reklamy.
     </p>
     <a
       href={ctaUrl}
       target="_blank"
       rel="noopener"
-      class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-lg text-sm font-bold text-black transition-transform hover:scale-[1.03]"
+      class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-lg text-sm font-bold text-black transition-transform hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black"
       style="background:#ff5b1f;"
     >
       Zobacz, jak pracuję →
