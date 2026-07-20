@@ -1,6 +1,6 @@
 ---
 title: 'Jak zrobić audyt SEO strony — kompletny przewodnik krok po kroku (2026)'
-date: '2026-07-29'
+date: '2026-07-19'
 tags: ['SEO', 'Audyt SEO', 'Marketing', 'Narzędzia SEO', 'Mała Firma']
 description: 'Audyt SEO nie musi być czarną magią za 2000 zł. Pokazuję krok po kroku, jak sprawdzić stronę technicznie, contentowo i linkowo — z darmowymi narzędziami.'
 keywords: 'audyt seo, jak zrobić audyt seo, audyt strony internetowej, audyty stron, narzędzia seo, audyt strony, analiza seo, google position checker'
@@ -8,7 +8,7 @@ image_prompt: 'A cyberpunk mechanic in a dark garage inspecting a glowing hologr
 featured: false
 ---
 
-Audyt SEO brzmi jak coś, co robi się raz, płaci 2000 zł i dostaje PDF na 40 stron, którego nikt nie przeczyta. W rzeczywistości to punkt startowy każdego sensownego pozycjonowania — [pisałem już, że to pierwsza pozycja w cenniku, na którą warto patrzeć](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-22) — i większość jego elementów możesz sprawdzić sam, za darmo, w jeden wieczór.
+Audyt SEO brzmi jak coś, co robi się raz, płaci 2000 zł i dostaje PDF na 40 stron, którego nikt nie przeczyta. W rzeczywistości to punkt startowy każdego sensownego pozycjonowania — [pisałem już, że to pierwsza pozycja w cenniku, na którą warto patrzeć](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) — i większość jego elementów możesz sprawdzić sam, za darmo, w jeden wieczór.
 
 To nie jest ten sam tekst, co [mój poradnik o weryfikacji agencji SEO](/post/jak-sprawdzic-agencje-seo_2026-07-15). Tamten pokazuje, jak sprawdzić, czy ktoś, komu już płacisz, robi swoją robotę. Ten pokazuje, jak zrobić audyt od zera — niezależnie od tego, czy masz agencję, czy dopiero się zastanawiasz, czy Ci potrzebna.
 
@@ -65,7 +65,7 @@ Ja od lat korzystam z [Semrusha](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025
 
 Podstawowy audyt techniczny i contentowy z tego tekstu zrobisz sam w jeden wieczór, bez wiedzy programistycznej — to kwestia kilkunastu kliknięć w darmowych narzędziach.
 
-Zlecenie **audytu strony internetowej** jako usługi (widełki: 500–2500 zł jednorazowo, [pisałem o tym szerzej przy okazji cen pozycjonowania](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-22)) ma sens, gdy: strona jest duża (setki podstron, trudno przejrzeć ręcznie), potrzebujesz analizy technicznej głębiej niż PageSpeed pokaże (crawl całej struktury, duplikaty treści, przekierowania), albo po prostu chcesz mieć zewnętrzne, niezależne oko — audytor bez interesu w utrzymaniu status quo Twojej strony często złapie rzeczy, których sam nie zauważysz, bo jesteś zbyt blisko własnego produktu.
+Zlecenie **audytu strony internetowej** jako usługi (widełki: 500–2500 zł jednorazowo, [pisałem o tym szerzej przy okazji cen pozycjonowania](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17)) ma sens, gdy: strona jest duża (setki podstron, trudno przejrzeć ręcznie), potrzebujesz analizy technicznej głębiej niż PageSpeed pokaże (crawl całej struktury, duplikaty treści, przekierowania), albo po prostu chcesz mieć zewnętrzne, niezależne oko — audytor bez interesu w utrzymaniu status quo Twojej strony często złapie rzeczy, których sam nie zauważysz, bo jesteś zbyt blisko własnego produktu.
 
 Jedno zdanie ostrzeżenia: jeśli zlecasz audyt tej samej agencji, która potem ma Cię pozycjonować, dostaniesz raport zaprojektowany tak, żeby uzasadnić ich własną ofertę. Nie jest to zawsze nieuczciwe — ale warto o tym pamiętać, czytając wnioski.
 
@@ -77,7 +77,7 @@ Jedno zdanie ostrzeżenia: jeśli zlecasz audyt tej samej agencji, która potem 
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
-Powiązane teksty: [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-22) · [jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15) · [narzędzia AI, których naprawdę używam](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15)
+Powiązane teksty: [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15) · [narzędzia AI, których naprawdę używam](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15)
 
 ---
 
