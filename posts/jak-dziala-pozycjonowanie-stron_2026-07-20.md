@@ -45,7 +45,7 @@ Link z innej strony do Twojej to w oczach Google coś w rodzaju rekomendacji. Im
 
 Analogia z mojego świata: to jak reputacja w open source. Jedna gwiazdka na GitHubie od uznanego dewelopera znaczy więcej niż sto gwiazdek od świeżo założonych, pustych kont — mechanizm ten sam, ocena jakości źródła, nie tylko liczby.
 
-## Krok 5: Linkowanie wewnętrzne — najtańszy dźwigień, jaki masz
+## Krok 5: Linkowanie wewnętrzne — najtańsza dźwignia, jakią masz
 
 W przeciwieństwie do linków zewnętrznych, linkowanie wewnętrzne jest w 100% pod Twoją kontrolą i nie kosztuje nic poza czasem. Dobra struktura robi dwie rzeczy naraz: pomaga Googlebotowi dotrzeć do każdej ważnej podstrony (krok 1) i przekazuje część autorytetu ze stron mocnych do stron, które dopiero budują pozycję.
 
