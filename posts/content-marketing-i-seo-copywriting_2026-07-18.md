@@ -143,7 +143,7 @@ Jeśli potrzebujesz leadów w tym miesiącu — SEM/PPC. Jeśli budujesz firmę 
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
-Powiązane teksty z tego cyklu: [jak działa pozycjonowanie stron](/post/jak-dziala-pozycjonowanie-stron_2026-07-20) · [jak zrobić audyt SEO](/post/jak-zrobic-audyt-seo_2026-07-19) · [ile kosztuje pozycjonowanie strony](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [pisanie treści pod AI (GEO)](/post/content_is_king_ai_is_the_kingdom_2025-10-04)
+Powiązane teksty z tego cyklu: [jak działa pozycjonowanie stron](/post/jak-dziala-pozycjonowanie-stron_2026-07-20) · [jak zrobić audyt SEO](/post/jak-zrobic-audyt-seo_2026-07-19) · [ile kosztuje pozycjonowanie strony](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [pisanie treści pod AI (GEO)](/post/content_is_king_ai_is_the_kingdom_2025-10-04) · [jak przebudowuję tego bloga](/post/jak-przebudowuje-bloga-pillar-pages_2026-07-16)
 
 ---
 

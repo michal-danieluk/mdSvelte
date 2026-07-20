@@ -65,7 +65,7 @@ Darmowy start: Google Trends i autouzupełnianie samej wyszukiwarki. [W tekście
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
-Powiązane teksty: [jak zrobić audyt SEO strony](/post/jak-zrobic-audyt-seo_2026-07-19) · [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · plan działania na weekend bez budżetu: [SEO dla małej firmy — od czego zacząć](https://buildletter.com/blog/seo-dla-malej-firmy-od-czego-zaczac/) na buildletter.com
+Powiązane teksty: [jak zrobić audyt SEO strony](/post/jak-zrobic-audyt-seo_2026-07-19) · [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [jak przebudowuję tego bloga](/post/jak-przebudowuje-bloga-pillar-pages_2026-07-16) · plan działania na weekend bez budżetu: [SEO dla małej firmy — od czego zacząć](https://buildletter.com/blog/seo-dla-malej-firmy-od-czego-zaczac/) na buildletter.com
 
 ---
 

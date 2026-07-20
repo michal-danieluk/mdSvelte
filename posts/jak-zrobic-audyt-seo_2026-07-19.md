@@ -77,7 +77,7 @@ Jedno zdanie ostrzeżenia: jeśli zlecasz audyt tej samej agencji, która potem 
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
-Powiązane teksty: [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15) · [narzędzia AI, których naprawdę używam](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15)
+Powiązane teksty: [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15) · [narzędzia AI, których naprawdę używam](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15) · [jak przebudowuję tego bloga](/post/jak-przebudowuje-bloga-pillar-pages_2026-07-16)
 
 ---
 

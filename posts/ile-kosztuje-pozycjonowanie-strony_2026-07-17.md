@@ -81,6 +81,8 @@ Szukasz kogoś, kto to dla Ciebie poprowadzi? [Zobacz, jak wygląda współpraca
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
+Powiązane teksty: [jak zrobić audyt SEO strony](/post/jak-zrobic-audyt-seo_2026-07-19) · [jak działa pozycjonowanie stron](/post/jak-dziala-pozycjonowanie-stron_2026-07-20) · [jak przebudowuję tego bloga](/post/jak-przebudowuje-bloga-pillar-pages_2026-07-16)
+
 ---
 
 *Dostałeś wycenę pozycjonowania i nie wiesz, czy jest uczciwa? Napisz do mnie na [LinkedIn](https://www.linkedin.com/in/michal-danieluk/) — chętnie zerknę i powiem, co widzę.*
