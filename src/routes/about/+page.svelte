@@ -7,7 +7,7 @@
 
 <Seo
   title={`O mnie - ${name}`}
-  description="Poznaj Michała Danieluka: sprzedawcę i marketera, który łączy marketing, automatyzację, AI oraz hobbystyczne budowanie narzędzi w Svelte i Ruby."
+  description="Michał Danieluk — sprzedawca i marketer łączący SEO, płatne kampanie, automatyzację i AI z praktycznym budowaniem narzędzi dla biznesu."
   keywords={[
     'Michał Danieluk',
     'specjalista marketingu',
@@ -50,15 +50,18 @@
       <section class="prose prose-zinc dark:prose-invert max-w-none 
         prose-headings:font-black prose-headings:tracking-tight
         prose-p:leading-relaxed prose-p:text-zinc-600 dark:prose-p:text-zinc-400">
-        <h2 class="text-3xl sm:text-4xl mb-8">Cześć! Nazywam się Michał.</h2>
+        <h2 class="text-3xl sm:text-4xl mb-8">Cześć, jestem Michał.</h2>
         <p>
-          Od lat zajmuję się sprzedażą – w mowie i piśmie. Moja praca to ciągłe balansowanie między potrzebami klientów a technologią, która pozwala te potrzeby zaspokoić szybciej i lepiej.
+          Zajmuję się sprzedażą i marketingiem. Kod, automatyzacja i AI są dla mnie narzędziami — mają pomagać zdobywać klientów, usuwać ręczną pracę albo podejmować lepsze decyzje. Jeśli nie robią żadnej z tych rzeczy, są tylko technologicznym hałasem.
         </p>
         <p>
-          Obecnie prowadzę <a href={substack} target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-bold no-underline hover:underline">newsletter produktowy</a>, gdzie odpowiadam za całą ścieżkę: od strategii treści, przez design, aż po techniczną egzekucję. Fascynuje mnie to, jak ewoluuje komunikacja z klientem i jak narzędzia, których używamy, zmieniają nasz sposób myślenia o marketingu.
+          Nie jestem programistą i nie próbuję nim być. Buduję własne narzędzia, ponieważ gotowe aplikacje często rozwiązują nie ten problem, który mam. Korzystam ze Svelte, Ruby, terminala i modeli AI, żeby usprawniać konkretne procesy w prawdziwym biznesie.
         </p>
         <p>
-          Prywatnie jestem entuzjastą kodu. Choć nie nazywam się pełnoetatowym programistą, uwielbiam budować własne systemy – od blogów w Svelte po automatyzacje w CLI. Wierzę, że zrozumienie "jak to działa pod spodem" daje ogromną przewagę w dzisiejszym świecie marketingu.
+          Na tym blogu opisuję to, co sam sprawdziłem: SEO, Google Ads, Meta Ads, automatyzację oraz praktyczne wykorzystanie AI. Pokazuję rozwiązania, ale także błędy, ograniczenia i eksperymenty, które nie przyniosły oczekiwanego efektu.
+        </p>
+        <p>
+          Prowadzę również <a href={substack} target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-bold no-underline hover:underline">BuildLetter</a> — newsletter dla osób, które chcą lepiej sprzedawać, sprawniej pracować i świadomie korzystać z technologii. Bez gonienia za każdą nową aplikacją i bez udawania eksperta od wszystkiego.
         </p>
       </section>
 
@@ -74,9 +77,9 @@
         </div>
 
         <div class="bg-zinc-100 dark:bg-zinc-900/50 rounded-2xl p-8 sm:p-12 text-center">
-          <h3 class="text-2xl font-black text-zinc-900 dark:text-zinc-50 mb-4">Masz pomysł na projekt?</h3>
+          <h3 class="text-2xl font-black text-zinc-900 dark:text-zinc-50 mb-4">Masz konkretny problem?</h3>
           <p class="text-zinc-600 dark:text-zinc-400 mb-8 max-w-md mx-auto leading-relaxed">
-            Nie cierpię spamu, ale kocham konkretne rozmowy o automatyzacji i marketingu. Napisz do mnie bezpośrednio na maila.
+            Jeśli chcesz uporządkować marketing, zautomatyzować proces albo sensownie wykorzystać AI w firmie — napisz. Opisz problem, a nie listę modnych narzędzi. Jeżeli będę wiedział, jak pomóc, odpowiem konkretnie. Jeśli nie — również powiem wprost.
           </p>
           
           <a
