@@ -67,7 +67,29 @@ Status po pierwszym przebiegu (Filary D, B, C napisane jako wpisy blogowe — pa
 6. **Data zawsze z przeszłości albo dzisiejsza, nigdy z przyszłości** — Vercel prerenderuje w build-time i nie odświeży się sam, gdy "nadejdzie" data. Sprawdź kolizję: `grep -rl "date: 'YYYY-MM-DD'" posts/*.md` przed zapisem.
 7. **Sprawdź nakładanie z buildletter.com/blog** (`~/Desktop/buildletter/src/pages/blog/`) przed pisaniem — ten sam autor prowadzi tam osobny blog o SEO/marketingu małych firm, z kątem sprzedażowym (CTA do usług). Jeśli temat się pokrywa: różnicuj kąt (michaldanieluk.pl = edukacyjny/personal brand, buildletter.com = sprzedażowy/actionable) i dodaj link w obie strony zamiast pisać duplikat. **Buildletter.com to osobne repo (Astro, nie SvelteKit) — commituj tam tylko pliki, które sam edytujesz, working tree bywa "brudny" od innej, równoległej pracy Michała.**
 
-## 5. Backlog — kolejne wpisy z serii "przebudowa bloga"
+## 5. Ekosystem właściwości Michała — mapa i polityka cross-postingu
+
+Ustalone 2026-07-21/22, po odkryciu że Substack "BuildLetter" (buildletter.substack.com) nie jest pustą platformą — ma już 7 opublikowanych wpisów po polsku, część niemal 1:1 duplikatów tytułów z michaldanieluk.pl (`automatyzacja-jednoosobowa-firma-stack-za-zero`, `5-kontrintuicyjnych-lekcji-marktingowych`, `nvim-i-obs`).
+
+### Cztery właściwości, trzy filary (Substack nie jest osobnym filarem)
+
+| Właściwość | Rola | Odbiorca |
+|---|---|---|
+| **michaldanieluk.pl** (ten blog) | Personal brand, edukacyjny, SEO-zindeksowany hub wiedzy | Szeroka publiczność SEO/marketing/tech |
+| **buildletter.substack.com** ("BuildLetter") | Mailowe rozszerzenie michaldanieluk.pl — **ten sam filar, inny format**, nie 4. odrębny byt | Ci sami czytelnicy co blog, w formacie mailowym |
+| **buildletter.com** | Serwisowy/sprzedażowy | Ogólne małe firmy szukające wykonawcy marketingu |
+| **marketingwbudowlance.pl** (beehiiv) | Serwisowy/sprzedażowy, branżowy | Firmy budowlane/wykonawcze konkretnie |
+
+### Polityka: ten sam temat, dwa różne teksty (nie duplikat + link)
+
+Substack **nie wspiera tagów canonical** (zweryfikowane 2026-07-21 — ograniczenie platformy, nie coś do obejścia ustawieniem). Dwie opcje radzenia sobie z tym:
+1. ~~Pełny tekst na blogu, teaser + link na Substacku~~ — działa, ale słabsze wykorzystanie Substacka.
+2. **✅ Wybrane: ten sam temat, dwa naprawdę różne teksty** — różny kąt, różna struktura, różne przykłady (nie przepisanie innymi słowami — to nadal wygląda jak duplikat dla Google). Substack może brzmieć bardziej osobiście/warsztatowo (skoro to "personal BuildLetter"), blog bardziej poradnikowo. Zero problemu z duplicate content, bo tekst faktycznie się różni — dokładnie ten wzorzec, który już działa między michaldanieluk.pl a buildletter.com (patrz punkt 7 w sekcji 4).
+3. **Zawsze linkuj między wersjami** (Substack → blog i odwrotnie) — nie zastępuje różnicowania treści, ale wzmacnia obie strony niezależnie od tego, że nie ma canonical.
+
+**Do zrobienia (zgłoszone, nie wykonane):** 3 istniejące duplikaty na Substacku (patrz wyżej) nie mają linku do wersji na blogu — warto dopisać, skoro nie ma canonical, żeby dać Google chociaż sygnał kierunkowy.
+
+## 6. Backlog — kolejne wpisy z serii "przebudowa bloga"
 
 - **Część 1 (2026-07-16):** `jak-przebudowuje-bloga-pillar-pages_2026-07-16` — plan przebudowy, dlaczego pillar pages, research keywordowy Semrushem, jak powstały 4 filary A/B/C/D.
 - **Część 2 — Answer the Public (rozpoczęta 2026-07-20):** 4 spoke-artykuły napisane w tej sesji (`czy-seo-sie-oplaca-malej-firmie`, `seo-samemu-czy-zatrudnic-kogos`, `content-marketing-a-seo-roznice`, `co-to-jest-seo-copywriting`), wszystkie dopięte do `pillars.ts` (`/seo`). Zasada: spoke targetuje długi ogon/konkretne pytanie, linkuje do huba, nie konkuruje o frazę główną.
