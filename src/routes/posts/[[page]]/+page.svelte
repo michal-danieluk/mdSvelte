@@ -62,11 +62,22 @@
         {/if}
       </div>
 
-      <div class="hidden sm:flex items-center gap-2">
-        <span class="text-xs font-black text-zinc-400 dark:text-zinc-600 uppercase tracking-widest">
-          Strona {data.page} z {totalPages}
-        </span>
-      </div>
+      <nav class="hidden sm:flex items-center gap-2" aria-label="Strony archiwum">
+        {#each Array(totalPages) as _, index}
+          {@const pageNumber = index + 1}
+          <a
+            href={pageNumber === 1 ? '/posts' : `/posts/${pageNumber}`}
+            aria-current={data.page === pageNumber ? 'page' : undefined}
+            class={`flex h-9 min-w-9 items-center justify-center rounded-xl px-3 text-xs font-black transition-colors ${
+              data.page === pageNumber
+                ? 'bg-indigo-600 text-white'
+                : 'text-zinc-500 hover:bg-zinc-100 hover:text-indigo-600 dark:text-zinc-500 dark:hover:bg-zinc-900 dark:hover:text-indigo-400'
+            }`}
+          >
+            {pageNumber}
+          </a>
+        {/each}
+      </nav>
 
       <div class="flex flex-1 justify-end">
         {#if hasNextPage}

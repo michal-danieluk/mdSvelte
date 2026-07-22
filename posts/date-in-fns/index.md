@@ -2,6 +2,7 @@
 title: Polskie wyświetlanie miesięcy w date-fns
 tags: Blog, Data, Config 
 date: 2023-2-22
+description: 'Jak skonfigurować polskie nazwy miesięcy i formatowanie dat w bibliotece date-fns za pomocą ustawienia locale.'
 ---
 
 ## Data po polsku

@@ -8,10 +8,18 @@
    *   description?: string,
    *   type?: string,
    *   image?: string | null,
-   *   keywords?: string | string[]
+   *   keywords?: string | string[],
+   *   robots?: string
    * }}
    */
-  let { title = name, description = '', type = 'website', image = null, keywords = [] } = $props()
+  let {
+    title = name,
+    description = '',
+    type = 'website',
+    image = null,
+    keywords = [],
+    robots = ''
+  } = $props()
 
   /** @param {string | string[]} value */
   function normalizeKeywords(value) {
@@ -45,6 +53,9 @@
   {/if}
   {#if metaKeywords}
     <meta name="keywords" content={metaKeywords} />
+  {/if}
+  {#if robots}
+    <meta name="robots" content={robots} />
   {/if}
   <link rel="canonical" href={canonicalUrl} />
 

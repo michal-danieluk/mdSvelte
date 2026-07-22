@@ -63,4 +63,4 @@ Podobne podejście stosuję, pomagając moim klientom osiągać świetne wyniki 
 
 Jedno zastrzeżenie: partyzanckie SEO wymaga cierpliwości tak samo jak to "budżetowe". Jeśli zastanawiasz się, ile realnie trzeba czekać, zanim ten epicki artykuł zacznie przyciągać ruch, sprawdź [Jak długo trzeba czekać na efekty marketingu](/post/jak-dlugo-czekac-na-efekty-marketingu_2026-07-02).
 
-A jeśli chcesz więcej takich porad, znajdziesz mnie na **[LinkedIn](link-do-linkedin)** i **[Twitterze](link-do-twittera)**.
+A jeśli chcesz więcej takich porad, znajdziesz mnie na **[LinkedIn](https://www.linkedin.com/in/michal-danieluk/)** i **[Twitterze](https://twitter.com/michaldanieluk)**.

@@ -6,8 +6,6 @@ description: "5 kontrintuicyjnych lekcji marketingowych od Rory'ego Sutherlanda:
 featured: false
 ---
 
-# 5 kontrintuicyjnych lekcji marketingowych od Rory'ego Sutherlanda
-
 Współczesny marketing stał się domeną analityków, optymalizatorów i maniaków danych. W świecie, gdzie liczy się każdy ułamek procenta konwersji, kreatywność ustępuje miejsca przyrostowym ulepszeniom. To świat, w którym można znaleźć racjonalne argumenty na rzecz robienia rzeczy nudnych i bezcelowych – byle tylko zachować posadę.
 
 Rory Sutherland, legenda brytyjskiej reklamy i autor bestsellerów, kwestionuje to myślenie. Twierdzi, że prawdziwa wartość nie leży w mikrooptymalizacjach, ale w zrozumieniu ludzkiej psychologii. Jego perspektywa wyjaśnia, dlaczego ludzie podejmują wybory sprzeczne z logiką – a mimo to mające doskonały sens.

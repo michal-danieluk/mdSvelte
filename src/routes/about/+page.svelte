@@ -7,7 +7,7 @@
 
 <Seo
   title={`O mnie - ${name}`}
-  description={bio}
+  description="Poznaj Michała Danieluka: sprzedawcę i marketera, który łączy marketing, automatyzację, AI oraz hobbystyczne budowanie narzędzi w Svelte i Ruby."
   keywords={[
     'Michał Danieluk',
     'specjalista marketingu',

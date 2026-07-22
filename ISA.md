@@ -1,19 +1,19 @@
 ---
-task: "Add sitewide SEO keyword metadata"
+task: "Implement SEO audit recommendations"
 slug: 20260720-103732_blog-pillar-pages
 project: md_blog
 effort: E3
 effort_source: auto
 phase: complete
-progress: 58/58
+progress: 90/90
 mode: interactive
 started: 2026-07-20T10:37:32Z
-updated: 2026-07-20T19:55:01Z
-iteration: 2
-principal_stated_goal: "trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.pl bo wogóle ich nie ma jakrobiłem audyt poprzez semrush."
+updated: 2026-07-22T06:01:11Z
+iteration: 3
+principal_stated_goal: "to wykonać zalecenia z audytu."
 principal_stated_goal_source: explicit-revision
 principal_stated_goal_signal: 2
-principal_stated_goal_locked: 2026-07-20T16:56:18Z
+principal_stated_goal_locked: 2026-07-22T05:50:52Z
 density_score: 0.67
 interview_invoked: false
 divergence_risk: low
@@ -38,7 +38,6 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - Tworzenie CMS-a do ręcznego zarządzania pillar pages.
 - Zewnętrzne badanie słów kluczowych i obietnice rankingów.
 - Nowy system wizualny niezależny od obecnego bloga.
-- Weryfikacja przez Interceptor lub inną przeglądarkę w iteracji 2, zgodnie z dyspozycją użytkownika.
 - Ręczne dopisywanie fraz do każdego artykułu, jeżeli frontmatter lub tagi już je definiują.
 
 ## Constraints
@@ -50,12 +49,16 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - Dobór wpisów ma korzystać z obecnego źródła danych, bez duplikowania metadanych postów.
 - Iteracja 1 wymagała Interceptora; iteracja 2 jest weryfikowana wyłącznie przez kod i prerenderowany HTML.
 - Metadane artykułów mają pozostać utrzymywane w ich frontmatterze.
+- Istniejące adresy artykułów i tagów pozostają bez zmian; warianty tagów różniące się wielkością liter są scalane na poziomie modelu danych.
+- Weryfikacja iteracji 3 obejmuje prerenderowany HTML oraz prawdziwy Chrome przez Interceptor.
 
 ## Goal
 
 „stwórz mi pillar pageś w blogu dla /seo /adsy (albo inna nazwa) i /marketing. Dasz radę to zrobić??” Zbudować responsywne, indeksowalne pillar pages pod `/seo`, `/google-ads`, `/meta-ads` i `/marketing`, które wprowadzają do tematu, porządkują istniejące artykuły oraz wzajemnie wspierają architekturę linkowania bloga. W iteracji dopilnować alfabetycznej kolejności filarów A–D i zbalansowanego układu czterech kart SEO.
 
 Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.pl bo wogóle ich nie ma jakrobiłem audyt poprzez semrush.” Każda indeksowalna strona ma emitować jeden niepusty, tematyczny `meta[name="keywords"]`; istniejące frazy postów mają płynąć z frontmatteru, a wynik ma zostać sprawdzony w wygenerowanym HTML, zapisany w commicie i wypchnięty na bieżącą gałąź.
+
+Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzone zalecenia techniczne i treściowe: jeden kanoniczny host `www`, spójne reguły indeksacji tagów i sitemap, czyste podglądy Markdown, poprawne title/opisy/H1/linki, schema `WebSite` oraz płytszą paginację archiwum. Nie zmieniać publicznych ścieżek ani zależności i nie wdrażać na produkcję bez osobnej zgody.
 
 ## Criteria
 
@@ -117,6 +120,38 @@ Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.
 - [x] ISC-56: Anti: zmiana nie modyfikuje adresów, zależności, title, description, canonical ani social meta.
 - [x] ISC-57: Zmiany SEO są zapisane w osobnym commicie na bieżącej gałęzi.
 - [x] ISC-58: Commit z metadanymi SEO jest wypchnięty do `origin/main`.
+- [x] ISC-59: Wspólna stała `website` używa kanonicznego hosta `https://www.michaldanieluk.pl`.
+- [x] ISC-60: JSON-LD i linki absolutne generowane przez aplikację korzystają ze wspólnej stałej `website`, bez starego hosta apex.
+- [x] ISC-61: Prerender strony głównej emituje canonical i `og:url` z hostem `www`.
+- [x] ISC-62: Prerender przykładowego artykułu emituje canonical, JSON-LD i social URL z hostem `www`.
+- [x] ISC-63: Każdy `<loc>` w sitemapie używa hosta `www`.
+- [x] ISC-64: Sitemap nie zawiera zduplikowanych wartości `<loc>`.
+- [x] ISC-65: Sitemap pomija tagi używane przez mniej niż dwa artykuły.
+- [x] ISC-66: Lista tagów scala warianty nazw prowadzące do tego samego sluga i sumuje ich użycia.
+- [x] ISC-67: Strona tagu z jednym artykułem emituje `meta[name="robots"]` o wartości `noindex, follow`.
+- [x] ISC-68: Strona tagu z co najmniej dwoma artykułami nie emituje dyrektywy `noindex`.
+- [x] ISC-69: `robots.txt` wskazuje kanoniczny adres sitemapy z hostem `www`.
+- [x] ISC-70: Strona główna emituje poprawny JSON-LD typu `WebSite` z nazwą i kanonicznym URL-em.
+- [x] ISC-71: Podstrony artykułów nie duplikują schematu `WebSite` przeznaczonego dla strony głównej.
+- [x] ISC-72: Repozytorium nie zawiera placeholderów `link-do-linkedin`, `link-do-twittera` ani `link-do-kontaktu`.
+- [x] ISC-73: Każdy prerenderowany artykuł ma dokładnie jeden nagłówek H1.
+- [x] ISC-74: Cztery wskazane starsze wpisy mają jawne, tekstowe opisy bez składni Markdown.
+- [x] ISC-75: Automatyczny podgląd pierwszego akapitu renderuje Markdown jako HTML i udostępnia czysty tekst dla metadanych.
+- [x] ISC-76: Karty wpisów na stronie głównej nie pokazują surowych znaczników linków, nagłówków ani wyróżnień Markdown.
+- [x] ISC-77: Domyślny title artykułu nie dokleja automatycznie nazwy autora.
+- [x] ISC-78: Frontmatter artykułu może opcjonalnie nadpisać title SEO polem `seoTitle` bez zmiany H1.
+- [x] ISC-79: Strona „O mnie” ma opis meta inny niż strona główna i zgodny z jej treścią.
+- [x] ISC-80: `/posts` zawiera bezpośrednie linki do każdej strony paginacji archiwum.
+- [x] ISC-81: Najstarsza strona paginacji zawiera linki do wpisów `text-email` i `ans-dot-file`.
+- [x] ISC-82: Wdrożenie nie zmienia slugów ani istniejących tras artykułów i tagów.
+- [x] ISC-83: Wdrożenie nie dodaje ani nie aktualizuje zależności projektu.
+- [x] ISC-84: Testy jednostkowe transformacji tagów i podglądów kończą się kodem 0.
+- [x] ISC-85: `bun run check` kończy się bez błędów i ostrzeżeń.
+- [x] ISC-86: `bun run build` kończy się kodem 0.
+- [x] ISC-87: Sweep prerenderowanego HTML potwierdza domenę, title, opisy, H1, robots i spójność sitemapy.
+- [x] ISC-88: Interceptor renderuje stronę główną bez błędów konsoli i z czystymi podglądami kart.
+- [x] ISC-89: Interceptor renderuje artykuł i tag `noindex` bez błędów konsoli.
+- [x] ISC-90: Żaden URL oznaczony `noindex` nie występuje w sitemapie.
 
 ## Test Strategy
 
@@ -139,6 +174,16 @@ Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.
 | ISC-56 | bash | diff zależności, tras i pozostałych metadanych | brak regresji | `git diff`, `rg` | derived: bezpieczeństwo |
 | ISC-57 | bash | commit zawiera wyłącznie uzgodnione zmiany | nowy SHA | `git show --stat` | derived: commit |
 | ISC-58 | bash | zdalny ref wskazuje nowy commit | `origin/main == HEAD` | `git ls-remote` | derived: push |
+| ISC-59..64 | bash | kanoniczny host w źródle i prerenderze | wyłącznie `www`, unikalne loc | `rg`, skrypt Bun | literal: audyt |
+| ISC-65..68, ISC-90 | test/bash | kontrakt indeksacji tagów | wspólny próg, bez sprzeczności | `bun test`, prerender sweep | derived: crawl budget |
+| ISC-69..71 | bash | robots i schema `WebSite` | poprawna dyrektywa i zakres | `rg`, parser JSON-LD | literal: audyt |
+| ISC-72..74 | bash | linki, H1 i opisy starszych wpisów | zero placeholderów/Markdown, jeden H1 | `rg`, prerender sweep | literal: audyt |
+| ISC-75..76 | test/screenshot | transformacja podglądów Markdown | czysty HTML i tekst | `bun test`, Interceptor | literal: audyt |
+| ISC-77..79 | bash | title i opisy tras | bez automatycznego suffixu, unikalne opisy | prerender sweep | literal: audyt |
+| ISC-80..81 | bash/screenshot | crawl depth archiwum | linki do wszystkich stron i starych wpisów | parser HTML, Interceptor | derived: discoverability |
+| ISC-82..83 | bash | regresja tras i zależności | brak zmian | `git diff` | derived: bezpieczeństwo |
+| ISC-84..87 | test/bash | testy, check, build i metadane | wszystkie kody 0 | `bun test`, `bun run check`, `bun run build` | derived: jakość |
+| ISC-88..89 | screenshot | realny render kluczowych tras | brak błędów konsoli | Interceptor | literal: weryfikacja web |
 
 ## Features
 
@@ -152,6 +197,13 @@ Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.
 | RouteKeywordMetadata | ISC-47..52 | KeywordNormalizer | true | medium |
 | ArticleKeywordMetadata | ISC-53..54 | KeywordNormalizer | true | high |
 | KeywordVerificationDelivery | ISC-55..58 | RouteKeywordMetadata, ArticleKeywordMetadata | false | high |
+| CanonicalOrigin | ISC-59..64, ISC-69..71 | none | false | high |
+| TagIndexabilityContract | ISC-65..68, ISC-90 | CanonicalOrigin | false | high |
+| MarkdownPreviewPipeline | ISC-75..76, ISC-84 | none | true | high |
+| LegacyContentCleanup | ISC-72..74 | none | true | medium |
+| ArticleMetadata | ISC-74, ISC-77..79 | MarkdownPreviewPipeline | true | medium |
+| CrawlableArchive | ISC-80..81 | none | true | medium |
+| SeoAuditVerification | ISC-82..89 | CanonicalOrigin, TagIndexabilityContract, MarkdownPreviewPipeline, LegacyContentCleanup, ArticleMetadata, CrawlableArchive | false | high |
 
 ## Decisions
 
@@ -166,6 +218,11 @@ Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.
 - 2026-07-20 16:58: „Sitewide keywords” oznacza wspólne renderowanie z wartościami właściwymi dla strony, a nie jedną globalną listę na wszystkich trasach.
 - 2026-07-20 16:59: Commit i push do `origin/main` dołączono jako kryteria ISC-57 i ISC-58 po doprecyzowaniu użytkownika.
 - 2026-07-20 17:12: Refined: normalizator ogranicza wynik do 10 unikalnych fraz; bezpieczny fallback artykułu używa wyłącznie jego tytułu, nie ogólnej frazy autora.
+- 2026-07-22 05:50: refined: rozpoczęto iterację 3; principal_stated_goal zmieniono z dodania keywords na wykonanie potwierdzonych zaleceń audytu SEO.
+- 2026-07-22 05:52: Host `www` jest jedynym źródłem prawdy, ponieważ produkcja kończy przekierowania właśnie na nim; zmiana stałej usuwa rozjazd canonical/JSON-LD/sitemapy u źródła.
+- 2026-07-22 05:53: Tagi o jednym wpisie pozostają dostępne i linkowalne, ale otrzymują `noindex, follow` i są pomijane w sitemapie; próg jest współdzieloną regułą, nie rozproszonym parametrem.
+- 2026-07-22 05:54: Nie zmieniamy slugów tagów z utraconymi polskimi znakami; warianty nazw są scalane po obecnym slugu, co usuwa duplikaty bez łamania istniejących URL-i.
+- 2026-07-22 05:55: Surowy Markdown jest naprawiany w pipeline danych, nie osobno w komponentach kart i metadanych; jedno przekształcenie obsługuje oba kanały.
 
 ## Changelog
 
@@ -173,6 +230,10 @@ Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.
   refuted by: większość nowych postów miała już frazy we frontmatterze, lecz `Seo.svelte` ich nie renderował
   learned: właściwym miejscem naprawy jest wspólny kontrakt metadanych z kontekstowymi fallbackami i limitem 10 fraz
   criterion now: ISC-45..54 wymagają jednego renderera, unikalnych fraz tras oraz łańcucha frontmatter → tagi → tytuł
+- 2026-07-22 | conjectured: każda krótka strona tagu wymaga dopisania dużej ilości tekstu
+  refuted by: sama długość treści nie jest potwierdzoną karą, a problemem audytu jest nadmiar niskowartościowych URL-i indeksowalnych i duplikaty slugów
+  learned: indeksowalność i sitemapę należy sterować wspólną regułą opartą na liczbie powiązanych wpisów, zachowując linki `follow`
+  criterion now: ISC-65..68 i ISC-90 definiują jeden testowalny kontrakt indeksacji tagów
 
 ## Verification
 
@@ -195,3 +256,13 @@ Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.
 - ISC-57: git — commit `311e65f` (`Dodaj słowa kluczowe do metadanych SEO`) zawiera 9 plików funkcjonalnych, 125 insertions i 7 deletions.
 - ISC-58: git — `git push origin main` zakończył się `95e70b1..311e65f main -> main`; `git ls-remote` potwierdził SHA `311e65f15072c33bf4e9664116473cef3324b3dc` na `refs/heads/main`.
 - ISC-58: production HTTP — `curl -L https://michaldanieluk.pl/?verify=311e65f` zwrócił na kanonicznym `www` nowy tag `keywords` strony głównej.
+- ISC-59..64: `verify-seo.ts` sprawdził 117 tras; wszystkie canonical, `og:url` i 67 unikalnych `<loc>` używają hosta `www`, a źródła absolutnych URL-i korzystają ze wspólnej stałej.
+- ISC-65..68, ISC-90: 69 stron tagów zostało sprawdzonych; 50 jednokrotnych tagów ma `noindex, follow`, 19 indeksowalnych tagów jest w sitemapie i żaden URL `noindex` do niej nie trafił.
+- ISC-69..71: `robots.txt` wskazuje sitemapę `www`; Chrome i parser JSON-LD potwierdziły `Person + WebSite` na `/` oraz `Person + BlogPosting` bez `WebSite` na artykule.
+- ISC-72..74: `rg` nie znalazł placeholderów linków; sweep potwierdził dokładnie jeden H1 we wszystkich 40 artykułach i czyste opisy czterech starszych wpisów.
+- ISC-75..76: `bun test tests/seo.test.js` — 3/3 testy; Interceptor na stronie głównej zwrócił `rawMarkdownLink: false` i poprawnie wyrenderowane podglądy.
+- ISC-77..79: sweep potwierdził brak automatycznego suffixu autora w title artykułów, obsługę `seoTitle` w rendererze oraz różne opisy `/` i `/about`.
+- ISC-80..81: parser `/posts` znalazł bezpośrednie linki do wszystkich czterech stron paginacji; ostatnia linkuje do `text-email` i `ans-dot-file`.
+- ISC-82..83: `git diff` nie obejmuje package manifestu, lockfile ani slugów; brak nowych zależności i zmian tras.
+- ISC-84..87: 3 testy przeszły; `bun run check` — 0 błędów, 0 ostrzeżeń; `bun run build` — kod 0; końcowy sweep 117 stron — `status: ok`.
+- ISC-88..89: Interceptor na `/`, artykule audytowym i `/tag/neovim` zwrócił po jednym H1, `errors: []`, brak overlay; finalny tag ma canonical `www` i `noindex, follow`.

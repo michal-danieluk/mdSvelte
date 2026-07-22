@@ -5,6 +5,7 @@
 import { posts, getAllTags } from '$lib/data/posts'
 import { pillarSlugs } from '$lib/data/pillars'
 import { website } from '$lib/info'
+import { isIndexableTag } from '$lib/data/seo.js'
 
 export const prerender = true
 
@@ -21,7 +22,7 @@ export async function GET({ setHeaders }) {
     'Content-Type': 'application/xml'
   })
 
-  const tags = getAllTags()
+  const tags = getAllTags().filter(isIndexableTag)
 
   const staticUrls = [
     { loc: website, priority: '1.0', changefreq: 'weekly' },

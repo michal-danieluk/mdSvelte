@@ -13,6 +13,7 @@
   title={`Temat: ${data.tag.name} - ${name}`}
   description={`Wpisy oznaczone tagiem ${data.tag.name}`}
   keywords={[data.tag.name, `${data.tag.name} artykuły`, `${data.tag.name} poradnik`]}
+  robots={data.indexable ? '' : 'noindex, follow'}
 />
 
 <div class="max-w-4xl mx-auto px-6 pt-12 lg:pt-20 pb-24">

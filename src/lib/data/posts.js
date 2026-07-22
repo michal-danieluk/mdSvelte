@@ -4,6 +4,7 @@ import { parse } from 'node-html-parser'
 import readingTime from 'reading-time'
 import fs from 'fs'
 import path from 'path'
+import { consolidateTags, createMarkdownPreview, getTagSlug } from '$lib/data/seo.js'
 
 // we require some server-side APIs to parse all metadata
 if (browser) {
@@ -18,7 +19,7 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
     // Get the raw markdown content for reading time calculation by reading the file directly
     const fullPath = path.join(process.cwd(), filepath)
     const rawContent = fs.readFileSync(fullPath, 'utf-8')
-    
+
     // Safely get preview
     let preview
     if (metadata.preview) {
@@ -27,7 +28,8 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
       // For preview, we'll extract from the raw content
       const contentWithoutFrontmatter = rawContent.replace(/^---[\s\S]*?---/, '').trim()
       const firstParagraph = contentWithoutFrontmatter.split('\n\n')[0] || ''
-      preview = { toString: () => firstParagraph, text: firstParagraph }
+      const markdownPreview = createMarkdownPreview(firstParagraph)
+      preview = { toString: () => markdownPreview.html, text: markdownPreview.text }
     }
 
     return {
@@ -73,8 +75,7 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
         // Use raw markdown content for reading time calculation
         const contentWithoutFrontmatter = rawContent.replace(/^---[\s\S]*?---/, '').trim()
         const minutes = readingTime(contentWithoutFrontmatter).minutes
-        
-        
+
         return Math.ceil(minutes) + ' min czyt.'
       })()
     }
@@ -83,7 +84,7 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
   .filter((post) => {
     // If you want to see future posts during local development, uncomment the line below or use an env var
     // if (process.env.NODE_ENV === 'development') return true
-    
+
     if (!post.date) return true
     const postDate = new Date(post.date)
     const now = new Date()
@@ -107,31 +108,12 @@ function addTimezoneOffset(date) {
 // Get all unique tags from all posts
 export function getAllTags() {
   const allTags = posts.flatMap((post) => post.tags)
-  const uniqueTags = [...new Set(allTags)]
-
-  return uniqueTags
-    .map((tag) => ({
-      name: tag,
-      slug: tag
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^a-z0-9-]/g, ''),
-      count: allTags.filter((t) => t === tag).length
-    }))
-    .sort((a, b) => b.count - a.count)
+  return consolidateTags(allTags)
 }
 
 // Get posts by tag
 export function getPostsByTag(tagSlug) {
-  return posts.filter((post) =>
-    post.tags.some(
-      (tag) =>
-        tag
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .replace(/[^a-z0-9-]/g, '') === tagSlug
-    )
-  )
+  return posts.filter((post) => post.tags.some((tag) => getTagSlug(tag) === tagSlug))
 }
 
 // Get tag info by slug
@@ -142,7 +124,5 @@ export function getTagBySlug(tagSlug) {
 
 // Get featured posts
 export function getFeaturedPosts(limit = 3) {
-  return posts
-    .filter((post) => post.featured === true)
-    .slice(0, limit)
+  return posts.filter((post) => post.featured === true).slice(0, limit)
 }

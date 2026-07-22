@@ -3,6 +3,7 @@
   import BuildletterCTA from '$lib/components/BuildletterCTA.svelte'
   import Seo from '$lib/components/Seo.svelte'
   import { getRelatedPillars } from '$lib/data/pillars'
+  import { website } from '$lib/info.js'
 
   /**
    * @typedef {{
@@ -36,7 +37,7 @@
       hasPart: articles.map((article) => ({
         '@type': 'Article',
         headline: article.title,
-        url: `https://michaldanieluk.pl/post/${article.slug}`
+        url: `${website}/post/${article.slug}`
       }))
     })
   )

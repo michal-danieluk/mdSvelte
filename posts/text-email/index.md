@@ -1,6 +1,7 @@
 ---
 title: Mało kto pisze maile tylko tekstowe
 date: 2023-03-17
+description: 'Dlaczego nadal wybieram tekstowe wiadomości e-mail i jak wygląda obsługa poczty w terminalowym kliencie Neomutt.'
 ---
 
 Mało kto dzisiaj wysyła maile tekstowe. Większość z nich jest w formacie HTML.

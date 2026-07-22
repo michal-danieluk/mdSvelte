@@ -5,10 +5,18 @@
   import SocialLinks from '$lib/components/SocialLinks.svelte'
   import Card from '$lib/components/Card.svelte'
   import Seo from '$lib/components/Seo.svelte'
-  import { avatar, bio, name } from '$lib/info.js'
+  import { avatar, bio, name, website } from '$lib/info.js'
 
   /** @type {import('./$types').PageData} */
   export let data
+
+  const websiteJsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name,
+    url: website,
+    inLanguage: 'pl-PL'
+  })
 </script>
 
 <Seo
@@ -24,6 +32,10 @@
     'AI w marketingu'
   ]}
 />
+
+<svelte:head>
+  {@html `<script type="application/ld+json">${websiteJsonLd}</script>`}
+</svelte:head>
 
 <!-- Redesigned Hero Section: Professional & Compact -->
 <section class="relative overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-24">

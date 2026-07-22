@@ -53,6 +53,6 @@ Optymalizacja pod LLM-y to nie rewolucja, a ewolucja. To, co robiłeś do tej po
 
 ---
 
-Zrozumienie i wdrożenie tych strategii to klucz do widoczności w dzisiejszym internecie. Jeśli czujesz, że to wszystko jest skomplikowane i potrzebujesz przewodnika, który pomoże Twojej firmie odnaleźć się w nowej rzeczywistości, **[odezwij się do mnie](link-do-kontaktu)**. Chętnie porozmawiamy o Twoich celach.
+Zrozumienie i wdrożenie tych strategii to klucz do widoczności w dzisiejszym internecie. Jeśli czujesz, że to wszystko jest skomplikowane i potrzebujesz przewodnika, który pomoże Twojej firmie odnaleźć się w nowej rzeczywistości, **[odezwij się do mnie](mailto:michal@danieluk.pl)**. Chętnie porozmawiamy o Twoich celach.
 
-A jeśli chcesz więcej takich porad, znajdziesz mnie na **[LinkedIn](link-do-linkedin)** i **[Twitterze](link-do-twittera)**.
+A jeśli chcesz więcej takich porad, znajdziesz mnie na **[LinkedIn](https://www.linkedin.com/in/michal-danieluk/)** i **[Twitterze](https://twitter.com/michaldanieluk)**.

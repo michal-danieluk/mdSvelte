@@ -1,4 +1,5 @@
 import { getPostsByTag, getTagBySlug } from '$lib/data/posts.js'
+import { isIndexableTag } from '$lib/data/seo.js'
 import { error } from '@sveltejs/kit'
 
 export async function load({ params }) {
@@ -12,6 +13,7 @@ export async function load({ params }) {
 
   return {
     tag,
-    posts
+    posts,
+    indexable: isIndexableTag(tag)
   }
 }

@@ -7,8 +7,6 @@ keywords: 'minimalizm cyfrowy, narzędzia AI, produktywność, tool fatigue, cyf
 image_prompt: 'A clean, minimalist desk with only a laptop and a coffee cup, surrounded by faded ghostly icons of dozens of apps and tools disappearing into the background, soft natural lighting'
 ---
 
-# Minimalizm w narzędziach — dlaczego mniej znaczy więcej
-
 W ciągu ostatniego roku przetestowałem ponad 30 narzędzi AI. Aplikacje do pisania, generowania grafik, automatyzacji, planowania, analizy danych. Każde obiecywało rewolucję.
 
 Używam pięciu.

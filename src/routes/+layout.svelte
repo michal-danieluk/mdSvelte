@@ -6,7 +6,7 @@
   import { browser } from '$app/environment'
   import { onMount } from 'svelte'
   import { page } from '$app/stores'
-  import { firstName, lastName } from '$lib/info'
+  import { firstName, lastName, website } from '$lib/info'
   import Search from '$lib/components/Search.svelte'
   import { fly, slide, fade } from 'svelte/transition'
   import { dev } from '$app/environment'
@@ -51,7 +51,7 @@
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Michał Danieluk',
-    url: 'https://michaldanieluk.pl',
+    url: website,
     jobTitle: 'Digital Marketing Specialist',
     knowsAbout: ['SEO', 'Google Ads', 'Email Marketing', 'Marketing Automation', 'AI'],
     sameAs: [

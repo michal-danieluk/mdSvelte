@@ -70,7 +70,7 @@
 </script>
 
 <Seo
-  title={`${data.post.title} - ${name}`}
+  title={data.post.seoTitle || data.post.title}
   description={postDescription}
   type="article"
   image={ogImage}

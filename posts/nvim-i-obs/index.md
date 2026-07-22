@@ -2,9 +2,8 @@
 title: Nvim i Obsidian czy to udana para?
 date: 2024-04-24
 tags: ['Neovim', 'Obsidian', 'Tools', 'Note-taking']
+description: 'Jak połączyć Neovim z Obsidianem i wygodnie pisać notatki Markdown bez opuszczania terminala.'
 ---
-
-# Nvim i obsydian.
 
 Sam obsydian jest świetnym narzędziem. Niezwykle przyjemnie się zniego korzysta.
 Bardzo lubię to, że mogę w nim pisać w stylu "Markdown" oraz to, że wszystkie pliki to są poprostu pliki tekstowe.
