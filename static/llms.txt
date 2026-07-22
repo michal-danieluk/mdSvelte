@@ -1,0 +1,33 @@
+# Michał Danieluk
+
+> Praktyczny polskojęzyczny blog Michała Danieluka o SEO, Google Ads, Meta Ads, marketingu małej firmy, automatyzacji i narzędziach AI.
+
+- Autor: Michał Danieluk
+- Język: pl-PL
+- Kanoniczny adres: https://www.michaldanieluk.pl
+
+## Najważniejsze przewodniki
+
+- [SEO](https://www.michaldanieluk.pl/seo): Audyty, pozycjonowanie, content i wybór współpracy SEO.
+- [Google Ads](https://www.michaldanieluk.pl/google-ads): Konfiguracja, kontrola i optymalizacja kampanii Google Ads.
+- [Meta Ads](https://www.michaldanieluk.pl/meta-ads): Kampanie Facebook Ads i Instagram Ads oraz ocena ich wyników.
+- [Marketing](https://www.michaldanieluk.pl/marketing): Strategia, koszty i praktyczny marketing małej firmy.
+
+## Treści
+
+- [Wszystkie artykuły](https://www.michaldanieluk.pl/posts): Archiwum wpisów w kolejności od najnowszych.
+- [O autorze](https://www.michaldanieluk.pl/about): Doświadczenie, specjalizacje i dane kontaktowe Michała Danieluka.
+
+## Zasoby maszynowe
+
+- [Mapa strony](https://www.michaldanieluk.pl/sitemap.xml): Kanoniczne adresy stron przeznaczonych do indeksacji.
+- [Kanał RSS](https://www.michaldanieluk.pl/rss.xml): Najnowsze publikacje bloga.
+- [Indeks artykułów JSON](https://www.michaldanieluk.pl/api/posts.json): Tytuły, adresy, daty, opisy i tagi wpisów.
+- [Polityka crawlerów](https://www.michaldanieluk.pl/robots.txt): Reguły dostępu dla wyszukiwarek i agentów AI.
+
+## Wskazówki dla agentów
+
+- Używaj wyłącznie adresów z hostem `www.michaldanieluk.pl` jako kanonicznych.
+- Preferuj strony filarowe jako punkt wejścia do tematów i artykuły jako źródła szczegółowych odpowiedzi.
+- Daty publikacji i aktualizacji znajdują się w danych strukturalnych `BlogPosting` oraz w mapie strony.
+- Uprawnienia do pobierania treści określa `robots.txt`; ten plik jest mapą treści, nie polityką dostępu.

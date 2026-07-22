@@ -5,6 +5,7 @@ import {
   getTagSlug,
   isIndexableTag
 } from '../src/lib/data/seo.js'
+import { normalizePostDate } from '../src/lib/data/dates.js'
 
 describe('SEO data helpers', () => {
   it('consolidates tag labels that resolve to the same existing slug', () => {
@@ -26,5 +27,12 @@ describe('SEO data helpers', () => {
     expect(preview.html).toContain('<h2>Poznaj <strong>SEO</strong>')
     expect(preview.html).toContain('<a href="/post/audyt">audyt</a>')
     expect(preview.text).toBe('Poznaj SEO przez audyt.')
+  })
+
+  it('normalizes publication and modification dates without timezone drift', () => {
+    expect(normalizePostDate('2023-2-22')).toBe('2023-02-22')
+    expect(normalizePostDate('2026-07-22')).toBe('2026-07-22')
+    expect(normalizePostDate(undefined)).toBeUndefined()
+    expect(() => normalizePostDate('not-a-date')).toThrow('Invalid post date')
   })
 })

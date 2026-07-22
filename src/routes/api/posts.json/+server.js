@@ -5,10 +5,11 @@ export const prerender = true
 
 /** @type {import('./$types').RequestHandler} */
 export async function GET() {
-  const searchIndex = posts.map(post => ({
+  const searchIndex = posts.map((post) => ({
     title: post.title,
     slug: post.slug,
     date: post.date,
+    updated: post.updated,
     description: post.description || post.preview.text,
     tags: post.tags
   }))

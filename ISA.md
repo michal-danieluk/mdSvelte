@@ -5,15 +5,15 @@ project: md_blog
 effort: E3
 effort_source: auto
 phase: complete
-progress: 90/90
+progress: 113/113
 mode: interactive
 started: 2026-07-20T10:37:32Z
-updated: 2026-07-22T06:01:11Z
-iteration: 3
-principal_stated_goal: "to wykonać zalecenia z audytu."
+updated: 2026-07-22T11:31:01Z
+iteration: 4
+principal_stated_goal: "wdróż rekomendacje"
 principal_stated_goal_source: explicit-revision
 principal_stated_goal_signal: 2
-principal_stated_goal_locked: 2026-07-22T05:50:52Z
+principal_stated_goal_locked: 2026-07-22T11:17:52Z
 density_score: 0.67
 interview_invoked: false
 divergence_risk: low
@@ -51,6 +51,8 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - Metadane artykułów mają pozostać utrzymywane w ich frontmatterze.
 - Istniejące adresy artykułów i tagów pozostają bez zmian; warianty tagów różniące się wielkością liter są scalane na poziomie modelu danych.
 - Weryfikacja iteracji 3 obejmuje prerenderowany HTML oraz prawdziwy Chrome przez Interceptor.
+- Agentowy manifest ma być statyczny i nie może duplikować pełnej treści artykułów.
+- Daty modyfikacji mają pochodzić wyłącznie z jawnego frontmatteru; brak pola `updated` zachowuje datę publikacji.
 
 ## Goal
 
@@ -59,6 +61,8 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.pl bo wogóle ich nie ma jakrobiłem audyt poprzez semrush.” Każda indeksowalna strona ma emitować jeden niepusty, tematyczny `meta[name="keywords"]`; istniejące frazy postów mają płynąć z frontmatteru, a wynik ma zostać sprawdzony w wygenerowanym HTML, zapisany w commicie i wypchnięty na bieżącą gałąź.
 
 Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzone zalecenia techniczne i treściowe: jeden kanoniczny host `www`, spójne reguły indeksacji tagów i sitemap, czyste podglądy Markdown, poprawne title/opisy/H1/linki, schema `WebSite` oraz płytszą paginację archiwum. Nie zmieniać publicznych ścieżek ani zależności i nie wdrażać na produkcję bez osobnej zgody.
+
+Iteracja 4: „wdróż rekomendacje”. Dodać kuratowany `/llms.txt`, rozdzielić w `robots.txt` boty wyszukujące i użytkownika od botów treningowych oraz przenieść jawne `updated` z frontmatteru do `BlogPosting.dateModified` i sitemapowego `lastmod`, zachowując datę publikacji jako fallback.
 
 ## Criteria
 
@@ -152,6 +156,29 @@ Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzon
 - [x] ISC-88: Interceptor renderuje stronę główną bez błędów konsoli i z czystymi podglądami kart.
 - [x] ISC-89: Interceptor renderuje artykuł i tag `noindex` bez błędów konsoli.
 - [x] ISC-90: Żaden URL oznaczony `noindex` nie występuje w sitemapie.
+- [x] ISC-91: Build generuje publiczny endpoint `/llms.txt`.
+- [x] ISC-92: `/llms.txt` identyfikuje autora i kanoniczną domenę bloga.
+- [x] ISC-93: `/llms.txt` wskazuje stronę filarową `/seo`.
+- [x] ISC-94: `/llms.txt` wskazuje stronę filarową `/google-ads`.
+- [x] ISC-95: `/llms.txt` wskazuje stronę filarową `/meta-ads`.
+- [x] ISC-96: `/llms.txt` wskazuje stronę filarową `/marketing`.
+- [x] ISC-97: `/llms.txt` wskazuje archiwum `/posts`.
+- [x] ISC-98: `/llms.txt` wskazuje `/sitemap.xml`.
+- [x] ISC-99: `/llms.txt` wskazuje `/rss.xml`.
+- [x] ISC-100: `/llms.txt` wskazuje `/api/posts.json`.
+- [x] ISC-101: `robots.txt` jawnie zezwala `OAI-SearchBot`.
+- [x] ISC-102: `robots.txt` jawnie zezwala `Claude-SearchBot`.
+- [x] ISC-103: `robots.txt` jawnie zezwala `ChatGPT-User`.
+- [x] ISC-104: `robots.txt` jawnie zezwala `Claude-User`.
+- [x] ISC-105: `robots.txt` blokuje `GPTBot`.
+- [x] ISC-106: `robots.txt` blokuje `ClaudeBot`.
+- [x] ISC-107: Model danych postu normalizuje opcjonalne `updated` do `yyyy-MM-dd`.
+- [x] ISC-107.1: Publiczne `/api/posts.json` udostępnia `updated` dla zaktualizowanych wpisów.
+- [x] ISC-108: `BlogPosting.dateModified` używa `updated`, gdy pole istnieje.
+- [x] ISC-109: Sitemapowy `lastmod` używa `updated`, gdy pole istnieje.
+- [x] ISC-110: Brak `updated` ustawia `dateModified` na `datePublished`.
+- [x] ISC-111: Brak `updated` ustawia `lastmod` na datę publikacji.
+- [x] ISC-112: Anti: testy, typecheck i build produkcyjny kończą się kodem 0.
 
 ## Test Strategy
 
@@ -184,6 +211,10 @@ Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzon
 | ISC-82..83 | bash | regresja tras i zależności | brak zmian | `git diff` | derived: bezpieczeństwo |
 | ISC-84..87 | test/bash | testy, check, build i metadane | wszystkie kody 0 | `bun test`, `bun run check`, `bun run build` | derived: jakość |
 | ISC-88..89 | screenshot | realny render kluczowych tras | brak błędów konsoli | Interceptor | literal: weryfikacja web |
+| ISC-91..100 | bash/http | manifest agentowy i jego odnośniki | plik obecny, komplet 9 zasobów | `rg`, lokalny HTTP | literal: rekomendacje |
+| ISC-101..106 | bash/http | jawne reguły botów AI | cztery allow, dwa disallow | `rg`, lokalny HTTP | derived: agentowe przeglądanie |
+| ISC-107..111 | test/bash | przepływ `updated` i fallback daty, także API | poprawne ISO w schema, sitemapie i JSON | `bun test`, prerender sweep | derived: aktualność |
+| ISC-112 | test/bash | testy, typy i build | wszystkie kody 0 | `bun test`, `bun run check`, `bun run build` | literal: rekomendacje |
 
 ## Features
 
@@ -204,6 +235,10 @@ Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzon
 | ArticleMetadata | ISC-74, ISC-77..79 | MarkdownPreviewPipeline | true | medium |
 | CrawlableArchive | ISC-80..81 | none | true | medium |
 | SeoAuditVerification | ISC-82..89 | CanonicalOrigin, TagIndexabilityContract, MarkdownPreviewPipeline, LegacyContentCleanup, ArticleMetadata, CrawlableArchive | false | high |
+| AgentManifest | ISC-91..100 | CanonicalOrigin, PillarRoutes | true | medium |
+| AiCrawlerPolicy | ISC-101..106 | none | true | medium |
+| ContentFreshnessSignals | ISC-107..111 | ArticleMetadata | false | high |
+| AgentReadinessVerification | ISC-112 | AgentManifest, AiCrawlerPolicy, ContentFreshnessSignals | false | high |
 
 ## Decisions
 
@@ -223,6 +258,12 @@ Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzon
 - 2026-07-22 05:53: Tagi o jednym wpisie pozostają dostępne i linkowalne, ale otrzymują `noindex, follow` i są pomijane w sitemapie; próg jest współdzieloną regułą, nie rozproszonym parametrem.
 - 2026-07-22 05:54: Nie zmieniamy slugów tagów z utraconymi polskimi znakami; warianty nazw są scalane po obecnym slugu, co usuwa duplikaty bez łamania istniejących URL-i.
 - 2026-07-22 05:55: Surowy Markdown jest naprawiany w pipeline danych, nie osobno w komponentach kart i metadanych; jedno przekształcenie obsługuje oba kanały.
+- 2026-07-22 11:17: refined: rozpoczęto iterację 4; principal_stated_goal zmieniono z „to wykonać zalecenia z audytu.” na „wdróż rekomendacje” jako wdrożenie trzech zaleceń gotowości agentowej.
+- 2026-07-22 11:17: W `robots.txt` zezwalamy botom wyszukującym i agentom uruchamianym przez użytkownika, a blokujemy oddzielne boty treningowe OpenAI i Anthropic; decyzja jest jawna i odwracalna.
+- 2026-07-22 11:17: `/llms.txt` jest kuratowanym indeksem kluczowych zasobów, nie mechanizmem uprawnień ani kopią całego bloga.
+- 2026-07-22 11:23: Root-cause-at-ingestion: opcjonalne `metadata.updated` musi zostać znormalizowane w `src/lib/data/posts.js`, aby jeden model zasilał schema, sitemapę i API bez trzech rozbieżnych parserów.
+- 2026-07-22 11:30: Końcowy Advisor został pominięty po odrzuceniu przez kontrolę prywatności; wysłanie stanu repozytorium do zewnętrznej usługi nie było konieczne do lokalnej, deterministycznej weryfikacji.
+- 2026-07-22 11:30: Pełny `bun run lint` pozostaje baseline-fail: Prettier wskazuje 49 wcześniej nieformatowanych plików, a ESLint 9 nie znajduje `eslint.config.*`; zmienione JS/TS przechodzą celowany Prettier check.
 
 ## Changelog
 
@@ -234,6 +275,10 @@ Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzon
   refuted by: sama długość treści nie jest potwierdzoną karą, a problemem audytu jest nadmiar niskowartościowych URL-i indeksowalnych i duplikaty slugów
   learned: indeksowalność i sitemapę należy sterować wspólną regułą opartą na liczbie powiązanych wpisów, zachowując linki `follow`
   criterion now: ISC-65..68 i ISC-90 definiują jeden testowalny kontrakt indeksacji tagów
+- 2026-07-22 | conjectured: lokalna północ przekazana do `toISOString()` zachowa kalendarzową datę frontmatteru
+  refuted by: lokalny sweep zwrócił `dateModified: 2026-07-21T22:00:00.000Z` dla `updated: 2026-07-22`
+  learned: data kalendarzowa bez czasu musi dostać jawne `T00:00:00.000Z`, inaczej strefa Europe/Warsaw przesuwa dzień w schema
+  criterion now: ISC-108 i ISC-110 wymagają poprawnej daty UTC, a class-sweep obejmuje schema, sitemapę, RSS i API
 
 ## Verification
 
@@ -266,3 +311,8 @@ Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzon
 - ISC-82..83: `git diff` nie obejmuje package manifestu, lockfile ani slugów; brak nowych zależności i zmian tras.
 - ISC-84..87: 3 testy przeszły; `bun run check` — 0 błędów, 0 ostrzeżeń; `bun run build` — kod 0; końcowy sweep 117 stron — `status: ok`.
 - ISC-88..89: Interceptor na `/`, artykule audytowym i `/tag/neovim` zwrócił po jednym H1, `errors: []`, brak overlay; finalny tag ma canonical `www` i `noindex, follow`.
+- ISC-91..100: lokalny preview oraz `verify-seo.ts` zwróciły 200 dla `/llms.txt`; manifest zawiera autora, canonical, cztery filary, archiwum, sitemapę, RSS i JSON API.
+- ISC-101..106: lokalny `robots.txt` zawiera cztery jawne bloki `Allow: /` dla agentów wyszukujących/użytkownika oraz `Disallow: /` dla `GPTBot` i `ClaudeBot`.
+- ISC-107..111: unit test normalizatora dat 4/4 oraz sweep 117 stron potwierdziły `updated: 2026-07-22` w API, schema i sitemapie, a artykuł bez `updated` zachował datę publikacji.
+- ISC-112: `bun test tests/seo.test.js` — 4/4; `bun run check` — 0 błędów i 0 ostrzeżeń; finalny `bun run build` — kod 0; `verify-seo.ts` — `status: ok`.
+- Browser note: Interceptor nie połączył się z rozszerzeniem Chrome (`no extensions connected`); iteracja nie zmienia UI, a wszystkie aktywne kryteria są file/HTTP/schema i mają lokalny dowód. Nie składamy twierdzenia o świeżej weryfikacji wizualnej.

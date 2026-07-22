@@ -1,6 +1,7 @@
 ---
 title: Jak sprawić, by AI polecało Twoją stronę? Czyli nowe SEO dla cwaniaków.
 date: 2025-10-03
+updated: 2026-07-22
 tags: ['SEO', 'AI', 'LLM', 'Marketing']
 description: 'LLMO, czyli nowe SEO: jak sprawić, żeby ChatGPT, Perplexity i inne AI polecały Twoją stronę. Słowa kluczowe, E-E-A-T i bycie "encją" wyjaśnione bez lania wody.'
 image_prompt: 'A friendly, glowing robot librarian is enthusiastically recommending a specific book to a person in a vast, futuristic library. The book is glowing brightly. The style should be slightly stylized, optimistic, and digital art.'

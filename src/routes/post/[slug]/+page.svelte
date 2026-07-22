@@ -26,8 +26,9 @@
       : [data.post.title]
   const structuredKeywords = Array.isArray(postKeywords) ? postKeywords.join(', ') : postKeywords
 
-  // ISO 8601 datetime for structured data (post.date is yyyy-MM-dd)
-  const publishedIso = new Date(`${data.post.date}T00:00:00`).toISOString()
+  // ISO 8601 UTC datetime for structured data (post dates are normalized as yyyy-MM-dd)
+  const publishedIso = `${data.post.date}T00:00:00.000Z`
+  const modifiedIso = `${data.post.updated || data.post.date}T00:00:00.000Z`
 
   const blogPostingJsonLd = JSON.stringify({
     '@context': 'https://schema.org',
@@ -38,7 +39,7 @@
     image: ogImage,
     url,
     datePublished: publishedIso,
-    dateModified: publishedIso,
+    dateModified: modifiedIso,
     author: {
       '@type': 'Person',
       name,
@@ -84,7 +85,6 @@
 
 <div class="max-w-6xl mx-auto px-6 pt-12 lg:pt-20">
   <div class="relative lg:flex lg:gap-16">
-    
     <!-- Left Column: Navigation (Sticky) -->
     <div class="hidden lg:block w-12 shrink-0">
       <div class="sticky top-24">
@@ -140,7 +140,7 @@
               <Tags tags={data.post.tags} />
             </div>
           {/if}
-          
+
           <div class="sm:text-right">
             <ShareButtons title={data.post.title} {url} />
           </div>

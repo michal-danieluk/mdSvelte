@@ -1,6 +1,7 @@
 ---
 title: 'Minimalizm w narzędziach — dlaczego mniej znaczy więcej'
 date: '2026-02-18'
+updated: '2026-07-22'
 tags: ['Produktywność', 'Narzędzia', 'Minimalizm', 'AI']
 description: 'Przetestowałem ponad 30 narzędzi AI w ciągu roku. Używam 5. Oto czego nauczyłem się o cyfrowym minimalizmie i dlaczego mniej narzędzi oznacza więcej efektów.'
 keywords: 'minimalizm cyfrowy, narzędzia AI, produktywność, tool fatigue, cyfrowy minimalizm, automatyzacja, subskrypcje'

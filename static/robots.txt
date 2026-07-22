@@ -1,4 +1,24 @@
-# https://www.robotstxt.org/robotstxt.html
+# Search and user-initiated AI agents may discover and retrieve public content.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Separate training crawlers are not allowed to collect the site.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
 User-agent: *
-Disallow:
+Allow: /
+
 Sitemap: https://www.michaldanieluk.pl/sitemap.xml

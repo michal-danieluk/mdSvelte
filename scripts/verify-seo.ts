@@ -17,6 +17,14 @@ const sitemapXml = await get('/sitemap.xml')
 const sitemapUrls = [...sitemapXml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
 const sitemapPaths = sitemapUrls.map((url) => new URL(url).pathname)
 
+function getSitemapLastmod(path: string) {
+  const url = `${canonicalOrigin}${path}`
+  const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return sitemapXml.match(
+    new RegExp(`<loc>${escapedUrl}</loc>[\\s\\S]*?<lastmod\\s*>\\s*([^<]+)</lastmod`)
+  )?.[1]
+}
+
 assert(sitemapUrls.length === new Set(sitemapUrls).size, 'Sitemap contains duplicate URLs')
 assert(
   sitemapUrls.every((url) => url === canonicalOrigin || url.startsWith(`${canonicalOrigin}/`)),
@@ -78,10 +86,13 @@ for (const path of tagPaths) {
 
 const home = pages.get('/')
 assert(home, 'Homepage was not fetched')
-const homeSchemas = home.querySelectorAll('script[type="application/ld+json"]').map((script) =>
-  JSON.parse(script.text)
+const homeSchemas = home
+  .querySelectorAll('script[type="application/ld+json"]')
+  .map((script) => JSON.parse(script.text))
+assert(
+  homeSchemas.some((schema) => schema['@type'] === 'WebSite'),
+  'Homepage lacks WebSite JSON-LD'
 )
-assert(homeSchemas.some((schema) => schema['@type'] === 'WebSite'), 'Homepage lacks WebSite JSON-LD')
 assert(!home.text.includes('](/post/'), 'Homepage exposes a raw Markdown link in preview text')
 
 const about = pages.get('/about')
@@ -92,7 +103,12 @@ assert(
   'Homepage and about page still share the same description'
 )
 
-for (const path of ['/post/nvim-i-obs', '/post/workflow', '/post/date-in-fns', '/post/text-email']) {
+for (const path of [
+  '/post/nvim-i-obs',
+  '/post/workflow',
+  '/post/date-in-fns',
+  '/post/text-email'
+]) {
   const description = pages
     .get(path)
     ?.querySelector('meta[name="description"]')
@@ -110,12 +126,68 @@ assert(
   !articleSchemas.some((schema) => schema['@type'] === 'WebSite'),
   'Article duplicates homepage WebSite schema'
 )
+const auditBlogPosting = articleSchemas.find((schema) => schema['@type'] === 'BlogPosting')
+assert(auditBlogPosting, 'Audit article lacks BlogPosting JSON-LD')
+assert(
+  auditBlogPosting.dateModified === auditBlogPosting.datePublished,
+  'Article without updated frontmatter does not fall back to datePublished'
+)
+assert(
+  getSitemapLastmod('/post/jak-zrobic-audyt-seo_2026-07-19')?.startsWith('2026-07-19'),
+  'Sitemap fallback lastmod does not use the publication date'
+)
+
+const updatedArticle = pages.get('/post/nvim-i-obs')
+assert(updatedArticle, 'Updated article was not fetched')
+const updatedBlogPosting = updatedArticle
+  .querySelectorAll('script[type="application/ld+json"]')
+  .map((script) => JSON.parse(script.text))
+  .find((schema) => schema['@type'] === 'BlogPosting')
+assert(updatedBlogPosting, 'Updated article lacks BlogPosting JSON-LD')
+assert(
+  updatedBlogPosting.dateModified.startsWith('2026-07-22'),
+  'Updated article schema does not use its updated frontmatter'
+)
+assert(
+  getSitemapLastmod('/post/nvim-i-obs')?.startsWith('2026-07-22'),
+  'Updated article sitemap lastmod does not use its updated frontmatter'
+)
+
+const postsJson = JSON.parse(await get('/api/posts.json'))
+assert(
+  postsJson.find((post: { slug: string }) => post.slug === 'nvim-i-obs')?.updated === '2026-07-22',
+  'Posts API does not expose the normalized updated date'
+)
 
 const robotsTxt = await get('/robots.txt')
 assert(
   robotsTxt.includes(`Sitemap: ${canonicalOrigin}/sitemap.xml`),
   'robots.txt lacks the canonical sitemap directive'
 )
+for (const agent of ['OAI-SearchBot', 'ChatGPT-User', 'Claude-SearchBot', 'Claude-User']) {
+  assert(robotsTxt.includes(`User-agent: ${agent}\nAllow: /`), `robots.txt does not allow ${agent}`)
+}
+for (const agent of ['GPTBot', 'ClaudeBot']) {
+  assert(
+    robotsTxt.includes(`User-agent: ${agent}\nDisallow: /`),
+    `robots.txt does not block ${agent}`
+  )
+}
+
+const llmsTxt = await get('/llms.txt')
+for (const requiredUrl of [
+  canonicalOrigin,
+  `${canonicalOrigin}/seo`,
+  `${canonicalOrigin}/google-ads`,
+  `${canonicalOrigin}/meta-ads`,
+  `${canonicalOrigin}/marketing`,
+  `${canonicalOrigin}/posts`,
+  `${canonicalOrigin}/sitemap.xml`,
+  `${canonicalOrigin}/rss.xml`,
+  `${canonicalOrigin}/api/posts.json`
+]) {
+  assert(llmsTxt.includes(requiredUrl), `llms.txt lacks ${requiredUrl}`)
+}
 
 const postsArchive = parse(await get('/posts'))
 const paginationPaths = [
@@ -143,7 +215,11 @@ console.log(
       sitemapUrls: sitemapUrls.length,
       tagPages: tagPaths.length,
       noindexTagPages: tagPaths.filter((path) =>
-        pages.get(path)?.querySelector('meta[name="robots"]')?.getAttribute('content')?.includes('noindex')
+        pages
+          .get(path)
+          ?.querySelector('meta[name="robots"]')
+          ?.getAttribute('content')
+          ?.includes('noindex')
       ).length,
       postPages: sitemapPaths.filter((path) => path.startsWith('/post/')).length,
       status: 'ok'

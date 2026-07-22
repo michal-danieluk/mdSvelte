@@ -1,6 +1,7 @@
 ---
 title: Mój workflow
 date: 2023-03-04
+updated: 2026-07-22
 tags: ['Linux', 'i3wm', 'Workflow', 'Arch Linux']
 description: 'Mój codzienny workflow w Arch Linux i i3wm: skróty klawiszowe, workspace i organizacja aplikacji na dwóch ekranach.'
 ---

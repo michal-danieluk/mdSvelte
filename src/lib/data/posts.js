@@ -1,10 +1,10 @@
 import { browser } from '$app/environment'
-import { format } from 'date-fns'
 import { parse } from 'node-html-parser'
 import readingTime from 'reading-time'
 import fs from 'fs'
 import path from 'path'
 import { consolidateTags, createMarkdownPreview, getTagSlug } from '$lib/data/seo.js'
+import { normalizePostDate } from '$lib/data/dates.js'
 
 // we require some server-side APIs to parse all metadata
 if (browser) {
@@ -45,14 +45,9 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
       // (needed to do correct dynamic import in posts/[slug].svelte)
       isIndexFile: filepath.endsWith('/index.md'),
 
-      // format date as yyyy-MM-dd
-      date: metadata.date
-        ? format(
-            // offset by timezone so that the date is correct
-            addTimezoneOffset(new Date(metadata.date)),
-            'yyyy-MM-dd'
-          )
-        : undefined,
+      // normalize publication and optional modification dates as yyyy-MM-dd
+      date: normalizePostDate(metadata.date),
+      updated: normalizePostDate(metadata.updated),
 
       // process tags - ensure it's always an array
       tags: metadata.tags
@@ -99,11 +94,6 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
     next: allPosts[index - 1],
     previous: allPosts[index + 1]
   }))
-
-function addTimezoneOffset(date) {
-  const offsetInMilliseconds = new Date().getTimezoneOffset() * 60 * 1000
-  return new Date(new Date(date).getTime() + offsetInMilliseconds)
-}
 
 // Get all unique tags from all posts
 export function getAllTags() {
