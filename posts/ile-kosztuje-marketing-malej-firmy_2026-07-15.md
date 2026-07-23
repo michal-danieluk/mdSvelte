@@ -63,7 +63,7 @@ I tu ważna rzecz: **jeśli w umowie lub ofercie nie jesteś w stanie zrozumieć
 - **Od pół roku "budujemy zasięgi".** Przy małej firmie efekty kampanii płatnych widać w tygodnie, nie w kwartały. SEO potrzebuje 4–6 miesięcy — ale nawet tam po trzech miesiącach powinieneś widzieć konkretne wykonane rzeczy, nie obietnice.
 - **Na pytanie "za co dokładnie płacę" dostajesz prezentację zamiast odpowiedzi.**
 
-Jeśli już płacisz za Google Ads i zastanawiasz się, czy to uczciwa cena za uczciwą pracę, sprawdź też [jak samodzielnie zweryfikować, czy agencja dobrze prowadzi Twoje kampanie](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01) — cztery rzeczy, które zobaczysz sam w panelu, bez wiedzy technicznej. To samo dotyczy SEO — mam analogiczny checklist: [Jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15).
+Jeśli już płacisz za Google Ads i zastanawiasz się, czy to uczciwa cena za uczciwą pracę, sprawdź też [jak samodzielnie zweryfikować, czy agencja dobrze prowadzi Twoje kampanie](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01) — cztery rzeczy, które zobaczysz sam w panelu, bez wiedzy technicznej. To samo dotyczy Meta Ads i SEO — mam analogiczne checklisty: [analiza kampanii Meta Ads](/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17) i [jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15).
 
 ## Sygnały, że cena jest zbyt niska, żeby dostać cokolwiek dobrego
 
