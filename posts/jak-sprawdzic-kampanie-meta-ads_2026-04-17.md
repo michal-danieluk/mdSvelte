@@ -1,8 +1,8 @@
 ---
-title: 'Jak sprawdzić, czy agencja dobrze prowadzi Twoje kampanie Meta Ads — 4 rzeczy, które sprawdzisz sam'
+title: 'Analiza kampanii Meta Ads: 4 metryki do sprawdzenia'
 date: '2026-04-17'
 tags: ['Meta Ads', 'Facebook Ads', 'Agencja', 'Marketing', 'Reklamy']
-description: 'Płacisz agencji za Facebook Ads? 4 konkretne metryki, które sprawdzisz sam w Menedżerze Reklam — bez wiedzy technicznej. Sprawdź, czy Twój budżet pracuje.'
+description: 'Jak zrobić analizę kampanii Meta Ads bez agencji? 4 konkretne metryki w Menedżerze Reklam — bez wiedzy technicznej.'
 keywords: 'jak sprawdzić kampanię Meta Ads, kontrola agencji Facebook Ads, metryki Meta Ads, częstotliwość reklam Facebook, CPM Facebook Ads, quality ranking Meta'
 image_prompt: 'Cyberpunk illustration, hooded figure sitting in front of multiple glowing monitors, screens showing Facebook Ads Manager interface with frequency charts, CPM trend lines, quality ranking indicators and audience overlap Venn diagrams. Neon color palette: violet #b347ff, cyan #00e5ff, amber #ff9500. Dark background with subtle grid lines. Flat illustration style, no text on the graphic.'
 featured: false

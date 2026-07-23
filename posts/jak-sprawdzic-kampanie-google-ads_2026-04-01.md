@@ -1,8 +1,8 @@
 ---
-title: 'Jak sprawdzić, czy agencja dobrze prowadzi Twoje kampanie Google Ads — 4 rzeczy, które zweryfikujesz sam'
+title: 'Sprawdź, czy agencja dobrze prowadzi Twój Google Ads'
 date: '2026-04-01'
 tags: ['Google Ads', 'Marketing', 'Agencja', 'Reklamy', 'SEM']
-description: 'Płacisz agencji za Google Ads? 4 konkretne rzeczy, które sprawdzisz sam w panelu — bez wiedzy technicznej. Dowiedz się, czy Twój budżet jest dobrze wydawany.'
+description: 'Płacisz agencji za Google Ads? 4 rzeczy sprawdzisz sam w panelu, bez wiedzy technicznej — zobacz, czy budżet dobrze pracuje.'
 keywords: 'jak sprawdzić kampanię google ads, kontrola agencji google ads, impression share, quality score google ads, raport wyszukiwanych haseł, audyt google ads'
 image_prompt: 'A cyberpunk figure sitting at a desk late at night, bathed in neon light from multiple monitors. The character wears a dark hoodie, face partially lit by the cold blue-purple glow of the screens. On the monitors: Google Ads dashboard with campaign metrics, impression share graphs, quality score columns — data glowing in electric cyan and neon purple. Deep black shadows, vivid neon accents — purple, cyan, amber. Flat illustration style with strong contrast and glowing edges. Stylized digital art, cinematic side-angle composition.'
 featured: true
