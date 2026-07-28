@@ -4,6 +4,7 @@ date: 2025-10-03
 updated: 2026-07-28
 tags: ['SEO', 'AI', 'LLM', 'Marketing']
 description: 'LLMO, czyli nowe SEO: jak sprawić, żeby ChatGPT, Perplexity i inne AI polecały Twoją stronę. Słowa kluczowe, E-E-A-T i bycie "encją" wyjaśnione bez lania wody.'
+keywords: 'llmo, jak być polecanym przez ai, seo dla ai, chatgpt seo, geo generative engine optimization'
 image_prompt: 'A friendly, glowing robot librarian is enthusiastically recommending a specific book to a person in a vast, futuristic library. The book is glowing brightly. The style should be slightly stylized, optimistic, and digital art.'
 ---
 

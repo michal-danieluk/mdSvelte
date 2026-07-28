@@ -1,32 +1,36 @@
 ---
 title: Markdown I ♥ you...
 date: 2022-12-12
+updated: '2026-07-28'
 tags: ['Markdown', 'Writing', 'Blog']
 description: 'Dlaczego Markdown to mój ulubiony sposób pisania: prosty, szybki i przenośny między Obsidianem a blogiem, bez zbędnego formatowania.'
+keywords: 'markdown, pisanie w markdown, obsidian markdown, markdown dla ai, pandoc'
 ---
 
 ## Uwielbiam markdown
 
-To najlepsza rzecz, jaka przydarzyła się pisaniu od czasu wynalezienia znaków :) Jest łatwy w użyciu i przyjazny dla początkujących, co czyni go świetnym dla pisarzy, którzy nie mają zbyt wiele czasu lub cierpliwości na uczenie się zupełnie nowego systemu. A jako dodatkowy bonus tekst pisany w markdown dzięki pandoc, można przekształcić w coś, co wygląda tak, jakby mógł go napisać sam Leonardo da Vinci.
+To chyba najlepsza rzecz, jaka przydarzyła się pisaniu, odkąd ktoś wymyślił znaki interpunkcyjne. Prosty do nauczenia i nie stawia między Tobą a tekstem żadnej bariery — piszesz, nie klikasz w przyciski formatowania. Bonus: przez pandoc jeden plik `.md` zamienia się w cokolwiek — PDF, HTML, docx — bez przepisywania od zera.
 
-## Co ten Markdown?
+## Co to w ogóle jest
 
-Markdown to prosty, łatwy w użyciu język znaczników, który konwertuje tekst na format rich-text. Jest przyjazny dla początkujących i może być używany do wszystkiego, od blogowania, przez pisanie książek, po tworzenie dokumentacji. Oczywiście nie ma nic, za dramo. Trzeba się troszkę tej składni nauczyć i wiedzieć co oznacza, ale nie jest to tablica pierwiastków Mendelew. Markdown jest bardzo prostym do opanowania systemem znaczników.
+Markdown to lekki język znaczników — kilka znaków (`#`, `*`, `-`) zamiast menu z formatowaniem. Nauka to dosłownie kwadrans, nie semestr — [tu masz cheat sheet](https://www.markdownguide.org/cheat-sheet/), jeśli chcesz zacząć. Używam go do wszystkiego: notatek, dokumentacji, tego bloga.
 
-## Inne zalety
+## Dlaczego wolę to od reszty
 
-Markdown jest przyjazny dla początkujących. Łatwo się go nauczyć, a do tego istnieje wiele zasobów do jego nauki. Możesz rozpocząć pracę z markdownem, czytając [markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
+- Piszę bez odrywania rąk od klawiatury — zero myszki, zero klikania w "pogrubienie".
+- Podgląd na żywo działa wszędzie, bez dodatkowego softu.
+- Notatka z Obsidiana ląduje na blogu praktycznie 1:1, razem ze zdjęciami — zero przeklejania i poprawiania formatowania.
 
-Markdown ma wiele zalet w porównaniu z innymi rodzajami formatowania:
+Ile razy wklejałeś tekst z Worda gdzieś indziej i dostawałeś śmietnik z ukrytym formatowaniem? Z markdownem ten problem po prostu nie istnieje — to zwykły tekst, więc zawsze wygląda tak samo, gdziekolwiek go wkleisz.
 
-- W formacie markdown można szybko i łatwo napisać cokolwiek; nie trzeba stosować przerw w liniach ani specjalnych kodów!
+## Krótko
 
-- Użytkownicy mogą szybko podejrzeć swoją pracę dzięki podglądom na żywo na dowolnym urządzeniu bez konieczności instalowania dodatkowego oprogramowania (np. rozszerzeń Chrome). Dzięki temu współpraca jest jeszcze łatwiejsza niż kiedykolwiek wcześniej!
+Markdown wygrywa prostotą. Nie trzeba się z nim mocować — trzeba nauczyć się kilkunastu znaków i już.
 
-Dzięki temu pisząc wpis z formatowaniem markdown w Obsidianie praktycznie od razu mogę go wstawić do mojego bloga już sformatowany i często nawet ze zdjęciami.
+## Aktualizacja (2026)
 
-Ile razy tekst skopiowany z Worda i wstawiony w inne miejsce wyglądał nie do poznania. Z markdownem nie ma takich problemów.
+Dwie rzeczy, których nie wiedziałem, kiedy pisałem ten tekst.
 
-## I love Markdown
+Pierwsza: Obsidian. Wtedy jeszcze go nie używałem tak, jak dziś — cały mój workflow notatek i pisania stoi teraz na plikach `.md` w jednym vaultcie, z linkowaniem między notatkami, wtyczkami i pełną kontrolą nad własnymi danymi. Markdown bez takiego narzędzia to dobry format tekstowy. Markdown z Obsidianem to system myślenia.
 
-Markdown jest świetny do pisania ze względu na swoją uniwersalność oraz prostotę.
+Druga, ważniejsza: nie miałem pojęcia, że za kilka lat markdown stanie się domyślnym językiem, w którym rozmawiam z AI. Modele językowe piszą i czytają markdown natywnie — kod, listy, tabele, nagłówki, wszystko, co dziś widzisz w odpowiedzi ChatGPT czy Claude'a, to markdown pod spodem. Format, który wybrałem, bo był wygodny do pisania bloga, okazał się też najwygodniejszym formatem do pracy z AI. Nie planowałem tego, ale się to opłaciło.

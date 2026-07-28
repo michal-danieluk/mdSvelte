@@ -4,6 +4,7 @@ date: 2025-10-03
 updated: 2026-07-22
 tags: ['SEO', 'Marketing', 'Mała Firma', 'Strategia']
 description: 'Partyzanckie SEO dla małych firm: jak wygrać z gigantami dzięki niszy i epickiej treści zamiast budżetu. Konkretne taktyki, bez magicznej różdżki.'
+keywords: 'partyzanckie seo, seo dla małej firmy, nisza seo, content marketing mała firma, jak konkurować z dużymi firmami'
 image_prompt: 'A small, clever chameleon is outsmarting a huge, clumsy dinosaur in a lush jungle. The chameleon is using its environment to its advantage. The style should be a vibrant, slightly humorous digital illustration.'
 featured: false
 ---

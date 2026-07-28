@@ -3,6 +3,7 @@ title: Redesign nagłówka bloga - testowanie różnych opcji
 date: 2025-01-27
 tags: ['SvelteKit', 'Design', 'Tailwind CSS', 'UI/UX']
 description: 'Jak testowałem różne warianty nagłówka bloga w SvelteKit i Tailwind CSS — od minimalistycznego glassmorphism po finalną wybraną wersję.'
+keywords: 'redesign nagłówka strony, sveltekit design, tailwind css header, glassmorphism ui, projektowanie nagłówka bloga'
 ---
 
 ## Jak to się zaczęło
@@ -15,7 +16,7 @@ Aby nie stracić obecnej wersji, zdecydowaliśmy się na systematyczne podejści
 
 ## Testowane opcje
 
-### Opcja 1: Minimal Floating Header ✅
+### Opcja 1: Minimal Floating Header
 Pierwsza opcja to minimalistyczny, "unoszący się" nagłówek z efektem glassmorphism:
 
 - Semi-przezroczyste tło z backdrop-blur
@@ -25,7 +26,7 @@ Pierwsza opcja to minimalistyczny, "unoszący się" nagłówek z efektem glassmo
 
 To jest opcja, która została ostatecznie wybrana - sprawdziła się najlepiej.
 
-### Opcja 2: Centered Modern Header ❌
+### Opcja 2: Centered Modern Header
 Druga opcja stawiała na centralną pozycję i duże typografie:
 
 - Wszystko wycentrowane pionowo
@@ -33,7 +34,7 @@ Druga opcja stawiała na centralną pozycję i duże typografie:
 - Styl redakcyjny/magazynowy
 - Niestety okazała się "okropna" w praktyce
 
-### Opcja 3: Split Header with Avatar ✅
+### Opcja 3: Split Header with Avatar
 Trzecia opcja wprowadzała podział przestrzeni i awatar:
 
 - Mini awatar z inicjałami w odznace
