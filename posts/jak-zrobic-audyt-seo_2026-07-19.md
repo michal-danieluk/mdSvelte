@@ -45,6 +45,8 @@ Wróć do Search Console, zakładka **Skuteczność** → tabela **Zapytania**. 
 
 Jeśli interesuje Cię konkretna fraza, a nie cały przegląd, możesz też użyć darmowego **google position checker** — wpisujesz frazę i domenę, a narzędzie sprawdza, na której pozycji się znajdujesz, bez ręcznego przewijania wyników (co i tak zniekształcałaby personalizacja Twojego własnego konta Google).
 
+Klasyczny audyt na tym się kończy, ale coraz częściej warto dorzucić jedno pytanie więcej: czy Twoja treść w ogóle nadaje się do zacytowania przez ChatGPT czy Perplexity, nie tylko do zaindeksowania przez Google. O tym, na co zwraca uwagę AI przy poleceniu strony, [piszę osobno](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03).
+
 ## Audyt off-page — linki i reputacja domeny
 
 Ten obszar najtrudniej sprawdzić za darmo, ale kilka sygnałów zobaczysz bez płacenia. W Search Console, zakładka **Linki**, znajdziesz listę stron, które linkują do Ciebie — jeśli widzisz tam głównie katalogi spamowe z podejrzanych domen, to sygnał ostrzegawczy, nie powód do dumy. Jakość linków liczy się bardziej niż ich ilość — pięć linków z branżowych, rozpoznawalnych stron jest warte więcej niż pięćdziesiąt z anonimowych katalogów.
@@ -77,7 +79,7 @@ Jedno zdanie ostrzeżenia: jeśli zlecasz audyt tej samej agencji, która potem 
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
-Powiązane teksty: [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15) · [narzędzia AI, których naprawdę używam](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15) · [jak przebudowuję tego bloga](/post/jak-przebudowuje-bloga-pillar-pages_2026-07-16)
+Powiązane teksty: [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [jak sprawdzić, czy agencja SEO robi cokolwiek](/post/jak-sprawdzic-agencje-seo_2026-07-15) · [narzędzia AI, których naprawdę używam](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15) · [jak przebudowuję tego bloga](/post/jak-przebudowuje-bloga-pillar-pages_2026-07-16) · [jak sprawić, by AI polecało Twoją stronę](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03)
 
 ---
 

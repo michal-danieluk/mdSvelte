@@ -49,7 +49,7 @@ Pełną checklistę na 10 punktów i rozbudowany rozbiór struktury tekstu SEO [
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
-Powiązane teksty: [content marketing i SEO copywriting — pełny przewodnik](/post/content-marketing-i-seo-copywriting_2026-07-18) · [content marketing a SEO — różnice](/post/content-marketing-a-seo-roznice_2026-07-09) · [jak zrobić audyt SEO](/post/jak-zrobic-audyt-seo_2026-07-19)
+Powiązane teksty: [content marketing i SEO copywriting — pełny przewodnik](/post/content-marketing-i-seo-copywriting_2026-07-18) · [content marketing a SEO — różnice](/post/content-marketing-a-seo-roznice_2026-07-09) · [jak zrobić audyt SEO](/post/jak-zrobic-audyt-seo_2026-07-19) · [jak sprawić, by AI polecało Twoją stronę](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03)
 
 ---
 

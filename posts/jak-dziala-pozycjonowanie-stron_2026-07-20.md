@@ -33,7 +33,7 @@ Tu dzieje się magia, którą wszyscy chcą sprzedać jako tajemnicę. W praktyc
 - **Trafność treści względem zapytania.** Czy strona faktycznie odpowiada na to, czego szuka użytkownik — nie czy zawiera frazę kluczową odpowiednią liczbę razy (to podejście umarło lata temu).
 - **Autorytet domeny**, budowany głównie przez linki przychodzące z innych, wiarygodnych stron — o tym w kroku 4.
 - **Doświadczenie użytkownika**: szybkość ładowania, działanie na telefonie, brak natrętnych elementów blokujących treść.
-- **Sygnały E-E-A-T** (doświadczenie, ekspertyza, autorytet, wiarygodność) — szczególnie ważne, odkąd Google coraz mocniej filtruje treści generowane masowo bez nadzoru.
+- **Sygnały E-E-A-T** (doświadczenie, ekspertyza, autorytet, wiarygodność) — szczególnie ważne, odkąd Google coraz mocniej filtruje treści generowane masowo bez nadzoru. To ten sam mechanizm, który decyduje, czy [AI Cię poleci, a nie tylko Google Cię zaindeksuje](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03).
 
 ### Pozycjonowanie sklepu internetowego — ta sama mechanika, większa skala
 
@@ -65,7 +65,7 @@ Darmowy start: Google Trends i autouzupełnianie samej wyszukiwarki. [W tekście
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
-Powiązane teksty: [jak zrobić audyt SEO strony](/post/jak-zrobic-audyt-seo_2026-07-19) · [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [jak przebudowuję tego bloga](/post/jak-przebudowuje-bloga-pillar-pages_2026-07-16) · plan działania na weekend bez budżetu: [SEO dla małej firmy — od czego zacząć](https://buildletter.com/blog/seo-dla-malej-firmy-od-czego-zaczac/) na buildletter.com
+Powiązane teksty: [jak zrobić audyt SEO strony](/post/jak-zrobic-audyt-seo_2026-07-19) · [ile kosztuje pozycjonowanie strony w 2026](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) · [jak przebudowuję tego bloga](/post/jak-przebudowuje-bloga-pillar-pages_2026-07-16) · [jak sprawić, by AI polecało Twoją stronę](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03) · plan działania na weekend bez budżetu: [SEO dla małej firmy — od czego zacząć](https://buildletter.com/blog/seo-dla-malej-firmy-od-czego-zaczac/) na buildletter.com
 
 ---
 
