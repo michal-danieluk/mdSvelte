@@ -116,7 +116,7 @@ Tak, i to z tego samego powodu, dla którego działał wcześniej — modele ję
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
-Powiązane teksty: [content marketing i SEO copywriting — pełny przewodnik](/post/content-marketing-i-seo-copywriting_2026-07-18) · [content marketing a SEO — różnice](/post/content-marketing-a-seo-roznice_2026-07-09) · [jak zrobić audyt SEO](/post/jak-zrobic-audyt-seo_2026-07-19) · [jak działa pozycjonowanie stron](/post/jak-dziala-pozycjonowanie-stron_2026-07-20) · [jak sprawić, by AI polecało Twoją stronę](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03)
+Powiązane teksty: [SEO copywriting — przykłady na 10 typów treści](/post/seo-copywriting-przyklady_2026-07-28) · [content marketing i SEO copywriting — pełny przewodnik](/post/content-marketing-i-seo-copywriting_2026-07-18) · [content marketing a SEO — różnice](/post/content-marketing-a-seo-roznice_2026-07-09) · [jak zrobić audyt SEO](/post/jak-zrobic-audyt-seo_2026-07-19) · [jak działa pozycjonowanie stron](/post/jak-dziala-pozycjonowanie-stron_2026-07-20) · [jak sprawić, by AI polecało Twoją stronę](/post/jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03)
 
 ---
 
