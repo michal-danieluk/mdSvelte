@@ -5,7 +5,7 @@ tags: ['SEO', 'Pozycjonowanie', 'Marketing', 'Mała Firma', 'Cennik']
 description: 'Pozycjonowanie stron kosztuje od 800 do 8000 zł miesięcznie — i to nie przypadek. Rozbijam widełki cenowe na czynniki pierwsze, żebyś wiedział, za co realnie płacisz.'
 keywords: 'pozycjonowanie cena, ile kosztuje pozycjonowanie, cennik pozycjonowania stron, pozycjonowanie lokalne cena, koszt seo miesięcznie, pozycjonowanie stron cena, ile kosztuje seo małej firmy'
 image_prompt: 'A cyberpunk accountant sitting at a glowing terminal desk, holographic invoice and price tags floating around a search results ranking chart, coins and Polish złoty symbols drifting in neon light, dark office, purple and teal neon glow, rain against the window, cinematic composition'
-featured: false
+featured: true
 ---
 
 Zapytaj pięciu agencji SEO o wycenę pozycjonowania tej samej strony, a dostaniesz pięć różnych liczb — od 800 zł do 8000 zł miesięcznie. Żadna z nich nie skłamie wprost, a mimo to rozjazd jest ogromny. Problem w tym, że nikt Ci nie powie, **dlaczego** akurat tyle — a bez tego nie masz jak ocenić, czy płacisz za pracę, czy za samo słowo "pozycjonowanie" w umowie.

@@ -5,7 +5,7 @@ tags: ['SEO', 'Audyt SEO', 'Marketing', 'Narzędzia SEO', 'Mała Firma']
 description: 'Audyt SEO nie musi być czarną magią za 2000 zł. Pokazuję krok po kroku, jak sprawdzić stronę technicznie, contentowo i linkowo — z darmowymi narzędziami.'
 keywords: 'audyt seo, jak zrobić audyt seo, audyt strony internetowej, audyty stron, narzędzia seo, audyt strony, analiza seo, google position checker'
 image_prompt: 'A cyberpunk mechanic in a dark garage inspecting a glowing holographic website blueprint with a diagnostic scanner, checklist items lighting up green and red, wires and neon cables connecting to a floating browser window, purple and cyan neon light, cinematic composition'
-featured: false
+featured: true
 ---
 
 Audyt SEO brzmi jak coś, co robi się raz, płaci 2000 zł i dostaje PDF na 40 stron, którego nikt nie przeczyta. W rzeczywistości to punkt startowy każdego sensownego pozycjonowania — [pisałem już, że to pierwsza pozycja w cenniku, na którą warto patrzeć](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17) — i większość jego elementów możesz sprawdzić sam, za darmo, w jeden wieczór.

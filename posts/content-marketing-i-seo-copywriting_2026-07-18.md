@@ -5,7 +5,7 @@ tags: ['Content Marketing', 'SEO', 'SEO Copywriting', 'Marketing', 'Mała Firma'
 description: 'Content marketing, SEO, SEM, SEO copywriting — te słowa mieszają się właścicielom firm w jedną papkę. Rozkładam je na czynniki pierwsze, z przykładem tekstu SEO.'
 keywords: 'content marketing, seo i sem, seo copywriting, seo marketing, tekst seo przykład, seo sem ppc'
 image_prompt: 'A cyberpunk writer at a mechanical typewriter that outputs glowing holographic text directly into a search results ranking, neon keyboard keys, floating paragraphs of text transforming into search result cards, purple and teal neon light, dark study, cinematic composition'
-featured: false
+featured: true
 ---
 
 Content marketing, SEO, SEM, SEO copywriting — cztery skróty, które w rozmowach z właścicielami małych firm regularnie zlewają się w jedną papkę: "no, to jest to pisanie tekstów pod Google, prawda?". Częściowo tak, ale to jak powiedzieć, że kod to "to pisanie na komputerze" — technicznie prawda, praktycznie bezużyteczne do podjęcia jakiejkolwiek decyzji.
