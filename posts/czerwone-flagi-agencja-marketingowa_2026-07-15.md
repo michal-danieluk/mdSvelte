@@ -108,6 +108,8 @@ A jeśli umowę już podpisałeś i chcesz sprawdzić, jak agencja radzi sobie w
 
 Godzina uważności na etapie wyboru kosztuje mniej niż rok złej współpracy. Dużo mniej.
 
+Nie chcesz sam liczyć czerwonych flag? [Zrób bezpłatny audyt marketingu Twojej firmy budowlanej →](https://buildletter.com/audyt-marketingu-firmy-budowlanej) — 30 minut, bez zobowiązań, powiem wprost, co widzę.
+
 **Chcesz dostawać więcej takich praktycznych materiałów o marketingu dla małych firm?** Zapisz się do mojego newslettera — bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)

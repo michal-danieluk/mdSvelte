@@ -198,6 +198,8 @@ Nie musisz być ekspertem od Google Ads, żeby ocenić pracę agencji. Wystarcz�
 
 Każdy z tych punktów możesz sprawdzić sam, w kilka minut, bez wiedzy technicznej. A jeśli nie masz dostępu do panelu Google Ads — to sam w sobie jest pierwszy i najważniejszy sygnał ostrzegawczy.
 
+Wolisz, żebym po prostu zerknął sam? [Zrób bezpłatny audyt marketingu Twojej firmy budowlanej →](https://buildletter.com/audyt-marketingu-firmy-budowlanej) — 30 minut, bez zobowiązań.
+
 **Chcesz dostawać więcej takich praktycznych materiałów o Google Ads i marketingu online?** Zapisz się do mojego newslettera — bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)

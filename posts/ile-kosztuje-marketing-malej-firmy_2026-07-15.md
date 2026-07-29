@@ -86,6 +86,8 @@ Sensowne punkty odniesienia dla małej firmy w Polsce w 2026: **700–2 500 zł 
 
 A od każdego, komu płacisz, masz prawo wymagać jednego: żeby potrafił po polsku, bez żargonu, wytłumaczyć Ci, za co płacisz i co z tego masz. Kto nie potrafi — nie zasługuje na Twoją fakturę.
 
+Dostałeś wycenę i chcesz drugie zdanie? [Zrób bezpłatny audyt marketingu Twojej firmy budowlanej →](https://buildletter.com/audyt-marketingu-firmy-budowlanej) — 30 minut, bez zobowiązań.
+
 **Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera — bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)

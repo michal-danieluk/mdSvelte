@@ -169,6 +169,8 @@ Meta Ads to potężne narzędzie, ale wymaga ciągłej opieki. Nie wystarczy ust
 
 Każdy z tych punktów sprawdzisz sam w kilka minut. A jeśli nie masz dostępu do Menedżera Reklam Meta — to sam w sobie jest pierwszy i najważniejszy sygnał ostrzegawczy.
 
+Wolisz, żebym po prostu zerknął sam? [Zrób bezpłatny audyt marketingu Twojej firmy budowlanej →](https://buildletter.com/audyt-marketingu-firmy-budowlanej) — 30 minut, bez zobowiązań.
+
 **Chcesz dostawać więcej takich praktycznych materiałów o marketingu online?** Zapisz się do mojego newslettera — bez lania wody, same konkrety prosto od praktyka.
 
 [Zapisz się do newslettera](https://buildletter.substack.com/subscribe)
