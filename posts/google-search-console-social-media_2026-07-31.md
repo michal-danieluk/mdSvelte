@@ -3,6 +3,7 @@ title: 'Google Search Console a social media — jak sprawdzić widoczność Ins
 date: '2026-07-30'
 tags: ['SEO', 'Google Search Console', 'Social media', 'Marketing']
 description: 'Google Search Console pozwala dodawać profile z Instagrama, TikToka, X i YouTube jako platform properties. Sprawdź, co naprawdę zobaczysz w raportach.'
+preview: 'Google dodał platform properties do Search Console. Sprawdź, jak treści z Instagrama, TikToka, X i YouTube pojawiają się w Google.'
 keywords: 'Google Search Console a social media, platform properties Google Search Console, Instagram w Google Search Console, TikTok SEO, YouTube SEO'
 image_prompt: 'A dark editorial illustration of four social media profile cards flowing into a Google search results page and a simple analytics chart. Instagram, TikTok, X and YouTube should be represented only by abstract shapes, not logos or readable text. Colors: deep purple-black background, neon cyan (#00e5ff), amber (#ff9500), purple (#b347ff). No text on the image. Flat vector style, clean lines, minimal detail.'
 featured: false
