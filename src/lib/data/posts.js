@@ -81,10 +81,15 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
     // if (process.env.NODE_ENV === 'development') return true
 
     if (!post.date) return true
-    const postDate = new Date(post.date)
     const now = new Date()
-    // Compare dates ignoring time (optional, but usually safer for "daily" posts)
-    return postDate <= now
+    // Compare calendar dates, not UTC midnight parsed from a date-only string.
+    // Otherwise a post dated today can look like a future post in timezones east of UTC.
+    const today = [
+      now.getFullYear(),
+      String(now.getMonth() + 1).padStart(2, '0'),
+      String(now.getDate()).padStart(2, '0')
+    ].join('-')
+    return post.date <= today
   })
   // sort by date
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
