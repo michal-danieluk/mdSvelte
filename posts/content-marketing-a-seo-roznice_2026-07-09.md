@@ -8,36 +8,36 @@ image_prompt: 'A cyberpunk diagram of two overlapping glowing circles floating i
 featured: false
 ---
 
-Krótka odpowiedź: **content marketing to co piszesz, SEO to jak sprawiasz, żeby to znaleziono.** Jedno bez drugiego działa gorzej, ale to dwie różne dyscypliny, z różnymi celami i różnym tempem. [Pełny przewodnik po obu mam tutaj](/post/content-marketing-i-seo-copywriting_2026-07-18) — ten tekst to szybkie rozgraniczenie, jeśli akurat to Cię gryzie.
+Krótka odpowiedź: **content marketing to co piszesz, SEO to jak sprawiasz, żeby to znaleziono.** Jedno bez drugiego działa gorzej, ale to dwie różne dyscypliny, z różnymi celami i różnym tempem. [Pełny przewodnik po obu mam tutaj](/post/content-marketing-i-seo-copywriting_2026-07-18), ten tekst to szybkie rozgraniczenie, jeśli akurat to Cię gryzie.
 
-## Czym się różnią — w jednej tabeli
+## Czym się różnią: w jednej tabeli
 
 | | Content marketing | SEO |
 |---|---|---|
 | **Cel** | Budować zaufanie i relację z odbiorcą | Być widocznym w wynikach wyszukiwania |
 | **Format** | Artykuły, newsletter, social, video, case study | Optymalizacja techniczna, treść pod frazy, linki |
 | **Miara sukcesu** | Zaangażowanie, powracający czytelnicy, konwersja | Pozycja w Google, ruch organiczny |
-| **Tempo efektów** | Może działać od razu (dystrybucja własna) | Zwykle miesiące — [rozpisałem realne terminy](/post/jak-dlugo-czekac-na-efekty-marketingu_2026-07-02) |
+| **Tempo efektów** | Może działać od razu (dystrybucja własna) | Zwykle miesiące: [rozpisałem realne terminy](/post/jak-dlugo-czekac-na-efekty-marketingu_2026-07-02) |
 | **Właściciel kanału** | Ty (newsletter, social) | Google (algorytm, nie Ty, decyduje o pozycji) |
 
 ## Gdzie się pokrywają
 
-Największe nieporozumienie: ludzie myślą, że to alternatywy — "robimy content marketing **albo** SEO". W praktyce **tekst na blogu to jednocześnie i content marketing, i materiał do pozycjonowania** — to ten sam artykuł, oceniany przez dwa różne pryzmaty. Dobry content marketing bez SEO ginie w internecie, bo nikt go nie znajdzie. Dobre SEO bez treści wartej przeczytania traci ruch, który już przyciągnęło — użytkownik wchodzi i wychodzi po pięciu sekundach.
+Największe nieporozumienie: ludzie myślą, że to alternatywy: "robimy content marketing **albo** SEO". W praktyce **tekst na blogu to jednocześnie i content marketing, i materiał do pozycjonowania**. To ten sam artykuł, oceniany przez dwa różne pryzmaty. Dobry content marketing bez SEO ginie w internecie, bo nikt go nie znajdzie. Dobre SEO bez treści wartej przeczytania traci ruch, który już przyciągnęło: użytkownik wchodzi i wychodzi po pięciu sekundach.
 
 ## Dlaczego potrzebujesz obu naraz
 
-Content marketing bez SEO to pisanie do szuflady — świetne treści, zerowa dystrybucja przez wyszukiwarkę. SEO bez content marketingu to optymalizacja pustki — techniczna strona bez niczego wartego zaindeksowania. [W pełnym przewodniku pokazuję, jak to połączyć w SEO copywriting](/post/content-marketing-i-seo-copywriting_2026-07-18) — czyli pisanie, które jest jednym i drugim naraz, nie wyborem między nimi.
+Content marketing bez SEO to pisanie do szuflady: świetne treści, zerowa dystrybucja przez wyszukiwarkę. SEO bez content marketingu to optymalizacja pustki: techniczna strona bez niczego wartego zaindeksowania. [W pełnym przewodniku pokazuję, jak to połączyć w SEO copywriting](/post/content-marketing-i-seo-copywriting_2026-07-18), czyli pisanie, które jest jednym i drugim naraz, nie wyborem między nimi.
 
 ---
 
 ## Co dalej?
 
-**Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera — bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
+**Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera: bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
-Powiązane teksty: [content marketing i SEO copywriting — pełny przewodnik](/post/content-marketing-i-seo-copywriting_2026-07-18) · [co to jest SEO copywriting](/post/co-to-jest-seo-copywriting_2026-07-10) · [czy SEO w ogóle się opłaca](/post/czy-seo-sie-oplaca-malej-firmie_2026-07-12)
+Powiązane teksty: [content marketing i SEO copywriting: pełny przewodnik](/post/content-marketing-i-seo-copywriting_2026-07-18) · [co to jest SEO copywriting](/post/co-to-jest-seo-copywriting_2026-07-10) · [czy SEO w ogóle się opłaca](/post/czy-seo-sie-oplaca-malej-firmie_2026-07-12)
 
 ---
 
-*Nie wiesz, od czego zacząć — treści czy techniki? Napisz do mnie na [LinkedIn](https://www.linkedin.com/in/michal-danieluk/), pomogę to uporządkować.*
+*Nie wiesz, od czego zacząć? Treści czy techniki? Napisz do mnie na [LinkedIn](https://www.linkedin.com/in/michal-danieluk/), pomogę to uporządkować.*

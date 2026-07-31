@@ -44,7 +44,7 @@ Nie buduj od razu wszystkich trzech warstw. Zacznij od pillar page, czyli tego p
 
 ## Co dalej?
 
-**Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera — bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
+**Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera: bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
@@ -52,4 +52,4 @@ Powiązane teksty: [jak działa pozycjonowanie stron, mechanika krok po kroku](/
 
 ---
 
-*Testowałeś już coś podobnego u siebie? Napisz do mnie na [LinkedIn](https://www.linkedin.com/in/michal-danieluk/) — chętnie porównam notatki.*
+*Testowałeś już coś podobnego u siebie? Napisz do mnie na [LinkedIn](https://www.linkedin.com/in/michal-danieluk/). Chętnie porównam notatki.*

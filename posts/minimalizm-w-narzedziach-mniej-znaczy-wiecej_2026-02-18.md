@@ -18,7 +18,7 @@ I wiesz co? Robię więcej niż wtedy, gdy miałem trzydzieści.
 
 Znasz to uczucie. Scrollujesz Twittera, ktoś wrzuca demo nowego narzędzia AI. Wygląda niesamowicie. Rejestrujesz się. Bawisz się przez godzinę. Następnego dnia zapominasz hasło.
 
-Tydzień później — nowe narzędzie. Jeszcze lepsze. Jeszcze ładniejsze. Jeszcze więcej obietnic.
+Tydzień później. Nowe narzędzie. Jeszcze lepsze. Jeszcze ładniejsze. Jeszcze więcej obietnic.
 
 To jest FOMO w najczystszej postaci. Strach, że jeśli nie przetestuję tego jednego narzędzia, zostanę w tyle. Że konkurencja już go używa. Że tracę przewagę.
 
@@ -36,7 +36,7 @@ Każde nowe narzędzie to krzywa uczenia się. To konfiguracja, integracja z res
 
 W pewnym momencie narzędzia, które miały oszczędzać czas, zaczęły go pożerać.
 
-Zauważyłem coś paradoksalnego: im więcej narzędzi miałem, tym mniej rzeczy faktycznie robiłem. Zamiast pisać — testowałem nowe edytory. Zamiast automatyzować procesy — porównywałem platformy do automatyzacji. Zamiast pracować — optymalizowałem środowisko pracy.
+Zauważyłem coś paradoksalnego: im więcej narzędzi miałem, tym mniej rzeczy faktycznie robiłem. Zamiast pisać, testowałem nowe edytory. Zamiast automatyzować procesy, porównywałem platformy do automatyzacji. Zamiast pracować, optymalizowałem środowisko pracy.
 
 To jest pułapka, w którą wpada mnóstwo ludzi z naszej branży.
 
@@ -44,33 +44,33 @@ To jest pułapka, w którą wpada mnóstwo ludzi z naszej branży.
 
 Banał? Może. Ale pomyśl o tym przez chwilę.
 
-Masz subskrypcję Notion, ale notatki robisz w Apple Notes. Masz Todoist, ale zadania zapisujesz na karteczkach. Masz trzy narzędzia do zarządzania projektami, ale realnie używasz jednego — i to w 20% jego możliwości.
+Masz subskrypcję Notion, ale notatki robisz w Apple Notes. Masz Todoist, ale zadania zapisujesz na karteczkach. Masz trzy narzędzia do zarządzania projektami, ale realnie używasz jednego, i to w 20% jego możliwości.
 
 Nie chodzi o to, które narzędzie jest „najlepsze" według rankingów na YouTube. Chodzi o to, które faktycznie otwierasz każdego dnia. Które stało się tak naturalne jak oddychanie.
 
 Dla mnie to pięć narzędzi. Dla ciebie może to być siedem albo trzy. Liczba nie ma znaczenia. Znaczenie ma to, że każde z nich naprawdę pracuje.
 
-Konkretnie która to piątka i dlaczego akurat ta — rozpisałem w [Narzędziach AI, których naprawdę używam w pracy](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15).
+Konkretnie która to piątka i dlaczego akurat ta: rozpisałem w [Narzędziach AI, których naprawdę używam w pracy](/post/narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15).
 
 ## Moje zasady cyfrowego minimalizmu
 
 Po roku eksperymentów wypracowałem kilka reguł, które pomagają mi nie wpaść z powrotem w pułapkę kolekcjonowania narzędzi.
 
-**Zasada 7 dni.** Nie adoptuję nowego narzędzia, dopóki nie potrzebuję go przynajmniej 3 razy w ciągu 7 dni. Jeśli problem pojawia się raz — dam radę bez dedykowanego rozwiązania. Jeśli wraca regularnie — wtedy szukam narzędzia.
+**Zasada 7 dni.** Nie adoptuję nowego narzędzia, dopóki nie potrzebuję go przynajmniej 3 razy w ciągu 7 dni. Jeśli problem pojawia się raz, dam radę bez dedykowanego rozwiązania. Jeśli wraca regularnie, wtedy szukam narzędzia.
 
-**Jedno narzędzie na jeden problem.** Nie trzymam trzech aplikacji do tego samego „na wszelki wypadek". Wybieram jedno, uczę się go porządnie i trzymam się go. Jeśli po miesiącu nie działa — zamieniam. Ale nigdy nie mam dwóch równoległych rozwiązań tego samego problemu.
+**Jedno narzędzie na jeden problem.** Nie trzymam trzech aplikacji do tego samego „na wszelki wypadek". Wybieram jedno, uczę się go porządnie i trzymam się go. Jeśli po miesiącu nie działa, zamieniam. Ale nigdy nie mam dwóch równoległych rozwiązań tego samego problemu.
 
-**Miesięczny audyt.** Raz w miesiącu przeglądam listę subskrypcji i instalek. Pytanie jest proste: czego NIE użyłem w ostatnim miesiącu? Jeśli odpowiedź brzmi „tego" — kasuję, anuluję, odinstralowuję. Bez sentymentów.
+**Miesięczny audyt.** Raz w miesiącu przeglądam listę subskrypcji i instalek. Pytanie jest proste: czego NIE użyłem w ostatnim miesiącu? Jeśli odpowiedź brzmi „tego", kasuję, anuluję, odinstralowuję. Bez sentymentów.
 
-**Głębokość zamiast szerokości.** Wolę znać 5 narzędzi na poziomie zaawansowanym niż 20 na poziomie „kliknąłem raz i wiem, do czego służy". Prawdziwa produktywność przychodzi z opanowania narzędzia — poznania skrótów klawiszowych, automatyzacji, integracji. Tego nie osiągniesz, skacząc co tydzień na nową platformę.
+**Głębokość zamiast szerokości.** Wolę znać 5 narzędzi na poziomie zaawansowanym niż 20 na poziomie „kliknąłem raz i wiem, do czego służy". Prawdziwa produktywność przychodzi z opanowania narzędzia: poznania skrótów klawiszowych, automatyzacji, integracji. Tego nie osiągniesz, skacząc co tydzień na nową platformę.
 
 ## Paradoks automatyzacji
 
-Jest w tym pewna ironia. Uczę ludzi automatyzacji i AI. Mógłbyś pomyśleć, że moje środowisko pracy wygląda jak kokpit samolotu — dwadzieścia ekranów, setka zintegrowanych narzędzi, automatyzacje lecące w tle.
+Jest w tym pewna ironia. Uczę ludzi automatyzacji i AI. Mógłbyś pomyśleć, że moje środowisko pracy wygląda jak kokpit samolotu: dwadzieścia ekranów, setka zintegrowanych narzędzi, automatyzacje lecące w tle.
 
 A wygląda raczej jak biurko minimalisty.
 
-Bo automatyzacja to nie chodzi o to, żeby mieć jak najwięcej narzędzi. Chodzi o to, żeby mieć jak najmniej — ale takich, które robią robotę za ciebie. Dobrze skonfigurowane pięć narzędzi potrafi więcej niż trzydzieści używanych po łebkach.
+Bo automatyzacja to nie chodzi o to, żeby mieć jak najwięcej narzędzi. Chodzi o to, żeby mieć jak najmniej, ale takich, które robią robotę za ciebie. Dobrze skonfigurowane pięć narzędzi potrafi więcej niż trzydzieści używanych po łebkach.
 
 Mniej kart w przeglądarce. Mniej powiadomień. Mniej decyzji, które narzędzie otworzyć. Więcej czasu na faktyczną pracę.
 
@@ -80,7 +80,7 @@ Jeśli czujesz, że toniesz w narzędziach, zacznij od jednej rzeczy: otwórz hi
 
 Ta liczba zazwyczaj wystarczy jako motywacja.
 
-Potem zadaj sobie pytanie przy każdym narzędziu: **gdybym musiał zacząć od zera, czy zainstalowałbym to ponownie?** Jeśli odpowiedź nie jest natychmiastowym „tak" — wiesz, co robić.
+Potem zadaj sobie pytanie przy każdym narzędziu: **gdybym musiał zacząć od zera, czy zainstalowałbym to ponownie?** Jeśli odpowiedź nie jest natychmiastowym „tak", wiesz, co robić.
 
 ## Minimalizm to nie asceza
 

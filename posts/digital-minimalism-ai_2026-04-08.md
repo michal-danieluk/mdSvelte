@@ -16,7 +16,7 @@ I wiesz co? Robiłem mniej niż kiedykolwiek.
 
 Bo zamiast pracować, testowałem. Zamiast tworzyć, porównywałem. Zamiast publikować, szukałem idealnego narzędzia do publikowania.
 
-Pisałem o tym mechanizmie już wcześniej w [Minimalizmie w narzędziach](/post/minimalizm-w-narzedziach-mniej-znaczy-wiecej_2026-02-18) — tu drążę temat dalej, bo od tamtej pory niewiele się zmieniło poza liczbą narzędzi na rynku.
+Pisałem o tym mechanizmie już wcześniej w [Minimalizmie w narzędziach](/post/minimalizm-w-narzedziach-mniej-znaczy-wiecej_2026-02-18), tu drążę temat dalej, bo od tamtej pory niewiele się zmieniło poza liczbą narzędzi na rynku.
 
 Wyobraź sobie coś innego.
 
@@ -66,7 +66,7 @@ Skoro mówię o minimalizmie, pokażę co zostało po wywaleniu reszty:
 
 To jest cały mój stack AI i automatyzacja. 5 narzędzi. Robię z nich więcej niż robiłem z 20.
 
-Jak dokładnie te pięć narzędzi łączy się w jeden workflow — od pomysłu do publikacji — pokazałem krok po kroku w [Automatyzacja dla jednoosobowej firmy — mój stack za $0](/post/automatyzacja-jednoosobowa-firma-stack-za-zero_2026-03-10).
+Jak dokładnie te pięć narzędzi łączy się w jeden workflow, od pomysłu do publikacji, pokazałem krok po kroku w [Automatyzacja dla jednoosobowej firmy — mój stack za $0](/post/automatyzacja-jednoosobowa-firma-stack-za-zero_2026-03-10).
 
 ## Ale... a co jeśli coś przegapię?
 

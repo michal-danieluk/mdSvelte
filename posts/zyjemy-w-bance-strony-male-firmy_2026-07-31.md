@@ -40,7 +40,7 @@ Dobra wiadomość jest prostsza, niż brzmi w teorii marketingowej: nie musisz b
 
 ## Co dalej?
 
-**Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera — bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
+**Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera: bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 
@@ -48,4 +48,4 @@ Powiązane teksty: [partyzanckie SEO dla małej firmy](/post/partyzanckie_seo_20
 
 ---
 
-*Widzisz podobne rzeczy w swojej branży? Napisz do mnie na [LinkedIn](https://www.linkedin.com/in/michal-danieluk/) — chętnie porównam obserwacje.*
+*Widzisz podobne rzeczy w swojej branży? Napisz do mnie na [LinkedIn](https://www.linkedin.com/in/michal-danieluk/). Chętnie porównam obserwacje.*

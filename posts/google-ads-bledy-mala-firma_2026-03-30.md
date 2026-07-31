@@ -8,28 +8,28 @@ image_prompt: 'A cyberpunk figure sitting at a desk late at night, bathed in neo
 featured: false
 ---
 
-Masz kampanię w Google Ads. Płacisz co miesiąc, kliknięcia są, ale klientów jakoś nie przybywa. Albo co gorsza — nie wiesz, czy w ogóle coś z tego wychodzi, bo agencja wysyła raport pełen kolorowych wykresów, z których nic konkretnego nie wynika.
+Masz kampanię w Google Ads. Płacisz co miesiąc, kliknięcia są, ale klientów jakoś nie przybywa. Albo co gorsza, nie wiesz, czy w ogóle coś z tego wychodzi, bo agencja wysyła raport pełen kolorowych wykresów, z których nic konkretnego nie wynika.
 
-Znam to dobrze. W swojej pracy widzę te same błędy — powtarzają się niezależnie od branży. I nie są to drobne usterki. To dziury, przez które małe firmy wylewają setki, a czasem tysiące złotych miesięcznie. Dobra wiadomość: większość z nich można naprawić bez rewolucji.
+Znam to dobrze. W swojej pracy widzę te same błędy: powtarzają się niezależnie od branży. I nie są to drobne usterki. To dziury, przez które małe firmy wylewają setki, a czasem tysiące złotych miesięcznie. Dobra wiadomość: większość z nich można naprawić bez rewolucji.
 
 ---
 
 ## Błąd nr 1: Dopasowanie słów kluczowych ustawione na "szerokie"
 
-To klasyk. Zakładasz kampanię, wpisujesz słowo kluczowe "hydraulik Warszawa" i Google zaczyna wyświetlać Twoje reklamy na wszystko, co ma luźny związek z hydrauliką. W raporcie pojawiają się wyszukiwania w stylu "jak samemu naprawić kran" albo "szkoła hydrauliczna Warszawa" — za które płacisz.
+To klasyk. Zakładasz kampanię, wpisujesz słowo kluczowe "hydraulik Warszawa" i Google zaczyna wyświetlać Twoje reklamy na wszystko, co ma luźny związek z hydrauliką. W raporcie pojawiają się wyszukiwania w stylu "jak samemu naprawić kran" albo "szkoła hydrauliczna Warszawa", za które płacisz.
 
 Dopasowanie szerokie (broad match) ma sens przy dużych budżetach i zaawansowanej optymalizacji. Dla małej firmy z budżetem 1000–3000 zł miesięcznie to przepalanie pieniędzy.
 
 **Co zamiast tego:**
-- Używaj dopasowania do wyrażenia (phrase match) — słowo kluczowe w cudzysłowie: "hydraulik Warszawa"
-- Albo ścisłego (exact match) — w nawiasach kwadratowych: [hydraulik Warszawa]
+- Używaj dopasowania do wyrażenia (phrase match), słowo kluczowe w cudzysłowie: "hydraulik Warszawa"
+- Albo ścisłego (exact match), w nawiasach kwadratowych: [hydraulik Warszawa]
 - Koniecznie dodaj listę wykluczających słów kluczowych (negative keywords), żeby odfiltrować ruch, który Cię nic nie kosztuje
 
 ---
 
 ## Błąd nr 2: Reklamy prowadzą na stronę główną
 
-Użytkownik szuka "montaż klimatyzacji Kraków", klika reklamę i ląduje na... stronie głównej firmy budowlanej, gdzie jest wszystko — od malowania po elewacje. Musi sam znaleźć dział klimatyzacji.
+Użytkownik szuka "montaż klimatyzacji Kraków", klika reklamę i ląduje na... stronie głównej firmy budowlanej, gdzie jest wszystko: od malowania po elewacje. Musi sam znaleźć dział klimatyzacji.
 
 Większość nie szuka. Zamyka zakładkę.
 
@@ -37,21 +37,21 @@ To się nazywa złe dopasowanie strony docelowej (landing page) do intencji wysz
 
 **Co zamiast tego:**
 - Każda kampania (albo chociaż każda grupa reklam) powinna prowadzić na dedykowaną podstronę
-- Ta podstrona powinna powtarzać to, co było w reklamie — jeśli reklama mówi "montaż klimatyzacji Kraków", strona też powinna o tym mówić, od razu, bez scrollowania
+- Ta podstrona powinna powtarzać to, co było w reklamie: jeśli reklama mówi "montaż klimatyzacji Kraków", strona też powinna o tym mówić, od razu, bez scrollowania
 - Minimum: wyraźny nagłówek, krótki opis usługi, formularz kontaktowy albo numer telefonu na wierzchu
 
 ---
 
 ## Błąd nr 3: Brak śledzenia konwersji
 
-Jeśli nie mierzysz, co się dzieje po kliknięciu reklamy — nie wiesz, czy kampania zarabia, czy traci. Proste.
+Jeśli nie mierzysz, co się dzieje po kliknięciu reklamy, nie wiesz, czy kampania zarabia, czy traci. Proste.
 
 A jednak w praktyce bardzo często widzę konta Google Ads, gdzie śledzenie konwersji albo nie istnieje, albo jest skonfigurowane tak, że liczy rzeczy bez znaczenia (np. każde odwiedzenie strony zamiast wysłania formularza lub zadzwonienia).
 
 **Co powinny liczyć konwersje w kampanii dla małej firmy usługowej:**
 - Wypełnienia formularza kontaktowego
 - Połączenia telefoniczne (Google Ads ma do tego wbudowaną funkcję)
-- Zapisy na newsletter lub rezerwacje online — jeśli to masz
+- Zapisy na newsletter lub rezerwacje online, jeśli to masz
 
 Bez tych danych optymalizacja kampanii to strzelanie w ciemno. Z tymi danymi możesz zobaczyć, które słowa kluczowe przynoszą klientów, a które tylko klikają i wychodzą.
 
@@ -59,7 +59,7 @@ Bez tych danych optymalizacja kampanii to strzelanie w ciemno. Z tymi danymi mo�
 
 ## Błąd nr 4: Budżet rozlany na zbyt wiele kampanii
 
-Widzę to regularnie: konto z budżetem 1500 zł/miesiąc i pięcioma aktywnymi kampaniami. Każda dostaje 300 zł, żadna nie ma dość danych, żeby Google mógł ją sensownie optymalizować. Algorytmy uczą się na podstawie konwersji — jeśli kampania ma ich za mało, nie ma na czym.
+Widzę to regularnie: konto z budżetem 1500 zł/miesiąc i pięcioma aktywnymi kampaniami. Każda dostaje 300 zł, żadna nie ma dość danych, żeby Google mógł ją sensownie optymalizować. Algorytmy uczą się na podstawie konwersji, jeśli kampania ma ich za mało, nie ma na czym.
 
 **Co zamiast tego:**
 - Na początku: jedna, maksymalnie dwie kampanie
@@ -72,9 +72,9 @@ Lepiej mieć jedną kampanię, która naprawdę działa, niż pięć, które led
 
 ## Błąd nr 5: Ignorowanie harmonogramu wyświetlania reklam
 
-Reklamy chodzą 24/7, ale Twoja firma działa 8:00–17:00. Ktoś klika o 22:30, próbuje zadzwonić, nikt nie odbiera — i idzie do konkurencji. A Ty zapłaciłeś za to kliknięcie.
+Reklamy chodzą 24/7, ale Twoja firma działa 8:00–17:00. Ktoś klika o 22:30, próbuje zadzwonić, nikt nie odbiera, i idzie do konkurencji. A Ty zapłaciłeś za to kliknięcie.
 
-W niektórych branżach to nie jest wielki problem. W innych — hydraulicy, serwisy, firmy usługowe — brak możliwości szybkiego kontaktu to zmarnowany lead.
+W niektórych branżach to nie jest wielki problem. W innych (hydraulicy, serwisy, firmy usługowe) brak możliwości szybkiego kontaktu to zmarnowany lead.
 
 **Co zamiast tego:**
 - Sprawdź w raporcie o porach dnia, kiedy przychodzą Twoje konwersje
@@ -85,7 +85,7 @@ W niektórych branżach to nie jest wielki problem. W innych — hydraulicy, ser
 
 ## Ile kosztuje naprawienie tych błędów?
 
-Część z tego możesz zrobić sam — dopasowanie słów kluczowych, wykluczenia, harmonogram — to zmiany w panelu Google Ads, nie wymagają specjalistycznej wiedzy, tylko trochę czasu.
+Część z tego możesz zrobić sam (dopasowanie słów kluczowych, wykluczenia, harmonogram): to zmiany w panelu Google Ads, nie wymagają specjalistycznej wiedzy, tylko trochę czasu.
 
 Trudniejsze jest śledzenie konwersji (wymaga integracji z Google Tag Manager) i sensowna struktura kampanii od zera. Tutaj warto mieć kogoś, kto to zrobi raz porządnie, zamiast płacić co miesiąc agencji, która kampanii nie tyka.
 
@@ -93,9 +93,9 @@ Szacunkowo: kampania z budżetem 2000 zł/miesiąc, gdzie te błędy nie są nap
 
 ---
 
-## Podsumowanie — co sprawdzić w pierwszej kolejności
+## Podsumowanie: co sprawdzić w pierwszej kolejności
 
-Jeśli masz kampanię i zastanawiasz się, czy działa — zacznij od tych pięciu pytań:
+Jeśli masz kampanię i zastanawiasz się, czy działa, zacznij od tych pięciu pytań:
 
 1. Jakie są moje dopasowania słów kluczowych i czy mam listę wykluczeń?
 2. Gdzie trafia użytkownik po kliknięciu reklamy?
@@ -103,10 +103,10 @@ Jeśli masz kampanię i zastanawiasz się, czy działa — zacznij od tych pięc
 4. Ile kampanii mam aktywnych i czy każda ma sensowny budżet?
 5. Czy reklamy chodzą w godzinach, kiedy mogę obsłużyć kontakt?
 
-Jeśli na choćby jedno z tych pytań nie znasz odpowiedzi — wiesz, od czego zacząć.
+Jeśli na choćby jedno z tych pytań nie znasz odpowiedzi, wiesz, od czego zacząć.
 
-Zaczynasz kampanię od zera i chcesz od razu uniknąć tych błędów, zamiast je potem naprawiać? Zobacz [Jak poprawnie ustawić kampanię Google Ads od zera](/post/jak-ustawic-kampanie-google-ads_2026-04-14). A jeśli kampanię prowadzi Ci agencja i chcesz sprawdzić, czy akurat te błędy popełnia — mam osobny checklist: [Jak sprawdzić, czy agencja dobrze prowadzi Twoje kampanie Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01).
+Zaczynasz kampanię od zera i chcesz od razu uniknąć tych błędów, zamiast je potem naprawiać? Zobacz [Jak poprawnie ustawić kampanię Google Ads od zera](/post/jak-ustawic-kampanie-google-ads_2026-04-14). A jeśli kampanię prowadzi Ci agencja i chcesz sprawdzić, czy akurat te błędy popełnia, mam osobny checklist: [Jak sprawdzić, czy agencja dobrze prowadzi Twoje kampanie Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01).
 
 ---
 
-Piszę regularnie o Google Ads i SEO z perspektywy praktyka, nie teorii. Jeśli chcesz dostawać takie materiały prosto na skrzynkę — zapisz się do newslettera. Albo napisz mi w komentarzu, który z tych błędów rozpoznajesz u siebie.
+Piszę regularnie o Google Ads i SEO z perspektywy praktyka, nie teorii. Jeśli chcesz dostawać takie materiały prosto na skrzynkę, zapisz się do newslettera. Albo napisz mi w komentarzu, który z tych błędów rozpoznajesz u siebie.

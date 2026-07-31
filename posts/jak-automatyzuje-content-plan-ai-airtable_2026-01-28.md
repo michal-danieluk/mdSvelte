@@ -32,11 +32,11 @@ Potrzebowałem jednego miejsca, prostego przepływu i kogoś, kto pomoże mi my�
 
 ## Mój setup: Airtable + Claude
 
-Nie wymyślałem tutaj koła na nowo. Setup jest prosty do bólu i właśnie dlatego działa. To zresztą tylko jeden kawałek szerszego stacku — cały mój automatyzacyjny setup za $0 opisałem w [Automatyzacja dla jednoosobowej firmy](/post/automatyzacja-jednoosobowa-firma-stack-za-zero_2026-03-10).
+Nie wymyślałem tutaj koła na nowo. Setup jest prosty do bólu i właśnie dlatego działa. To zresztą tylko jeden kawałek szerszego stacku, cały mój automatyzacyjny setup za $0 opisałem w [Automatyzacja dla jednoosobowej firmy](/post/automatyzacja-jednoosobowa-firma-stack-za-zero_2026-03-10).
 
 ### Airtable jako kręgosłup
 
-Airtable to taki Excel na sterydach — ale spokojnie, nie musisz być technicznym ninja, żeby go ogarnąć. Moja baza ma jedną tabelę z pięcioma kolumnami:
+Airtable to taki Excel na sterydach, ale spokojnie, nie musisz być technicznym ninja, żeby go ogarnąć. Moja baza ma jedną tabelę z pięcioma kolumnami:
 
 | Kolumna | Typ | Po co |
 |---------|-----|-------|
@@ -50,11 +50,11 @@ Statusy to serce całego systemu. Mam ich pięć:
 
 **pomysł → brief → draft → review → opublikowany**
 
-Każdy pomysł zaczyna jako "pomysł" i przesuwa się w prawo. Jeśli utknął — widzę to od razu. Jeśli mam za mało materiału w pipeline — też widzę.
+Każdy pomysł zaczyna jako "pomysł" i przesuwa się w prawo. Jeśli utknął, widzę to od razu. Jeśli mam za mało materiału w pipeline, też widzę.
 
 ### AI do generowania pomysłów
 
-Tu wchodzi Claude. Raz na tydzień (albo gdy mam pusty pipeline) odpalam sesję ideacji (tak wiem powinno być kreacji ale tak wyszło z angielska i już zostało, to mój system nie czepiać się). Nie generuję jednego pomysłu na raz — robię to hurtowo.
+Tu wchodzi Claude. Raz na tydzień (albo gdy mam pusty pipeline) odpalam sesję ideacji (tak wiem powinno być kreacji ale tak wyszło z angielska i już zostało, to mój system nie czepiać się). Nie generuję jednego pomysłu na raz, robię to hurtowo.
 
 Mój prompt wygląda mniej więcej tak:
 
@@ -96,7 +96,7 @@ Każdy poniedziałek o 9:00 otwieram Airtable i odpowiadam sobie na trzy pytania
 
 1. **Co jest gotowe do publikacji?** (status: review → opublikowany)
 2. **Co wymaga mojej pracy w tym tygodniu?** (status: brief → draft)
-3. **Czy mam wystarczająco pomysłów w pipeline?** (jeśli mniej niż 5 ze statusem "pomysł" — odpalam sesję ideacji)
+3. **Czy mam wystarczająco pomysłów w pipeline?** (jeśli mniej niż 5 ze statusem "pomysł", odpalam sesję ideacji)
 
 To wszystko. 15 minut i wiem dokładnie, co robię w tym tygodniu.
 
@@ -108,11 +108,11 @@ Bo wiem, że teraz myślisz o dodaniu 15 kolumn, 8 widoków i automatyzacji prze
 
 **Zacznij od trzech kolumn.** Tytuł, status, format. Resztę dodasz, jak poczujesz, że czegoś brakuje. Nie wcześniej.
 
-**Nie automatyzuj wszystkiego od razu.** Ręczne przesuwanie statusu to 2 sekundy. Nie potrzebujesz na to automatyzacji. Automatyzuj wtedy, gdy coś naprawdę boli — nie wtedy, gdy coś "fajnie byłoby zautomatyzować".
+**Nie automatyzuj wszystkiego od razu.** Ręczne przesuwanie statusu to 2 sekundy. Nie potrzebujesz na to automatyzacji. Automatyzuj wtedy, gdy coś naprawdę boli, nie wtedy, gdy coś "fajnie byłoby zautomatyzować".
 
-**Generuj pomysły hurtowo.** 10 na raz, nie jeden na raz. Dlaczego? Bo przy jednym pomyśle za bardzo się do niego przywiązujesz. Przy dziesięciu — wyrzucasz słabe bez sentymentu.
+**Generuj pomysły hurtowo.** 10 na raz, nie jeden na raz. Dlaczego? Bo przy jednym pomyśle za bardzo się do niego przywiązujesz. Przy dziesięciu, wyrzucasz słabe bez sentymentu.
 
-**Nie każdy pomysł musi zostać zrealizowany.** Pipeline to nie lista zobowiązań. Jeśli pomysł leży ze statusem "pomysł" od trzech tygodni — usuń go. Nie wrócisz do niego. Wiem to. Ty też to wiesz.
+**Nie każdy pomysł musi zostać zrealizowany.** Pipeline to nie lista zobowiązań. Jeśli pomysł leży ze statusem "pomysł" od trzech tygodni, usuń go. Nie wrócisz do niego. Wiem to. Ty też to wiesz.
 
 ---
 
