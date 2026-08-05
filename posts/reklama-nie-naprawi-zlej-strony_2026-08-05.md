@@ -40,6 +40,8 @@ Tą rurą jest cała ścieżka:
 6. Wysyła formularz albo dzwoni.
 7. Firma odbiera kontakt i prowadzi rozmowę.
 
+![Gdzie wycieka Twoja ścieżka: siedem kroków od reklamy do klienta i typowy wyciek przy każdym](/img/reklama-nie-naprawi-zlej-strony-sciezka.png)
+
 Każdy z tych punktów możesz sprawdzić osobno, i to jest ważne, bo komunikat „reklama nie działa” tak naprawdę wrzuca do jednego worka kampanię, stronę, ofertę, analitykę i sprzedaż.
 
 Jeżeli dopiero konfigurujesz konto, zacznij od poradnika [jak poprawnie ustawić kampanię Google Ads](/post/jak-ustawic-kampanie-google-ads_2026-04-14). Tutaj zajmiemy się tym, co dzieje się po uruchomieniu ruchu.
@@ -116,8 +118,6 @@ Nie poprawiaj wszystkiego jednocześnie. Najpierw znajdź objaw i wybierz jeden 
 | Formularz wygląda dobrze, ale nic nie wpada   | Błąd techniczny albo problem z dostarczeniem    | Wyślij prawdziwe zgłoszenie z telefonu                   | Napraw formularz i potwierdzenie wysyłki          |
 | Zapytania wpadają, ale nie znasz źródła       | Brakuje poprawnego pomiaru                      | Porównaj formularze, połączenia i dane kampanii          | Uporządkuj oznaczenia oraz konwersje              |
 | Leady są, ale rozmowy nie ruszają             | Kontakt nie ma właściciela albo procesu         | Prześledź ostatnie zapytania od wpłynięcia do odpowiedzi | Ustal odpowiedzialność i kolejny krok             |
-
-![Tabela: gdzie urywa się ścieżka od reklamy do leada](/img/reklama-nie-naprawi-zlej-strony-tabela.png)
 
 Traktuj to jako sposób na znalezienie pierwszego miejsca do sprawdzenia, a nie pełny audyt.
 
