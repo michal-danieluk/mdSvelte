@@ -9,8 +9,6 @@ image_prompt: 'A dark editorial illustration of a bright advertising arrow sendi
 featured: false
 ---
 
-# Reklama nie naprawi złej strony. Co sprawdzić, gdy są kliknięcia, ale nie ma leadów?
-
 Budżet się ładnie wydaje, w panelu reklamowym pojawiają się kliknięcia, a telefon milczy, formularz też i maile też jakoś nie przychodzą.
 
 Jaki jest najczęstszy pierwszy odruch? Zwiększyć budżet, zmienić reklamę, optymalizować albo uznać, że Google Ads po prostu u nas nie działa.
@@ -149,7 +147,7 @@ Dopiero gdy ta ścieżka jest spójna, oceniaj, czy trzeba zmienić kampanię, s
 
 ## Chcesz zobaczyć to na własne oczy?
 
-Wszystkie testy z tego artykułu możesz zrobić ręcznie, ale jest łatwiejszy sposób, żeby zobaczyć, gdzie ludzie się gubią: nagrania sesji i mapy cieplne. Microsoft Clarity (darmowe) albo Hotjar pokazują dokładnie, jak ktoś porusza się po Twojej stronie, gdzie klika, gdzie się zatrzymuje, gdzie przewija w kółko szukając czegoś, czego nie widzi. Jeśli formularz wygląda dobrze na Twoim ekranie, ale nagrania pokazują, że ludzie go omijają albo rezygnują w połowie, masz konkretny dowód, a nie zgadywanie.
+Wszystkie testy z tego artykułu możesz zrobić ręcznie, ale jest łatwiejszy sposób, żeby zobaczyć, gdzie ludzie się gubią: nagrania sesji i mapy cieplne. [Microsoft Clarity](https://clarity.microsoft.com/) (darmowe) albo [Hotjar](https://www.hotjar.com/) pokazują dokładnie, jak ktoś porusza się po Twojej stronie, gdzie klika, gdzie się zatrzymuje, gdzie przewija w kółko szukając czegoś, czego nie widzi. Jeśli formularz wygląda dobrze na Twoim ekranie, ale nagrania pokazują, że ludzie go omijają albo rezygnują w połowie, masz konkretny dowód, a nie zgadywanie.
 
 Zadaniem reklamy jest doprowadzić właściwą osobę do jasnej oferty i prostego następnego kroku, nie naprawiać Twojego biznesu.
 
