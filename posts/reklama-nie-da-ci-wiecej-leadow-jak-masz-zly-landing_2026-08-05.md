@@ -1,10 +1,10 @@
 ---
-title: 'Reklama nie naprawi złej strony. Co sprawdzić, gdy są kliknięcia, ale nie ma leadów?'
+title: 'Reklama nie da Ci więcej leadów, jak masz zły landing'
 date: '2026-08-05'
 tags: ['Google Ads', 'Reklamy', 'Landing page', 'Leady', 'Marketing']
-description: 'Kampania generuje kliknięcia, ale nie daje zapytań? Sprawdź, gdzie urywa się ścieżka od reklamy przez stronę aż do obsługi leada.'
+description: 'Masz kliknięcia z Google Ads, ale nie masz leadów? Sprawdź, czy problem tkwi w landingu, ofercie czy formularzu, zanim zwiększysz budżet.'
 preview: 'Budżet rośnie, kliknięcia są, a telefon i tak milczy. Sprawdź siedem miejsc na ścieżce od reklamy do leada, zanim znowu dołożysz do kampanii.'
-keywords: 'kampania Google Ads nie przynosi leadów, reklama nie działa, są kliknięcia nie ma zapytań, strona docelowa reklamy, reklama nie przynosi klientów'
+keywords: 'zły landing page nie generuje leadów, kampania Google Ads nie przynosi leadów, reklama nie działa, są kliknięcia nie ma zapytań, strona docelowa reklamy, reklama nie przynosi klientów'
 image_prompt: 'A dark editorial illustration of a bright advertising arrow sending visitors into a visibly broken website funnel with several leaking stages before a contact form. Deep charcoal background, neon cyan and amber accents, subtle purple details, flat vector style, clean geometric composition, no logos, no readable text.'
 featured: false
 ---
