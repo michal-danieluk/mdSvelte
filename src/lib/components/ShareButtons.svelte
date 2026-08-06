@@ -1,27 +1,29 @@
 <script>
   import { twitter } from '$lib/info'
+  import { buildShareUrl } from '$lib/data/socialPreview'
   import { Icon } from '@steeze-ui/svelte-icon'
   import { Link, ClipboardDocumentCheck } from '@steeze-ui/heroicons'
 
   let { title, url } = $props()
   let copied = $state(false)
+  const shareUrl = $derived(buildShareUrl(url))
 
   const shareLinks = $derived([
     {
       name: 'LinkedIn',
-      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
       bg: 'hover:bg-[#0A66C2] hover:text-white'
     },
     {
       name: 'X (Twitter)',
-      href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}${twitter ? `&via=${twitter}` : ''}`,
+      href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(shareUrl)}${twitter ? `&via=${twitter}` : ''}`,
       bg: 'hover:bg-black dark:hover:bg-white dark:hover:text-black hover:text-white'
     }
   ])
 
   function copyToClipboard() {
     if (typeof navigator !== 'undefined') {
-      navigator.clipboard.writeText(url)
+      navigator.clipboard.writeText(shareUrl)
       copied = true
       setTimeout(() => (copied = false), 2000)
     }
@@ -39,6 +41,7 @@
         href={link.href}
         target="_blank"
         rel="noopener noreferrer"
+        data-share-url={shareUrl}
         class="inline-flex items-center px-4 py-2 text-xs font-bold text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl transition-all duration-200 {link.bg} hover:border-transparent hover:shadow-lg active:scale-95"
       >
         {link.name}
@@ -52,6 +55,7 @@
           ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 text-green-600 dark:text-green-400' 
           : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-indigo-500 dark:hover:border-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:shadow-lg'}"
       aria-label="Kopiuj link"
+      data-share-url={shareUrl}
     >
       {#if copied}
         <Icon src={ClipboardDocumentCheck} class="w-4 h-4" />

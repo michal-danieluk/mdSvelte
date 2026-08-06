@@ -1,21 +1,82 @@
 import { parse } from 'node-html-parser'
+import { SOCIAL_PREVIEW_REVISION } from '../src/lib/data/socialPreview'
 
 const localOrigin = 'http://127.0.0.1:5173'
 const canonicalOrigin = 'https://www.michaldanieluk.pl'
+const socialPreviewOnly = process.argv.includes('--social-preview-only')
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message)
 }
 
-async function get(path: string) {
-  const response = await fetch(`${localOrigin}${path}`)
+async function get(path: string): Promise<string> {
+  const response = await fetch(`${localOrigin}${path}`, { signal: AbortSignal.timeout(30_000) })
   assert(response.ok, `${path} returned ${response.status}`)
   return response.text()
+}
+
+interface PostApiEntry {
+  slug: string
+  updated?: string
+}
+
+function isPostApiEntry(value: unknown): value is PostApiEntry {
+  return (
+    typeof value === 'object' &&
+    value !== null &&
+    typeof (value as { slug?: unknown }).slug === 'string'
+  )
+}
+
+function getMetaContent(page: ReturnType<typeof parse>, selector: string, path: string): string {
+  const content = page.querySelector(selector)?.getAttribute('content')
+  assert(content, `${path} lacks ${selector}`)
+  return content
+}
+
+async function assertGeneratedPng(imageUrl: string, path: string): Promise<void> {
+  const canonicalImageUrl = new URL(imageUrl)
+  const localImageUrl = `${localOrigin}${canonicalImageUrl.pathname}${canonicalImageUrl.search}`
+  const response = await fetch(localImageUrl, { signal: AbortSignal.timeout(30_000) })
+
+  assert(response.ok, `${path} social image returned ${response.status}`)
+  assert(
+    response.headers.get('content-type')?.split(';')[0] === 'image/png',
+    `${path} social image is not image/png`
+  )
+
+  const bytes = new Uint8Array(await response.arrayBuffer())
+  assert(bytes.byteLength > 10 * 1024, `${path} social image is not larger than 10KB`)
+  assert(
+    bytes.length >= 24 &&
+      bytes[0] === 0x89 &&
+      bytes[1] === 0x50 &&
+      bytes[2] === 0x4e &&
+      bytes[3] === 0x47 &&
+      new TextDecoder().decode(bytes.subarray(12, 16)) === 'IHDR',
+    `${path} social image lacks a valid PNG IHDR`
+  )
+
+  const dimensions = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength)
+  assert(dimensions.getUint32(16) === 1200, `${path} social image width is not 1200`)
+  assert(dimensions.getUint32(20) === 630, `${path} social image height is not 630`)
 }
 
 const sitemapXml = await get('/sitemap.xml')
 const sitemapUrls = [...sitemapXml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
 const sitemapPaths = sitemapUrls.map((url) => new URL(url).pathname)
+const postsJson: unknown = JSON.parse(await get('/api/posts.json'))
+assert(Array.isArray(postsJson), 'Posts API did not return an array')
+assert(postsJson.every(isPostApiEntry), 'Posts API returned an invalid post entry')
+const postPaths = postsJson.map((post) => `/post/${post.slug}`)
+const sitemapPostPaths = sitemapPaths.filter((path) => path.startsWith('/post/'))
+
+assert(postPaths.length === new Set(postPaths).size, 'Posts API contains duplicate slugs')
+assert(
+  postPaths.length === sitemapPostPaths.length &&
+    postPaths.every((path) => sitemapPostPaths.includes(path)),
+  'Sitemap post routes do not exactly match every Posts API route'
+)
 
 function getSitemapLastmod(path: string) {
   const url = `${canonicalOrigin}${path}`
@@ -41,7 +102,7 @@ const tagPaths = [
   )
 ]
 
-const allPaths = [...new Set([...sitemapPaths, ...tagPaths])]
+const allPaths = [...new Set([...sitemapPaths, ...postPaths, ...tagPaths])]
 const pages = new Map<string, ReturnType<typeof parse>>()
 
 for (let index = 0; index < allPaths.length; index += 12) {
@@ -49,6 +110,110 @@ for (let index = 0; index < allPaths.length; index += 12) {
   const htmlPages = await Promise.all(paths.map((path) => get(path)))
   paths.forEach((path, pathIndex) => pages.set(path, parse(htmlPages[pathIndex])))
 }
+
+async function verifyPostSocialPreview(path: string): Promise<void> {
+  const page = pages.get(path)
+  assert(page, `${path} was not fetched`)
+
+  const canonical = page.querySelector('link[rel="canonical"]')?.getAttribute('href')
+  assert(canonical, `${path} lacks canonical link`)
+  const ogUrl = getMetaContent(page, 'meta[property="og:url"]', path)
+  assert(canonical === `${canonicalOrigin}${path}`, `${path} canonical is not query-free`)
+  assert(ogUrl === canonical, `${path} og:url does not exactly match canonical`)
+
+  const ogImageTags = page.querySelectorAll('meta[property="og:image"]')
+  assert(ogImageTags.length === 1, `${path} does not have exactly one og:image`)
+  const ogImage = getMetaContent(page, 'meta[property="og:image"]', path)
+  const parsedOgImage = new URL(ogImage)
+  assert(parsedOgImage.protocol === 'https:', `${path} og:image is not absolute HTTPS`)
+  assert(parsedOgImage.origin === canonicalOrigin, `${path} og:image is not on canonical origin`)
+  assert(
+    parsedOgImage.searchParams.get('v') === SOCIAL_PREVIEW_REVISION,
+    `${path} og:image lacks the current social revision`
+  )
+  assert(
+    getMetaContent(page, 'meta[property="og:image:secure_url"]', path) === ogImage,
+    `${path} og:image:secure_url does not match og:image`
+  )
+  assert(
+    getMetaContent(page, 'meta[property="og:image:type"]', path) === 'image/png',
+    `${path} og:image:type is not image/png`
+  )
+  assert(
+    getMetaContent(page, 'meta[property="og:image:width"]', path) === '1200',
+    `${path} og:image:width is not 1200`
+  )
+  assert(
+    getMetaContent(page, 'meta[property="og:image:height"]', path) === '630',
+    `${path} og:image:height is not 630`
+  )
+  const ogImageAlt = getMetaContent(page, 'meta[property="og:image:alt"]', path)
+  assert(
+    getMetaContent(page, 'meta[name="twitter:card"]', path) === 'summary_large_image',
+    `${path} twitter:card is not summary_large_image`
+  )
+  assert(
+    getMetaContent(page, 'meta[name="twitter:image"]', path) === ogImage,
+    `${path} twitter:image does not match og:image`
+  )
+  const twitterImageAlt = getMetaContent(page, 'meta[name="twitter:image:alt"]', path)
+
+  const blogPosting = page
+    .querySelectorAll('script[type="application/ld+json"]')
+    .map((script) => JSON.parse(script.text))
+    .find((schema) => schema['@type'] === 'BlogPosting')
+  assert(blogPosting, `${path} lacks BlogPosting JSON-LD`)
+  assert(typeof blogPosting.headline === 'string', `${path} BlogPosting lacks a headline`)
+  assert(
+    parsedOgImage.searchParams.get('title') === blogPosting.headline,
+    `${path} og:image title does not match BlogPosting headline`
+  )
+  assert(ogImageAlt.includes(blogPosting.headline), `${path} og:image:alt is not title-based`)
+  assert(
+    twitterImageAlt.includes(blogPosting.headline),
+    `${path} twitter:image:alt is not title-based`
+  )
+  assert(blogPosting.image === ogImage, `${path} BlogPosting.image does not match og:image`)
+
+  const expectedShareUrl = `${canonical}?v=${encodeURIComponent(SOCIAL_PREVIEW_REVISION)}`
+  const shareAnchors = page.querySelectorAll('a[data-share-url]')
+  assert(shareAnchors.length === 2, `${path} does not expose both social share links`)
+  for (const link of shareAnchors) {
+    assert(link.getAttribute('data-share-url') === expectedShareUrl, `${path} has stale share URL`)
+    const href = link.getAttribute('href')
+    assert(href, `${path} share link lacks href`)
+    assert(
+      new URL(href).searchParams.get('url') === expectedShareUrl,
+      `${path} share href is stale`
+    )
+  }
+  assert(
+    page.querySelector('button[data-share-url]')?.getAttribute('data-share-url') ===
+      expectedShareUrl,
+    `${path} Copy Link URL is stale`
+  )
+
+  await assertGeneratedPng(ogImage, path)
+}
+
+for (let index = 0; index < postPaths.length; index += 4) {
+  await Promise.all(postPaths.slice(index, index + 4).map(verifyPostSocialPreview))
+}
+
+console.log(
+  JSON.stringify(
+    {
+      socialPreviewSweep: 'ok',
+      postPages: postPaths.length,
+      socialImages: postPaths.length,
+      revision: SOCIAL_PREVIEW_REVISION
+    },
+    null,
+    2
+  )
+)
+
+if (socialPreviewOnly) process.exit(0)
 
 for (const [path, page] of pages) {
   const canonical = page.querySelector('link[rel="canonical"]')?.getAttribute('href')
@@ -153,9 +318,8 @@ assert(
   'Updated article sitemap lastmod does not use its updated frontmatter'
 )
 
-const postsJson = JSON.parse(await get('/api/posts.json'))
 assert(
-  postsJson.find((post: { slug: string }) => post.slug === 'nvim-i-obs')?.updated === '2026-07-22',
+  postsJson.find((post) => post.slug === 'nvim-i-obs')?.updated === '2026-07-22',
   'Posts API does not expose the normalized updated date'
 )
 
@@ -221,7 +385,8 @@ console.log(
           ?.getAttribute('content')
           ?.includes('noindex')
       ).length,
-      postPages: sitemapPaths.filter((path) => path.startsWith('/post/')).length,
+      postPages: postPaths.length,
+      socialImages: postPaths.length,
       status: 'ok'
     },
     null,

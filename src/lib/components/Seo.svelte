@@ -1,6 +1,7 @@
 <script>
   import { page } from '$app/stores'
   import { website, name } from '$lib/info.js'
+  import { buildSocialPreviewImageUrl } from '$lib/data/socialPreview'
 
   /**
    * @type {{
@@ -8,6 +9,7 @@
    *   description?: string,
    *   type?: string,
    *   image?: string | null,
+   *   imageAlt?: string,
    *   keywords?: string | string[],
    *   robots?: string
    * }}
@@ -17,6 +19,7 @@
     description = '',
     type = 'website',
     image = null,
+    imageAlt = '',
     keywords = [],
     robots = ''
   } = $props()
@@ -40,7 +43,8 @@
   }
 
   const canonicalUrl = `${website}${$page.url.pathname}`
-  const ogImage = image || `${website}/api/og?title=${encodeURIComponent(title)}`
+  const ogImage = image || buildSocialPreviewImageUrl(title)
+  const socialImageAlt = imageAlt.trim() || `${title} — grafika podglądu`
   // meta tag content shouldn't contain raw newlines, even if the source text does
   const metaDescription = description.replace(/\s+/g, ' ').trim()
   const metaKeywords = $derived(normalizeKeywords(keywords).join(', '))
@@ -67,6 +71,11 @@
     <meta property="og:description" content={metaDescription} />
   {/if}
   <meta property="og:image" content={ogImage} />
+  <meta property="og:image:secure_url" content={ogImage} />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={socialImageAlt} />
   <meta property="og:site_name" content={name} />
   <meta property="og:locale" content="pl_PL" />
 
@@ -81,4 +90,5 @@
     <meta name="twitter:description" content={metaDescription} />
   {/if}
   <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image:alt" content={socialImageAlt} />
 </svelte:head>

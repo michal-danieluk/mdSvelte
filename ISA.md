@@ -1,20 +1,20 @@
 ---
-task: "Implement SEO audit recommendations"
+task: "Audit and fix blog-wide social preview images"
 slug: 20260720-103732_blog-pillar-pages
 project: md_blog
 effort: E3
-effort_source: auto
+effort_source: context-override
 phase: complete
-progress: 113/113
+progress: 147/147
 mode: interactive
 started: 2026-07-20T10:37:32Z
-updated: 2026-07-22T11:31:01Z
-iteration: 4
-principal_stated_goal: "wdróż rekomendacje"
-principal_stated_goal_source: explicit-revision
+updated: 2026-08-06T19:48:30Z
+iteration: 5
+principal_stated_goal: "przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to narpaw to"
+principal_stated_goal_source: prompt
 principal_stated_goal_signal: 2
-principal_stated_goal_locked: 2026-07-22T11:17:52Z
-density_score: 0.67
+principal_stated_goal_locked: 2026-08-06T19:30:46Z
+density_score: 0.57
 interview_invoked: false
 divergence_risk: low
 density_gate_acknowledged: true
@@ -27,9 +27,13 @@ frame_drift: none
 
 Blog ma rosnący zbiór artykułów o SEO, Google Ads i marketingu, ale nie ma trwałych stron tematycznych, które objaśniają obszar, prowadzą czytelnika od podstaw do decyzji i grupują powiązane materiały. Same tagi są indeksem, nie pillar page: nie budują narracji, intencji wyszukiwania ani świadomego linkowania wewnętrznego.
 
+Iteracja 5: starszy artykuł nie pokazuje obrazu przy udostępnianiu mimo obecnego `og:image`. Wpis powstał przed wdrożeniem social meta, a cały blog korzysta ze wspólnego dynamicznego generatora bez jawnych wymiarów, typu, altów i rewizji cache; brakowało też testu, który sprawdza każdy artykuł oraz rzeczywisty payload PNG.
+
 ## Vision
 
 Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich i od razu rozumie, czego się nauczy, od czego zacząć oraz jaki artykuł przeczytać następnie. Każdy pillar ma własną obietnicę i strukturę, ale wszystkie wyglądają jak naturalna część obecnego bloga. Euphoric surprise: cztery nowe adresy porządkują już istniejący dorobek bez tworzenia równoległego systemu kategorii.
+
+Iteracja 5: każdy opublikowany wpis daje crawlerowi kompletną, jednoznaczną kartę 1200×630, a przycisk udostępniania sam omija historyczny cache bez zmiany canonical. Euphoric surprise: jedna poprawka wspólnych komponentów i jeden sweep zamykają problem dla całego archiwum, również dla przyszłych wpisów.
 
 ## Out of Scope
 
@@ -39,6 +43,8 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - Zewnętrzne badanie słów kluczowych i obietnice rankingów.
 - Nowy system wizualny niezależny od obecnego bloga.
 - Ręczne dopisywanie fraz do każdego artykułu, jeżeli frontmatter lub tagi już je definiują.
+- Ręczne generowanie osobnego pliku graficznego dla każdego istniejącego posta.
+- Wdrażanie na produkcję lub zewnętrzne odświeżanie cache kont społecznościowych bez osobnego polecenia.
 
 ## Constraints
 
@@ -53,6 +59,10 @@ Czytelnik wchodzi na jedną z czterech krótkich, konkretnych stron eksperckich 
 - Weryfikacja iteracji 3 obejmuje prerenderowany HTML oraz prawdziwy Chrome przez Interceptor.
 - Agentowy manifest ma być statyczny i nie może duplikować pełnej treści artykułów.
 - Daty modyfikacji mają pochodzić wyłącznie z jawnego frontmatteru; brak pola `updated` zachowuje datę publikacji.
+- Obrazy social pozostają generowane przez istniejący endpoint `@vercel/og` w formacie PNG 1200×630.
+- Canonical i `og:url` nie mogą przejąć parametru rewizji używanego wyłącznie przez linki share.
+- Rewizje obrazu i linku udostępniania muszą mieć pojedyncze źródło prawdy.
+- Sweep musi wykrywać regresję na każdym URL-u `/post/*`, nie na ręcznie wybranej próbce.
 
 ## Goal
 
@@ -63,6 +73,8 @@ Iteracja 2: „trzeba mi dodac słowa klluczowe do mojej storony michaldanieluk.
 Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzone zalecenia techniczne i treściowe: jeden kanoniczny host `www`, spójne reguły indeksacji tagów i sitemap, czyste podglądy Markdown, poprawne title/opisy/H1/linki, schema `WebSite` oraz płytszą paginację archiwum. Nie zmieniać publicznych ścieżek ani zależności i nie wdrażać na produkcję bez osobnej zgody.
 
 Iteracja 4: „wdróż rekomendacje”. Dodać kuratowany `/llms.txt`, rozdzielić w `robots.txt` boty wyszukujące i użytkownika od botów treningowych oraz przenieść jawne `updated` z frontmatteru do `BlogPosting.dateModified` i sitemapowego `lastmod`, zachowując datę publikacji jako fallback.
+
+Iteracja 5: „przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to narpaw to”. Przeskanować wszystkie opublikowane artykuły pod kątem podglądów społecznościowych, naprawić wspólny kontrakt obrazu i linków udostępniania oraz dodać trwały test całej klasy, bez ręcznej edycji poszczególnych postów.
 
 ## Criteria
 
@@ -179,6 +191,40 @@ Iteracja 4: „wdróż rekomendacje”. Dodać kuratowany `/llms.txt`, rozdzieli
 - [x] ISC-110: Brak `updated` ustawia `dateModified` na `datePublished`.
 - [x] ISC-111: Brak `updated` ustawia `lastmod` na datę publikacji.
 - [x] ISC-112: Anti: testy, typecheck i build produkcyjny kończą się kodem 0.
+- [x] ISC-113: Sitemapowy sweep enumeruje wszystkie opublikowane trasy `/post/*`.
+- [x] ISC-114: Każda enumerowana trasa artykułu zwraca HTTP 200.
+- [x] ISC-115: Każdy artykuł emituje dokładnie jeden `meta[property="og:image"]`.
+- [x] ISC-116: Każdy `og:image` jest absolutnym adresem HTTPS na kanonicznym hoście.
+- [x] ISC-117: Każdy artykuł otrzymuje obraz OG właściwy dla własnego tytułu.
+- [x] ISC-118: Każdy obraz OG zwraca HTTP 200.
+- [x] ISC-119: Każdy obraz OG zwraca `Content-Type: image/png`.
+- [x] ISC-120: Każdy obraz OG ma szerokość 1200 pikseli.
+- [x] ISC-121: Każdy obraz OG ma wysokość 630 pikseli.
+- [x] ISC-122: Każdy obraz OG ma niepusty payload PNG większy niż 10 KB.
+- [x] ISC-123: Każdy artykuł emituje `og:image:type` o wartości `image/png`.
+- [x] ISC-124: Każdy artykuł emituje `og:image:width` o wartości `1200`.
+- [x] ISC-125: Każdy artykuł emituje `og:image:height` o wartości `630`.
+- [x] ISC-126: Każdy artykuł emituje niepusty `og:image:alt` oparty na tytule.
+- [x] ISC-127: Każdy artykuł emituje `og:image:secure_url` zgodny z `og:image`.
+- [x] ISC-128: Każdy artykuł emituje `twitter:card` o wartości `summary_large_image`.
+- [x] ISC-129: Każdy `twitter:image` jest identyczny z `og:image` tego artykułu.
+- [x] ISC-130: Każdy artykuł emituje niepusty `twitter:image:alt` oparty na tytule.
+- [x] ISC-131: `BlogPosting.image` jest identyczny z `og:image` artykułu.
+- [x] ISC-132: Przycisk LinkedIn przekazuje pełny adres udostępnianego artykułu.
+- [x] ISC-133: Przycisk X przekazuje pełny adres udostępnianego artykułu.
+- [x] ISC-134: Linki LinkedIn i X używają jawnej rewizji omijającej historyczny cache podglądu.
+- [x] ISC-135: Przycisk „Kopiuj link” kopiuje wersjonowany adres udostępniania.
+- [x] ISC-136: Canonical artykułu pozostaje czystym adresem bez parametru rewizji udostępniania.
+- [x] ISC-137: `og:url` artykułu pozostaje czystym adresem bez parametru rewizji udostępniania.
+- [x] ISC-138: Rewizja linku udostępniania jest utrzymywana w jednej współdzielonej stałej.
+- [x] ISC-139: Rewizja obrazu OG jest utrzymywana w jednej współdzielonej stałej.
+- [x] ISC-140: Tytuły zawierające polskie znaki, myślnik i `$` generują poprawnie zakodowany adres obrazu.
+- [x] ISC-141: Artykuł otwarty z parametrem rewizji udostępniania renderuje tę samą treść i HTTP 200.
+- [x] ISC-142: Trwały sweep social-preview sprawdza wszystkie artykuły, a nie wybrany przykład.
+- [x] ISC-143: Testy jednostkowe social-preview kończą się kodem 0.
+- [x] ISC-144: `bun run check` kończy się bez błędów i ostrzeżeń.
+- [x] ISC-145: `bun run build` kończy się kodem 0.
+- [x] ISC-146: Anti: poprawka nie modyfikuje plików postów, zależności ani publicznych slugów.
 
 ## Test Strategy
 
@@ -215,6 +261,13 @@ Iteracja 4: „wdróż rekomendacje”. Dodać kuratowany `/llms.txt`, rozdzieli
 | ISC-101..106 | bash/http | jawne reguły botów AI | cztery allow, dwa disallow | `rg`, lokalny HTTP | derived: agentowe przeglądanie |
 | ISC-107..111 | test/bash | przepływ `updated` i fallback daty, także API | poprawne ISO w schema, sitemapie i JSON | `bun test`, prerender sweep | derived: aktualność |
 | ISC-112 | test/bash | testy, typy i build | wszystkie kody 0 | `bun test`, `bun run check`, `bun run build` | literal: rekomendacje |
+| ISC-113..117 | bash | komplet tras i ich podstawowe social meta | 100% artykułów | `bun run scripts/verify-seo.ts` | literal: przejrzyj bloga |
+| ISC-118..122 | http/bash | status, typ, wymiary i payload wszystkich obrazów | 200, PNG, 1200×630, >10 KB | `fetch` + parser IHDR w Bun | literal: obrazki |
+| ISC-123..131 | bash | pełny kontrakt Open Graph, Twitter i JSON-LD | zgodne wartości na 100% artykułów | `node-html-parser` w `verify-seo.ts` | literal: napraw |
+| ISC-132..137 | bash/screenshot | linki share, rewizja cache i niezmieniony canonical | pełne URL-e, czysty canonical | `verify-seo.ts`, Interceptor | derived: podgląd udostępnienia |
+| ISC-138..140 | test/bash | jedno źródło rewizji i bezpieczne kodowanie | jeden helper, poprawne URL-e | `bun test`, `rg` | derived: trwałość |
+| ISC-141..145 | http/test/bash | render z rewizją, sweep, testy, check i build | wszystkie kody 0 | Interceptor, Bun | literal: wszystkie wpisy |
+| ISC-146 | bash | brak zmian treści, zależności i slugów | zero diff w chronionych powierzchniach | `git diff -- posts package.json bun.lock` | derived: regresja |
 
 ## Features
 
@@ -239,6 +292,9 @@ Iteracja 4: „wdróż rekomendacje”. Dodać kuratowany `/llms.txt`, rozdzieli
 | AiCrawlerPolicy | ISC-101..106 | none | true | medium |
 | ContentFreshnessSignals | ISC-107..111 | ArticleMetadata | false | high |
 | AgentReadinessVerification | ISC-112 | AgentManifest, AiCrawlerPolicy, ContentFreshnessSignals | false | high |
+| SocialPreviewContract | ISC-115..131, ISC-138..140 | ArticleMetadata | false | high |
+| ShareCacheRevision | ISC-132..137, ISC-141 | SocialPreviewContract | false | high |
+| SocialPreviewClassSweep | ISC-113..122, ISC-142..146 | SocialPreviewContract, ShareCacheRevision | false | high |
 
 ## Decisions
 
@@ -264,6 +320,13 @@ Iteracja 4: „wdróż rekomendacje”. Dodać kuratowany `/llms.txt`, rozdzieli
 - 2026-07-22 11:23: Root-cause-at-ingestion: opcjonalne `metadata.updated` musi zostać znormalizowane w `src/lib/data/posts.js`, aby jeden model zasilał schema, sitemapę i API bez trzech rozbieżnych parserów.
 - 2026-07-22 11:30: Końcowy Advisor został pominięty po odrzuceniu przez kontrolę prywatności; wysłanie stanu repozytorium do zewnętrznej usługi nie było konieczne do lokalnej, deterministycznej weryfikacji.
 - 2026-07-22 11:30: Pełny `bun run lint` pozostaje baseline-fail: Prettier wskazuje 49 wcześniej nieformatowanych plików, a ESLint 9 nie znajduje `eslint.config.*`; zmienione JS/TS przechodzą celowany Prettier check.
+- 2026-08-06 21:30: refined: rozpoczęto iterację 5; cel projektu zmieniono na blog-wide audyt i naprawę obrazów udostępniania po zgłoszeniu pustego podglądu starszego artykułu.
+- 2026-08-06 21:30: Root-cause-at-ingestion: brak nie pochodzi z frontmatteru pojedynczego posta; wspólny kontrakt w `Seo.svelte`, generator URL obrazu i `ShareButtons.svelte` obsługują całą klasę, więc naprawa musi wylądować w tych współdzielonych punktach.
+- 2026-08-06 21:30: Historyczny cache platform społecznościowych omijamy wersjonowanym adresem używanym tylko do udostępniania; canonical i `og:url` pozostają stabilne i czyste.
+- 2026-08-06 21:30: Podłoga E3 została spełniona 34 nowymi ISC, ponieważ osobne probe'y obejmują komplet tras, HTML meta, binarny PNG, linki platform, cache, regresje i build.
+- 2026-08-06 21:48: Jedna stała `SOCIAL_PREVIEW_REVISION` wersjonuje obraz oraz link share; następna zmiana grafiki wymaga tylko podbicia tej wartości.
+- 2026-08-06 21:48: Pełny historyczny verifier zachowuje wcześniejszy guardrail H1; niezależny tryb `--social-preview-only` daje deterministyczny dowód tej iteracji bez ukrywania niepowiązanego długu.
+- 2026-08-06 21:48: Advisor został uruchomiony zgodnie z planem, lecz narzędzie zakończyło się kodem 1; deterministyczne testy, class-sweep oraz realny Chrome dostarczyły pełny dowód lokalny.
 
 ## Changelog
 
@@ -279,6 +342,10 @@ Iteracja 4: „wdróż rekomendacje”. Dodać kuratowany `/llms.txt`, rozdzieli
   refuted by: lokalny sweep zwrócił `dateModified: 2026-07-21T22:00:00.000Z` dla `updated: 2026-07-22`
   learned: data kalendarzowa bez czasu musi dostać jawne `T00:00:00.000Z`, inaczej strefa Europe/Warsaw przesuwa dzień w schema
   criterion now: ISC-108 i ISC-110 wymagają poprawnej daty UTC, a class-sweep obejmuje schema, sitemapę, RSS i API
+- 2026-08-06 | conjectured: brak grafiki wymaga poprawienia frontmatteru pojedynczych starych postów
+  refuted by: produkcyjny audyt znalazł działające PNG dla 45/45 wpisów, lecz każdy HTML miał niepełny kontrakt social meta, a 22 wpisy powstały przed wdrożeniem OG
+  learned: naprawa należy do współdzielonego renderera SEO i wersjonowanego linku share, nie do treści postów
+  criterion now: ISC-113..146 wymagają kompletnego kontraktu HTML/PNG/share oraz trwałego sweepu całej klasy
 
 ## Verification
 
@@ -316,3 +383,11 @@ Iteracja 4: „wdróż rekomendacje”. Dodać kuratowany `/llms.txt`, rozdzieli
 - ISC-107..111: unit test normalizatora dat 4/4 oraz sweep 117 stron potwierdziły `updated: 2026-07-22` w API, schema i sitemapie, a artykuł bez `updated` zachował datę publikacji.
 - ISC-112: `bun test tests/seo.test.js` — 4/4; `bun run check` — 0 błędów i 0 ostrzeżeń; finalny `bun run build` — kod 0; `verify-seo.ts` — `status: ok`.
 - Browser note: Interceptor nie połączył się z rozszerzeniem Chrome (`no extensions connected`); iteracja nie zmienia UI, a wszystkie aktywne kryteria są file/HTTP/schema i mają lokalny dowód. Nie składamy twierdzenia o świeżej weryfikacji wizualnej.
+- ISC-113..142: `bun scripts/verify-seo.ts --social-preview-only` — `socialPreviewSweep: ok`, 45/45 tras postów i 45/45 obrazów; każdy HTML ma dokładnie jeden zgodny zestaw OG/Twitter/JSON-LD/share, a każdy PNG ma HTTP 200, `image/png`, prawidłowy IHDR, 1200×630 i >10 KB.
+- ISC-132..141: Interceptor otworzył zgłoszony artykuł z `?v=2026-08-06`; realny DOM zachował czysty canonical i `og:url`, pełne tagi obrazu oraz wersjonowane linki LinkedIn/X/Copy. `window.__interceptor_errors` i log sieci były puste.
+- ISC-118..122, ISC-141: Interceptor otworzył lokalny endpoint OG i zapisał zrzut `interceptor-screenshot-1786045553634.png`; wizualnie potwierdzono pełną, czytelną kartę z polskimi znakami, myślnikiem i `$0`.
+- ISC-143: `bun test tests/social-preview.test.js tests/seo.test.js` — 8/8 testów, 21 asercji, kod 0.
+- ISC-144: `bun run check` — 0 błędów i 0 ostrzeżeń.
+- ISC-145: `bun run build` — kod 0; tylko wcześniejsze nieblokujące ostrzeżenia `verbatimModuleSyntax` i opcjonalnego `sharp`.
+- ISC-146: `git diff -- posts package.json bun.lock bun.lockb pnpm-lock.yaml package-lock.json` — pusty; nie zmieniono treści, zależności ani slugów.
+- Regression note: pełny `bun scripts/verify-seo.ts` najpierw potwierdza social sweep 45/45, następnie zgłasza wcześniejszy podwójny H1 w `/post/google-search-console-social-media_2026-07-31`; problem pozostaje poza zakresem tej iteracji i nie został ukryty ani osłabiony.

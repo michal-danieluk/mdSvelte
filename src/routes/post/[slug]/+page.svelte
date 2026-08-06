@@ -10,12 +10,13 @@
   import Newsletter from '$lib/components/Newsletter.svelte'
   import BuildletterCTA from '$lib/components/BuildletterCTA.svelte'
   import Seo from '$lib/components/Seo.svelte'
+  import { buildSocialPreviewImageUrl } from '$lib/data/socialPreview'
 
   /** @type {import('./$types').PageData} */
   export let data
 
   // generated open-graph image for sharing on social media.
-  const ogImage = `${website}/api/og?title=${encodeURIComponent(data.post.title)}`
+  const ogImage = buildSocialPreviewImageUrl(data.post.title)
 
   const url = `${website}/post/${data.post.slug}`
   const postDescription = data.post.description || data.post.preview.text
@@ -75,6 +76,7 @@
   description={postDescription}
   type="article"
   image={ogImage}
+  imageAlt={`${data.post.title} — grafika wpisu`}
   keywords={postKeywords}
 />
 
