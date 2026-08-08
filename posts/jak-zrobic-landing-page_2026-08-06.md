@@ -4,6 +4,7 @@ seoTitle: 'Jak zrobić landing page? Szablon sekcja po sekcji'
 date: '2026-08-06'
 tags: ['Landing page', 'Google Ads', 'Marketing', 'Leady', 'Copywriting']
 description: 'Jak zrobić landing page dla firmy usługowej? Gotowy szablon 6 sekcji, minimum treści w każdej i błędy, które blokują zapytania od klientów.'
+preview: 'Landing page nie potrzebuje czternastu sekcji, tylko odpowiedzi na sześć pytań klienta. Sprawdź gotowy szablon sekcja po sekcji, zanim znowu zmienisz kolor przycisku.'
 keywords: 'jak zrobić landing page, co powinien zawierać landing page, elementy landing page, landing page firmy usługowej, struktura landing page'
 image_prompt: 'Cyberpunk flat illustration, hooded figure arranging modular website sections into one clear conversion path leading to a contact form. Neon cyan (#00e5ff) highlights the headline and call-to-action blocks, amber (#ff9500) marks trust elements, purple (#b347ff) outlines the remaining sections. Background: deep dark purple-black atmosphere with subtle neon light reflections. No text on the image. Flat vector style, clean lines, minimal detail, moody cyberpunk aesthetic.'
 featured: false
