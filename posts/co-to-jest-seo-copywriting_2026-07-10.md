@@ -1,10 +1,11 @@
 ---
-title: 'Co to jest SEO copywriting? Prosta definicja i przykład'
+title: 'SEO copywriting: co to jest i jak działa'
+seoTitle: 'SEO copywriting | Prosta definicja i przykład | Michał Danieluk'
 date: '2026-07-10'
-updated: '2026-07-28'
+updated: '2026-08-09'
 tags: ['SEO Copywriting', 'Content Marketing', 'SEO', 'Marketing']
-description: 'SEO copywriting w jednym zdaniu, plus trzy konkretne przykłady złego i dobrego tekstu na różne typy fraz. Bez teorii, którą i tak zaraz zapomnisz.'
-keywords: 'seo copywriting co to, co to jest seo copywriting, definicja seo copywriting, na czym polega copywriting seo'
+description: 'SEO copywriting bez branżowej waty: prosta definicja, mechanika dobrego tekstu i przykład pokazujący, jak połączyć intencję użytkownika z widocznością w Google.'
+keywords: 'seo copywriting, co to jest seo copywriting, definicja seo copywriting, na czym polega copywriting seo'
 image_prompt: 'A cyberpunk pen glowing with neon ink writing directly onto a floating holographic search results page, letters transforming into ranking positions as they are written, purple and blue neon light, dark study, cinematic composition'
 featured: false
 ---
@@ -20,51 +21,23 @@ Dwie skrajności, których SEO copywriting unika:
 
 SEO copywriting siedzi pomiędzy: pisze się dla człowieka, z pełną świadomością, jakiej odpowiedzi ten człowiek szuka i jakimi słowami jej szuka. To nie jest kompromis między "dobrym tekstem" a "tekstem pod SEO", to jeden i ten sam tekst, tylko pisany świadomie.
 
-## Trzy frazy, trzy typy intencji, ten sam mechanizm
+## SEO copywriting na jednym przykładzie
 
-Jeden przykład potrafi wyglądać jak szczęśliwy traf. Dlatego poniżej trzy różne frazy, trzy różne intencje wyszukiwania, żeby było widać, że to nie sztuczka na jedno zapytanie, tylko powtarzalny wzorzec.
-
-### Fraza lokalna: "pozycjonowanie lokalne"
+Weź frazę „audyt SEO cena”. Wpisuje ją ktoś, kto nie chce kolejnej definicji audytu. Chce liczby i informacji, co za nią dostanie.
 
 **Źle:**
-> "Pozycjonowanie lokalne to ważna usługa dla firm działających lokalnie. Dzięki pozycjonowaniu lokalnemu Twoja firma zyska widoczność w wynikach lokalnych."
 
-Zero konkretu, fraza powtórzona bez potrzeby, czytelnik nic się nie dowiedział.
-
-**Dobrze:**
-> "Pozycjonowanie lokalne opiera się głównie o Google Business Profile, darmowe narzędzie, które przy dobrej optymalizacji potrafi dać więcej niż miesiąc pracy nad ogólną stroną. Sprawdza się, gdy Twoi klienci szukają Cię z dopiskiem miasta lub dzielnicy."
-
-Ta sama intencja, ale odpowiedź konkretna, weryfikowalna, warta przeczytania do końca, [rozwijam to szerzej w tekście o cenach pozycjonowania](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17).
-
-### Fraza komercyjna: "audyt SEO cena"
-
-To fraza, którą wpisuje ktoś gotowy zapłacić: inna intencja niż wyżej, więc odpowiedź musi być inna, nie ta sama forma z podmienionym tematem.
-
-**Źle:**
 > "Audyt SEO to kompleksowa usługa, która pozwala zdiagnozować kondycję Twojej strony internetowej. Cena audytu SEO zależy od wielu czynników i ustalana jest indywidualnie."
 
 "Zależy od wielu czynników" bez ani jednej liczby to zdanie, które można wkleić pod dowolną usługę na świecie, i właśnie dlatego nic nie znaczy.
 
 **Dobrze:**
+
 > "Jednorazowy audyt SEO kosztuje zwykle 500–2500 zł, w zależności od wielkości strony i głębokości analizy technicznej. Podstawowy audyt kilkunastu podstron zrobisz sam w jeden wieczór, za darmo: [pokazuję jak, krok po kroku](/post/jak-zrobic-audyt-seo_2026-07-19)."
 
 Widełki, konkretne kryterium różnicujące cenę, i od razu droga dalej dla czytelnika, który chce więcej: to trzy rzeczy, których pierwsza wersja nie dała w ogóle.
 
-### Fraza informacyjna: "jak działa pozycjonowanie stron"
-
-Ktoś, kto to wpisuje, nie szuka jeszcze usługi: szuka zrozumienia. Tekst pisany pod frazę transakcyjną w tym miejscu odbije się jak piłka od ściany.
-
-**Źle:**
-> "Pozycjonowanie stron to proces, który pozwala poprawić widoczność strony w wyszukiwarce. Składa się z wielu elementów i wymaga czasu oraz doświadczenia."
-
-Odpowiedź na pytanie "jak to działa" bez ani jednego słowa o tym, jak to działa.
-
-**Dobrze:**
-> "Google najpierw crawluje Twoją stronę (odwiedza ją botem), potem indeksuje (zapisuje w swojej bazie), a na końcu rankinguje na tle setek innych stron względem konkretnego zapytania, na podstawie ponad 200 czynników, z których treść i linki wciąż ważą najwięcej. Pierwsze ruchy w pozycjach widać zwykle po 2–3 miesiącach, bo tyle czasu potrzebuje algorytm, żeby w ogóle zauważyć zmiany."
-
-Konkretne kroki, konkretna liczba tygodni, żadnej wody, [pełny rozbiór mechaniki mam osobno](/post/jak-dziala-pozycjonowanie-stron_2026-07-20).
-
-Trzy różne frazy, trzy różne odpowiedzi w "dobrej" wersji, bo dobra odpowiedź zawsze wynika z tego, czego konkretnie ktoś szuka, nie z szablonu, który podmienia się pod dowolny temat.
+Jeśli potrzebujesz większej próbki, [zebrałem 10 przykładów tekstu SEO przed i po](/post/seo-copywriting-przyklady_2026-07-28). Tam analizuję formaty od title tagu i H1 po opis kategorii, FAQ oraz CTA. Ten tekst zostaje przy definicji i mechanice.
 
 ## Mechanika dobrego tekstu SEO copywritingowego
 
@@ -120,4 +93,4 @@ Powiązane teksty: [SEO copywriting: przykłady na 10 typów treści](/post/seo-
 
 ---
 
-*Masz tekst i nie wiesz, czy to dobry SEO copywriting? Napisz do mnie na [LinkedIn](https://www.linkedin.com/in/michal-danieluk/), zerknę.*
+_Masz tekst i nie wiesz, czy to dobry SEO copywriting? Napisz do mnie na [LinkedIn](https://www.linkedin.com/in/michal-danieluk/), zerknę._

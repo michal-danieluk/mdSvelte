@@ -78,6 +78,7 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
     moreArticleSlugs: [
       'content-marketing-a-seo-roznice_2026-07-09',
       'co-to-jest-seo-copywriting_2026-07-10',
+      'seo-copywriting-przyklady_2026-07-28',
       'czy-seo-sie-oplaca-malej-firmie_2026-07-12',
       'seo-samemu-czy-zatrudnic-kogos_2026-07-14',
       'jak-sprawdzic-agencje-seo_2026-07-15',
@@ -227,6 +228,8 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
       }
     ],
     moreArticleSlugs: [
+      'co-to-jest-seo-copywriting_2026-07-10',
+      'seo-copywriting-przyklady_2026-07-28',
       'czerwone-flagi-agencja-marketingowa_2026-07-15',
       '5-kontrintuicyjnych-lekcji-marktingowych',
       'narzedzia-ai-ktorych-naprawde-uzywam_2025-11-15'

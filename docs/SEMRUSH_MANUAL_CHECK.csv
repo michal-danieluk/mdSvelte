@@ -1,0 +1,30 @@
+priority,cluster,keyword,proposed_target,current_signal,volume_pl,kd,intent,top10_serp_type,decision,notes
+P1,SEO hub,SEO dla małej firmy,/seo,"GSC: 1 impression; URL indexed",,17,Informational,,keep_hub,"Semrush did not report volume; keep as strategic hub, not a traffic forecast"
+P1,Marketing hub,marketing dla małej firmy,/marketing,"GSC: 9 impressions; avg pos 73.1",20,6,Informational,,keep_hub_supporting,"Low-volume phrase; hub value comes from combining supporting topics"
+P1,Content marketing,content marketing,/post/content-marketing-i-seo-copywriting_2026-07-18,"Existing pillar article",12100,27,Informational,,keep,"Largest validated informational opportunity; AI Overview and PAA present"
+P1,SEO copywriting,SEO copywriting,/post/co-to-jest-seo-copywriting_2026-07-10,"GSC: 33 impressions; avg pos 35.2",1300,14,Informational,,keep,"Strongest balance of demand and difficulty among validated existing articles"
+P1,SEO copywriting,co to jest SEO copywriting,/post/co-to-jest-seo-copywriting_2026-07-10,"GSC: 10 impressions; avg pos 34.6",,,,,,
+P1,SEO copywriting,SEO copywriting przykłady,/post/seo-copywriting-przyklady_2026-07-28,"GSC: examples URL avg pos 14.8; definition URL avg pos 25.6",20,17,Commercial,,keep_supporting,"Low reported volume but existing GSC traction; keep separate from definition"
+P1,SEO copywriting,tekst SEO przykład,/post/seo-copywriting-przyklady_2026-07-28,"GSC: 6 impressions; avg pos 35.8",,,,,,
+P1,SEO audit,audyt SEO,/post/jak-zrobic-audyt-seo_2026-07-19,"URL indexed; page has 56 impressions",1900,44,Informational,,keep,"Meaningful demand but higher difficulty; strengthen cluster and links before rewriting"
+P1,SEO audit,jak zrobić audyt SEO,/post/jak-zrobic-audyt-seo_2026-07-19,"GSC variant: 17 impressions; avg pos 53.6",,,,,,
+P1,SEO cost,ile kosztuje pozycjonowanie,/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17,"URL indexed; commercial fit",,,,,,
+P1,SEO cost,pozycjonowanie cena,/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17,"Existing primary in frontmatter",1000,35,Informational,,keep,"Validated demand and strong fit with existing cost article"
+P1,Ads audit,"jak sprawdzić, czy agencja dobrze prowadzi Google Ads i Meta Ads?",/post/jak-sprawdzic-kampanie-google-ads_2026-04-01,"GSC: Google URL pos 4.2 and Meta URL pos 4.7; 0 clicks",,,,,,
+P1,Meta Ads,analiza kampanii Meta Ads,/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17,"GSC: 10 impressions in last 28d; avg pos 54.5",,,,,,
+P1,Meta Ads,jak sprawdzić kampanię Meta Ads,/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17,"Existing dedicated article",,,,,,
+P2,SEO basics,pozycjonowanie stron,/post/jak-dziala-pozycjonowanie-stron_2026-07-20,"Check if SERP is service-led",5400,50,Transactional,,change_target,"Broad phrase is transactional and relatively difficult; educational article should lead with jak działa pozycjonowanie stron"
+P2,SEO basics,jak działa pozycjonowanie stron,/post/jak-dziala-pozycjonowanie-stron_2026-07-20,"Existing exact article intent",,,,,,
+P2,SEO decision,czy SEO się opłaca,/post/czy-seo-sie-oplaca-malej-firmie_2026-07-12,"Existing dedicated article",,,,,,
+P2,SEO decision,SEO samemu czy agencja,/post/seo-samemu-czy-zatrudnic-kogos_2026-07-14,"Existing dedicated article",,,,,,
+P2,SEO agency,jak sprawdzić agencję SEO,/post/jak-sprawdzic-agencje-seo_2026-07-15,"Existing dedicated article",,,,,,
+P2,Google Ads hub,Google Ads dla małej firmy,/google-ads,"Hub indexed; limited impressions",,,,,,
+P2,Google Ads setup,jak ustawić kampanię Google Ads,/post/jak-ustawic-kampanie-google-ads_2026-04-14,"Existing dedicated article",,,,,,
+P2,Google Ads quality,wynik jakości Google Ads,/post/wynik-jakosci-google-ads_2026-04-10,"Duplicate claim exists in audit article",,,,,,
+P2,Meta Ads hub,Meta Ads dla małej firmy,/meta-ads,"Hub indexed",,,,,,
+P2,Marketing cost,ile kosztuje marketing małej firmy,/post/ile-kosztuje-marketing-malej-firmy_2026-07-15,"GSC: page has 1 click and avg pos 4.7 on low sample",,,,,,
+P3,Local SEO,pozycjonowanie wizytówki Google,NEW,"Content gap; compare SERP with local SEO",1300,23,Informational,,new_page,"Best validated content gap; strong demand and achievable difficulty"
+P3,Local SEO,pozycjonowanie lokalne,NEW_OR_SHARED,"Decide after SERP overlap check",880,23,Informational,,compare_serp,"Good opportunity; compare actual TOP 10 overlap with Google Business Profile query before deciding one or two pages"
+P3,Google Ads cost,ile kosztuje Google Ads,NEW,"Commercial content gap",,,,,,
+P3,Keyword research,wyszukiwarka słów kluczowych,NEW,"Only a section in SEO audit today",,,,,,
+P3,Keyword research,jak znaleźć słowa kluczowe,NEW_OR_SHARED,"Compare with keyword tool intent",,,,,,

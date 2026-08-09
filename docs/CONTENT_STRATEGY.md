@@ -66,6 +66,7 @@ Status po pierwszym przebiegu (Filary D, B, C napisane jako wpisy blogowe — pa
 5. Frontmatter jak w istniejących postach: `title, date, tags, description, keywords, image_prompt, featured`.
 6. **Data zawsze z przeszłości albo dzisiejsza, nigdy z przyszłości** — Vercel prerenderuje w build-time i nie odświeży się sam, gdy "nadejdzie" data. Sprawdź kolizję: `grep -rl "date: 'YYYY-MM-DD'" posts/*.md` przed zapisem.
 7. **Sprawdź nakładanie z buildletter.com/blog** (`~/Desktop/buildletter/src/pages/blog/`) przed pisaniem — ten sam autor prowadzi tam osobny blog o SEO/marketingu małych firm, z kątem sprzedażowym (CTA do usług). Jeśli temat się pokrywa: różnicuj kąt (michaldanieluk.pl = edukacyjny/personal brand, buildletter.com = sprzedażowy/actionable) i dodaj link w obie strony zamiast pisać duplikat. **Buildletter.com to osobne repo (Astro, nie SvelteKit) — commituj tam tylko pliki, które sam edytujesz, working tree bywa "brudny" od innej, równoległej pracy Michała.**
+8. **Compact Keywords jest obowiązkowe dla tytułów i nowych URL-i.** Stosuj stałe zasady z `docs/COMPACT_KEYWORDS_RULES.md`: jedna fraza i intencja na owner URL, fraza na początku SEO title/H1/description/pierwszego zdania, title w formacie `FRAZA | KORZYŚĆ | MARKA`, krótki long-tail slug bez daty. Nie zmieniaj istniejącego, zaindeksowanego slugu bez uzasadnienia, przekierowania 301 i kontroli w GSC.
 
 ## 5. Ekosystem właściwości Michała — mapa i polityka cross-postingu
 
