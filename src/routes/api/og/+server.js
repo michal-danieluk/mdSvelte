@@ -4,7 +4,7 @@ import { firstName, lastName } from '$lib/info'
 /** @type {import('./$types').RequestHandler} */
 export async function GET({ url }) {
   const title = url.searchParams.get('title') || 'Michał Danieluk'
-  
+
   // Przepisane na czyste obiekty JS, aby uniknąć błędów kompilacji JSX w pliku .js
   return new ImageResponse(
     {
@@ -18,9 +18,10 @@ export async function GET({ url }) {
           alignItems: 'flex-start',
           justifyContent: 'center',
           backgroundColor: '#09090b', // Zinc-950
-          backgroundImage: 'radial-gradient(circle at 25px 25px, #27272a 2%, transparent 0%), radial-gradient(circle at 75px 75px, #27272a 2%, transparent 0%)',
+          backgroundImage:
+            'radial-gradient(circle at 25px 25px, #27272a 2%, transparent 0%), radial-gradient(circle at 75px 75px, #27272a 2%, transparent 0%)',
           backgroundSize: '100px 100px',
-          padding: '80px',
+          padding: '80px'
         },
         children: [
           // Logo/Header
@@ -30,7 +31,7 @@ export async function GET({ url }) {
               style: {
                 display: 'flex',
                 alignItems: 'center',
-                marginBottom: '40px',
+                marginBottom: '40px'
               },
               children: [
                 {
@@ -40,7 +41,7 @@ export async function GET({ url }) {
                       height: '40px',
                       width: '4px',
                       backgroundColor: '#4f46e5', // Indigo-600
-                      marginRight: '20px',
+                      marginRight: '20px'
                     }
                   }
                 },
@@ -52,7 +53,7 @@ export async function GET({ url }) {
                       fontWeight: '900',
                       letterSpacing: '-0.05em',
                       color: 'white',
-                      display: 'flex',
+                      display: 'flex'
                     },
                     children: [
                       firstName,
@@ -82,7 +83,7 @@ export async function GET({ url }) {
                 color: 'white',
                 maxWidth: '900px',
                 marginBottom: '40px',
-                display: 'flex',
+                display: 'flex'
               },
               children: title
             }
@@ -94,7 +95,7 @@ export async function GET({ url }) {
               style: {
                 display: 'flex',
                 alignItems: 'center',
-                marginTop: 'auto',
+                marginTop: 'auto'
               },
               children: [
                 {
@@ -105,7 +106,7 @@ export async function GET({ url }) {
                       fontWeight: '700',
                       color: '#a1a1aa', // Zinc-400
                       letterSpacing: '0.1em',
-                      textTransform: 'uppercase',
+                      textTransform: 'uppercase'
                     },
                     children: 'Marketing • Automation • AI'
                   }
@@ -118,7 +119,7 @@ export async function GET({ url }) {
     },
     {
       width: 1200,
-      height: 630,
+      height: 630
     }
   )
 }

@@ -42,7 +42,9 @@
   body {
     background-color: var(--color-bg);
     color: var(--color-fg);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition:
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -89,10 +91,17 @@
 
 /* Global utility for consistent typography */
 @layer base {
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-bold tracking-tight text-zinc-900 dark:text-zinc-50;
   }
-  
-  h1 { @apply text-3xl sm:text-4xl lg:text-5xl; }
-  h2 { @apply text-2xl sm:text-3xl; }
+
+  h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+  h2 {
+    @apply text-2xl sm:text-3xl;
+  }
 }

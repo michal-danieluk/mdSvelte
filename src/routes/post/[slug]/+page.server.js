@@ -12,14 +12,14 @@ export async function load({ params }) {
   }
 
   // Robust tag matching (case-insensitive)
-  const currentTags = (post.tags || []).map(t => String(t).toLowerCase())
-  
+  const currentTags = (post.tags || []).map((t) => String(t).toLowerCase())
+
   let relatedPosts = []
   try {
     relatedPosts = posts
       .filter((p) => p.slug !== slug)
       .map((p) => {
-        const pTags = (p.tags || []).map(t => String(t).toLowerCase())
+        const pTags = (p.tags || []).map((t) => String(t).toLowerCase())
         const commonTags = pTags.filter((tag) => currentTags.includes(tag))
         return { ...p, score: commonTags.length }
       })
@@ -36,13 +36,11 @@ export async function load({ params }) {
 
   // Fallback: If no related posts by tags, show the latest 3 posts
   if (relatedPosts.length === 0) {
-    relatedPosts = posts
-      .filter((p) => p.slug !== slug)
-      .slice(0, 3)
+    relatedPosts = posts.filter((p) => p.slug !== slug).slice(0, 3)
   }
 
   // Clean up relatedPosts to avoid circular references or unnecessary large data
-  const cleanedRelatedPosts = relatedPosts.map(p => ({
+  const cleanedRelatedPosts = relatedPosts.map((p) => ({
     title: p.title,
     slug: p.slug,
     date: p.date,

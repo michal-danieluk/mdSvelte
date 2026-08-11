@@ -1,23 +1,38 @@
 <script>
   import { linkedin, instagram, twitter, github } from '$lib/info'
-
-  const target= '_blank\" rel=\"noopener noreferrer'
 </script>
 
 {#if twitter}
-  <a href={`https://twitter.com/${twitter}`} class="group" {target} aria-label="Follow on Twitter">
-       <svg widith="24" height="20" 
+  <a
+    href={`https://twitter.com/${twitter}`}
+    class="group"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow on Twitter"
+  >
+    <svg
+      widith="24"
+      height="20"
       class="w-6 h-4 transition fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
       aria-hidden="true"
-
-            viewBox="0 0 1200 1227" xmlns="http://www.w3.org/2000/svg">
-  <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
-</svg> 
+      viewBox="0 0 1200 1227"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
+      />
+    </svg>
   </a>
 {/if}
 
 {#if instagram}
-  <a href={`https://instagram.com/${instagram}`} class="group" {target} aria-label="Follow on Instagram">
+  <a
+    href={`https://instagram.com/${instagram}`}
+    class="group"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow on Instagram"
+  >
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -34,7 +49,13 @@
 {/if}
 
 {#if github}
-  <a href={`https://github.com/${github}`} class="group" {target} aria-label="Follow on GitHub">
+  <a
+    href={`https://github.com/${github}`}
+    class="group"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow on GitHub"
+  >
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -50,7 +71,13 @@
 {/if}
 
 {#if linkedin}
-  <a href={`https://linkedin.com/in/${linkedin}`} class="group" {target} aria-label="Follow on LinkedIn">
+  <a
+    href={`https://linkedin.com/in/${linkedin}`}
+    class="group"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow on LinkedIn"
+  >
     <svg
       viewBox="0 0 24 24"
       class="w-6 h-6 transition fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"

@@ -4,7 +4,7 @@ import slugPlugin from 'rehype-slug'
 import relativeImages from 'mdsvex-relative-images'
 import remarkHeadings from '@vcarl/remark-headings'
 
-// Polish character slugification function  
+// Polish character slugification function
 function slugifyPolish(text) {
   if (typeof text !== 'string') return ''
   return text
@@ -20,7 +20,7 @@ function slugifyPolish(text) {
     .replace(/ź/g, 'z')
     .replace(/ż/g, 'z')
     .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9\-]/g, '')
+    .replace(/[^a-z0-9-]/g, '')
     .replace(/^-+|-+$/g, '')
 }
 
@@ -31,19 +31,19 @@ function fixPolishSlugs() {
   return function transformer(tree) {
     visit(tree, 'element', (node) => {
       if (
-        (node.tagName === 'h1' || 
-         node.tagName === 'h2' || 
-         node.tagName === 'h3' || 
-         node.tagName === 'h4' || 
-         node.tagName === 'h5' || 
-         node.tagName === 'h6') &&
+        (node.tagName === 'h1' ||
+          node.tagName === 'h2' ||
+          node.tagName === 'h3' ||
+          node.tagName === 'h4' ||
+          node.tagName === 'h5' ||
+          node.tagName === 'h6') &&
         node.properties &&
         node.properties.id
       ) {
         // Apply Polish character conversion to the ID
         node.properties.id = slugifyPolish(node.properties.id)
       }
-      
+
       // Also fix anchor links that point to headings
       if (node.tagName === 'a' && node.properties && node.properties.href) {
         const href = node.properties.href

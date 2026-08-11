@@ -8,7 +8,8 @@
   import { page } from '$app/stores'
   import { firstName, lastName, website } from '$lib/info'
   import Search from '$lib/components/Search.svelte'
-  import { fly, slide, fade } from 'svelte/transition'
+  import { buildJsonLdScript } from '$lib/data/jsonLd.js'
+  import { fly, slide } from 'svelte/transition'
   import { dev } from '$app/environment'
   import { inject } from '@vercel/analytics'
 
@@ -61,10 +62,11 @@
       'https://www.instagram.com/michal_danieluk'
     ]
   })
+  const personJsonLdScript = buildJsonLdScript(personJsonLd)
 </script>
 
 <svelte:head>
-  {@html `<script type="application/ld+json">${personJsonLd}</script>`}
+  {@html personJsonLdScript}
 </svelte:head>
 
 <div class="flex flex-col min-h-screen bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300">

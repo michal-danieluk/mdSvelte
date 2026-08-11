@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit'
 
 export async function load({ params }) {
   const tag = getTagBySlug(params.slug)
-  
+
   if (!tag) {
     throw error(404, `Tag "${params.slug}" not found`)
   }

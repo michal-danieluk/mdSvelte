@@ -2,6 +2,7 @@
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
   import BuildletterCTA from '$lib/components/BuildletterCTA.svelte'
   import Seo from '$lib/components/Seo.svelte'
+  import { buildJsonLdScript } from '$lib/data/jsonLd.js'
   import { getRelatedPillars } from '$lib/data/pillars'
   import { website } from '$lib/info.js'
 
@@ -41,6 +42,7 @@
       }))
     })
   )
+  const collectionJsonLdScript = $derived(buildJsonLdScript(collectionJsonLd))
 
   const focusClasses =
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-4 focus-visible:ring-offset-zinc-50 dark:focus-visible:ring-indigo-400 dark:focus-visible:ring-offset-zinc-950'
@@ -49,7 +51,7 @@
 <Seo title={pillar.seoTitle} description={pillar.metaDescription} keywords={pillar.keywords} />
 
 <svelte:head>
-  {@html `<script type="application/ld+json">${collectionJsonLd}</script>`}
+  {@html collectionJsonLdScript}
 </svelte:head>
 
 <article class="mx-auto w-full max-w-6xl px-2 pb-12 pt-10 sm:px-6 sm:pt-16 lg:pt-20">

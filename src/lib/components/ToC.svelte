@@ -24,9 +24,11 @@
     headings = post.headings
 
     if (browser) {
-      elements = headings.map((heading) => {
-        return document.getElementById(heading.id)
-      }).filter(Boolean)
+      elements = headings
+        .map((heading) => {
+          return document.getElementById(heading.id)
+        })
+        .filter(Boolean)
     }
   }
 
@@ -41,7 +43,7 @@
       const scrollY = window.scrollY
       const windowHeight = window.innerHeight
       const offset = 120
-      
+
       let currentActiveHeading = headings[0]
 
       for (let i = elements.length - 1; i >= 0; i--) {
@@ -54,7 +56,7 @@
 
       const pageHeight = document.documentElement.scrollHeight
       const scrollProgress = (scrollY + windowHeight) / pageHeight
-      
+
       if (scrollProgress > 0.98) {
         currentActiveHeading = headings[headings.length - 1]
       }
@@ -64,7 +66,7 @@
   }
 </script>
 
-<svelte:window on:scroll={setActiveHeading}></svelte:window>
+<svelte:window on:scroll={setActiveHeading} />
 
 <nav class="flex flex-col gap-4">
   <ul class="flex flex-col gap-3">
@@ -75,10 +77,12 @@
       >
         <!-- Active indicator -->
         {#if activeHeading === heading}
-          <div class="absolute left-0 top-1 bottom-1 w-0.5 bg-indigo-500 rounded-full animate-in fade-in duration-300"></div>
+          <div
+            class="absolute left-0 top-1 bottom-1 w-0.5 bg-indigo-500 rounded-full animate-in fade-in duration-300"
+          ></div>
         {/if}
 
-        <a 
+        <a
           href={`#${heading.id}`}
           class="block text-xs font-bold leading-relaxed tracking-tight transition-colors"
           class:text-indigo-600={activeHeading === heading}

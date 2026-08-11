@@ -10,6 +10,7 @@
   import Newsletter from '$lib/components/Newsletter.svelte'
   import BuildletterCTA from '$lib/components/BuildletterCTA.svelte'
   import Seo from '$lib/components/Seo.svelte'
+  import { buildJsonLdScript } from '$lib/data/jsonLd.js'
   import { buildSocialPreviewImageUrl } from '$lib/data/socialPreview'
 
   /** @type {import('./$types').PageData} */
@@ -56,6 +57,7 @@
       '@id': url
     }
   })
+  const blogPostingJsonLdScript = buildJsonLdScript(blogPostingJsonLd)
 
   let canGoBack = false
   afterNavigate(({ from }) => {
@@ -82,7 +84,7 @@
 
 <svelte:head>
   <meta name="author" content={name} />
-  {@html `<script type="application/ld+json">${blogPostingJsonLd}</script>`}
+  {@html blogPostingJsonLdScript}
 </svelte:head>
 
 <div class="max-w-6xl mx-auto px-6 pt-12 lg:pt-20">
@@ -111,34 +113,44 @@
         <header class="mb-12">
           <div class="flex items-center gap-3 mb-6">
             <div class="h-px w-8 bg-indigo-500"></div>
-            <PostDate 
-              class="text-xs font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400" 
-              post={data.post} 
-              collapsed 
+            <PostDate
+              class="text-xs font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400"
+              post={data.post}
+              collapsed
             />
           </div>
 
-          <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-zinc-900 dark:text-zinc-50 leading-[1.1]">
+          <h1
+            class="text-3xl sm:text-5xl font-black tracking-tight text-zinc-900 dark:text-zinc-50 leading-[1.1]"
+          >
             {data.post.title}
           </h1>
         </header>
 
         <!-- Post Content: Explicit max-w to prevent layout breaks -->
-        <div class="prose prose-zinc dark:prose-invert 
+        <div
+          class="prose prose-zinc dark:prose-invert
           max-w-none break-words
           prose-p:text-base sm:prose-p:text-lg prose-p:leading-relaxed
           prose-headings:font-black prose-headings:tracking-tight
           prose-a:text-indigo-600 dark:prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:underline
           prose-pre:rounded-2xl prose-pre:border prose-pre:border-zinc-200 dark:prose-pre:border-zinc-800
-          prose-img:rounded-2xl prose-img:shadow-xl">
+          prose-img:rounded-2xl prose-img:shadow-xl"
+        >
           <svelte:component this={data.component} />
         </div>
 
         <!-- Social Share & Tags -->
-        <div class="mt-16 pt-8 border-t border-zinc-100 dark:border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-8">
+        <div
+          class="mt-16 pt-8 border-t border-zinc-100 dark:border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-8"
+        >
           {#if data.post.tags && data.post.tags.length > 0}
             <div>
-              <h3 class="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-3">Tematyka</h3>
+              <h3
+                class="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-3"
+              >
+                Tematyka
+              </h3>
               <Tags tags={data.post.tags} />
             </div>
           {/if}
@@ -153,18 +165,26 @@
         <!-- Related Posts Section -->
         {#if data.relatedPosts && data.relatedPosts.length > 0}
           <section class="mt-24 pt-16 border-t border-zinc-100 dark:border-zinc-800">
-            <h3 class="text-xl font-black text-zinc-900 dark:text-zinc-50 mb-10 flex items-center gap-3">
+            <h3
+              class="text-xl font-black text-zinc-900 dark:text-zinc-50 mb-10 flex items-center gap-3"
+            >
               <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
               Może Cię zainteresować
             </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {#each data.relatedPosts as related}
-                <a 
-                  href="/post/{related.slug}" 
+                <a
+                  href="/post/{related.slug}"
                   class="group p-6 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-zinc-100 dark:border-zinc-800 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all"
                 >
-                  <PostDate class="text-[10px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-3" post={related} collapsed />
-                  <h4 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
+                  <PostDate
+                    class="text-[10px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-3"
+                    post={related}
+                    collapsed
+                  />
+                  <h4
+                    class="text-lg font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2"
+                  >
                     {related.title}
                   </h4>
                 </a>
@@ -180,10 +200,15 @@
       <footer class="mt-24 py-12 border-t border-zinc-100 dark:border-zinc-800">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
           <div class="flex flex-col items-center sm:items-start">
-            <a href="/" class="text-lg font-black tracking-tighter text-zinc-900 dark:text-zinc-50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+            <a
+              href="/"
+              class="text-lg font-black tracking-tighter text-zinc-900 dark:text-zinc-50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
               {name}<span class="text-indigo-600 dark:text-indigo-400">.</span>
             </a>
-            <p class="text-sm text-zinc-500 dark:text-zinc-500 mt-1">Dzięki za lekturę! Podziel się tekstem dalej.</p>
+            <p class="text-sm text-zinc-500 dark:text-zinc-500 mt-1">
+              Dzięki za lekturę! Podziel się tekstem dalej.
+            </p>
           </div>
           <div class="flex items-center gap-4">
             <SocialLinks />
@@ -197,12 +222,15 @@
       <aside class="sticky top-24">
         {#if data.post.headings && data.post.headings.length > 0}
           <div class="pl-8 border-l border-zinc-100 dark:border-zinc-800">
-            <h3 class="text-xs font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-6">Spis treści</h3>
+            <h3
+              class="text-xs font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-6"
+            >
+              Spis treści
+            </h3>
             <ToC post={data.post} />
           </div>
         {/if}
       </aside>
     </div>
-
   </div>
 </div>

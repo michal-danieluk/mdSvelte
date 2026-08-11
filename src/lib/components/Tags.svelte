@@ -2,12 +2,15 @@
   export let tags = []
   export let showLabel = true
   export let size = 'sm' // sm, base
-  
+
   function tagToSlug(tag) {
-    return tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+    return tag
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9-]/g, '')
   }
 
-  $: sizeClasses = {
+  const sizeClasses = {
     sm: 'px-2 py-1 text-xs',
     base: 'px-3 py-2 text-sm'
   }
@@ -21,7 +24,9 @@
     {#each tags as tag}
       <a
         href="/tag/{tagToSlug(tag)}"
-        class="inline-flex items-center {sizeClasses[size]} font-medium text-zinc-600 bg-zinc-100 rounded-full hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition-colors"
+        class="inline-flex items-center {sizeClasses[
+          size
+        ]} font-medium text-zinc-600 bg-zinc-100 rounded-full hover:bg-zinc-200 dark:text-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition-colors"
       >
         #{tag}
       </a>

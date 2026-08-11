@@ -3,8 +3,8 @@
   import PostsList from '$lib/components/PostsList.svelte'
   import FeaturedPosts from '$lib/components/FeaturedPosts.svelte'
   import SocialLinks from '$lib/components/SocialLinks.svelte'
-  import Card from '$lib/components/Card.svelte'
   import Seo from '$lib/components/Seo.svelte'
+  import { buildJsonLdScript } from '$lib/data/jsonLd.js'
   import { avatar, bio, name, website } from '$lib/info.js'
 
   /** @type {import('./$types').PageData} */
@@ -21,6 +21,7 @@
     url: website,
     inLanguage: 'pl-PL'
   })
+  const websiteJsonLdScript = buildJsonLdScript(websiteJsonLd)
 </script>
 
 <Seo
@@ -38,7 +39,7 @@
 />
 
 <svelte:head>
-  {@html `<script type="application/ld+json">${websiteJsonLd}</script>`}
+  {@html websiteJsonLdScript}
 </svelte:head>
 
 <!-- Redesigned Hero Section: Professional & Compact -->

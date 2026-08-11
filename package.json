@@ -5,16 +5,22 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"test": "bun test",
 		"check": "svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
 		"seo:dataforseo": "node scripts/dataforseo-research.mjs",
-		"lint": "prettier --check . && eslint --ignore-path .gitignore .",
-		"format": "prettier --write ."
+		"lint": "npm run format:check && npm run lint:code",
+		"lint:code": "eslint \"src/**/*.{js,svelte}\" \"scripts/**/*.{js,mjs}\" \"tests/**/*.js\" \"*.{js,cjs,mjs}\"",
+		"format:check": "prettier --plugin=prettier-plugin-svelte --check \"src/**/*.{js,ts,svelte,css}\" \"scripts/**/*.{js,mjs}\" \"tests/**/*.js\" \"*.{js,cjs,mjs}\"",
+		"format": "prettier --plugin=prettier-plugin-svelte --write \"src/**/*.{js,ts,svelte,css}\" \"scripts/**/*.{js,mjs}\" \"tests/**/*.js\" \"*.{js,cjs,mjs}\"",
+		"content:check": "node scripts/check-content.mjs",
+		"verify": "npm run test && npm run check && npm run lint && npm run content:check && npm run build"
 	},
 	"engines": {
 		"node": ">=20.0.0"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.34.0",
 		"@sveltejs/adapter-vercel": "^6.3.3",
 		"@sveltejs/kit": "^2.36.3",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
@@ -27,6 +33,7 @@
 		"eslint": "^9.34.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.11.0",
+		"globals": "^17.9.0",
 		"mdsvex": "^0.12.6",
 		"mdsvex-relative-images": "^2.0.0",
 		"postcss": "^8.5.6",

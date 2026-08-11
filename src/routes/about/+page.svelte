@@ -2,7 +2,7 @@
   import SocialLinks from '$lib/components/SocialLinks.svelte'
   import Newsletter from '$lib/components/Newsletter.svelte'
   import Seo from '$lib/components/Seo.svelte'
-  import { avatar, bio, name, email, substack } from '$lib/info.js'
+  import { avatar, name, email, substack } from '$lib/info.js'
 </script>
 
 <Seo
@@ -19,23 +19,28 @@
 
 <div class="max-w-6xl mx-auto px-6 py-12 lg:py-20">
   <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
-    
     <!-- Left Column: Identity & Socials -->
     <aside class="lg:w-1/4 shrink-0">
-      <div class="lg:sticky lg:top-24 flex flex-col items-center lg:items-start text-center lg:text-left">
+      <div
+        class="lg:sticky lg:top-24 flex flex-col items-center lg:items-start text-center lg:text-left"
+      >
         <div class="relative mb-8">
-          <div class="absolute inset-0 rounded-3xl bg-indigo-500/20 blur-2xl dark:bg-indigo-400/10"></div>
+          <div
+            class="absolute inset-0 rounded-3xl bg-indigo-500/20 blur-2xl dark:bg-indigo-400/10"
+          ></div>
           <img
             src={avatar}
             alt={name}
             class="relative rounded-3xl w-48 h-48 lg:w-full lg:h-auto aspect-square object-cover shadow-2xl ring-1 ring-zinc-200 dark:ring-zinc-800 rotate-3 transition-transform hover:rotate-0 duration-500"
           />
         </div>
-        
+
         <h1 class="text-2xl font-black tracking-tight text-zinc-900 dark:text-zinc-50 mb-2">
           {name}
         </h1>
-        <p class="text-indigo-600 dark:text-indigo-400 font-bold text-sm uppercase tracking-widest mb-6">
+        <p
+          class="text-indigo-600 dark:text-indigo-400 font-bold text-sm uppercase tracking-widest mb-6"
+        >
           Marketing & Automation
         </p>
 
@@ -47,21 +52,36 @@
 
     <!-- Right Column: Story & Contact -->
     <main class="flex-grow">
-      <section class="prose prose-zinc dark:prose-invert max-w-none 
+      <section
+        class="prose prose-zinc dark:prose-invert max-w-none
         prose-headings:font-black prose-headings:tracking-tight
-        prose-p:leading-relaxed prose-p:text-zinc-600 dark:prose-p:text-zinc-400">
+        prose-p:leading-relaxed prose-p:text-zinc-600 dark:prose-p:text-zinc-400"
+      >
         <h2 class="text-3xl sm:text-4xl mb-8">Cześć, jestem Michał.</h2>
         <p>
-          Zajmuję się sprzedażą i marketingiem. Kod, automatyzacja i AI są dla mnie narzędziami — mają pomagać zdobywać klientów, usuwać ręczną pracę albo podejmować lepsze decyzje. Jeśli nie robią żadnej z tych rzeczy, są tylko technologicznym hałasem.
+          Zajmuję się sprzedażą i marketingiem. Kod, automatyzacja i AI są dla mnie narzędziami —
+          mają pomagać zdobywać klientów, usuwać ręczną pracę albo podejmować lepsze decyzje. Jeśli
+          nie robią żadnej z tych rzeczy, są tylko technologicznym hałasem.
         </p>
         <p>
-          Nie jestem programistą i nie próbuję nim być. Buduję własne narzędzia, ponieważ gotowe aplikacje często rozwiązują nie ten problem, który mam. Korzystam ze Svelte, Ruby, terminala i modeli AI, żeby usprawniać konkretne procesy w prawdziwym biznesie.
+          Nie jestem programistą i nie próbuję nim być. Buduję własne narzędzia, ponieważ gotowe
+          aplikacje często rozwiązują nie ten problem, który mam. Korzystam ze Svelte, Ruby,
+          terminala i modeli AI, żeby usprawniać konkretne procesy w prawdziwym biznesie.
         </p>
         <p>
-          Na tym blogu opisuję to, co sam sprawdziłem: SEO, Google Ads, Meta Ads, automatyzację oraz praktyczne wykorzystanie AI. Pokazuję rozwiązania, ale także błędy, ograniczenia i eksperymenty, które nie przyniosły oczekiwanego efektu.
+          Na tym blogu opisuję to, co sam sprawdziłem: SEO, Google Ads, Meta Ads, automatyzację oraz
+          praktyczne wykorzystanie AI. Pokazuję rozwiązania, ale także błędy, ograniczenia i
+          eksperymenty, które nie przyniosły oczekiwanego efektu.
         </p>
         <p>
-          Prowadzę również <a href={substack} target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-bold no-underline hover:underline">BuildLetter</a> — newsletter dla osób, które chcą lepiej sprzedawać, sprawniej pracować i świadomie korzystać z technologii. Bez gonienia za każdą nową aplikacją i bez udawania eksperta od wszystkiego.
+          Prowadzę również <a
+            href={substack}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-indigo-600 dark:text-indigo-400 font-bold no-underline hover:underline"
+            >BuildLetter</a
+          > — newsletter dla osób, które chcą lepiej sprzedawać, sprawniej pracować i świadomie korzystać
+          z technologii. Bez gonienia za każdą nową aplikacją i bez udawania eksperta od wszystkiego.
         </p>
       </section>
 
@@ -77,28 +97,38 @@
         </div>
 
         <div class="bg-zinc-100 dark:bg-zinc-900/50 rounded-2xl p-8 sm:p-12 text-center">
-          <h3 class="text-2xl font-black text-zinc-900 dark:text-zinc-50 mb-4">Masz konkretny problem?</h3>
+          <h3 class="text-2xl font-black text-zinc-900 dark:text-zinc-50 mb-4">
+            Masz konkretny problem?
+          </h3>
           <p class="text-zinc-600 dark:text-zinc-400 mb-8 max-w-md mx-auto leading-relaxed">
-            Jeśli chcesz uporządkować marketing, zautomatyzować proces albo sensownie wykorzystać AI w firmie — napisz. Opisz problem, a nie listę modnych narzędzi. Jeżeli będę wiedział, jak pomóc, odpowiem konkretnie. Jeśli nie — również powiem wprost.
+            Jeśli chcesz uporządkować marketing, zautomatyzować proces albo sensownie wykorzystać AI
+            w firmie — napisz. Opisz problem, a nie listę modnych narzędzi. Jeżeli będę wiedział,
+            jak pomóc, odpowiem konkretnie. Jeśli nie — również powiem wprost.
           </p>
-          
+
           <a
             href="mailto:{email}"
             class="group relative inline-flex items-center justify-center px-10 py-5 font-black uppercase tracking-widest text-white transition-all duration-200 bg-indigo-600 rounded-2xl hover:bg-indigo-500 hover:shadow-xl hover:shadow-indigo-500/20 active:scale-95"
           >
             Napisz wiadomość
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
             </svg>
           </a>
 
-          <div class="mt-8 text-xs font-bold text-zinc-400 dark:text-zinc-600 uppercase tracking-widest">
+          <div
+            class="mt-8 text-xs font-bold text-zinc-400 dark:text-zinc-600 uppercase tracking-widest"
+          >
             Odpowiadam zazwyczaj w ciągu 24h
           </div>
         </div>
       </section>
     </main>
-
   </div>
 </div>

@@ -16,11 +16,15 @@
 
 <div class="flex flex-col items-center pt-24 pb-12 text-center px-6 min-h-[70vh]">
   <div in:fly={{ y: 30, duration: 800 }}>
-    <span class="text-xl font-black uppercase tracking-[0.4em] text-indigo-600 dark:text-indigo-400 mb-6 block">
+    <span
+      class="text-xl font-black uppercase tracking-[0.4em] text-indigo-600 dark:text-indigo-400 mb-6 block"
+    >
       Error {status}
     </span>
-    
-    <h1 class="text-6xl sm:text-8xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 mb-8">
+
+    <h1
+      class="text-6xl sm:text-8xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 mb-8"
+    >
       {#if is404}
         Zgubiony w <span class="text-indigo-600 dark:text-indigo-400">kodzie?</span>
       {:else}
@@ -28,9 +32,12 @@
       {/if}
     </h1>
 
-    <p class="max-w-lg mx-auto text-xl text-zinc-600 dark:text-zinc-400 mb-14 leading-relaxed font-medium">
+    <p
+      class="max-w-lg mx-auto text-xl text-zinc-600 dark:text-zinc-400 mb-14 leading-relaxed font-medium"
+    >
       {#if is404}
-        Wygląda na to, że ta strona nie istnieje. Może została zautomatyzowana przez AI, albo po prostu wpisałeś zły adres.
+        Wygląda na to, że ta strona nie istnieje. Może została zautomatyzowana przez AI, albo po
+        prostu wpisałeś zły adres.
       {:else}
         {message}. Spróbuj odświeżyć stronę lub wróć za chwilę.
       {/if}
@@ -44,7 +51,7 @@
         <Icon src={ArrowLeft} class="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
         Wróć do bazy
       </a>
-      
+
       <a
         href="mailto:michal@danieluk.pl"
         class="px-8 py-5 text-zinc-600 dark:text-zinc-400 font-bold hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
@@ -55,7 +62,9 @@
   </div>
 
   <!-- Dekoracyjny element w tle -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 blur-[160px] opacity-25 dark:opacity-10 pointer-events-none">
+  <div
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 blur-[160px] opacity-25 dark:opacity-10 pointer-events-none"
+  >
     <div class="w-96 h-96 bg-indigo-600 rounded-full"></div>
   </div>
 </div>
