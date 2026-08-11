@@ -13,8 +13,7 @@ export const name = `${firstName} ${lastName}` // +'😎'
 // Used for the landing page & footer of posts
 export const avatar = `img/md.jpg` //'https://michaldanieluk.com/img/michal.jpg'
 export const bio = `\
-Sprzedawca i marketer, który po godzinach bawi się w 'vibe coding'. Svelte i Ruby to dla mnie hobbystyczne narzędzia amatora – nie buduję skomplikowanych systemów, tylko automatyzuję to, co ułatwia mi życie w biznesie. Liczy się konkretny efekt, a nie liczba linii kodu.
-I use Arch BTW.
+Testuję SEO, Google Ads, Meta Ads, automatyzację i AI na własnych projektach. Pokazuję wyniki, błędy i konkretne decyzje — bez agencyjnej waty. Po godzinach bawię się w 'vibe coding'. I use Arch BTW.
 `
 // Your social usernames, empty strings won't be used.
 // For sake of the live demo, I'm using `username/repo` for github,

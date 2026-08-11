@@ -1,6 +1,8 @@
 ---
-title: 'Analiza kampanii Meta Ads: 4 metryki do sprawdzenia'
+title: 'Jak sprawdzić kampanię Meta Ads? 4 metryki do kontroli'
+seoTitle: 'Jak sprawdzić kampanię Meta Ads? 4 metryki | Michał Danieluk'
 date: '2026-04-17'
+updated: '2026-08-11'
 tags: ['Meta Ads', 'Facebook Ads', 'Agencja', 'Marketing', 'Reklamy']
 description: 'Jak zrobić analizę kampanii Meta Ads bez agencji? 4 konkretne metryki w Menedżerze Reklam — bez wiedzy technicznej.'
 keywords: 'jak sprawdzić kampanię Meta Ads, kontrola agencji Facebook Ads, metryki Meta Ads, częstotliwość reklam Facebook, CPM Facebook Ads, quality ranking Meta'
@@ -168,8 +170,6 @@ Meta Ads to potężne narzędzie, ale wymaga ciągłej opieki. Nie wystarczy ust
 4. **Overlap grup odbiorców** pokazuje, czy nie licytujesz sam przeciwko sobie
 
 Każdy z tych punktów sprawdzisz sam w kilka minut. A jeśli nie masz dostępu do Menedżera Reklam Meta, to sam w sobie jest pierwszy i najważniejszy sygnał ostrzegawczy.
-
-Wolisz, żebym po prostu zerknął sam? [Zrób bezpłatny audyt marketingu Twojej firmy budowlanej →](https://buildletter.com/audyt-marketingu-firmy-budowlanej), 30 minut, bez zobowiązań.
 
 **Chcesz dostawać więcej takich praktycznych materiałów o marketingu online?** Zapisz się do mojego newslettera: bez lania wody, same konkrety prosto od praktyka.
 

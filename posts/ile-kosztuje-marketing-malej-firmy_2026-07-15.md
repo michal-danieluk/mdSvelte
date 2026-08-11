@@ -1,8 +1,10 @@
 ---
 title: 'Ile powinieneś płacić za marketing małej firmy? Realne widełki cenowe w Polsce w 2026'
+seoTitle: 'Ile kosztuje marketing małej firmy w 2026? | Michał Danieluk'
 date: '2026-07-13'
+updated: '2026-08-11'
 tags: ['Marketing', 'Mała Firma', 'Ceny', 'Agencja', 'Strategia']
-description: 'Ile kosztuje Google Ads, SEO, strona internetowa i audyt w Polsce w 2026? Konkretne widełki cenowe dla małych firm — bez owijania, z wyjaśnieniem skąd biorą się różnice.'
+description: 'Ile kosztuje marketing małej firmy w 2026? Zobacz realne widełki cenowe Google Ads, Meta Ads, SEO, audytu i strony internetowej w Polsce.'
 keywords: 'ile kosztuje marketing małej firmy, cennik agencji marketingowej, ile kosztuje prowadzenie google ads, ile kosztuje seo miesięcznie, ile kosztuje strona internetowa 2026, ceny usług marketingowych polska'
 image_prompt: 'A cyberpunk marketplace at night, a small business owner standing before a giant holographic price board glowing in neon pink and cyan, floating digital price tags and złoty symbols drifting in the air, rain-slicked street reflecting the neon numbers, dark atmospheric city backdrop'
 featured: false
@@ -85,8 +87,6 @@ I jedno zdanie, które chcę tu zostawić, bo widzę odwrotne przekonanie u wiel
 Sensowne punkty odniesienia dla małej firmy w Polsce w 2026: **700–2 500 zł miesięcznie** za prowadzenie kampanii reklamowych (plus budżet płacony osobno), **1 000–3 500 zł miesięcznie** za SEO, **500–2 500 zł** za porządny jednorazowy audyt, **2 500–12 000 zł** za stronę firmową. Powyżej tych kwot: pytaj, co konkretnie dostajesz ekstra. Poniżej dolnych granic: pytaj, co zostało wycięte.
 
 A od każdego, komu płacisz, masz prawo wymagać jednego: żeby potrafił po polsku, bez żargonu, wytłumaczyć Ci, za co płacisz i co z tego masz. Kto nie potrafi, nie zasługuje na Twoją fakturę.
-
-Dostałeś wycenę i chcesz drugie zdanie? [Zrób bezpłatny audyt marketingu Twojej firmy budowlanej →](https://buildletter.com/audyt-marketingu-firmy-budowlanej), 30 minut, bez zobowiązań.
 
 **Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera: bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 

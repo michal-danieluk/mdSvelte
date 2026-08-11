@@ -1,10 +1,10 @@
 ---
-title: 'Tekst SEO: przykład przed i po na 10 typach treści'
-seoTitle: 'Tekst SEO: przykład | 10 wersji przed i po | Michał Danieluk'
+title: 'SEO copywriting: 10 przykładów tekstów przed i po'
+seoTitle: 'SEO copywriting: 10 przykładów przed i po | Michał Danieluk'
 date: '2026-07-28'
-updated: '2026-08-09'
+updated: '2026-08-11'
 tags: ['SEO Copywriting', 'Content Marketing', 'SEO', 'Przykłady']
-description: 'Tekst SEO: przykład przed i po dla 10 miejsc na stronie — od title tagu i H1 po opis kategorii, FAQ oraz CTA. Zobacz zmianę i powód, dla którego działa.'
+description: 'SEO copywriting na 10 przykładach przed i po: title tag, H1, meta description, opis kategorii, FAQ i CTA. Zobacz, dlaczego poprawiona wersja działa.'
 keywords: 'tekst seo przykład, przykład tekstu seo, dobry tekst seo przykład, seo copywriting przykłady'
 image_prompt: 'A cyberpunk gallery wall displaying ten glowing holographic text panels side by side, each panel showing text transforming from dull gray static into bright neon copy, a figure studying the panels, purple and blue neon light, dark studio, cinematic composition'
 featured: false

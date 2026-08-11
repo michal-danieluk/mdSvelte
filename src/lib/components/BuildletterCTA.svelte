@@ -4,7 +4,7 @@
 
   // UTM zamiast Vercel Analytics track() (custom events sa platne) — dane trafiaja
   // w query stringu, wiec zlapie je kazde narzedzie analityczne po stronie buildletter.com
-  const ctaUrl = `https://buildletter.com?utm_source=michaldanieluk.pl&utm_medium=blog_cta&utm_campaign=blog_bridge${postSlug ? `&utm_content=${postSlug}` : ''}`
+  const ctaUrl = `https://buildletter.com/?utm_source=michaldanieluk.pl&utm_medium=blog_cta&utm_campaign=blog_bridge${postSlug ? `&utm_content=${postSlug}` : ''}#kontakt`
 </script>
 
 <aside
@@ -21,11 +21,12 @@
       build<span style="color:#ff5b1f;">letter</span>
     </p>
     <h3 class="mt-3 text-xl sm:text-2xl font-black tracking-tight text-white">
-      Prowadzisz małą firmę?
+      Chcesz sprawdzić, co ma sens w Twojej firmie?
     </h3>
     <p class="mt-2 max-w-lg text-sm sm:text-base leading-relaxed text-zinc-400">
-      Ten blog to mój poligon — SEO i marketing testuję tu na sobie, na własne pieniądze. To samo
-      robię dla małych firm: widoczność w Google, audyty, reklamy.
+      Na bezpłatnej, 30-minutowej konsultacji sprawdzimy punkt wyjścia, obecne źródła zapytań i
+      ograniczenia. Potem dostaniesz konkretną rekomendację: co zrobić, dlaczego i jak mierzyć
+      efekt.
     </p>
     <a
       href={ctaUrl}
@@ -34,7 +35,7 @@
       class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-lg text-sm font-bold text-black transition-transform hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black"
       style="background:#ff5b1f;"
     >
-      Zobacz, jak pracuję →
+      Umów bezpłatną konsultację →
     </a>
   </div>
 </aside>

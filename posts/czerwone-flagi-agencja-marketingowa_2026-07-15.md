@@ -1,6 +1,7 @@
 ---
 title: 'Czerwone flagi przy wyborze agencji marketingowej — 7 sygnałów, że powinieneś uciekać'
 date: '2026-07-11'
+updated: '2026-08-11'
 tags: ['Marketing', 'Mała Firma', 'Agencja', 'Strategia']
 description: 'Wybierasz agencję marketingową? 7 czerwonych flag, które rozpoznasz jeszcze przed podpisaniem umowy — zanim zamrozisz budżet na rok w złej współpracy.'
 keywords: 'jak wybrać agencję marketingową, czerwone flagi agencja, zła agencja marketingowa, umowa z agencją reklamową, gwarancja pozycji w google, własność konta google ads, wybór agencji dla małej firmy'
@@ -108,9 +109,7 @@ A jeśli umowę już podpisałeś i chcesz sprawdzić, jak agencja radzi sobie w
 
 Godzina uważności na etapie wyboru kosztuje mniej niż rok złej współpracy. Dużo mniej.
 
-Nie chcesz sam liczyć czerwonych flag? [Zrób bezpłatny audyt marketingu Twojej firmy budowlanej →](https://buildletter.com/audyt-marketingu-firmy-budowlanej), 30 minut, bez zobowiązań, powiem wprost, co widzę.
-
-**Chcesz dostawać więcej takich praktycznych materiałów o marketingu dla małych firm?** Zapisz się do mojego newslettera: bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
+**Chcesz dostawać więcej takich praktycznych materiałów o marketingu małej firmy?** Zapisz się do mojego newslettera: bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
 [Zapisz się do newslettera →](https://buildletter.substack.com/subscribe)
 

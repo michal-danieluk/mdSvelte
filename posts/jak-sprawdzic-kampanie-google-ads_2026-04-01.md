@@ -1,9 +1,11 @@
 ---
-title: 'Jak sprawdzić, czy agencja dobrze prowadzi Google Ads i Meta Ads'
+title: 'Jak sprawdzić kampanię Google Ads? 4 testy pracy agencji'
+seoTitle: 'Jak sprawdzić kampanię Google Ads? 4 testy | Michał Danieluk'
 date: '2026-04-01'
+updated: '2026-08-11'
 tags: ['Google Ads', 'Marketing', 'Agencja', 'Reklamy', 'SEM']
-description: 'Płacisz agencji za Google Ads i Meta Ads? Sprawdź samodzielnie w kilka minut, czy budżet dobrze pracuje — checklist krok po kroku, bez wiedzy technicznej.'
-keywords: 'jak sprawdzić kampanię google ads, kontrola agencji google ads, impression share, quality score google ads, raport wyszukiwanych haseł, audyt google ads, jak sprawdzić czy agencja dobrze prowadzi google ads i meta ads, analiza kampanii meta ads, ocena kampanii meta ads'
+description: 'Jak sprawdzić kampanię Google Ads i pracę agencji? Cztery testy: udział w wyświetleniach, struktura, wyszukiwane hasła i wynik jakości.'
+keywords: 'jak sprawdzić kampanię google ads, kontrola agencji google ads, impression share, quality score google ads, raport wyszukiwanych haseł, audyt google ads'
 image_prompt: 'A cyberpunk figure sitting at a desk late at night, bathed in neon light from multiple monitors. The character wears a dark hoodie, face partially lit by the cold blue-purple glow of the screens. On the monitors: Google Ads dashboard with campaign metrics, impression share graphs, quality score columns — data glowing in electric cyan and neon purple. Deep black shadows, vivid neon accents — purple, cyan, amber. Flat illustration style with strong contrast and glowing edges. Stylized digital art, cinematic side-angle composition.'
 featured: false
 ---
@@ -138,34 +140,9 @@ Słaba agencja ustawia kampanię raz i zapomina. Wynik jakości z czasem spada, 
 
 ---
 
-## A co jeśli agencja prowadzi też Meta Ads / Facebook Ads?
+## A jeśli agencja prowadzi też Meta Ads?
 
-Coraz więcej agencji sprzedaje pakiet „Google Ads + Meta Ads" jako jedną usługę. Dobra wiadomość: nie musisz uczyć się drugiego, zupełnie nowego systemu, żeby ocenić, czy ktoś dobrze zarządza Twoimi kampaniami na Facebooku i Instagramie. Logika jest ta sama co przy Google Ads, zmieniają się tylko nazwy metryk.
-
-Oto trzy rzeczy, które warto sprawdzić w Menedżerze Reklam Meta (Ads Manager), odpowiadające dokładnie temu, co już wiesz z Google Ads:
-
-**1. Częstotliwość (Frequency): odpowiednik udziału w wyświetleniach**
-
-To, ile razy przeciętny użytkownik widział Twoją reklamę w wybranym okresie. Znajdziesz ją w kolumnach raportu kampanii (Kolumny → Dostosuj kolumny → Częstotliwość).
-
-- Poniżej 3: w porządku, reklama jeszcze „świeża"
-- 3–5: czas rozważyć zmianę kreacji
-- Powyżej 5–6 oznacza zmęczenie reklamą (ad fatigue): ludzie ignorują lub irytują się reklamą, koszty rosną, a agencja powinna to było dawno wychwycić i podmienić kreacje
-
-**2. Wynik jakości rankingu reklamy: odpowiednik Wyniku jakości**
-
-Meta ocenia każdą reklamę w trzech kategoriach porównawczych względem konkurencji o tę samą grupę odbiorców: jakość, współczynnik zaangażowania i współczynnik konwersji. Sprawdzisz to na poziomie reklamy w kolumnie „Rankingi trafności" lub w szczegółach pojedynczej reklamy.
-
-- Oceny „Powyżej przeciętnej" lub „Przeciętna": kreacja i targetowanie są dopracowane
-- „Poniżej przeciętnej" w którejkolwiek kategorii: sygnał, że reklama jest źle dopasowana do odbiorców, a to bezpośrednio podnosi koszt za wynik
-
-**3. Struktura zestawów reklam: odpowiednik struktury kampanii**
-
-Tak jak w Google Ads sprawdzasz, czy kampanie są logicznie pogrupowane, tak tutaj patrzysz, czy zestawy reklam mają sensownie zawężone grupy odbiorców (a nie jeden wielki „wrzutnik" do wszystkich), i czy agencja rotuje kreacje zamiast wgrywać jedną grafikę na miesiące.
-
-**Kiedy zapalić czerwoną lampkę:** brak dostępu do panelu Meta Business Suite (dokładnie jak z Google Ads), częstotliwość powyżej 6 utrzymująca się tygodniami bez reakcji, oraz raporty, w których agencja pokazuje tylko „zasięg" i „polubienia" zamiast wyniku jakości rankingu i kosztu za konwersję.
-
-Chcesz pełny, rozszerzony przewodnik po audycie kampanii Meta Ads, z dokładnymi ścieżkami w panelu i przykładami liczb? Mam osobny artykuł poświęcony wyłącznie temu: [Sprawdź, czy agencja dobrze prowadzi Twój Meta Ads](/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17).
+Nie oceniaj Meta Ads tymi samymi wskaźnikami co kampanii w wyszukiwarce. Na Facebooku i Instagramie ważniejsze są częstotliwość, trend CPM, ranking jakości reklam i nakładanie się grup odbiorców. [Te cztery metryki rozpisuję krok po kroku w osobnym przewodniku po kontroli Meta Ads](/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17).
 
 ---
 
@@ -197,8 +174,6 @@ Nie musisz być ekspertem od Google Ads, żeby ocenić pracę agencji. Wystarcz�
 4. **Wynik jakości** pokazuje, czy Google Cię nagradza, czy karze wyższymi cenami
 
 Każdy z tych punktów możesz sprawdzić sam, w kilka minut, bez wiedzy technicznej. A jeśli nie masz dostępu do panelu Google Ads, to sam w sobie jest pierwszy i najważniejszy sygnał ostrzegawczy.
-
-Wolisz, żebym po prostu zerknął sam? [Zrób bezpłatny audyt marketingu Twojej firmy budowlanej →](https://buildletter.com/audyt-marketingu-firmy-budowlanej), 30 minut, bez zobowiązań.
 
 **Chcesz dostawać więcej takich praktycznych materiałów o Google Ads i marketingu online?** Zapisz się do mojego newslettera: bez lania wody, same konkrety prosto od praktyka, nie teoretyka.
 
