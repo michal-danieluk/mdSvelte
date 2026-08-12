@@ -29,7 +29,7 @@ Nauka SEO na własnej stronie oznacza popełnianie błędów na stronie, z któr
 ## Wynik testu: trzy scenariusze
 
 - **Rób sam:** mało konkurencji, masz realnie 5+ godzin tygodniowo, presja czasowa niska, strona nie jest jeszcze głównym źródłem klientów. [Zacznij tutaj](https://buildletter.com/blog/seo-dla-malej-firmy-od-czego-zaczac/).
-- **Hybryda:** zrób fundament sam (wizytówka Google, [audyt techniczny](/post/jak-zrobic-audyt-seo_2026-07-19), pierwsze treści), zleć trudniejsze elementy (linkbuilding, content na skalę, analizę konkurencji) komuś, kto robi to zawodowo.
+- **Hybryda:** zrób fundament sam ([wizytówka Google](/post/jak-zrobic-wizytowke-google), [audyt techniczny](/post/jak-zrobic-audyt-seo_2026-07-19), pierwsze treści), zleć trudniejsze elementy (linkbuilding, content na skalę, analizę konkurencji) komuś, kto robi to zawodowo.
 - **Zatrudnij kogoś:** duża konkurencja, mało czasu, potrzebujesz efektów w rozsądnym terminie, strona już generuje realny biznes. [Sprawdź, ile to realnie kosztuje](/post/ile-kosztuje-pozycjonowanie-strony_2026-07-17), zanim zaczniesz szukać wykonawcy.
 
 ## Koszt błędnej decyzji działa w obie strony

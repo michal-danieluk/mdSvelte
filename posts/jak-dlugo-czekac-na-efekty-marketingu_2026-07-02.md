@@ -28,7 +28,7 @@ To ma brutalną konsekwencję: **największe koszty ponosisz wtedy, gdy efektów
 
 Najszybszy realny efekt w marketingu lokalnym. Jeśli Twoja firma obsługuje klientów z okolicy (betoniarnia, salon, warsztat, gabinet), dobrze uzupełniona i zoptymalizowana wizytówka Google potrafi zadzwonić telefonem w kilka tygodni.
 
-Dlaczego tak szybko? Bo konkurencja zwykle śpi. Większość lokalnych wizytówek to nazwa, adres i dwa zdjęcia z 2021 roku. Kompletny profil, aktualne zdjęcia, odpowiedzi na opinie, właściwe kategorie: to często wystarcza, żeby wskoczyć wyżej w mapach.
+Dlaczego tak szybko? Bo konkurencja zwykle śpi. Większość lokalnych wizytówek to nazwa, adres i dwa zdjęcia z 2021 roku. Jeśli zaczynasz od zera, skorzystaj z [instrukcji zakładania Profilu Firmy w Google](/post/jak-zrobic-wizytowke-google). Kompletny profil, aktualne zdjęcia, odpowiedzi na opinie, właściwe kategorie: to często wystarcza, żeby wskoczyć wyżej w mapach.
 
 **🚩 Czerwona flaga:** jeśli ktoś obiecuje "pozycję 1 w mapach w tydzień", uciekaj. Pozycji w mapach nikt uczciwy nie gwarantuje.
 

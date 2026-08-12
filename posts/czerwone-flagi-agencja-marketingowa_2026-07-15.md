@@ -81,7 +81,7 @@ Konsekwencja przy rozstaniu: cała historia kampanii, dane o konwersjach, wytren
 
 ## Bonus: płacisz za "przedłużanie" wizytówki Google
 
-Jeśli agencja zakłada Ci wizytówkę w Google (Profil Firmy w Google, dawniej Google Moja Firma), a potem co jakiś czas wystawia fakturę za jej "odświeżenie", "przedłużenie" czy "reaktywację", to nie jest usługa, tylko oszustwo. Wizytówka Google jest i zawsze była całkowicie darmowa. Nie ma niczego do przedłużania ani odnawiania. Konto nie wygasa, dopóki sam go nie usuniesz.
+Jeśli agencja zakłada Ci wizytówkę w Google (Profil Firmy w Google, dawniej Google Moja Firma), a potem co jakiś czas wystawia fakturę za jej "odświeżenie", "przedłużenie" czy "reaktywację", to nie jest usługa, tylko oszustwo. Wizytówka Google jest i zawsze była całkowicie darmowa. Możesz ją [założyć samodzielnie krok po kroku](/post/jak-zrobic-wizytowke-google). Nie ma niczego do przedłużania ani odnawiania. Konto nie wygasa, dopóki sam go nie usuniesz.
 
 Jedyne uzasadnione opłaty w tym obszarze to realna praca: optymalizacja opisu, dodawanie zdjęć, odpowiadanie na opinie, regularne publikowanie postów. Sama obecność wizytówki w wynikach Google nie kosztuje nic, ani Ciebie, ani agencji.
 
