@@ -1,10 +1,19 @@
 <!-- Most między blogiem (poligon) a buildletter.com (usługi) — wizualnie w brandzie buildletter -->
 <script>
+  import { pushBuildletterCtaEvent } from '$lib/data/analytics.js'
+
   let { postSlug = null } = $props()
 
-  // UTM zamiast Vercel Analytics track() (custom events sa platne) — dane trafiaja
-  // w query stringu, wiec zlapie je kazde narzedzie analityczne po stronie buildletter.com
   const ctaUrl = `https://buildletter.com/?utm_source=michaldanieluk.pl&utm_medium=blog_cta&utm_campaign=blog_bridge${postSlug ? `&utm_content=${postSlug}` : ''}#kontakt`
+
+  function trackClick() {
+    window.dataLayer = window.dataLayer || []
+    pushBuildletterCtaEvent(window.dataLayer, {
+      postSlug,
+      ctaLocation: 'post_footer',
+      destinationUrl: ctaUrl
+    })
+  }
 </script>
 
 <aside
@@ -30,6 +39,7 @@
     </p>
     <a
       href={ctaUrl}
+      onclick={trackClick}
       target="_blank"
       rel="noopener"
       class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-lg text-sm font-bold text-black transition-transform hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black"
