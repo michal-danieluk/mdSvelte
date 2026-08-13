@@ -55,7 +55,7 @@ Ostatni element, najczęściej wycinany przy niskich stawkach. Bez regularnego s
 
 Jeśli prowadzisz lokalny biznes (gabinet, warsztat, restaurację, kancelarię), pozycjonowanie lokalne to zwykle **tańsza i szybsza droga do wyniku** niż ogólnokrajowe SEO, i warto to rozróżnić przy wycenie.
 
-**Fundament to Google Business Profile** (dawniej Google Moja Firma), darmowe narzędzie, które przy dobrej optymalizacji potrafi dać więcej niż miesiąc pracy nad ogólną stroną. Pełne uzupełnienie profilu, zdjęcia, regularne posty, zbieranie i odpowiadanie na opinie: to praca rzędu kilkuset złotych miesięcznie, nie kilku tysięcy.
+**Fundament to Google Business Profile** (dawniej Google Moja Firma), darmowe narzędzie, które przy dobrej optymalizacji potrafi dać więcej niż miesiąc pracy nad ogólną stroną. Jeśli profilu jeszcze nie masz, możesz [założyć Profil Firmy w Google krok po kroku](/post/jak-zrobic-wizytowke-google). Pełne uzupełnienie profilu, zdjęcia, regularne posty, zbieranie i odpowiadanie na opinie: to praca rzędu kilkuset złotych miesięcznie, nie kilku tysięcy.
 
 **Kiedy samo lokalne SEO wystarczy:** gdy Twoi klienci szukają Cię z dopiskiem miasta/dzielnicy ("dentysta Kraków Podgórze") i nie planujesz obsługiwać klientów poza swoim regionem. Widełki: **500–1500 zł miesięcznie**.
 
