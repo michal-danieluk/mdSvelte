@@ -5,7 +5,7 @@ import {
   getTagSlug,
   isIndexableTag
 } from '../src/lib/data/seo.js'
-import { normalizePostDate } from '../src/lib/data/dates.js'
+import { getCalendarDate, normalizePostDate } from '../src/lib/data/dates.js'
 
 describe('SEO data helpers', () => {
   it('consolidates tag labels that resolve to the same existing slug', () => {
@@ -34,5 +34,11 @@ describe('SEO data helpers', () => {
     expect(normalizePostDate('2026-07-22')).toBe('2026-07-22')
     expect(normalizePostDate(undefined)).toBeUndefined()
     expect(() => normalizePostDate('not-a-date')).toThrow('Invalid post date')
+  })
+
+  it('uses the Warsaw calendar date when UTC is still on the previous day', () => {
+    const afterMidnightInWarsaw = new Date('2026-08-14T23:10:00Z')
+
+    expect(getCalendarDate(afterMidnightInWarsaw, 'Europe/Warsaw')).toBe('2026-08-15')
   })
 })

@@ -4,7 +4,7 @@ import readingTime from 'reading-time'
 import fs from 'fs'
 import path from 'path'
 import { consolidateTags, createMarkdownPreview, getTagSlug } from '$lib/data/seo.js'
-import { normalizePostDate } from '$lib/data/dates.js'
+import { BLOG_TIME_ZONE, getCalendarDate, normalizePostDate } from '$lib/data/dates.js'
 
 // we require some server-side APIs to parse all metadata
 if (browser) {
@@ -81,14 +81,7 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
     // if (process.env.NODE_ENV === 'development') return true
 
     if (!post.date) return true
-    const now = new Date()
-    // Compare calendar dates, not UTC midnight parsed from a date-only string.
-    // Otherwise a post dated today can look like a future post in timezones east of UTC.
-    const today = [
-      now.getFullYear(),
-      String(now.getMonth() + 1).padStart(2, '0'),
-      String(now.getDate()).padStart(2, '0')
-    ].join('-')
+    const today = getCalendarDate(new Date(), BLOG_TIME_ZONE)
     return post.date <= today
   })
   // sort by date
