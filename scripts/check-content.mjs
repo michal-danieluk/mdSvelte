@@ -49,7 +49,121 @@ function isValidDate(value) {
   )
 }
 
-export function validatePost({ filePath, source, knownSlugs }) {
+const SUPPORTED_IMAGE_EXTENSIONS = new Set([
+  '.png',
+  '.jpg',
+  '.jpeg',
+  '.webp',
+  '.avif',
+  '.gif',
+  '.svg'
+])
+const GENERIC_IMAGE_ALTS = new Set([
+  'image',
+  'obraz',
+  'obrazek',
+  'grafika',
+  'screenshot',
+  'zdjęcie'
+])
+
+function validatePlaceholders(body, errors) {
+  const placeholders = body.match(/\[(?:UZUPEŁNIJ|ŹRÓDŁO|INSERT[^\]]*|ADD[^\]]*)\]/giu) || []
+  for (const placeholder of new Set(placeholders)) {
+    errors.push(`pozostawiony placeholder: ${placeholder}`)
+  }
+
+  const citationTokens = body.match(/\bciteturn\d+[a-z]+\d+\b/giu) || []
+  for (const token of new Set(citationTokens)) {
+    errors.push(`wyciek technicznego tokenu cytowania: ${token}`)
+  }
+}
+
+function validateHeadings(body, errors, enforceLayoutH1) {
+  const proseBody = body.replace(/^(?:```|~~~)[^\n]*\n[\s\S]*?^(?:```|~~~)\s*$/gm, '')
+  if (enforceLayoutH1 && /^#(?!#)\s+\S/m.test(proseBody)) {
+    errors.push('nagłówek H1 w treści: layout artykułu renderuje H1 z pola title')
+  }
+
+  const seen = new Map()
+  for (const match of proseBody.matchAll(/^##(?!#)\s+(.+?)\s*#*\s*$/gm)) {
+    const heading = match[1].replace(/[*_`]/g, '').trim()
+    const normalized = heading.toLocaleLowerCase('pl-PL')
+    if (seen.has(normalized)) errors.push(`zduplikowany nagłówek H2: ${seen.get(normalized)}`)
+    else seen.set(normalized, heading)
+  }
+}
+
+export function resolveLocalAssetPath({ imagePath, filePath, projectRoot }) {
+  let decodedPath
+  try {
+    decodedPath = decodeURIComponent(imagePath)
+  } catch {
+    throw new Error(`nieprawidłowa ścieżka lokalnego obrazu: ${imagePath}`)
+  }
+
+  const root = path.resolve(projectRoot)
+  const allowedRoot = decodedPath.startsWith('/')
+    ? path.resolve(root, 'static')
+    : path.resolve(root, 'posts')
+  const resolvedPath = decodedPath.startsWith('/')
+    ? path.resolve(allowedRoot, `.${decodedPath}`)
+    : path.resolve(path.dirname(path.resolve(filePath)), decodedPath)
+  const relative = path.relative(allowedRoot, resolvedPath)
+  if (relative.startsWith('..') || path.isAbsolute(relative)) {
+    throw new Error(`lokalny obraz wychodzi poza dozwolony katalog: ${imagePath}`)
+  }
+
+  if (fs.existsSync(allowedRoot)) {
+    const realAllowedRoot = fs.realpathSync(allowedRoot)
+    let existingPath = resolvedPath
+    while (!fs.existsSync(existingPath) && existingPath !== allowedRoot) {
+      existingPath = path.dirname(existingPath)
+    }
+    const realExistingPath = fs.realpathSync(existingPath)
+    const realRelative = path.relative(realAllowedRoot, realExistingPath)
+    if (realRelative.startsWith('..') || path.isAbsolute(realRelative)) {
+      throw new Error(`lokalny obraz prowadzi symlinkiem poza dozwolony katalog: ${imagePath}`)
+    }
+  }
+
+  return resolvedPath
+}
+
+function validateImages(body, errors, warnings, assetExists) {
+  for (const match of body.matchAll(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g)) {
+    const alt = match[1].trim()
+    const imagePath = match[2].replace(/^<|>$/g, '')
+    const cleanPath = imagePath.split(/[?#]/, 1)[0]
+
+    if (!alt) errors.push(`pusty alt text obrazu: ${imagePath}`)
+    else if (GENERIC_IMAGE_ALTS.has(alt.toLocaleLowerCase('pl-PL'))) {
+      warnings.push(`generyczny alt text obrazu: „${alt}”`)
+    }
+
+    let parsedPath = cleanPath
+    try {
+      parsedPath = new URL(cleanPath, 'https://local.invalid').pathname
+    } catch {
+      // Extension validation below will report malformed or unsupported paths.
+    }
+    const extension = path.extname(parsedPath).toLocaleLowerCase('en-US')
+    if (!SUPPORTED_IMAGE_EXTENSIONS.has(extension)) {
+      errors.push(`nieobsługiwany format obrazu: ${imagePath}`)
+    }
+
+    const isRemote = /^(?:https?:|data:)/i.test(imagePath)
+    if (!isRemote && assetExists) {
+      try {
+        if (!assetExists(cleanPath)) errors.push(`nieistniejący lokalny obraz: ${imagePath}`)
+      } catch (error) {
+        errors.push(error.message)
+      }
+    }
+  }
+}
+
+export function validatePost({ filePath, source, knownSlugs, assetExists = null }) {
   const errors = []
   const warnings = []
   let metadata
@@ -78,9 +192,19 @@ export function validatePost({ filePath, source, knownSlugs }) {
     warnings.push(`title SEO ma ${effectiveTitle.length} znaków; zalecane 30–60`)
   }
 
+  validatePlaceholders(body, errors)
+  validateHeadings(body, errors, Boolean(metadata.workflow_status))
+  validateImages(body, errors, warnings, assetExists)
+
   const links = body.matchAll(/\]\(\/post\/([^\s)?#]+)(?:[?#][^)]*)?\)/g)
   for (const link of links) {
-    const targetSlug = decodeURIComponent(link[1].replace(/\/$/, ''))
+    let targetSlug
+    try {
+      targetSlug = decodeURIComponent(link[1].replace(/\/$/, ''))
+    } catch {
+      errors.push(`nieprawidłowo zakodowany link wewnętrzny: /post/${link[1]}`)
+      continue
+    }
     if (!knownSlugs.has(targetSlug)) {
       errors.push(`nieistniejący link wewnętrzny: /post/${targetSlug}`)
     }
@@ -144,9 +268,14 @@ function getMarkdownFiles(directory) {
 
 function run() {
   const postsDirectory = path.resolve('posts')
+  const projectRoot = process.cwd()
   const posts = getMarkdownFiles(postsDirectory).map((filePath) => ({
     filePath: path.relative(process.cwd(), filePath),
-    source: fs.readFileSync(filePath, 'utf8')
+    source: fs.readFileSync(filePath, 'utf8'),
+    assetExists: (imagePath) => {
+      const resolvedPath = resolveLocalAssetPath({ imagePath, filePath, projectRoot })
+      return fs.existsSync(resolvedPath)
+    }
   }))
   const result = validateCollection(posts)
 

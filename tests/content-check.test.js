@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'bun:test'
+import { mkdtemp, mkdir, symlink, writeFile } from 'node:fs/promises'
+import os from 'node:os'
+import path from 'node:path'
 import {
   parseFrontmatter,
+  resolveLocalAssetPath,
   slugFromPath,
   validateCollection,
   validatePost
@@ -100,5 +104,151 @@ description: 'Za krótko.'
     expect(result.errors).toContain(
       'zduplikowana trasa /post/duplikat: /repo/posts/duplikat.md, /repo/posts/duplikat/index.md'
     )
+  })
+
+  it('rejects publishing placeholders and leaked chatbot citation tokens', () => {
+    const result = validatePost({
+      filePath: '/repo/posts/niegotowy.md',
+      source: `---
+title: 'Niegotowy wpis do publikacji'
+date: '2026-08-11'
+---
+
+Tekst wymaga [UZUPEŁNIJ] i ma wyciek citeturn0search0.`,
+      knownSlugs: new Set(['niegotowy'])
+    })
+
+    expect(result.errors).toContain('pozostawiony placeholder: [UZUPEŁNIJ]')
+    expect(result.errors).toContain('wyciek technicznego tokenu cytowania: citeturn0search0')
+  })
+
+  it('rejects empty image alt text, unsupported formats and duplicate H2 anchors', () => {
+    const result = validatePost({
+      filePath: '/repo/posts/grafiki.md',
+      source: `---
+title: 'Grafiki w artykule testowym'
+date: '2026-08-11'
+---
+
+## Ten sam nagłówek
+
+![](/img/pusty-alt.webp)
+
+## Ten sam nagłówek
+
+![Diagram procesu](/img/proces.tiff)`,
+      knownSlugs: new Set(['grafiki'])
+    })
+
+    expect(result.errors).toContain('pusty alt text obrazu: /img/pusty-alt.webp')
+    expect(result.errors).toContain('nieobsługiwany format obrazu: /img/proces.tiff')
+    expect(result.errors).toContain('zduplikowany nagłówek H2: Ten sam nagłówek')
+  })
+
+  it('checks whether local image files exist and warns about generic alt text', () => {
+    const checkedPaths = []
+    const result = validatePost({
+      filePath: '/repo/posts/obrazy.md',
+      source: `---
+title: 'Obrazy w artykule testowym'
+date: '2026-08-11'
+---
+
+![Obrazek](/img/brak.webp)`,
+      knownSlugs: new Set(['obrazy']),
+      assetExists: (imagePath) => {
+        checkedPaths.push(imagePath)
+        return false
+      }
+    })
+
+    expect(checkedPaths).toEqual(['/img/brak.webp'])
+    expect(result.errors).toContain('nieistniejący lokalny obraz: /img/brak.webp')
+    expect(result.warnings).toContain('generyczny alt text obrazu: „Obrazek”')
+  })
+
+  it('rejects local images that escape the posts or static directories', () => {
+    expect(() =>
+      resolveLocalAssetPath({
+        imagePath: '../../outside.webp',
+        filePath: '/repo/posts/article.md',
+        projectRoot: '/repo'
+      })
+    ).toThrow('wychodzi poza dozwolony katalog')
+
+    expect(
+      resolveLocalAssetPath({
+        imagePath: '/img/posts/article/diagram.webp',
+        filePath: '/repo/posts/article.md',
+        projectRoot: '/repo'
+      })
+    ).toBe('/repo/static/img/posts/article/diagram.webp')
+  })
+
+  it('rejects a local image symlink that resolves outside the project', async () => {
+    const root = await mkdtemp(path.join(os.tmpdir(), 'content-assets-'))
+    const posts = path.join(root, 'posts')
+    const outside = path.join(path.dirname(root), `${path.basename(root)}-outside.webp`)
+    const linkedImage = path.join(posts, 'linked.webp')
+    await mkdir(posts)
+    await writeFile(outside, 'outside')
+    await symlink(outside, linkedImage)
+
+    expect(() =>
+      resolveLocalAssetPath({
+        imagePath: './linked.webp',
+        filePath: path.join(posts, 'article.md'),
+        projectRoot: root
+      })
+    ).toThrow('symlinkiem poza dozwolony katalog')
+  })
+
+  it('reports malformed URL encoding instead of crashing content validation', () => {
+    const result = validatePost({
+      filePath: '/repo/posts/kodowanie.md',
+      source: `---
+title: 'Test nieprawidłowego kodowania URL'
+date: '2026-08-11'
+---
+
+[Błędny link](/post/bledny%zz)
+
+![Diagram procesu](/img/bledny%zz.webp)`,
+      knownSlugs: new Set(['kodowanie']),
+      assetExists: (imagePath) =>
+        Boolean(
+          resolveLocalAssetPath({
+            imagePath,
+            filePath: '/repo/posts/kodowanie.md',
+            projectRoot: '/repo'
+          })
+        )
+    })
+
+    expect(result.errors).toContain('nieprawidłowo zakodowany link wewnętrzny: /post/bledny%zz')
+    expect(result.errors).toContain('nieprawidłowa ścieżka lokalnego obrazu: /img/bledny%zz.webp')
+  })
+
+  it('rejects a second H1 in posts created by the new workflow but ignores code comments', () => {
+    const result = validatePost({
+      filePath: '/repo/posts/podwojny-h1.md',
+      source: `---
+title: 'Tytuł renderowany przez layout'
+date: '2026-08-11'
+workflow_status: approved
+---
+
+# Drugi H1 w treści
+
+\`\`\`bash
+# To jest komentarz w kodzie
+\`\`\``,
+      knownSlugs: new Set(['podwojny-h1'])
+    })
+
+    expect(result.errors).toContain(
+      'nagłówek H1 w treści: layout artykułu renderuje H1 z pola title'
+    )
+    expect(result.errors.filter((error) => error.includes('nagłówek H1'))).toHaveLength(1)
   })
 })
