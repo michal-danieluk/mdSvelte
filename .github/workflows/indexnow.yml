@@ -1,0 +1,46 @@
+name: Submit changed URLs to IndexNow
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: 'Canonical URLs to submit, one per line'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-production
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+      github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the deployed commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'deployment_status' && github.event.deployment.sha || github.sha }}
+          fetch-depth: 2
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Submit URLs changed by the production deployment
+        if: github.event_name == 'deployment_status'
+        env:
+          DEPLOYED_SHA: ${{ github.event.deployment.sha }}
+        run: bun run indexnow:submit -- --from "$DEPLOYED_SHA^" --to "$DEPLOYED_SHA"
+
+      - name: Submit manually provided URLs
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          INDEXNOW_URLS: ${{ inputs.urls }}
+        run: bun run indexnow:submit

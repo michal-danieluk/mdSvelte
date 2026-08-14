@@ -12,6 +12,7 @@
 		"content:sync": "node scripts/sync-approved-post.mjs",
 		"content:release": "node scripts/release-approved-post.mjs",
 		"image:prepare": "node scripts/prepare-image.mjs",
+		"indexnow:submit": "bun scripts/indexnow-submit.ts",
 		"lint": "npm run format:check && npm run lint:code",
 		"lint:code": "eslint \"src/**/*.{js,svelte}\" \"scripts/**/*.{js,mjs}\" \"tests/**/*.js\" \"*.{js,cjs,mjs}\"",
 		"format:check": "prettier --plugin=prettier-plugin-svelte --check \"src/**/*.{js,ts,svelte,css}\" \"scripts/**/*.{js,mjs}\" \"tests/**/*.js\" \"*.{js,cjs,mjs}\"",

@@ -1,20 +1,20 @@
 ---
-task: "Audit and fix blog-wide social preview images"
+task: "Add automated IndexNow notifications after production deployments"
 slug: 20260720-103732_blog-pillar-pages
 project: md_blog
 effort: E3
 effort_source: context-override
-phase: complete
-progress: 147/147
+phase: execute
+progress: 166/172
 mode: interactive
 started: 2026-07-20T10:37:32Z
-updated: 2026-08-06T19:48:30Z
-iteration: 5
-principal_stated_goal: "przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to narpaw to"
+updated: 2026-08-14T20:43:30Z
+iteration: 7
+principal_stated_goal: "wdróż"
 principal_stated_goal_source: prompt
 principal_stated_goal_signal: 2
-principal_stated_goal_locked: 2026-08-06T19:30:46Z
-density_score: 0.57
+principal_stated_goal_locked: 2026-08-14T20:43:00Z
+density_score: 0.67
 interview_invoked: false
 divergence_risk: low
 density_gate_acknowledged: true
@@ -75,6 +75,10 @@ Iteracja 3: „to wykonać zalecenia z audytu.” Wdrożyć lokalnie potwierdzon
 Iteracja 4: „wdróż rekomendacje”. Dodać kuratowany `/llms.txt`, rozdzielić w `robots.txt` boty wyszukujące i użytkownika od botów treningowych oraz przenieść jawne `updated` z frontmatteru do `BlogPosting.dateModified` i sitemapowego `lastmod`, zachowując datę publikacji jako fallback.
 
 Iteracja 5: „przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to narpaw to”. Przeskanować wszystkie opublikowane artykuły pod kątem podglądów społecznościowych, naprawić wspólny kontrakt obrazu i linków udostępniania oraz dodać trwały test całej klasy, bez ręcznej edycji poszczególnych postów.
+
+Iteracja 6: „trzeba dodać mi IndexNow do strony aby Bing mi to lepiej indeksował”. Dodać zgodną z protokołem weryfikację własności hosta `www.michaldanieluk.pl` oraz automatyczne zgłaszanie wyłącznie URL-i zmienionych przez commit po jego faktycznym promowaniu na produkcję Vercel; zachować możliwość kontrolowanego zgłoszenia ręcznego bez nowych zależności.
+
+Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/main`, potwierdzić produkcyjne wdrożenie dokładnego commita oraz zweryfikować publiczny klucz i przyjęcie automatycznego zgłoszenia.
 
 ## Criteria
 
@@ -225,6 +229,31 @@ Iteracja 5: „przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to 
 - [x] ISC-144: `bun run check` kończy się bez błędów i ostrzeżeń.
 - [x] ISC-145: `bun run build` kończy się kodem 0.
 - [x] ISC-146: Anti: poprawka nie modyfikuje plików postów, zależności ani publicznych slugów.
+- [x] ISC-147: Publiczny plik klucza IndexNow ma nazwę równą zawartemu kluczowi.
+- [x] ISC-148: Klucz IndexNow spełnia zakres 8–128 dozwolonych znaków protokołu.
+- [x] ISC-149: Build umieszcza plik klucza w katalogu głównym publicznego hosta.
+- [x] ISC-150: Payload IndexNow używa hosta `www.michaldanieluk.pl`.
+- [x] ISC-151: Payload IndexNow wskazuje publiczny plik przez poprawne `keyLocation`.
+- [x] ISC-152: Payload odrzuca każdy URL spoza kanonicznego hosta HTTPS.
+- [x] ISC-153: Payload usuwa duplikaty URL-i przed wysłaniem.
+- [x] ISC-154: Zmieniony, dodany lub usunięty post mapuje się na właściwy URL `/post/<slug>`.
+- [x] ISC-155: Zmiana wspólnego kodu strony zgłasza aktualne indeksowalne adresy z sitemapy.
+- [x] ISC-156: Zmiany wyłącznie w testach, dokumentacji i automatyzacji nie zgłaszają URL-i.
+- [x] ISC-157: Odpowiedzi HTTP 200 i 202 są traktowane jako przyjęcie zgłoszenia.
+- [x] ISC-158: Nieudana odpowiedź API kończy komendę zgłoszenia błędem.
+- [x] ISC-159: Workflow IndexNow uruchamia się dopiero po udanym `deployment_status` środowiska `Production`.
+- [x] ISC-160: Workflow pobiera dokładny SHA wdrożonego commita z payloadu Vercel.
+- [x] ISC-161: Testy IndexNow, typecheck i build kończą się kodem 0.
+- [x] ISC-162: Anti: build i testy lokalne nie wykonują prawdziwego zgłoszenia do IndexNow.
+- [x] ISC-162.1: Anti: repozytorium nie zawiera martwego pliku klucza poza katalogiem `static/`.
+- [x] ISC-163: Pełne testy, `svelte-check` i build przechodzą bez błędów przed commitem wdrożeniowym.
+- [x] ISC-164: Commit wdrożeniowy zawiera wyłącznie pliki integracji IndexNow i ISA, bez niepowiązanych zmian użytkownika.
+- [ ] ISC-165: `origin/main` wskazuje dokładnie SHA lokalnego commita wdrożeniowego.
+- [ ] ISC-166: Vercel oznacza wdrożenie dokładnego SHA jako udane środowisko Production.
+- [ ] ISC-167: Publiczny URL nowego klucza zwraca HTTP 200 i dokładną treść klucza.
+- [ ] ISC-168: Anti: publiczny URL błędnego rootowego klucza nadal zwraca 404 po jego usunięciu.
+- [ ] ISC-169: Workflow IndexNow dla produkcyjnego deploymentu kończy się sukcesem i przyjętym zgłoszeniem.
+- [ ] ISC-170: Prawdziwy Chrome otwiera publiczny plik klucza jako tekst bez strony błędu aplikacji.
 
 ## Test Strategy
 
@@ -268,6 +297,17 @@ Iteracja 5: „przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to 
 | ISC-138..140 | test/bash | jedno źródło rewizji i bezpieczne kodowanie | jeden helper, poprawne URL-e | `bun test`, `rg` | derived: trwałość |
 | ISC-141..145 | http/test/bash | render z rewizją, sweep, testy, check i build | wszystkie kody 0 | Interceptor, Bun | literal: wszystkie wpisy |
 | ISC-146 | bash | brak zmian treści, zależności i slugów | zero diff w chronionych powierzchniach | `git diff -- posts package.json bun.lock` | derived: regresja |
+| ISC-147..153 | test/bash | klucz, host i struktura payloadu | zgodne z protokołem, wyłącznie canonical HTTPS | `bun test`, odczyt buildu | literal: IndexNow |
+| ISC-154..156 | test/bash | mapowanie diffu Git na publiczne URL-e | tylko adresy zmienione przez wdrożony commit | `bun test`, fixture diff | derived: brak spamu |
+| ISC-157..158 | test | obsługa odpowiedzi IndexNow | 200/202 sukces, pozostałe błąd | mock `fetch` w Bun | literal: zgłaszanie |
+| ISC-159..160 | bash | zdarzenie i SHA produkcyjnego wdrożenia | promoted + production + payload git.sha | odczyt workflow | derived: właściwy moment |
+| ISC-161..162 | test/bash | regresja i brak efektów ubocznych | test/check/build 0, zero realnych wywołań | Bun, kontrolowany mock | derived: bezpieczeństwo |
+| ISC-162.1 | test/bash | lokalizacja wszystkich źródłowych plików klucza | zero kluczy poza `static/` | Bun, `rg --files` | derived: produkcyjny 404 |
+| ISC-163..164 | test/bash/git | gotowość i czystość commita | test/check/build 0, tylko pliki IndexNow i ISA | Bun, Git | literal: wdróż |
+| ISC-165..166 | git/http | zgodność remote i produkcji | exact SHA na main i Production success | Git, GitHub API | literal: wdróż |
+| ISC-167..168 | http | publiczne pliki kluczy | nowy 200 z kluczem, stary 404 | `curl` | derived: własność |
+| ISC-169 | GitHub Actions | wynik automatycznego zgłoszenia | workflow success, HTTP 200/202 w logu | `gh` | literal: IndexNow |
+| ISC-170 | browser | render publicznego klucza | dokładny tekst, brak ERROR 404 | Interceptor | literal: wdróż |
 
 ## Features
 
@@ -295,6 +335,11 @@ Iteracja 5: „przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to 
 | SocialPreviewContract | ISC-115..131, ISC-138..140 | ArticleMetadata | false | high |
 | ShareCacheRevision | ISC-132..137, ISC-141 | SocialPreviewContract | false | high |
 | SocialPreviewClassSweep | ISC-113..122, ISC-142..146 | SocialPreviewContract, ShareCacheRevision | false | high |
+| IndexNowOwnership | ISC-147..153 | CanonicalOrigin | true | high |
+| IndexNowUrlSelection | ISC-154..156 | IndexNowOwnership | false | high |
+| IndexNowSubmission | ISC-157..158, ISC-162 | IndexNowUrlSelection | false | high |
+| IndexNowDeploymentWorkflow | ISC-159..161 | IndexNowSubmission | false | high |
+| IndexNowProductionRelease | ISC-163..170 | IndexNowDeploymentWorkflow | false | high |
 
 ## Decisions
 
@@ -327,6 +372,17 @@ Iteracja 5: „przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to 
 - 2026-08-06 21:48: Jedna stała `SOCIAL_PREVIEW_REVISION` wersjonuje obraz oraz link share; następna zmiana grafiki wymaga tylko podbicia tej wartości.
 - 2026-08-06 21:48: Pełny historyczny verifier zachowuje wcześniejszy guardrail H1; niezależny tryb `--social-preview-only` daje deterministyczny dowód tej iteracji bez ukrywania niepowiązanego długu.
 - 2026-08-06 21:48: Advisor został uruchomiony zgodnie z planem, lecz narzędzie zakończyło się kodem 1; deterministyczne testy, class-sweep oraz realny Chrome dostarczyły pełny dowód lokalny.
+- 2026-08-14 22:21: refined: rozpoczęto iterację 6; cel projektu zmieniono na automatyczną integrację IndexNow dla kanonicznego hosta `www.michaldanieluk.pl`.
+- 2026-08-14 22:21: refined: `vercel.deployment.promoted` zastąpiono potwierdzonym w tym repozytorium zdarzeniem `deployment_status` ze stanem `success` i środowiskiem `Production`; GitHub API wykazał aktywne eventy dla świeżych wdrożeń, a build-time ping pozostaje wykluczony jako przedwczesny.
+- 2026-08-14 22:21: Podłoga delegacji E2 nie jest używana: implementacja jest jednym sekwencyjnym łańcuchem w kilku małych plikach, a reguły sesji zabraniają subagentów bez wyraźnej prośby użytkownika.
+- 2026-08-14 22:21: Root-cause-at-ingestion: pipeline kończy się na udanym statusie Vercel bez konsumenta tłumaczącego wdrożony diff na kanoniczne URL-e; naprawa działa na zdarzeniu deploymentu zamiast w UI lub pojedynczym poście.
+- 2026-08-14 22:21: Nowe pliki narzędziowe zachowują TypeScript, lecz używają `@ts-nocheck`, ponieważ repo nie instaluje deklaracji Node/Bun i dotychczasowy `svelte-check` obejmuje aplikację, nie skrypty; 11 testów Bun wykonuje wszystkie gałęzie integracji bez dodawania zależności.
+- 2026-08-14 22:21: Produkcyjny Interceptor potwierdził `ERROR 404` dla równolegle dodanego rootowego `663e55e712a14599a2015f98372be534.txt`; class-sweep wykazał dwa źródłowe klucze, więc martwy root usunięto, a jedyny kanoniczny klucz pozostaje w `static/`.
+- 2026-08-14 22:35: Advisor został uruchomiony zgodnie z planem, lecz zakończył się kodem 1 bez odpowiedzi; decyzję o gotowości oparto na 59 testach, pełnym check/build, dry-run payloadu oraz weryfikacji lokalnego i produkcyjnego URL-u w prawdziwym Chrome.
+- 2026-08-14 22:35: Granica wdrożenia pozostaje jawna: integracja jest gotowa lokalnie, ale commit, push, deploy i pierwszy live POST do IndexNow wymagają osobnego polecenia użytkownika.
+- 2026-08-14 22:42: refined: polecenie „wdróż” udziela wymaganej zgody na commit, push do `origin/main` i produkcyjną weryfikację; wcześniejsze wyłączenie wdrożenia z zakresu przestaje obowiązywać wyłącznie dla integracji IndexNow.
+- 2026-08-14 22:42: Naturalny zakres iteracji wdrożeniowej ma 8 nowych ISC zamiast miękkiej podłogi E2 wynoszącej 16; dalsze dzielenie powielałoby te same dowody Git/Vercel/HTTP bez zwiększenia pokrycia.
+- 2026-08-14 22:42: Delegacja jest pominięta, ponieważ commit, push, deploy i weryfikacja tworzą jeden zależny łańcuch, a reguły sesji zabraniają subagentów bez wyraźnej prośby użytkownika.
 
 ## Changelog
 
@@ -346,6 +402,10 @@ Iteracja 5: „przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to 
   refuted by: produkcyjny audyt znalazł działające PNG dla 45/45 wpisów, lecz każdy HTML miał niepełny kontrakt social meta, a 22 wpisy powstały przed wdrożeniem OG
   learned: naprawa należy do współdzielonego renderera SEO i wersjonowanego linku share, nie do treści postów
   criterion now: ISC-113..146 wymagają kompletnego kontraktu HTML/PNG/share oraz trwałego sweepu całej klasy
+- 2026-08-14 | conjectured: dodanie pliku klucza do katalogu głównego repozytorium wystarczy do aktywacji IndexNow
+  refuted by: wdrożony commit `d6067ca` zwracał produkcyjny `ERROR 404` dla pliku klucza i nie zawierał mechanizmu zgłaszania zmienionych URL-i
+  learned: w SvelteKit plik własności musi trafić do `static/`, a zgłoszenie powinno powstawać z diffu dopiero po udanym wdrożeniu produkcyjnym
+  criterion now: ISC-147..162.1 wymagają publicznego pliku własności, selektora URL-i po deploymencie i regresyjnego zakazu kluczy poza `static/`
 
 ## Verification
 
@@ -391,3 +451,13 @@ Iteracja 5: „przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to 
 - ISC-145: `bun run build` — kod 0; tylko wcześniejsze nieblokujące ostrzeżenia `verbatimModuleSyntax` i opcjonalnego `sharp`.
 - ISC-146: `git diff -- posts package.json bun.lock bun.lockb pnpm-lock.yaml package-lock.json` — pusty; nie zmieniono treści, zależności ani slugów.
 - Regression note: pełny `bun scripts/verify-seo.ts` najpierw potwierdza social sweep 45/45, następnie zgłasza wcześniejszy podwójny H1 w `/post/google-search-console-social-media_2026-07-31`; problem pozostaje poza zakresem tej iteracji i nie został ukryty ani osłabiony.
+- ISC-147..149: file/build/Chrome — źródłowy i zbudowany plik ma 65 bajtów, nazwę równą 64-znakowej treści; Interceptor otworzył lokalny URL klucza i pokazał dokładny klucz bez błędów.
+- ISC-150..153: dry-run/test — payload zawiera `host: www.michaldanieluk.pl`, poprawne `keyLocation`, usuwa fragmenty i duplikaty oraz odrzuca host apex i HTTP.
+- ISC-154..156: Bun test — diff `A/M/D/R` postów mapuje oba historyczne i nowe slugi; zmiana `src/` rozwija sitemapę; testy, docs i workflow dają pustą listę.
+- ISC-157..158, ISC-162: Bun test — mock `fetch` przyjmuje wyłącznie 200/202, 403 rzuca błąd; cały build i zestaw testów wykonały zero prawdziwych POST-ów IndexNow.
+- ISC-159..160: YAML/test/GitHub API — workflow wymaga `deployment_status.state == success` i `environment == Production`, pobiera `deployment.sha` z `fetch-depth: 2`; repo ma aktywne production deployment events.
+- ISC-161: `bun test` — 59/59 testów i 127 asercji; `bun run check` — 0 błędów, 0 ostrzeżeń; `bun run build` — kod 0; targetowany Prettier i `git diff --check` — czyste.
+- ISC-162.1: production Chrome/class-sweep — rootowy klucz z commita `d6067ca` zwracał `ERROR 404`; po usunięciu sweep źródeł znajduje dokładnie jeden plik klucza, wyłącznie w `static/`.
+- Deployment boundary: zmiany pozostają lokalne; nie wykonano commit/push/deploy ani live POST do IndexNow, więc produkcyjna aktywacja wymaga osobnej dyspozycji i późniejszej weryfikacji publicznego klucza.
+- ISC-163: Bun/bash — `bun test` 59/59 i 127 asercji, `svelte-check` 0 błędów/ostrzeżeń, `bun run build` kod 0; pierwsza próba buildu trafiła na ograniczenie zapisu sandboxa, ponowienie z wymaganym dostępem zakończyło się sukcesem.
+- ISC-164: Git staged-tree — `git diff --cached --name-status` zawiera dokładnie 7 ścieżek: workflow, usunięcie starego klucza, ISA, package script, submitter, nowy klucz i test; `.hermes/` oraz narzędzia publikacji treści pozostają untracked i poza stagingiem.
