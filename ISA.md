@@ -4,11 +4,11 @@ slug: 20260720-103732_blog-pillar-pages
 project: md_blog
 effort: E3
 effort_source: context-override
-phase: execute
-progress: 166/172
+phase: complete
+progress: 172/172
 mode: interactive
 started: 2026-07-20T10:37:32Z
-updated: 2026-08-14T20:43:30Z
+updated: 2026-08-14T20:49:30Z
 iteration: 7
 principal_stated_goal: "wdróż"
 principal_stated_goal_source: prompt
@@ -248,12 +248,12 @@ Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/
 - [x] ISC-162.1: Anti: repozytorium nie zawiera martwego pliku klucza poza katalogiem `static/`.
 - [x] ISC-163: Pełne testy, `svelte-check` i build przechodzą bez błędów przed commitem wdrożeniowym.
 - [x] ISC-164: Commit wdrożeniowy zawiera wyłącznie pliki integracji IndexNow i ISA, bez niepowiązanych zmian użytkownika.
-- [ ] ISC-165: `origin/main` wskazuje dokładnie SHA lokalnego commita wdrożeniowego.
-- [ ] ISC-166: Vercel oznacza wdrożenie dokładnego SHA jako udane środowisko Production.
-- [ ] ISC-167: Publiczny URL nowego klucza zwraca HTTP 200 i dokładną treść klucza.
-- [ ] ISC-168: Anti: publiczny URL błędnego rootowego klucza nadal zwraca 404 po jego usunięciu.
-- [ ] ISC-169: Workflow IndexNow dla produkcyjnego deploymentu kończy się sukcesem i przyjętym zgłoszeniem.
-- [ ] ISC-170: Prawdziwy Chrome otwiera publiczny plik klucza jako tekst bez strony błędu aplikacji.
+- [x] ISC-165: `origin/main` wskazuje dokładnie SHA lokalnego commita wdrożeniowego.
+- [x] ISC-166: Vercel oznacza wdrożenie dokładnego SHA jako udane środowisko Production.
+- [x] ISC-167: Publiczny URL nowego klucza zwraca HTTP 200 i dokładną treść klucza.
+- [x] ISC-168: Anti: publiczny URL błędnego rootowego klucza nadal zwraca 404 po jego usunięciu.
+- [x] ISC-169: Workflow IndexNow dla produkcyjnego deploymentu kończy się sukcesem i przyjętym zgłoszeniem.
+- [x] ISC-170: Prawdziwy Chrome otwiera publiczny plik klucza jako tekst bez strony błędu aplikacji.
 
 ## Test Strategy
 
@@ -383,6 +383,7 @@ Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/
 - 2026-08-14 22:42: refined: polecenie „wdróż” udziela wymaganej zgody na commit, push do `origin/main` i produkcyjną weryfikację; wcześniejsze wyłączenie wdrożenia z zakresu przestaje obowiązywać wyłącznie dla integracji IndexNow.
 - 2026-08-14 22:42: Naturalny zakres iteracji wdrożeniowej ma 8 nowych ISC zamiast miękkiej podłogi E2 wynoszącej 16; dalsze dzielenie powielałoby te same dowody Git/Vercel/HTTP bez zwiększenia pokrycia.
 - 2026-08-14 22:42: Delegacja jest pominięta, ponieważ commit, push, deploy i weryfikacja tworzą jeden zależny łańcuch, a reguły sesji zabraniają subagentów bez wyraźnej prośby użytkownika.
+- 2026-08-14 22:49: Końcowy Advisor zakończył się kodem 1 bez odpowiedzi; nie ma konfliktu do rozstrzygnięcia, ponieważ remote SHA, produkcyjny status Vercel, HTTP kluczy, log IndexNow 202 i Chrome dostarczyły zgodne dowody deterministyczne.
 
 ## Changelog
 
@@ -406,6 +407,10 @@ Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/
   refuted by: wdrożony commit `d6067ca` zwracał produkcyjny `ERROR 404` dla pliku klucza i nie zawierał mechanizmu zgłaszania zmienionych URL-i
   learned: w SvelteKit plik własności musi trafić do `static/`, a zgłoszenie powinno powstawać z diffu dopiero po udanym wdrożeniu produkcyjnym
   criterion now: ISC-147..162.1 wymagają publicznego pliku własności, selektora URL-i po deploymencie i regresyjnego zakazu kluczy poza `static/`
+- 2026-08-14 | conjectured: udany status produkcyjnego deploymentu wystarcza do potwierdzenia kompletnego wdrożenia IndexNow
+  refuted by: Vercel potwierdza publikację pliku, ale dopiero osobny log GitHub Actions wykazał przyjęcie jednego URL-u przez API kodem HTTP 202
+  learned: publikacja własności i powiadomienie wyszukiwarki są dwoma niezależnymi wynikami, które wymagają osobnych dowodów
+  criterion now: ISC-166 i ISC-169 oddzielnie wymagają udanego deploymentu dokładnego SHA oraz przyjętego zgłoszenia IndexNow
 
 ## Verification
 
@@ -461,3 +466,10 @@ Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/
 - Deployment boundary: zmiany pozostają lokalne; nie wykonano commit/push/deploy ani live POST do IndexNow, więc produkcyjna aktywacja wymaga osobnej dyspozycji i późniejszej weryfikacji publicznego klucza.
 - ISC-163: Bun/bash — `bun test` 59/59 i 127 asercji, `svelte-check` 0 błędów/ostrzeżeń, `bun run build` kod 0; pierwsza próba buildu trafiła na ograniczenie zapisu sandboxa, ponowienie z wymaganym dostępem zakończyło się sukcesem.
 - ISC-164: Git staged-tree — `git diff --cached --name-status` zawiera dokładnie 7 ścieżek: workflow, usunięcie starego klucza, ISA, package script, submitter, nowy klucz i test; `.hermes/` oraz narzędzia publikacji treści pozostają untracked i poza stagingiem.
+- ISC-165: Git — push zakończył się `d6067ca..fca20cd main -> main`, a lokalny HEAD i deploymentowy checkout wskazały `fca20cd8b084e11fd96aa361852855dc1628644b`.
+- ISC-166: GitHub/Vercel API — deployment `5913181110` dla SHA `fca20cd8b084e11fd96aa361852855dc1628644b` ma środowisko `Production` i status `success`.
+- ISC-167: HTTP — publiczny nowy plik zwrócił `HTTP/2 200`, `content-type: text/plain`, 65 bajtów i dokładny klucz `a7f6d54eb21bf7d25fe1704382fa87bc40c70c98bf05961297892b187efbd82b`.
+- ISC-168: HTTP — usunięty rootowy klucz `663e55e712a14599a2015f98372be534.txt` zwrócił `HTTP/2 404` po wdrożeniu.
+- ISC-169: GitHub Actions — run `31839329213` dla eventu `deployment_status` zakończył się `success`; log submittera: `IndexNow: przyjęto 1 URL-i (HTTP 202).`
+- ISC-170: Interceptor/Chrome — publiczny plik pokazał dokładny klucz, `window.__interceptor_errors` zwróciło `[]`, log sieci był pusty; obejrzany zrzut `/tmp/pai-screenshots/interceptor-screenshot-1786740447393.png` zawiera wyłącznie poprawny tekst klucza.
+- Deployment complete: commit `fca20cd8b084e11fd96aa361852855dc1628644b` trafił na `origin/main`, został wdrożony na Production, opublikował klucz i uruchomił przyjęte zgłoszenie jednego URL-u do IndexNow.
