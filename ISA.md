@@ -4,11 +4,11 @@ slug: 20260720-103732_blog-pillar-pages
 project: md_blog
 effort: E3
 effort_source: context-override
-phase: execute
-progress: 177/182
+phase: complete
+progress: 182/182
 mode: interactive
 started: 2026-07-20T10:37:32Z
-updated: 2026-08-14T20:59:09Z
+updated: 2026-08-14T21:05:30Z
 iteration: 8
 principal_stated_goal: "mój klucz tez przenieś tam gdzie powienien być"
 principal_stated_goal_source: prompt
@@ -261,11 +261,11 @@ Iteracja 8: „mój klucz tez przenieś tam gdzie powienien być”. Zastąpić 
 - [x] ISC-173: Selektor klucza odnajduje dokładnie jeden klucz i jest nim `663e55e712a14599a2015f98372be534`.
 - [x] ISC-174: Pełne testy, `svelte-check` i build przechodzą po zamianie klucza.
 - [x] ISC-175: Commit zamiany nie obejmuje niepowiązanych lokalnych plików użytkownika.
-- [ ] ISC-176: `origin/main` i Vercel Production potwierdzają dokładny SHA zamiany klucza.
-- [ ] ISC-177: Publiczny URL klucza użytkownika zwraca HTTP 200 i dokładną treść.
-- [ ] ISC-178: Anti: publiczny URL wygenerowanego klucza zwraca HTTP 404 po zamianie.
-- [ ] ISC-179: Produkcyjny workflow IndexNow przyjmuje zgłoszenie z kluczem użytkownika.
-- [ ] ISC-180: Prawdziwy Chrome pokazuje wyłącznie dokładny klucz użytkownika bez błędów.
+- [x] ISC-176: `origin/main` i Vercel Production potwierdzają dokładny SHA zamiany klucza.
+- [x] ISC-177: Publiczny URL klucza użytkownika zwraca HTTP 200 i dokładną treść.
+- [x] ISC-178: Anti: publiczny URL wygenerowanego klucza zwraca HTTP 404 po zamianie.
+- [x] ISC-179: Produkcyjny workflow IndexNow przyjmuje zgłoszenie z kluczem użytkownika.
+- [x] ISC-180: Prawdziwy Chrome pokazuje wyłącznie dokładny klucz użytkownika bez błędów.
 
 ## Test Strategy
 
@@ -406,6 +406,7 @@ Iteracja 8: „mój klucz tez przenieś tam gdzie powienien być”. Zastąpić 
 - 2026-08-14 22:59: refined: „mój klucz też przenieś” oznacza zastąpienie klucza wygenerowanego kluczem użytkownika, nie utrzymywanie dwóch aktywnych kluczy; selektor i testy celowo wymagają dokładnie jednego źródła prawdy.
 - 2026-08-14 22:59: Naturalny zakres rotacji ma 10 ISC zamiast miękkiej podłogi E2 wynoszącej 16; dalsze dzielenie powielałoby te same dowody plik/test/Git/HTTP/Chrome.
 - 2026-08-14 22:59: Delegacja jest pominięta, ponieważ zamiana dwóch plików, jeden test i sekwencyjne wdrożenie tworzą mały wspólny zakres, a reguły sesji zabraniają subagentów bez wyraźnej prośby użytkownika.
+- 2026-08-14 23:05: Końcowy Advisor zakończył się kodem 1 bez odpowiedzi; spójne dowody Git, Vercel, HTTP 200/404, IndexNow 202 i Chrome uzasadniają zamknięcie bez dodatkowej korekty.
 
 ## Changelog
 
@@ -433,6 +434,10 @@ Iteracja 8: „mój klucz tez przenieś tam gdzie powienien być”. Zastąpić 
   refuted by: Vercel potwierdza publikację pliku, ale dopiero osobny log GitHub Actions wykazał przyjęcie jednego URL-u przez API kodem HTTP 202
   learned: publikacja własności i powiadomienie wyszukiwarki są dwoma niezależnymi wynikami, które wymagają osobnych dowodów
   criterion now: ISC-166 i ISC-169 oddzielnie wymagają udanego deploymentu dokładnego SHA oraz przyjętego zgłoszenia IndexNow
+- 2026-08-14 | conjectured: wygenerowanie nowego poprawnego klucza jest równoważne przeniesieniu istniejącego poprawnego klucza właściciela
+  refuted by: użytkownik jawnie poprosił o zachowanie swojego klucza mimo technicznej poprawności wygenerowanego zamiennika
+  learned: przy poprawnym kluczu właściciela należy naprawiać lokalizację i automatyzację, a nie zmieniać jego tożsamość bez potrzeby
+  criterion now: ISC-171..180 wymagają dokładnego klucza użytkownika, jednego źródła prawdy i produkcyjnego dowodu rotacji
 
 ## Verification
 
@@ -500,3 +505,9 @@ Iteracja 8: „mój klucz tez przenieś tam gdzie powienien być”. Zastąpić 
 - ISC-173: Bun/dry-run — test selektora przeszedł, a payload wskazał `key: 663e55e712a14599a2015f98372be534` i odpowiadające `keyLocation`.
 - ISC-174: Bun/bash — test IndexNow 13/13, pełny zestaw 59/59 i 127 asercji, `svelte-check` 0 błędów/ostrzeżeń, build kod 0.
 - ISC-175: Git staged-tree — staging zawiera wyłącznie ISA, test oraz zamianę dwóch plików klucza; `.hermes/` i narzędzia publikacji treści pozostają untracked.
+- ISC-176: Git/GitHub/Vercel — lokalny HEAD, `origin/main` i udany status Production wskazują `58fbc1d6e230ab84f425c97577d1955275687db4`.
+- ISC-177: HTTP — `663e55e712a14599a2015f98372be534.txt` zwrócił HTTP 200, `text/plain`, 33 bajty i dokładny klucz użytkownika.
+- ISC-178: HTTP — wygenerowany `a7f6d54e….txt` zwrócił HTTP 404 po wdrożeniu.
+- ISC-179: GitHub Actions — run `31840726626` zakończył się sukcesem; log: `IndexNow: przyjęto 1 URL-i (HTTP 202).`
+- ISC-180: Interceptor/Chrome — publiczny URL pokazał wyłącznie `663e55e712a14599a2015f98372be534`, błędy `[]`, log sieci pusty; obejrzany zrzut `/tmp/pai-screenshots/interceptor-screenshot-1786741546069.png`.
+- Deployment complete: commit `58fbc1d6e230ab84f425c97577d1955275687db4` zastąpił wygenerowany klucz pierwotnym kluczem użytkownika, został wdrożony na Production i otrzymał HTTP 202 z IndexNow.
