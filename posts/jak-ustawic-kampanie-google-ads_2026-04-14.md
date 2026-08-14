@@ -1,5 +1,6 @@
 ---
 title: 'Jak poprawnie ustawić kampanię Google Ads od zera — przewodnik dla małej firmy'
+seoTitle: 'Jak ustawić kampanię Google Ads od zera?'
 date: '2026-04-14'
 tags: ['Google Ads', 'Marketing', 'SEM', 'Kampania', 'Poradnik']
 description: 'Jak ustawić kampanię Google Ads krok po kroku? Przewodnik dla małych firm — struktura, słowa kluczowe, reklamy i landing page bez przepalania budżetu.'

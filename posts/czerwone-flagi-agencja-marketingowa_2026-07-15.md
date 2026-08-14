@@ -1,5 +1,6 @@
 ---
 title: 'Czerwone flagi przy wyborze agencji marketingowej — 7 sygnałów, że powinieneś uciekać'
+seoTitle: 'Czerwone flagi agencji marketingowej: 7 sygnałów'
 date: '2026-07-11'
 updated: '2026-08-11'
 tags: ['Marketing', 'Mała Firma', 'Agencja', 'Strategia']

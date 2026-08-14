@@ -1,5 +1,6 @@
 ---
 title: 'Reddit SEO: jak "niewidzialne" słowo w zapytaniu daje Ci ruch, o który nikt inny nie walczy'
+seoTitle: 'Reddit SEO: jak wykorzystać zapytania z nazwą Reddit'
 date: '2026-07-31'
 tags: ['SEO', 'Content Marketing', 'Słowa kluczowe', 'Marketing', 'Mała Firma']
 description: 'Ludzie coraz częściej dopisują "reddit" do wyszukiwań, szukając prawdziwych opinii, nie reklam. To luka, którą większość firm ignoruje. Pokazuję strategię trzech warstw stron, która ją wykorzystuje.'

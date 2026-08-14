@@ -1,5 +1,6 @@
 ---
 title: 'Jak długo trzeba czekać na efekty marketingu? Prawdziwe terminy, kanał po kanale'
+seoTitle: 'Jak długo czekać na efekty marketingu?'
 date: '2026-07-02'
 tags: ['Marketing', 'SEO', 'Google Ads', 'Strategia', 'Mała firma']
 description: 'Ile czasu mija od pierwszej złotówki wydanej na marketing do pierwszego klienta? Realne terminy dla SEO, Google Ads, wizytówki Google i e-mail marketingu — bez obiecanek.'

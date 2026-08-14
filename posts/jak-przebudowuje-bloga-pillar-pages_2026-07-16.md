@@ -1,5 +1,6 @@
 ---
 title: 'Przebudowuję bloga michaldanieluk.pl — plan na pillar pages i research Semrushem'
+seoTitle: 'Pillar pages: jak przebudowuję bloga pod SEO'
 date: '2026-07-16'
 tags: ['Content Marketing', 'SEO', 'Blog', 'Pillar Pages', 'Semrush']
 description: 'Za kulisami przebudowy własnego bloga: dlaczego wprowadzam pillar pages, jak wyglądał research keywordowy w Semrush i co poszło nie tak po drodze.'

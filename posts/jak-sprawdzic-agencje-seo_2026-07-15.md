@@ -1,5 +1,6 @@
 ---
 title: 'Jak sprawdzić, czy agencja SEO robi cokolwiek — 4 rzeczy, które zweryfikujesz sam'
+seoTitle: 'Jak sprawdzić agencję SEO? 4 rzeczy do weryfikacji'
 date: '2026-07-15'
 tags: ['SEO', 'Marketing', 'Agencja', 'Mała Firma', 'Google Search Console']
 description: 'Płacisz agencji za SEO i nie wiesz, czy coś się dzieje? 4 konkretne rzeczy, które sprawdzisz sam — bez wiedzy technicznej. Zobacz, czy Twoje pieniądze pracują.'

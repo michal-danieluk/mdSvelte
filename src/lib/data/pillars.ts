@@ -188,7 +188,7 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
     slug: 'marketing',
     name: 'Marketing',
     eyebrow: 'Przewodnik po marketingu',
-    seoTitle: 'Marketing małej firmy: strategia, koszty i realne efekty | Michał Danieluk',
+    seoTitle: 'Marketing małej firmy: strategia, koszty i efekty',
     metaDescription:
       'Praktyczny marketing małej firmy: wybierz właściwe kanały, poznaj realne koszty i terminy oraz podejmuj decyzje bez agencyjnych obietnic.',
     keywords: [
