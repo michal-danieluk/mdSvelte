@@ -45,7 +45,7 @@ describe('IndexNow ownership key', () => {
 
   test('the repository contains one valid IndexNow key file', async () => {
     const result = await findIndexNowKey(path.resolve('static'))
-    expect(result.key).toHaveLength(64)
+    expect(result.key).toBe('663e55e712a14599a2015f98372be534')
   })
 
   test('keeps ownership keys in static instead of the repository root', async () => {

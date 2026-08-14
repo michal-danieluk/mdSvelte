@@ -4,16 +4,16 @@ slug: 20260720-103732_blog-pillar-pages
 project: md_blog
 effort: E3
 effort_source: context-override
-phase: complete
-progress: 172/172
+phase: execute
+progress: 177/182
 mode: interactive
 started: 2026-07-20T10:37:32Z
-updated: 2026-08-14T20:49:30Z
-iteration: 7
-principal_stated_goal: "wdróż"
+updated: 2026-08-14T20:59:09Z
+iteration: 8
+principal_stated_goal: "mój klucz tez przenieś tam gdzie powienien być"
 principal_stated_goal_source: prompt
 principal_stated_goal_signal: 2
-principal_stated_goal_locked: 2026-08-14T20:43:00Z
+principal_stated_goal_locked: 2026-08-14T20:59:09Z
 density_score: 0.67
 interview_invoked: false
 divergence_risk: low
@@ -79,6 +79,8 @@ Iteracja 5: „przejzyj mi bloga i sprawdź czy są jeszcze takie jeśli tak to 
 Iteracja 6: „trzeba dodać mi IndexNow do strony aby Bing mi to lepiej indeksował”. Dodać zgodną z protokołem weryfikację własności hosta `www.michaldanieluk.pl` oraz automatyczne zgłaszanie wyłącznie URL-i zmienionych przez commit po jego faktycznym promowaniu na produkcję Vercel; zachować możliwość kontrolowanego zgłoszenia ręcznego bez nowych zależności.
 
 Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/main`, potwierdzić produkcyjne wdrożenie dokładnego commita oraz zweryfikować publiczny klucz i przyjęcie automatycznego zgłoszenia.
+
+Iteracja 8: „mój klucz tez przenieś tam gdzie powienien być”. Zastąpić wygenerowany klucz pierwotnym kluczem użytkownika `663e55e712a14599a2015f98372be534`, zachowując dokładnie jeden aktywny plik własności, sprawną automatyzację oraz produkcyjne potwierdzenie IndexNow.
 
 ## Criteria
 
@@ -254,6 +256,16 @@ Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/
 - [x] ISC-168: Anti: publiczny URL błędnego rootowego klucza nadal zwraca 404 po jego usunięciu.
 - [x] ISC-169: Workflow IndexNow dla produkcyjnego deploymentu kończy się sukcesem i przyjętym zgłoszeniem.
 - [x] ISC-170: Prawdziwy Chrome otwiera publiczny plik klucza jako tekst bez strony błędu aplikacji.
+- [x] ISC-171: `static/663e55e712a14599a2015f98372be534.txt` ma nazwę równą dokładnej treści klucza użytkownika.
+- [x] ISC-172: Anti: wygenerowany klucz `a7f6d54e…` nie pozostaje w źródłach ani buildzie.
+- [x] ISC-173: Selektor klucza odnajduje dokładnie jeden klucz i jest nim `663e55e712a14599a2015f98372be534`.
+- [x] ISC-174: Pełne testy, `svelte-check` i build przechodzą po zamianie klucza.
+- [x] ISC-175: Commit zamiany nie obejmuje niepowiązanych lokalnych plików użytkownika.
+- [ ] ISC-176: `origin/main` i Vercel Production potwierdzają dokładny SHA zamiany klucza.
+- [ ] ISC-177: Publiczny URL klucza użytkownika zwraca HTTP 200 i dokładną treść.
+- [ ] ISC-178: Anti: publiczny URL wygenerowanego klucza zwraca HTTP 404 po zamianie.
+- [ ] ISC-179: Produkcyjny workflow IndexNow przyjmuje zgłoszenie z kluczem użytkownika.
+- [ ] ISC-180: Prawdziwy Chrome pokazuje wyłącznie dokładny klucz użytkownika bez błędów.
 
 ## Test Strategy
 
@@ -308,6 +320,12 @@ Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/
 | ISC-167..168 | http | publiczne pliki kluczy | nowy 200 z kluczem, stary 404 | `curl` | derived: własność |
 | ISC-169 | GitHub Actions | wynik automatycznego zgłoszenia | workflow success, HTTP 200/202 w logu | `gh` | literal: IndexNow |
 | ISC-170 | browser | render publicznego klucza | dokładny tekst, brak ERROR 404 | Interceptor | literal: wdróż |
+| ISC-171..173 | test/bash | jedyny kanoniczny klucz użytkownika | jeden plik, nazwa równa treści | Bun, `rg` | literal: mój klucz |
+| ISC-174..175 | test/bash/git | regresja i czystość commita | test/check/build 0, brak obcych plików | Bun, Git | derived: bezpieczeństwo |
+| ISC-176 | git/http | produkcyjny SHA zamiany | remote i Production success | Git, GitHub API | literal: przenieś |
+| ISC-177..178 | http | nowe i usunięte publiczne klucze | użytkownika 200, wygenerowany 404 | `curl` | literal: tam gdzie powinien być |
+| ISC-179 | GitHub Actions | zgłoszenie z kluczem użytkownika | workflow success, HTTP 200/202 | `gh` | derived: działanie IndexNow |
+| ISC-180 | browser | publiczny render klucza użytkownika | dokładny tekst i brak błędów | Interceptor | literal: mój klucz |
 
 ## Features
 
@@ -340,6 +358,7 @@ Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/
 | IndexNowSubmission | ISC-157..158, ISC-162 | IndexNowUrlSelection | false | high |
 | IndexNowDeploymentWorkflow | ISC-159..161 | IndexNowSubmission | false | high |
 | IndexNowProductionRelease | ISC-163..170 | IndexNowDeploymentWorkflow | false | high |
+| IndexNowPrincipalKey | ISC-171..180 | IndexNowProductionRelease | false | high |
 
 ## Decisions
 
@@ -384,6 +403,9 @@ Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/
 - 2026-08-14 22:42: Naturalny zakres iteracji wdrożeniowej ma 8 nowych ISC zamiast miękkiej podłogi E2 wynoszącej 16; dalsze dzielenie powielałoby te same dowody Git/Vercel/HTTP bez zwiększenia pokrycia.
 - 2026-08-14 22:42: Delegacja jest pominięta, ponieważ commit, push, deploy i weryfikacja tworzą jeden zależny łańcuch, a reguły sesji zabraniają subagentów bez wyraźnej prośby użytkownika.
 - 2026-08-14 22:49: Końcowy Advisor zakończył się kodem 1 bez odpowiedzi; nie ma konfliktu do rozstrzygnięcia, ponieważ remote SHA, produkcyjny status Vercel, HTTP kluczy, log IndexNow 202 i Chrome dostarczyły zgodne dowody deterministyczne.
+- 2026-08-14 22:59: refined: „mój klucz też przenieś” oznacza zastąpienie klucza wygenerowanego kluczem użytkownika, nie utrzymywanie dwóch aktywnych kluczy; selektor i testy celowo wymagają dokładnie jednego źródła prawdy.
+- 2026-08-14 22:59: Naturalny zakres rotacji ma 10 ISC zamiast miękkiej podłogi E2 wynoszącej 16; dalsze dzielenie powielałoby te same dowody plik/test/Git/HTTP/Chrome.
+- 2026-08-14 22:59: Delegacja jest pominięta, ponieważ zamiana dwóch plików, jeden test i sekwencyjne wdrożenie tworzą mały wspólny zakres, a reguły sesji zabraniają subagentów bez wyraźnej prośby użytkownika.
 
 ## Changelog
 
@@ -473,3 +495,8 @@ Iteracja 7: „wdróż”. Opublikować gotową integrację IndexNow na `origin/
 - ISC-169: GitHub Actions — run `31839329213` dla eventu `deployment_status` zakończył się `success`; log submittera: `IndexNow: przyjęto 1 URL-i (HTTP 202).`
 - ISC-170: Interceptor/Chrome — publiczny plik pokazał dokładny klucz, `window.__interceptor_errors` zwróciło `[]`, log sieci był pusty; obejrzany zrzut `/tmp/pai-screenshots/interceptor-screenshot-1786740447393.png` zawiera wyłącznie poprawny tekst klucza.
 - Deployment complete: commit `fca20cd8b084e11fd96aa361852855dc1628644b` trafił na `origin/main`, został wdrożony na Production, opublikował klucz i uruchomił przyjęte zgłoszenie jednego URL-u do IndexNow.
+- ISC-171: file/hex — źródło i build zawierają `663e55e712a14599a2015f98372be534` plus newline; plik buildu ma 33 bajty, a nazwa bez `.txt` równa się treści.
+- ISC-172: class-sweep — `rg` nie znalazł wygenerowanego klucza w aktywnych źródłach, a `.vercel/output/static/a7f6d54e….txt` nie istnieje.
+- ISC-173: Bun/dry-run — test selektora przeszedł, a payload wskazał `key: 663e55e712a14599a2015f98372be534` i odpowiadające `keyLocation`.
+- ISC-174: Bun/bash — test IndexNow 13/13, pełny zestaw 59/59 i 127 asercji, `svelte-check` 0 błędów/ostrzeżeń, build kod 0.
+- ISC-175: Git staged-tree — staging zawiera wyłącznie ISA, test oraz zamianę dwóch plików klucza; `.hermes/` i narzędzia publikacji treści pozostają untracked.
