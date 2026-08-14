@@ -52,6 +52,8 @@ Nigdy nie zapominaj o człowieku po drugiej stronie. Pisz naturalnie, w swoim st
 
 *   **W praktyce:** Używaj danych strukturalnych (Schema.org). To jak dać AI "ściągę" z Twojej treści. Oznaczaj artykuły, przepisy, produkty, FAQ. To potężny sygnał, którego nie można ignorować. Możesz nawet poprosić AI o pomoc w ich stworzeniu.
 
+W [prostym poradniku po Schema.org](/post/dane-strukturalne-schema-org) pokazuję, jaki typ wybrać, co sprawdzić i co przekazać wykonawcy strony.
+
 Ostatnio sam użyłem do tego Gemini CLI:
 
 ```bash

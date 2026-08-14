@@ -36,7 +36,7 @@ Oto cztery strategie, które pomogą Ci przetrwać tę rewolucję:
 ### Strategia #1: Zacznij mówić językiem maszyn
 
 AI kocha porządek. Twoje treści muszą być dla niego krystalicznie czyste.
-*   **Dane strukturalne (Schema.org):** To jak dać robotowi mapę Twojej strony. Używaj ich do oznaczania wszystkiego – od artykułów, przez produkty, po sekcje Q&A.
+*   **Dane strukturalne (Schema.org):** To jak dać robotowi mapę Twojej strony. Używaj ich do oznaczania wszystkiego – od artykułów, przez produkty, po sekcje Q&A. Zacznij od poradnika o [danych strukturalnych dla właściciela strony](/post/dane-strukturalne-schema-org).
 *   **Klarowna struktura:** Używaj nagłówków (H1, H2, H3), krótkich akapitów, list i tabel. Pisz prosto i zwięźle. Koniec z laniem wody.
 
 ### Strategia #2: Bądź odpowiedzią, a nie tylko linkiem

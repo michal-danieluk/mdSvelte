@@ -49,6 +49,8 @@ Chcesz zobaczyć, jak to samo myślenie, konceptami i encjami zamiast słów klu
 
 Pamiętasz sekcję "AI Overviews" na górze wyników Google? Aby się tam znaleźć, musisz mówić do AI w jego języku. Tym językiem są **dane strukturalne** (np. [Schema.org](http://schema.org/)). To specjalne znaczniki w kodzie Twojej strony, które tłumaczą AI, czym jest dana treść. Dzięki nim AI wie, że "40 minut" to czas przygotowania przepisu, a "50 zł" to cena produktu. To takie podawanie informacji na tacy. Im łatwiej AI Cię zrozumie, tym chętniej Cię poleci.
 
+Jeśli chcesz zacząć bez grzebania w kodzie, zobacz [jak sprawdzić dane strukturalne na stronie](/post/dane-strukturalne-schema-org) i co przygotować dla wykonawcy.
+
 ## Aktualizacja: Google w końcu to potwierdził oficjalnie
 
 Google wypuścił własny poradnik "Optimizing your website for generative AI features" (branża nazywa go po prostu AI Optimization Guide). Dobra wiadomość: potwierdza większość tego, co napisałem wyżej. Zła: pomija dokładnie te części, które najbardziej bolą, trochę jak pytanie Urzędu Skarbowego o to, jak płacić mniejsze podatki.
