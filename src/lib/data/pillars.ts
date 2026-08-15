@@ -105,6 +105,7 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
       'czy-seo-sie-oplaca-malej-firmie_2026-07-12',
       'seo-samemu-czy-zatrudnic-kogos_2026-07-14',
       'jak-sprawdzic-agencje-seo_2026-07-15',
+      'jak-zrobic-wizytowke-google',
       'partyzanckie_seo_2025-10-03',
       'jak_sprawic_by_ai_polecalo_twoja_strone_2025-10-03'
     ]

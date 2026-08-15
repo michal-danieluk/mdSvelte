@@ -2,7 +2,7 @@
 title: 'Jak zrobić wizytówkę Google? Instrukcja krok po kroku'
 seoTitle: 'Jak zrobić wizytówkę Google? Instrukcja krok po kroku'
 date: '2026-08-11'
-updated: ''
+updated: '2026-08-16'
 tags: ['SEO', 'Lokalne SEO', 'Profil Firmy w Google', 'Mała Firma', 'Google Maps']
 description: 'Jak zrobić wizytówkę Google krok po kroku: konto, dane firmy, kategoria, adres lub obszar działania, weryfikacja i ustawienia po starcie.'
 preview: 'Założenie Profilu Firmy w Google jest bezpłatne. Zobacz, jak poprawnie podać nazwę, kategorię, adres lub obszar działania i przejść weryfikację.'
@@ -152,6 +152,20 @@ Nie. Samo założenie wizytówki nie wystarczy, bo trzeba jeszcze o nią dbać i
 Google opisuje trzy główne grupy czynników lokalnych wyników: trafność, odległość i popularność. Część z nich zależy od zapytania i lokalizacji użytkownika, więc nikt uczciwy nie zagwarantuje konkretnej pozycji.
 
 Masz wpływ na jakość i aktualność informacji, dobór właściwej kategorii, zdjęcia, opinie, odpowiedzi oraz spójność profilu ze stroną. Google wprost zaznacza też, że nie można zapłacić za podniesienie pozycji w bezpłatnych wynikach lokalnych. Więcej znajdziesz w oficjalnym opisie [rankingu lokalnego](https://support.google.com/business/answer/7091?hl=pl).
+
+## Jak poprawić pozycjonowanie wizytówki Google po założeniu profilu
+
+Pozycjonowanie wizytówki Google zaczyna się po weryfikacji. Utrzymuj aktualne dane, pokazuj prawdziwe usługi i dbaj o to, żeby profil oraz strona przedstawiały tę samą firmę. Dopisanie miasta do nazwy lub kupowanie opinii nie rozwiąże problemu.
+
+Zacznij od pięciu rzeczy:
+
+1. **Sprawdź kategorię główną i usługi.** Kategoria ma opisywać główne źródło przychodu, a usługi muszą odpowiadać temu, co firma faktycznie wykonuje.
+2. **Utrzymuj zgodne dane.** Nazwa, telefon, godziny i obszar działania na stronie muszą zgadzać się z profilem. Po zmianie oferty albo numeru telefonu popraw oba miejsca tego samego dnia.
+3. **Proś o opinie po zakończonej usłudze.** Nie kupuj ich i nie filtruj klientów według tego, czy byli zadowoleni. Odpowiadaj rzeczowo, również na krytykę.
+4. **Dodawaj aktualne zdjęcia oraz informacje, których klient naprawdę szuka.** Pokaż realizacje, zespół, lokal lub sprzęt. Zdjęcie z banku obrazów nie potwierdza, że firma istnieje w danym miejscu.
+5. **Raz w miesiącu sprawdź, czy profil nadal prowadzi do kontaktu.** Zadzwoń na numer, kliknij stronę, zweryfikuj godziny i odpowiedz na nowe opinie. Profil z nieaktualną ofertą nie pomaga w pozyskiwaniu klientów.
+
+Te działania poprawiają trafność i wiarygodność informacji, ale nie anulują znaczenia odległości od osoby szukającej. Firma usługowa nie powinna tworzyć dodatkowych profili dla każdego miasta tylko po to, żeby ominąć ten mechanizm.
 
 Jeśli chcesz zrobić podstawy samodzielnie, ten poradnik wystarczy na start. Granicą zwykle nie jest wiedza, tylko czas. Jeśli ledwo wyrabiasz się z obsługą klientów, prawdopodobnie nie będziesz regularnie aktualizować profilu, odpowiadać na opinie i sprawdzać, czy dane nadal są poprawne.
 
