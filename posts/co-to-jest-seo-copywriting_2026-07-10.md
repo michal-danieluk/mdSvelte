@@ -1,6 +1,6 @@
 ---
 title: 'SEO copywriting: co to jest i jak działa'
-seoTitle: 'SEO copywriting | Prosta definicja i przykład | Michał Danieluk'
+seoTitle: 'SEO copywriting: definicja i przykład'
 date: '2026-07-10'
 updated: '2026-08-09'
 tags: ['SEO Copywriting', 'Content Marketing', 'SEO', 'Marketing']

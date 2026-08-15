@@ -1,8 +1,9 @@
 ---
 title: 'Jak działa pozycjonowanie stron? Mechanika algorytmu Google krok po kroku'
+seoTitle: 'Jak działa pozycjonowanie stron?'
 date: '2026-07-20'
 tags: ['SEO', 'Pozycjonowanie', 'Google', 'Linkbuilding', 'Marketing']
-description: 'Pozycjonowanie stron nie jest magią — to proces, który da się rozłożyć na czynniki pierwsze. Crawling, indeksacja, ranking, linki. Wyjaśniam mechanikę krok po kroku.'
+description: 'Crawling, indeksacja, ranking i linki: zobacz, jak Google ocenia strony i jak działa pozycjonowanie krok po kroku w praktyce.'
 keywords: 'pozycjonowanie stron, jak działa pozycjonowanie, pozycjonowanie sklepu internetowego, wyszukiwarka słów kluczowych, linkbuilding seo, linkowanie wewnętrzne, jak działa google'
 image_prompt: 'A cyberpunk engineer standing before a massive glowing machine made of interconnected gears and search result cards, pulling levers labeled with ranking factors, neon blue and purple light, data streams flowing between gears, dark industrial control room, cinematic composition'
 featured: false

@@ -1,5 +1,6 @@
 ---
 title: 'SEO samodzielnie czy zatrudnić kogoś? Test decyzyjny na start'
+seoTitle: 'SEO samodzielnie czy zlecić specjaliście?'
 date: '2026-07-14'
 tags: ['SEO', 'Pozycjonowanie', 'Marketing', 'Mała Firma', 'DIY']
 description: 'Nie plan działania i nie checklista audytu — cztery pytania, które rozstrzygają, czy SEO robić samodzielnie, czy zlecić komuś. Z rachunkiem kosztu złej decyzji.'

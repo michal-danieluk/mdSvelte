@@ -1,8 +1,9 @@
 ---
 title: Mało kto pisze maile tylko tekstowe
+tags: ['E-mail', 'Neomutt', 'Linux', 'Produktywność']
 date: 2023-03-17
 updated: 2026-07-22
-description: 'Dlaczego nadal wybieram tekstowe wiadomości e-mail i jak wygląda obsługa poczty w terminalowym kliencie Neomutt.'
+description: 'Dlaczego wybieram maile tekstowe i jak działa poczta w terminalu: Neomutt, prosty format wiadomości oraz mniej rozpraszaczy.'
 ---
 
 Mało kto dzisiaj wysyła maile tekstowe. Większość z nich jest w formacie HTML.

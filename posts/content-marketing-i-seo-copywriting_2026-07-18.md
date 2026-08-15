@@ -1,6 +1,6 @@
 ---
 title: 'Content marketing i SEO copywriting — kompletny przewodnik dla małej firmy (2026)'
-seoTitle: 'Content marketing | Jak połączyć treści z SEO | Michał Danieluk'
+seoTitle: 'Content marketing: jak połączyć treści z SEO'
 date: '2026-07-18'
 updated: '2026-08-09'
 tags: ['Content Marketing', 'SEO', 'SEO Copywriting', 'Marketing', 'Mała Firma']

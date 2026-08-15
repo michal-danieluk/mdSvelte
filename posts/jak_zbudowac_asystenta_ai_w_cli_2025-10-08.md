@@ -1,5 +1,6 @@
 ---
 title: 'Budowa Asystenta AI w CLI (Cz. 1): Dlaczego przeglądarka Cię ogranicza?'
+seoTitle: 'Asystent AI w CLI: dlaczego przeglądarka nie wystarcza'
 date: '2025-10-08'
 tags: ['AI', 'Filozofia Pracy', 'Produktywność', 'Deep Work', 'Seria Asystent CLI']
 description: 'Część 1 serii o budowie osobistego asystenta AI. Dowiedz się, dlaczego kopiowanie promptów do ChatGPT to ślepa uliczka i czym jest podejście "Context-First".'

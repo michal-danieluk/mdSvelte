@@ -1,5 +1,6 @@
 ---
-title: Jak sprawić, by AI polecało Twoją stronę? Czyli nowe SEO dla cwaniaków.
+title: 'Jak sprawić, by AI polecało Twoją stronę? Czyli nowe SEO dla cwaniaków.'
+seoTitle: 'Jak sprawić, by AI polecało Twoją stronę?'
 date: 2025-10-03
 updated: 2026-07-28
 tags: ['SEO', 'AI', 'LLM', 'Marketing']

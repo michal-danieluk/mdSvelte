@@ -3,7 +3,7 @@ title: 'Ile kosztuje pozycjonowanie strony w 2026? Realne widełki i na co idą 
 seoTitle: 'Ile kosztuje pozycjonowanie strony w 2026?'
 date: '2026-07-17'
 tags: ['SEO', 'Pozycjonowanie', 'Marketing', 'Mała Firma', 'Cennik']
-description: 'Pozycjonowanie stron kosztuje od 800 do 8000 zł miesięcznie — i to nie przypadek. Rozbijam widełki cenowe na czynniki pierwsze, żebyś wiedział, za co realnie płacisz.'
+description: 'Pozycjonowanie stron kosztuje 800–8000 zł miesięcznie. Sprawdź, skąd biorą się widełki i za co płacisz w obsłudze SEO małej firmy.'
 keywords: 'pozycjonowanie cena, ile kosztuje pozycjonowanie, cennik pozycjonowania stron, pozycjonowanie lokalne cena, koszt seo miesięcznie, pozycjonowanie stron cena, ile kosztuje seo małej firmy'
 image_prompt: 'A cyberpunk accountant sitting at a glowing terminal desk, holographic invoice and price tags floating around a search results ranking chart, coins and Polish złoty symbols drifting in neon light, dark office, purple and teal neon glow, rain against the window, cinematic composition'
 featured: true

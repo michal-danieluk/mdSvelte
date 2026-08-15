@@ -1,7 +1,9 @@
 ---
 title: Postawiłem nowy blog cz. 1
+seoTitle: 'Nowy blog na SvelteKit: start projektu'
 date: 2023-2-21
 tags: ['SvelteKit', 'Blog', 'Web Development']
+description: 'Dlaczego przeniosłem blog z Next.js na SvelteKit i jak wyglądały pierwsze decyzje przy budowie nowej wersji strony internetowej.'
 ---
 
 No i powstał nowy blog. W znaczeniu nowa szata graficzna i nowy silnik podspodem.

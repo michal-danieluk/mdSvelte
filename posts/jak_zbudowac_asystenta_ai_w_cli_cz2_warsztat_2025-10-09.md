@@ -1,5 +1,6 @@
 ---
 title: 'Budowa Asystenta AI w CLI (Cz. 2): Warsztat Geeka - Konfiguracja'
+seoTitle: 'Asystent AI w CLI: konfiguracja warsztatu'
 date: '2025-10-09'
 tags: ['AI', 'Tutorial', 'Gemini CLI', 'Konfiguracja', 'Seria Asystent CLI']
 description: 'Część 2 serii. Przechodzimy do praktyki: instalacja narzędzi, zdobycie kluczy API i budowa struktury katalogów, która stanie się mózgiem Twojego asystenta.'

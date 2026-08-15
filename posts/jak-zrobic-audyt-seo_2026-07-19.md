@@ -1,5 +1,6 @@
 ---
 title: 'Jak zrobić audyt SEO strony — kompletny przewodnik krok po kroku (2026)'
+seoTitle: 'Audyt SEO strony: jak zrobić go krok po kroku'
 date: '2026-07-19'
 tags: ['SEO', 'Audyt SEO', 'Marketing', 'Narzędzia SEO', 'Mała Firma']
 description: 'Audyt SEO nie musi być czarną magią za 2000 zł. Pokazuję krok po kroku, jak sprawdzić stronę technicznie, contentowo i linkowo — z darmowymi narzędziami.'

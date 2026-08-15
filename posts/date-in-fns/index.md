@@ -1,9 +1,9 @@
 ---
 title: Polskie wyświetlanie miesięcy w date-fns
-tags: Blog, Data, Config 
+tags: ['Blog', 'Data', 'Config']
 date: 2023-2-22
 updated: 2026-07-22
-description: 'Jak skonfigurować polskie nazwy miesięcy i formatowanie dat w bibliotece date-fns za pomocą ustawienia locale.'
+description: 'Instrukcja formatowania dat w date-fns: ustawienie polskiego locale, nazwy miesięcy oraz przykłady kodu JavaScript w projekcie.'
 ---
 
 ## Data po polsku

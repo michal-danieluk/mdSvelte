@@ -1,8 +1,9 @@
 ---
 title: 'SEO umiera, nadchodzi GEO. Jak przetrwać w erze AI Overviews?'
+seoTitle: 'GEO i AI Overviews: co zmienia się w SEO'
 date: '2025-10-05'
 tags: ['SEO', 'AI', 'GEO', 'Marketing', 'SGE']
-description: 'Tradycyjne SEO traci na znaczeniu. Dowiedz się, czym jest Generative Engine Optimization (GEO) i jak dostosować swoją strategię, aby przetrwać w nowej erze wyszukiwania zdominowanej przez AI.'
+description: 'Czym jest Generative Engine Optimization i jak AI Overviews wpływa na widoczność treści. Sprawdź, co zmieniać w strategii SEO.'
 keywords: 'GEO, SEO, AI Overviews, The Great Decoupling, AI w SEO, marketing, optymalizacja, SGE'
 image_prompt: 'A massive, crumbling stone statue of the letters SEO with a sleek, glowing GEO robot emerging from the ruins, digital futuristic style.'
 ---

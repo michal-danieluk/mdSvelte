@@ -1,5 +1,6 @@
 ---
 title: "5 kontrintuicyjnych lekcji marketingowych od Rory'ego Sutherlanda"
+seoTitle: "5 lekcji marketingu od Rory'ego Sutherlanda"
 date: 2025-09-10
 updated: 2026-07-22
 tags: ['Marketing', 'Psychologia', 'Strategia', 'Biznes', 'Innowacje']

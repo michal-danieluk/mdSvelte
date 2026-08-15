@@ -3,7 +3,7 @@ title: 'Żyjemy w bańce. Sprawdziłem strony konkurencji w Betonie i wróciłem
 seoTitle: 'Strony małych firm: marketing poza naszą bańką'
 date: '2026-07-31'
 tags: ['Marketing', 'Mała Firma', 'SEO', 'Strategia']
-description: 'Sprawdziłem strony konkurencji w branży betoniarskiej. Połowa nie ma strony w ogóle. Reszta żyje w latach 90. Ten tekst jest o tym, jak łatwo zapomnieć, że nie każdy żyje w naszej bańce.'
+description: 'Co zobaczyłem, analizując strony firm betoniarskich: dlaczego marketingowa bańka przesłania stan cyfrowej obecności małych firm.'
 keywords: 'marketing małej firmy, strona internetowa firmy budowlanej, formularz kontaktowy, tagi śledzące, marketing dla budowlanki, mała firma strona internetowa'
 image_prompt: 'A person standing outside a giant transparent glass bubble looking at a gray, empty industrial landscape with a handful of dim, flickering old websites floating like tombstones, cinematic neon-noir contrast between the bright bubble interior and the dark reality outside'
 featured: false

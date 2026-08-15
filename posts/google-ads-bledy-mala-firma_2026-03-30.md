@@ -1,5 +1,6 @@
 ---
 title: 'Jak małe firmy tracą pieniądze w Google Ads (i jak to naprawić)'
+seoTitle: 'Błędy Google Ads, przez które mała firma traci budżet'
 date: '2026-03-30'
 tags: ['Google Ads', 'Marketing', 'Reklamy', 'SEM', 'Mała firma']
 description: 'Małe firmy tracą nawet 40–60% budżetu w Google Ads przez 5 powtarzających się błędów. Sprawdź, które robisz i jak je szybko naprawić.'

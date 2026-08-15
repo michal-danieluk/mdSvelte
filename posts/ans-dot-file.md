@@ -1,6 +1,8 @@
 ---
 title: Zarządzanie dotfiles
+seoTitle: 'Dotfiles: Ansible i Stow w jednym repozytorium'
 date: 2023-03-31
+tags: ['Ansible', 'Dotfiles', 'Linux', 'Automatyzacja']
 description: 'Jak zarządzam konfiguracją systemu: Ansible do automatyzacji, Stow do symlinków i wszystko w jednym repozytorium dotfiles na GitHubie.'
 keywords: 'zarządzanie dotfiles, ansible dotfiles, gnu stow, automatyzacja konfiguracji systemu, dotfiles github'
 ---

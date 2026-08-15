@@ -1,5 +1,6 @@
 ---
 title: 'Content marketing a SEO — czym się różnią i jak ze sobą współpracują'
+seoTitle: 'Content marketing a SEO: różnice i współpraca'
 date: '2026-07-09'
 tags: ['Content Marketing', 'SEO', 'Marketing', 'Mała Firma']
 description: 'Content marketing i SEO to nie to samo, choć często się je myli. Krótko: czym się różnią, gdzie na siebie nachodzą i dlaczego potrzebujesz obu naraz.'

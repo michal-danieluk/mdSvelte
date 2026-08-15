@@ -1,5 +1,6 @@
 ---
 title: Markdown I ♥ you...
+seoTitle: 'Markdown: prosty sposób pisania tekstów'
 date: 2022-12-12
 updated: '2026-07-28'
 tags: ['Markdown', 'Writing', 'Blog']
