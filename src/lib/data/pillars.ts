@@ -9,6 +9,11 @@ export type LearningStep = {
   articleSlug: string
 }
 
+export type DecisionGuide = {
+  title: string
+  description: string
+}
+
 export type PillarConfig = {
   slug: PillarSlug
   name: string
@@ -20,6 +25,7 @@ export type PillarConfig = {
   accent: string
   promise: string
   introduction: string
+  decisionGuide?: DecisionGuide[]
   learningPath: LearningStep[]
   moreArticleSlugs: string[]
 }
@@ -29,9 +35,9 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
     slug: 'seo',
     name: 'SEO',
     eyebrow: 'Przewodnik po SEO',
-    seoTitle: 'SEO od podstaw: praktyczny przewodnik dla małej firmy | Michał Danieluk',
+    seoTitle: 'SEO dla małej firmy | Od czego zacząć | Michał Danieluk',
     metaDescription:
-      'Zrozum SEO bez branżowego żargonu. Przejdź od mechaniki Google przez audyt i treści po ocenę efektów pozycjonowania swojej strony.',
+      'SEO dla małej firmy: zacznij od audytu i podstaw, potem rozwijaj treści oraz oceniaj efekty bez branżowego żargonu.',
     keywords: [
       'SEO dla małej firmy',
       'pozycjonowanie stron',
@@ -39,12 +45,29 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
       'SEO copywriting',
       'koszt pozycjonowania'
     ],
-    title: 'SEO, które da się',
-    accent: 'zrozumieć i sprawdzić',
+    title: 'SEO dla małej firmy:',
+    accent: 'od czego zacząć',
     promise:
-      'Przejdziesz przez cztery filary: treści, audyt, mechanikę pozycjonowania oraz koszty SEO dla małej firmy.',
+      'Ułożysz kolejność działań: audyt, technikę, treści i ocenę kosztów SEO dla małej firmy.',
     introduction:
-      'Pozycjonowanie nie zaczyna się od listy stu słów kluczowych. Zaczyna się od strony, którą robot Google może znaleźć, człowiek chce przeczytać, a właściciel firmy potrafi ocenić. Ta ścieżka układa najważniejsze elementy we właściwej kolejności.',
+      'SEO dla małej firmy nie zaczyna się od listy stu słów kluczowych. Najpierw sprawdź, czy Google może znaleźć stronę, potem usuń największe blokery i dopiero wtedy inwestuj w treści oraz linki. Ta ścieżka układa te decyzje we właściwej kolejności.',
+    decisionGuide: [
+      {
+        title: '1. Najpierw sprawdź fundament',
+        description:
+          'Zanim napiszesz nowy tekst albo kupisz pakiet linków, zrób audyt indeksacji, szybkości, linkowania wewnętrznego i stron-sierot.'
+      },
+      {
+        title: '2. Potem wybierz pytania klientów',
+        description:
+          'Treść ma odpowiadać na jedno realne pytanie i prowadzić do jednego właściciela tematu. Nie próbuj jedną stroną rankować na wszystko.'
+      },
+      {
+        title: '3. Na końcu oceniaj wynik',
+        description:
+          'W Search Console sprawdzaj zapytania, strony, wyświetlenia i pozycje. Ruch ma prowadzić do działania, nie tylko do wykresu.'
+      }
+    ],
     learningPath: [
       {
         label: 'Filar A · Content i copywriting',
@@ -188,9 +211,9 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
     slug: 'marketing',
     name: 'Marketing',
     eyebrow: 'Przewodnik po marketingu',
-    seoTitle: 'Marketing małej firmy: strategia, koszty i efekty',
+    seoTitle: 'Marketing małej firmy: kanały, budżet i pomiar | Michał Danieluk',
     metaDescription:
-      'Praktyczny marketing małej firmy: wybierz właściwe kanały, poznaj realne koszty i terminy oraz podejmuj decyzje bez agencyjnych obietnic.',
+      'Marketing małej firmy: wybierz kanały, ustaw realny budżet i mierz wyniki bez agencyjnych obietnic oraz przypadkowych działań.',
     keywords: [
       'marketing małej firmy',
       'strategia marketingowa',
@@ -198,12 +221,29 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
       'content marketing',
       'efekty marketingu'
     ],
-    title: 'Marketing, który wspiera',
-    accent: 'decyzje biznesowe',
+    title: 'Marketing małej firmy:',
+    accent: 'kanały, budżet i pomiar',
     promise:
-      'Wybierzesz kanały odpowiednie do etapu firmy, ustawisz realistyczny budżet i ocenisz pracę marketingu przez pryzmat biznesu.',
+      'Wybierzesz kanały odpowiednie do etapu firmy, ustawisz realistyczny budżet i sprawdzisz, czy marketing prowadzi do zapytań.',
     introduction:
-      'Marketing nie jest pojedynczą kampanią ani zestawem postów. To system: komu pomagasz, dlaczego ktoś ma wybrać właśnie Ciebie, gdzie docierasz z tą obietnicą i jak mierzysz rezultat. Ten przewodnik pomaga ułożyć decyzje przed wyborem narzędzi.',
+      'Marketing małej firmy nie jest pojedynczą kampanią ani zestawem postów. Najpierw określ cel i horyzont czasu, następnie wybierz kanał, który pasuje do sytuacji, a na końcu mierz zapytania i sprzedaż. Ten przewodnik pomaga ułożyć te decyzje przed wyborem narzędzi.',
+    decisionGuide: [
+      {
+        title: '1. Zacznij od celu i terminu',
+        description:
+          'Pilne zapytania wymagają innego kanału niż budowanie rozpoznawalności. Nie oceniaj SEO po tygodniu ani reklamy po samych kliknięciach.'
+      },
+      {
+        title: '2. Rozdziel budżet od kosztu obsługi',
+        description:
+          'W Google Ads i Meta Ads część pieniędzy trafia do platformy, a część opłaca pracę nad kampanią. Porównuj je osobno.'
+      },
+      {
+        title: '3. Mierz drogę do zapytania',
+        description:
+          'Sprawdzaj nie tylko ruch, lecz także kliknięcia w kontakt, formularze, rozmowy i źródło leada. Dopiero wtedy wiesz, co działa.'
+      }
+    ],
     learningPath: [
       {
         label: '01 · Ustaw oczekiwania',

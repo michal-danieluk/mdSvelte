@@ -1,14 +1,16 @@
 ---
-title: 'Jak sprawdzić kampanię Google Ads? 4 testy pracy agencji'
-seoTitle: 'Jak sprawdzić kampanię Google Ads? 4 testy | Michał Danieluk'
+title: 'Jak sprawdzić, czy agencja dobrze prowadzi Google Ads i Meta Ads?'
+seoTitle: 'Jak sprawdzić Google Ads i Meta Ads? 4 testy'
 date: '2026-04-01'
-updated: '2026-08-11'
+updated: '2026-08-16'
 tags: ['Google Ads', 'Marketing', 'Agencja', 'Reklamy', 'SEM']
-description: 'Jak sprawdzić kampanię Google Ads i pracę agencji? Cztery testy: udział w wyświetleniach, struktura, wyszukiwane hasła i wynik jakości.'
-keywords: 'jak sprawdzić kampanię google ads, kontrola agencji google ads, impression share, quality score google ads, raport wyszukiwanych haseł, audyt google ads'
+description: 'Jak sprawdzić, czy agencja dobrze prowadzi Google Ads i Meta Ads? Zacznij od 4 testów konta Google Ads, a Meta Ads oceń osobną checklistą.'
+keywords: 'jak sprawdzić google ads i meta ads, jak sprawdzić kampanię google ads, kontrola agencji google ads, impression share, quality score google ads, raport wyszukiwanych haseł, audyt google ads'
 image_prompt: 'A cyberpunk figure sitting at a desk late at night, bathed in neon light from multiple monitors. The character wears a dark hoodie, face partially lit by the cold blue-purple glow of the screens. On the monitors: Google Ads dashboard with campaign metrics, impression share graphs, quality score columns — data glowing in electric cyan and neon purple. Deep black shadows, vivid neon accents — purple, cyan, amber. Flat illustration style with strong contrast and glowing edges. Stylized digital art, cinematic side-angle composition.'
 featured: false
 ---
+
+Jak sprawdzić, czy agencja dobrze prowadzi Google Ads i Meta Ads? Zacznij od czterech rzeczy w koncie Google Ads: udziału w wyświetleniach, struktury, wyszukiwanych haseł i wyniku jakości. Meta Ads wymagają innych metryk, dlatego kieruję do osobnej checklisty zamiast mieszać dwa systemy w jeden raport.
 
 Płacisz agencji za prowadzenie Google Ads. Co miesiąc przychodzi faktura, czasem raport w PDF-ie z wykresami, które wyglądają profesjonalnie. Ale tak naprawdę nie masz pojęcia, czy te pieniądze pracują dobrze, czy lecą w błoto.
 
@@ -18,7 +20,7 @@ Dobra wiadomość: nie musisz być specjalistą od reklam, żeby ocenić, czy Tw
 
 Dopiero szukasz agencji i jeszcze nie masz kogo weryfikować? Zacznij od [7 pytań, które musisz zadać przed podpisaniem umowy](/post/jak-wybrac-agencje-google-ads_2026-04-03).
 
-Jeśli ta sama agencja prowadzi Ci równolegle kampanie Meta Ads (Facebook i Instagram), sprawdź też [analogiczny checklist dla Meta Ads](/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17). Tam liczą się zupełnie inne metryki niż w Google Ads.
+Jeśli ta sama agencja prowadzi Ci równolegle kampanie Meta Ads (Facebook i Instagram), przejdź też przez [analizę kampanii Meta Ads](/post/jak-sprawdzic-kampanie-meta-ads_2026-04-17). Tam liczą się zupełnie inne metryki niż w Google Ads.
 
 ---
 

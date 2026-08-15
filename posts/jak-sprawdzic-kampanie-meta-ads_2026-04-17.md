@@ -1,18 +1,20 @@
 ---
-title: 'Jak sprawdzić kampanię Meta Ads? 4 metryki do kontroli'
-seoTitle: 'Jak sprawdzić kampanię Meta Ads? 4 metryki | Michał Danieluk'
+title: 'Analiza kampanii Meta Ads: 4 metryki do kontroli'
+seoTitle: 'Analiza kampanii Meta Ads: 4 metryki | Michał Danieluk'
 date: '2026-04-17'
-updated: '2026-08-11'
+updated: '2026-08-16'
 tags: ['Meta Ads', 'Facebook Ads', 'Agencja', 'Marketing', 'Reklamy']
-description: 'Jak zrobić analizę kampanii Meta Ads bez agencji? 4 konkretne metryki w Menedżerze Reklam — bez wiedzy technicznej.'
-keywords: 'jak sprawdzić kampanię Meta Ads, kontrola agencji Facebook Ads, metryki Meta Ads, częstotliwość reklam Facebook, CPM Facebook Ads, quality ranking Meta'
+description: 'Analiza kampanii Meta Ads bez agencji: 4 konkretne metryki w Menedżerze Reklam — częstotliwość, CPM, rankingi jakości i overlap odbiorców.'
+keywords: 'analiza kampanii meta ads, ocena kampanii meta ads, jak sprawdzić kampanię meta ads, kontrola agencji facebook ads, metryki meta ads, częstotliwość reklam facebook, cpm facebook ads, quality ranking meta'
 image_prompt: 'Cyberpunk illustration, hooded figure sitting in front of multiple glowing monitors, screens showing Facebook Ads Manager interface with frequency charts, CPM trend lines, quality ranking indicators and audience overlap Venn diagrams. Neon color palette: violet #b347ff, cyan #00e5ff, amber #ff9500. Dark background with subtle grid lines. Flat illustration style, no text on the graphic.'
 featured: false
 ---
 
+Analiza kampanii Meta Ads nie wymaga dostępu do raportów agencji ani wiedzy technicznej. W Menedżerze Reklam sprawdzisz cztery rzeczy: częstotliwość, trend CPM, rankingi jakości i nakładanie się grup odbiorców.
+
 Płacisz agencji za reklamy na Facebooku i Instagramie. Dostajesz raporty ze screenshotami dashboardów, zasięgami liczonymi w tysiącach i kolorowymi wykresami. Wygląda profesjonalnie. Ale czy faktycznie wiesz, czy te pieniądze pracują, czy się palą?
 
-Meta Ads to zupełnie inna bestia niż [Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01). W Google ludzie aktywnie szukają Twojego produktu: Ty odpowiadasz na istniejące zapotrzebowanie. W Meta Ads przerywasz komuś scrollowanie, żeby zwrócić na siebie uwagę. Inne mechanizmy, inne pułapki, inne metryki do obserwowania.
+Meta Ads to zupełnie inna bestia niż [kontrola kampanii Google Ads](/post/jak-sprawdzic-kampanie-google-ads_2026-04-01). W Google ludzie aktywnie szukają Twojego produktu: Ty odpowiadasz na istniejące zapotrzebowanie. W Meta Ads przerywasz komuś scrollowanie, żeby zwrócić na siebie uwagę. Inne mechanizmy, inne pułapki, inne metryki do obserwowania.
 
 Widziałem dziesiątki kampanii małych firm na Facebooku i Instagramie. Pewien wzorzec powtarza się niepokojąco często: agencja ustawia kampanię, pierwsze tygodnie wyglądają nieźle, a potem nikt jej nie dotyka przez miesiące. Budżet leci, wyniki spadają, a klient tego nie widzi, bo nie wie, na co patrzeć.
 

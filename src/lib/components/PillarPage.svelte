@@ -124,6 +124,33 @@
     </p>
   </section>
 
+  {#if pillar.decisionGuide?.length}
+    <section aria-labelledby="decyzje-title" class="mx-auto max-w-5xl pb-16 sm:pb-20">
+      <div class="mb-8 max-w-3xl">
+        <p
+          class="text-xs font-black uppercase tracking-[0.2em] text-indigo-600 dark:text-indigo-400"
+        >
+          Od czego zacząć
+        </p>
+        <h2 id="decyzje-title" class="mt-3 text-2xl font-black sm:text-3xl">
+          Trzy decyzje przed wyborem narzędzi
+        </h2>
+      </div>
+      <div class="grid gap-5 md:grid-cols-3">
+        {#each pillar.decisionGuide as decision}
+          <div
+            class="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900"
+          >
+            <h3 class="text-lg font-black leading-snug">{decision.title}</h3>
+            <p class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+              {decision.description}
+            </p>
+          </div>
+        {/each}
+      </div>
+    </section>
+  {/if}
+
   <section
     id="sciezka"
     aria-labelledby="sciezka-title"
