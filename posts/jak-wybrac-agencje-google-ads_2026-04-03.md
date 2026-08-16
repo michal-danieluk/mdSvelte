@@ -113,6 +113,8 @@ Im precyzyjniej to określisz, tym łatwiej ocenisz, czy agencja rozumie Twój b
 
 Jeśli Twój budżet reklamowy to mniej niż 1500 zł miesięcznie, obsługa agencyjna prawdopodobnie nie ma sensu ekonomicznego. Lepiej nauczyć się podstaw samemu albo wynająć freelancera na konsultację.
 
+Zanim porównasz oferty, policz też [całkowity koszt Google Ads](/post/ile-kosztuje-google-ads): budżet dla Google, obsługę, setup i dodatkowe prace. Dopiero wtedy wiesz, ile kosztuje pierwszy miesiąc, a ile kolejne.
+
 ---
 
 ## Podsumowanie

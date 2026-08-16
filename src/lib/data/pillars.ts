@@ -139,14 +139,21 @@ export const pillars: Record<PillarSlug, PillarConfig> = {
         articleSlug: 'jak-ustawic-kampanie-google-ads_2026-04-14'
       },
       {
-        label: '02 · Płać za jakość',
+        label: '02 · Policz koszt testu',
+        title: 'Policz budżet na Google Ads',
+        description:
+          'Oddziel budżet dla Google od obsługi i setupu. Sprawdź, czy kampania ma szansę się spiąć, zanim zaczniesz ją skalować.',
+        articleSlug: 'ile-kosztuje-google-ads'
+      },
+      {
+        label: '03 · Płać za jakość',
         title: 'Zrozum wynik jakości',
         description:
           'Trafność reklamy i doświadczenie strony docelowej wpływają na koszt. Naucz się poprawiać je jako jeden system.',
         articleSlug: 'wynik-jakosci-google-ads_2026-04-10'
       },
       {
-        label: '03 · Zamknij wycieki',
+        label: '04 · Zamknij wycieki',
         title: 'Znajdź miejsca, które zjadają budżet',
         description:
           'Sprawdź powtarzalne błędy małych kont i ustaw prostą rutynę kontroli, zanim zaczniesz zwiększać wydatki.',
