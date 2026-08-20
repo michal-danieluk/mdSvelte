@@ -1,10 +1,10 @@
 ---
 title: 'Jak sprawdzić, czy agencja dobrze prowadzi Google Ads i Meta Ads?'
-seoTitle: 'Jak sprawdzić Google Ads i Meta Ads? 4 testy'
+seoTitle: 'Czy agencja dobrze prowadzi Google Ads i Meta Ads? 4 testy, które zrobisz sam'
 date: '2026-04-01'
 updated: '2026-08-16'
 tags: ['Google Ads', 'Marketing', 'Agencja', 'Reklamy', 'SEM']
-description: 'Jak sprawdzić, czy agencja dobrze prowadzi Google Ads i Meta Ads? Zacznij od 4 testów konta Google Ads, a Meta Ads oceń osobną checklistą.'
+description: 'Sprawdź sam, czy agencja dobrze prowadzi Twoje Google Ads i Meta Ads: 4 testy konta Google Ads (udział w wyświetleniach, struktura, hasła, wynik jakości) + osobna checklista Meta Ads. Krok po kroku, bez żargonu.'
 keywords: 'jak sprawdzić google ads i meta ads, jak sprawdzić kampanię google ads, kontrola agencji google ads, impression share, quality score google ads, raport wyszukiwanych haseł, audyt google ads'
 image_prompt: 'A cyberpunk figure sitting at a desk late at night, bathed in neon light from multiple monitors. The character wears a dark hoodie, face partially lit by the cold blue-purple glow of the screens. On the monitors: Google Ads dashboard with campaign metrics, impression share graphs, quality score columns — data glowing in electric cyan and neon purple. Deep black shadows, vivid neon accents — purple, cyan, amber. Flat illustration style with strong contrast and glowing edges. Stylized digital art, cinematic side-angle composition.'
 featured: false

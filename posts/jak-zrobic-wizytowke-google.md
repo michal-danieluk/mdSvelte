@@ -7,6 +7,19 @@ tags: ['SEO', 'Lokalne SEO', 'Profil Firmy w Google', 'Mała Firma', 'Google Map
 description: 'Jak zrobić wizytówkę Google krok po kroku: konto, dane firmy, kategoria, adres lub obszar działania, weryfikacja i ustawienia po starcie.'
 preview: 'Założenie Profilu Firmy w Google jest bezpłatne. Zobacz, jak poprawnie podać nazwę, kategorię, adres lub obszar działania i przejść weryfikację.'
 keywords: 'jak zrobić wizytówkę Google, jak założyć wizytówkę Google, jak stworzyć wizytówkę Google, Profil Firmy w Google, wizytówka Google krok po kroku'
+faq:
+  - q: 'Czy wizytówka Google jest płatna?'
+    a: 'Nie. Dodanie profilu lub zgłoszenie do niego praw jest bezpłatne. Możesz zapłacić specjaliście za konfigurację i obsługę, ale nie płacisz Google za samo posiadanie profilu.'
+  - q: 'Czy można założyć profil bez strony internetowej?'
+    a: 'Tak. Profil i strona są osobnymi elementami. Bez strony nadal podajesz kompletne dane firmy w formularzu. Strona staje się ważna później, gdy klient chce sprawdzić usługi, realizacje, ceny lub wysłać zapytanie poza Mapami.'
+  - q: 'Czy pokazywać adres domowy?'
+    a: 'Nie, jeśli nie przyjmujesz tam klientów. Wybierz profil firmy działającej na określonym obszarze, ukryj adres i podaj miejscowości lub kody pocztowe, które faktycznie obsługujesz.'
+  - q: 'Ile trwa weryfikacja?'
+    a: 'Nie ma jednego terminu dla każdej firmy. Czas zależy od metody udostępnionej przez Google i ewentualnej dodatkowej kontroli. Nie zmieniaj danych tylko po to, żeby przyspieszyć proces.'
+  - q: 'Czy mogę mieć więcej niż jedną wizytówkę?'
+    a: 'Jedna firma działająca na określonym obszarze powinna mieć jeden profil dla całego obsługiwanego terenu. Oddzielne profile mają sens dla rzeczywistych lokalizacji, a nie dla każdego miasta wpisanego do oferty.'
+  - q: 'Czy firma usługowa bez lokalu może mieć profil?'
+    a: 'Tak, jeśli świadczy usługi bezpośrednio u klientów i spełnia wytyczne Google. Taki profil powinien ukrywać adres i pokazywać rzeczywisty obszar działania.'
 featured: false
 workflow_status: approved
 approved_at: '2026-08-12'

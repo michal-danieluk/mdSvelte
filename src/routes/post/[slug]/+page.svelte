@@ -59,6 +59,25 @@
   })
   const blogPostingJsonLdScript = buildJsonLdScript(blogPostingJsonLd)
 
+  // Cleanse external URLs out of FAQ answers if mdsvex turns them into paragraphs.
+  const faq = data.post.faq
+  const faqJsonLd =
+    Array.isArray(faq) && faq.length
+      ? JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faq.map((item) => ({
+            '@type': 'Question',
+            name: String(item.q || '').trim(),
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: String(item.a || '').trim()
+            }
+          }))
+        })
+      : null
+  const faqJsonLdScript = faqJsonLd ? buildJsonLdScript(faqJsonLd) : null
+
   let canGoBack = false
   afterNavigate(({ from }) => {
     if (from && from.url.pathname.startsWith('/posts')) {
@@ -85,6 +104,9 @@
 <svelte:head>
   <meta name="author" content={name} />
   {@html blogPostingJsonLdScript}
+  {#if faqJsonLdScript}
+    {@html faqJsonLdScript}
+  {/if}
 </svelte:head>
 
 <div class="max-w-6xl mx-auto px-6 pt-12 lg:pt-20">
